@@ -32,7 +32,9 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
- 
+ void checkTurn(void);
+ void checkStraight(void);
+ void checkLeft(void);
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -47,6 +49,7 @@ int left = 0;
 int right = 0;
 int LCheck = 0;
 int RCheck = 0;
+int move = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -56,11 +59,68 @@ int RCheck = 0;
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+void checkTurn(void){
+	if ((move == 1) && (count > 600)){
+		printf("Keep turning left\r\n");
+	}
+	else if ((move == 2) && (count > 600)){
+		printf("Keep turning right\r\n");
+	}
+	else {
+		printf("Good to go Forward\r\n");
+		move = 0;
+	}
+}
+void checkStraight(void){
+	if (count > 600){
+		printf("checkDirection\r\n");
+		left = 1;
+		init_Left();
+	}
 
+}
+void checkLeft(void){
+	left++;
+	if (count > 600){
+		printf("Left Not good\r\n");
+	}
+	if (left > 3){
+		left = 0;
+		right = 1;
+		init_Right();
+	}
+	LCheck += count;
+}
+void checkRight(void){
+	right++;
+	if (count > 600){
+		printf("Right Not Good\r\n");
+
+	}
+	if (right > 3){
+		left = 0;
+		right = 0;
+	}
+	RCheck += count;
+}
+void determineDir(void){
+	if (LCheck < RCheck){
+		printf("Turn Left\r\n");
+		move = 1;
+	}
+	else {
+		printf("Turn Right\r\n");
+		move = 2;
+	}
+	init_Straight();
+	LCheck = 0;
+	RCheck = 0;
+}
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
 extern TIM_HandleTypeDef htim6;
+extern TIM_HandleTypeDef htim22;
 /* USER CODE BEGIN EV */
 
 /* USER CODE END EV */
@@ -167,9 +227,8 @@ void EXTI0_1_IRQHandler(void)
 void EXTI4_15_IRQHandler(void)
 {
   /* USER CODE BEGIN EXTI4_15_IRQn 0 */
-
 	if (__HAL_GPIO_EXTI_GET_FLAG(GPIO_PIN_7)){
-		printf("Button Push\r\n");
+		printf("Push Button\r\n");
 	}
   /* USER CODE END EXTI4_15_IRQn 0 */
   HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_7);
@@ -184,48 +243,20 @@ void EXTI4_15_IRQHandler(void)
 void TIM6_DAC_IRQHandler(void)
 {
   /* USER CODE BEGIN TIM6_DAC_IRQn 0 */
-	if ((left == right) && (LCheck == RCheck)){
-		if (count > 750){
-				printf("checkDirection\r\n");
-				left = 1;
-				CheckLeft();
-			}
-
+	if (move > 0){
+		checkTurn();
+	}
+	else if ((left == right) && (LCheck == RCheck)){
+		checkStraight();
 	}
 	else if(left > 0){
-		if (count > 750){
-			printf("Left Not good\r\n");
-			left++;
-			if (left > 3){
-				left = 0;
-				right = 1;
-				CheckRight();
-			}
-		}
-
-		LCheck += count;
+		checkLeft();
 	}
 	else if(right > 0){
-			if (count > 750){
-				printf("Right Not Good\r\n");
-				right++;
-				if (right > 3){
-					left = 0;
-					right = 0;
-				}
-			}
-		RCheck += count;
+		checkRight();
 	}
 	else if ((RCheck > 0) && (LCheck > 0)){
-		if (LCheck < RCheck){
-			printf("Turn Left\r\n");
-		}
-		else {
-			printf("Turn Right\r\n");
-		}
-		CheckStraight();
-		LCheck = 0;
-		RCheck = 0;
+		determineDir();
 	}
 	count = 0;
   /* USER CODE END TIM6_DAC_IRQn 0 */
@@ -233,6 +264,20 @@ void TIM6_DAC_IRQHandler(void)
   /* USER CODE BEGIN TIM6_DAC_IRQn 1 */
 
   /* USER CODE END TIM6_DAC_IRQn 1 */
+}
+
+/**
+  * @brief This function handles TIM22 global interrupt.
+  */
+void TIM22_IRQHandler(void)
+{
+  /* USER CODE BEGIN TIM22_IRQn 0 */
+
+  /* USER CODE END TIM22_IRQn 0 */
+  HAL_TIM_IRQHandler(&htim22);
+  /* USER CODE BEGIN TIM22_IRQn 1 */
+
+  /* USER CODE END TIM22_IRQn 1 */
 }
 
 /* USER CODE BEGIN 1 */

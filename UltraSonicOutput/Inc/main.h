@@ -47,9 +47,9 @@ extern "C" {
 
 /* Exported macro ------------------------------------------------------------*/
 /* USER CODE BEGIN EM */
-void CheckLeft(void);
-void CheckRight(void);
-void CheckStraight(void);
+void init_Left(void);
+void init_Right(void);
+void init_Straight(void);
 /* USER CODE END EM */
 
 void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
