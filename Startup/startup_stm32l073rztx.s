@@ -63,7 +63,7 @@ defined in linker script */
   .type  Reset_Handler, %function
 Reset_Handler:  
    ldr   r0, =_estack
-	   mov   sp, r0          /* set stack pointer */
+   mov   sp, r0          /* set stack pointer */
 
 /* Copy the data segment initializers from flash to SRAM */
   movs  r1, #0

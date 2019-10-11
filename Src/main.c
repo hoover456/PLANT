@@ -27,7 +27,8 @@
 #define ARM_MATH_CM0_FAMILY
 #define __FPU_PRESENT 1
 #include "arm_math.h"
-//#include "math.h"
+#include "stdio.h"
+#include "math.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -40,7 +41,7 @@
 #define WHEEL_DIAMETER 65.0 // Wheel Diameter in mm
 #define WHEEL_CIRCUMFRENCE 204 // Wheel Circumfrence in mm
 #define ENCODER_PPR 800 // 800 pulses per one wheel revolution
-#define MOTOR_MAX_SPEED 4095
+#define MOTOR_MAX_SPEED 65535
 
 /* USER CODE END PD */
 
@@ -56,19 +57,18 @@ TIM_HandleTypeDef htim21;
 UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
-uint32_t nLoop=0;
-int r_enc_cnt = 0;
-int dir = 1;
-//int Kp = 1;
-//int Kd = 0;
-//int Ki = 0;
+//uint32_t nLoop=0;
+//int r_enc_cnt = 0;
+int r_dir; // set initial dir of both motors to forward
+int l_dir;
 int cms = 0;
 int seconds = 0;
 int r_enc_setpoint = 0;
 int r_enc_currentPos = 0;
+int l_enc_setpoint = 0;
+int l_enc_currentPos = 0;
 arm_pid_instance_f32 R_PID;
-int pid_error;
-int duty;
+arm_pid_instance_f32 L_PID;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -78,7 +78,10 @@ static void MX_USART2_UART_Init(void);
 static void MX_TIM3_Init(void);
 static void MX_TIM21_Init(void);
 /* USER CODE BEGIN PFP */
-
+void Left_Motor_PWM_Gen(int speed, int brake);
+void Left_Motor_Controller(void);
+void Right_Motor_Controller(void);
+void Right_Motor_PWM_Gen(int speed, int brake);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -111,11 +114,14 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-  R_PID.Kp = 5;
+  R_PID.Kp = 500;
   R_PID.Kd = 0;
   R_PID.Ki = 0;
-  int32_t reset = 1;
   arm_pid_init_f32(&R_PID, 1);
+  L_PID.Kp = 500;
+  L_PID.Kd = 0;
+  L_PID.Ki = 0;
+  arm_pid_init_f32(&L_PID, 1);
   /* USER CODE END Init */
 
   /* Configure the system clock */
@@ -131,27 +137,28 @@ int main(void)
   MX_TIM3_Init();
   MX_TIM21_Init();
   /* USER CODE BEGIN 2 */
-
+  r_enc_setpoint = -800;
+//  r_dir = 1;
+  l_enc_setpoint = 800;
+//  l_dir = 1;
+  printf("Hello...\r\n");
+  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
+  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);
+  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_3);
+  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_4);
+  HAL_TIM_OC_Start_IT(&htim21, TIM_CHANNEL_1);
+  __HAL_TIM_SET_COMPARE(&htim21, TIM_CHANNEL_1, 0);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  printf("Hello...\r\n");
-  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
-  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);
-  HAL_TIM_OC_Start_IT(&htim21, TIM_CHANNEL_1);
-//  int count = 0;
-//  int pulse_width1 = 0;
-//  int pulse_width2 = 4096;
-  __HAL_TIM_SET_COMPARE(&htim21, TIM_CHANNEL_1, 0);
-  r_enc_setpoint = 1600;
   while (1)
   {
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin); // PORTA, PA5
-	  HAL_Delay(500);
+	Right_Motor_Controller();
+	Left_Motor_Controller();
   }
   /* USER CODE END 3 */
 }
@@ -222,7 +229,7 @@ static void MX_TIM3_Init(void)
   htim3.Instance = TIM3;
   htim3.Init.Prescaler = 0;
   htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim3.Init.Period = 4095;
+  htim3.Init.Period = 65535;
   htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim3.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_PWM_Init(&htim3) != HAL_OK)
@@ -243,11 +250,19 @@ static void MX_TIM3_Init(void)
   {
     Error_Handler();
   }
-  if (HAL_TIMEx_RemapConfig(&htim3, TIM3_TI1_GPIO) != HAL_OK)
+  if (HAL_TIMEx_RemapConfig(&htim3, TIM3_TI1_GPIO|TIM3_TI4_GPIOC9_AF2) != HAL_OK)
   {
     Error_Handler();
   }
   if (HAL_TIM_PWM_ConfigChannel(&htim3, &sConfigOC, TIM_CHANNEL_2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  if (HAL_TIM_PWM_ConfigChannel(&htim3, &sConfigOC, TIM_CHANNEL_3) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  if (HAL_TIM_PWM_ConfigChannel(&htim3, &sConfigOC, TIM_CHANNEL_4) != HAL_OK)
   {
     Error_Handler();
   }
@@ -300,14 +315,9 @@ static void MX_TIM21_Init(void)
   {
     Error_Handler();
   }
-  if (HAL_TIMEx_RemapConfig(&htim21, TIM3_TI1_GPIO) != HAL_OK)
-  {
-    Error_Handler();
-  }
   /* USER CODE BEGIN TIM21_Init 2 */
 
   /* USER CODE END TIM21_Init 2 */
-  HAL_TIM_MspPostInit(&htim21);
 
 }
 
@@ -359,7 +369,6 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOH_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
-  __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_RESET);
@@ -406,50 +415,118 @@ return ch;
 
 void Right_Encoder_Interrupt_Handler(void){
 //	r_enc_cnt++;
-	if(dir==1)
+	if(r_dir==1)
 		r_enc_currentPos++;
 	else
 		r_enc_currentPos--;
 }
 
-void Right_Motor_PWM_Gen(int speed){
-	// Negative speed corresponds to opposite direction
-	if(speed < 0){
-		dir = !dir;
-		speed = -speed;
-	}
-	if(speed > MOTOR_MAX_SPEED)
-		speed = MOTOR_MAX_SPEED;
-	// dir == 1 corresponds to forward turn (PWM1 on, PWM2 off)
-	if(dir==1){
-		__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, speed);
-		__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_2, 0);
-	} else {
-		__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, 0);
-		__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_2, speed);
-	}
-	printf("Speed = %d, Dir = %d, Error = %d, Encoder = %d\r\n", speed, dir, pid_error, r_enc_currentPos);
+void Left_Encoder_Interrupt_Handler(void){
+	if(l_dir==1)
+		l_enc_currentPos++;
+	else
+		l_enc_currentPos--;
 }
 
+void Right_Motor_PWM_Gen(int speed, int brake){
+	// if brake is true, brake and ignore speed setting
+	if (brake){
+		__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, MOTOR_MAX_SPEED);
+		__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_2, MOTOR_MAX_SPEED);
+	} else {
+		// Negative speed corresponds to opposite direction
+		if(speed < 0){
+			r_dir = 0;
+			speed = -speed;
+		} else
+			r_dir = 1;
+		// can't go faster than the PWM generator can handle (100% duty cycle)
+		if(speed > MOTOR_MAX_SPEED)
+			speed = MOTOR_MAX_SPEED;
 
+		// r_dir == 1 corresponds to forward turn (PWM1 on, PWM2 off)
+		if(r_dir==1){
+			__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, speed);
+			__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_2, 0);
+		} else {
+			__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, 0);
+			__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_2, speed);
+		}
+	}
+}
+
+void Left_Motor_PWM_Gen(int speed, int brake){
+	// if brake is true, brake and ignore speed setting
+	if (brake){
+		__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_3, MOTOR_MAX_SPEED);
+		__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_4, MOTOR_MAX_SPEED);
+	} else {
+		// Negative speed corresponds to opposite direction
+		if(speed < 0){
+			l_dir = 0;
+			speed = -speed;
+		} else
+			l_dir = 1;
+		// can't go faster than the PWM generator can handle (100% duty cycle)
+		if(speed > MOTOR_MAX_SPEED)
+			speed = MOTOR_MAX_SPEED;
+
+		// l_dir == 1 corresponds to forward turn (PWM1 on, PWM2 off)
+		if(l_dir==1){
+			__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_3, speed);
+			__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_4, 0);
+		} else {
+			__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_3, 0);
+			__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_4, speed);
+		}
+	}
+}
+
+void Right_Motor_Controller(void){
+//	if(r_enc_setpoint < 0){
+//		r_enc_setpoint = -r_enc_setpoint;
+//		r_dir = 0;
+//	} else {
+//		r_dir = 1;
+//	}
+  	int r_pid_error = r_enc_setpoint - r_enc_currentPos; // Compute error
+  	int duty = (int)arm_pid_f32(&R_PID, r_pid_error); // Compute PID controller output
+  	if(fabs((float)r_pid_error  / r_enc_setpoint) < 0.005)
+  		Right_Motor_PWM_Gen(0, 1); // Switch to brake mode if within 0.5% off setpoint
+  	else
+  		Right_Motor_PWM_Gen(duty, 0);
+}
+
+void Left_Motor_Controller(void){
+//	if(l_enc_setpoint < 0){
+//			l_enc_setpoint = -l_enc_setpoint;
+//			l_dir = 0;
+//	} else {
+//			l_dir = 1;
+//	}
+  	int l_pid_error = l_enc_setpoint - l_enc_currentPos; // Compute error
+  	int duty = (int)arm_pid_f32(&L_PID, l_pid_error); // Compute PID controller output
+  	if(fabs((float)l_pid_error  / l_enc_setpoint) < 0.005)
+  		Left_Motor_PWM_Gen(0, 1); // Switch to brake mode if within 0.5% off setpoint
+  	else
+  		Left_Motor_PWM_Gen(duty, 0);
+}
+
+// Timer that ticks every 100ms for general timing purposes
 void HUNDRED_MS_TIM_INT_HANDLER(void){
 	cms++;
-	pid_error = r_enc_setpoint - r_enc_currentPos;
-//	if(pid_error > 0)
-//		dir = 1;
-//	else
-//		dir = 0;
-	duty = (int)arm_pid_f32(&R_PID, pid_error);
-	Right_Motor_PWM_Gen(duty);
-	printf("%d\r\n", duty);
-//	__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, MOTOR_SPEED);
 	if(cms % 10 == 0){
 		cms = 0;
 		seconds++;
-//		printf("Elapsed Seconds: %d\r", seconds);
-		fflush(stdout);
 	}
 	return;
+}
+
+// Debugging function - prints the right motor encoder reading when the blue button is pushed
+void Print_Encoder_Reading(void){
+	printf("Rotations: %d          \r", r_enc_currentPos);
+	fflush(stdout);
+//	r_enc_currentPos = 0;
 }
 /* USER CODE END 4 */
 

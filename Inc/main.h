@@ -57,8 +57,9 @@ void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
 void Right_Encoder_Interrupt_Handler(void);
+void Left_Encoder_Interrupt_Handler(void);
 void HUNDRED_MS_TIM_INT_HANDLER(void);
-void Right_Motor_PWM_Gen(int speed);
+void Print_Encoder_Reading(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
