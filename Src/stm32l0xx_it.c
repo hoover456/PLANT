@@ -42,8 +42,6 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN PV */
-int r_enc_rising_cnt = 0;
-int r_wheel_cnt = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -57,7 +55,7 @@ int r_wheel_cnt = 0;
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
-
+extern TIM_HandleTypeDef htim21;
 /* USER CODE BEGIN EV */
 
 /* USER CODE END EV */
@@ -153,23 +151,16 @@ void EXTI4_15_IRQHandler(void)
 	// PIN 12
 	if(__HAL_GPIO_EXTI_GET_FLAG(GPIO_PIN_12))
 	{
-		r_enc_rising_cnt++;
-		if( r_enc_rising_cnt >= 800){
-				r_wheel_cnt++;
-				r_enc_rising_cnt = 0;
-				printf("Rotations: %d          \r", r_wheel_cnt);
-				fflush(stdout);
-		}
-
+		Right_Encoder_Interrupt_Handler();
 	}
 
 	// PIN 13
 
 	if(__HAL_GPIO_EXTI_GET_FLAG(GPIO_PIN_13)){
-		r_enc_rising_cnt = 0;
-		r_wheel_cnt = 0;
-		printf("Rotations: %d          \r", r_wheel_cnt);
-		fflush(stdout);
+//		r_enc_rising_cnt = 0;
+//		r_wheel_cnt = 0;
+//		printf("Rotations: %d          \r", r_wheel_cnt);
+//		fflush(stdout);
 
 	}
   /* USER CODE END EXTI4_15_IRQn 0 */
@@ -179,6 +170,21 @@ void EXTI4_15_IRQHandler(void)
   /* USER CODE BEGIN EXTI4_15_IRQn 1 */
 
   /* USER CODE END EXTI4_15_IRQn 1 */
+}
+
+/**
+  * @brief This function handles TIM21 global interrupt.
+  */
+void TIM21_IRQHandler(void)
+{
+  /* USER CODE BEGIN TIM21_IRQn 0 */
+	HUNDRED_MS_TIM_INT_HANDLER();
+
+  /* USER CODE END TIM21_IRQn 0 */
+  HAL_TIM_IRQHandler(&htim21);
+  /* USER CODE BEGIN TIM21_IRQn 1 */
+
+  /* USER CODE END TIM21_IRQn 1 */
 }
 
 /* USER CODE BEGIN 1 */
