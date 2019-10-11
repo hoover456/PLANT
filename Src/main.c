@@ -23,7 +23,11 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#define ARM_MATH_CM0
+#define ARM_MATH_CM0_FAMILY
+#define __FPU_PRESENT 1
+#include "arm_math.h"
+//#include "math.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -33,6 +37,10 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+#define WHEEL_DIAMETER 65.0 // Wheel Diameter in mm
+#define WHEEL_CIRCUMFRENCE 204 // Wheel Circumfrence in mm
+#define ENCODER_PPR 800 // 800 pulses per one wheel revolution
+#define MOTOR_MAX_SPEED 4095
 
 /* USER CODE END PD */
 
@@ -43,11 +51,24 @@
 
 /* Private variables ---------------------------------------------------------*/
 TIM_HandleTypeDef htim3;
+TIM_HandleTypeDef htim21;
 
 UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
 uint32_t nLoop=0;
+int r_enc_cnt = 0;
+int dir = 1;
+//int Kp = 1;
+//int Kd = 0;
+//int Ki = 0;
+int cms = 0;
+int seconds = 0;
+int r_enc_setpoint = 0;
+int r_enc_currentPos = 0;
+arm_pid_instance_f32 R_PID;
+int pid_error;
+int duty;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -55,6 +76,7 @@ void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_USART2_UART_Init(void);
 static void MX_TIM3_Init(void);
+static void MX_TIM21_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -68,6 +90,8 @@ static void MX_TIM3_Init(void);
 #else
 #define PUTCHAR_PROTOTYPE int fputc(int ch, FILE *f)
 #endif /* __GNUC__ */
+
+
 /* USER CODE END 0 */
 
 /**
@@ -87,7 +111,11 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-
+  R_PID.Kp = 5;
+  R_PID.Kd = 0;
+  R_PID.Ki = 0;
+  int32_t reset = 1;
+  arm_pid_init_f32(&R_PID, 1);
   /* USER CODE END Init */
 
   /* Configure the system clock */
@@ -101,6 +129,7 @@ int main(void)
   MX_GPIO_Init();
   MX_USART2_UART_Init();
   MX_TIM3_Init();
+  MX_TIM21_Init();
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
@@ -110,9 +139,12 @@ int main(void)
   printf("Hello...\r\n");
   HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
   HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);
-  int count = 0;
-  int pulse_width1 = 0;
-  int pulse_width2 = 4096;
+  HAL_TIM_OC_Start_IT(&htim21, TIM_CHANNEL_1);
+//  int count = 0;
+//  int pulse_width1 = 0;
+//  int pulse_width2 = 4096;
+  __HAL_TIM_SET_COMPARE(&htim21, TIM_CHANNEL_1, 0);
+  r_enc_setpoint = 1600;
   while (1)
   {
     /* USER CODE END WHILE */
@@ -120,20 +152,6 @@ int main(void)
     /* USER CODE BEGIN 3 */
 	  HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin); // PORTA, PA5
 	  HAL_Delay(500);
-	  count++;
-	  if (count > 8){
-		  count = 0;
-	  }
-	  pulse_width1 = count*512;
-	  pulse_width2 = (8-count)*512;
-	  __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, pulse_width1);
-	  __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_2, pulse_width2);
-//	  nLoop++;
-//	  printf("nLoop == %d \n\r", nLoop);
-//	  if(nLoop>=100){
-//		  printf("Goodbye\r\n");
-//		  break;
-//	  }
   }
   /* USER CODE END 3 */
 }
@@ -218,7 +236,7 @@ static void MX_TIM3_Init(void)
     Error_Handler();
   }
   sConfigOC.OCMode = TIM_OCMODE_PWM1;
-  sConfigOC.Pulse = 1023;
+  sConfigOC.Pulse = 0;
   sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
   sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
   if (HAL_TIM_PWM_ConfigChannel(&htim3, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
@@ -229,7 +247,6 @@ static void MX_TIM3_Init(void)
   {
     Error_Handler();
   }
-  sConfigOC.Pulse = 0;
   if (HAL_TIM_PWM_ConfigChannel(&htim3, &sConfigOC, TIM_CHANNEL_2) != HAL_OK)
   {
     Error_Handler();
@@ -238,6 +255,59 @@ static void MX_TIM3_Init(void)
 
   /* USER CODE END TIM3_Init 2 */
   HAL_TIM_MspPostInit(&htim3);
+
+}
+
+/**
+  * @brief TIM21 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM21_Init(void)
+{
+
+  /* USER CODE BEGIN TIM21_Init 0 */
+
+  /* USER CODE END TIM21_Init 0 */
+
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+  TIM_OC_InitTypeDef sConfigOC = {0};
+
+  /* USER CODE BEGIN TIM21_Init 1 */
+
+  /* USER CODE END TIM21_Init 1 */
+  htim21.Instance = TIM21;
+  htim21.Init.Prescaler = 2099;
+  htim21.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim21.Init.Period = 99;
+  htim21.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim21.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_OC_Init(&htim21) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim21, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sConfigOC.OCMode = TIM_OCMODE_TOGGLE;
+  sConfigOC.Pulse = 0;
+  sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
+  sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
+  if (HAL_TIM_OC_ConfigChannel(&htim21, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  if (HAL_TIMEx_RemapConfig(&htim21, TIM3_TI1_GPIO) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM21_Init 2 */
+
+  /* USER CODE END TIM21_Init 2 */
+  HAL_TIM_MspPostInit(&htim21);
 
 }
 
@@ -289,6 +359,7 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOH_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
+  __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_RESET);
@@ -331,6 +402,54 @@ PUTCHAR_PROTOTYPE
  HAL_UART_Transmit(&huart2, (uint8_t *)&ch, 1, 0xFFFF);
 
 return ch;
+}
+
+void Right_Encoder_Interrupt_Handler(void){
+//	r_enc_cnt++;
+	if(dir==1)
+		r_enc_currentPos++;
+	else
+		r_enc_currentPos--;
+}
+
+void Right_Motor_PWM_Gen(int speed){
+	// Negative speed corresponds to opposite direction
+	if(speed < 0){
+		dir = !dir;
+		speed = -speed;
+	}
+	if(speed > MOTOR_MAX_SPEED)
+		speed = MOTOR_MAX_SPEED;
+	// dir == 1 corresponds to forward turn (PWM1 on, PWM2 off)
+	if(dir==1){
+		__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, speed);
+		__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_2, 0);
+	} else {
+		__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, 0);
+		__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_2, speed);
+	}
+	printf("Speed = %d, Dir = %d, Error = %d, Encoder = %d\r\n", speed, dir, pid_error, r_enc_currentPos);
+}
+
+
+void HUNDRED_MS_TIM_INT_HANDLER(void){
+	cms++;
+	pid_error = r_enc_setpoint - r_enc_currentPos;
+//	if(pid_error > 0)
+//		dir = 1;
+//	else
+//		dir = 0;
+	duty = (int)arm_pid_f32(&R_PID, pid_error);
+	Right_Motor_PWM_Gen(duty);
+	printf("%d\r\n", duty);
+//	__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, MOTOR_SPEED);
+	if(cms % 10 == 0){
+		cms = 0;
+		seconds++;
+//		printf("Elapsed Seconds: %d\r", seconds);
+		fflush(stdout);
+	}
+	return;
 }
 /* USER CODE END 4 */
 
