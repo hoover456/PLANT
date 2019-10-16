@@ -47,7 +47,9 @@ extern "C" {
 
 /* Exported macro ------------------------------------------------------------*/
 /* USER CODE BEGIN EM */
-
+void init_Left(void);
+void init_Right(void);
+void init_Straight(void);
 /* USER CODE END EM */
 
 void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
@@ -58,26 +60,15 @@ void Error_Handler(void);
 /* USER CODE BEGIN EFP */
 void Right_Encoder_Interrupt_Handler(void);
 void Left_Encoder_Interrupt_Handler(void);
-void HUNDRED_MS_TIM_INT_HANDLER(void);
+void TEN_KHZ_TIM_Interrupt_Handler(void);
 void Print_Encoder_Reading(void);
+void TIM22_Interrupt_Handler(void);
+void Read_Light_Sensors(void);
+void DMA1_Channel1_Handler(void);
+void ADC_ConvCpltCallback(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define B1_Pin GPIO_PIN_13
-#define B1_GPIO_Port GPIOC
-#define B1_EXTI_IRQn EXTI4_15_IRQn
-#define MCO_Pin GPIO_PIN_0
-#define MCO_GPIO_Port GPIOH
-#define USART_TX_Pin GPIO_PIN_2
-#define USART_TX_GPIO_Port GPIOA
-#define USART_RX_Pin GPIO_PIN_3
-#define USART_RX_GPIO_Port GPIOA
-#define LD2_Pin GPIO_PIN_5
-#define LD2_GPIO_Port GPIOA
-#define TMS_Pin GPIO_PIN_13
-#define TMS_GPIO_Port GPIOA
-#define TCK_Pin GPIO_PIN_14
-#define TCK_GPIO_Port GPIOA
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */

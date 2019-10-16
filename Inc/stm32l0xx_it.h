@@ -52,8 +52,12 @@ void HardFault_Handler(void);
 void SVC_Handler(void);
 void PendSV_Handler(void);
 void SysTick_Handler(void);
+void EXTI0_1_IRQHandler(void);
 void EXTI4_15_IRQHandler(void);
+void ADC1_COMP_IRQHandler(void);
+void TIM6_DAC_IRQHandler(void);
 void TIM21_IRQHandler(void);
+void TIM22_IRQHandler(void);
 /* USER CODE BEGIN EFP */
 
 /* USER CODE END EFP */
