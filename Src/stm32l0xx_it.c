@@ -50,6 +50,7 @@ int right = 0;
 int LCheck = 0;
 int RCheck = 0;
 int move = 0;
+int soil_count = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -59,41 +60,6 @@ int move = 0;
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
-void IR_LOCATE(void){
-	while(1){
-	int pins = ((GPIOA->IDR>>10) & 7);
-
-	if(pins == 0){
-		printf("0\r\n");
-	}
-	if(pins == 1){
-		printf("1\r\n");
-	}
-	if(pins == 2){
-		printf("2\r\n");
-	}
-	if(pins == 3){
-		printf("3\r\n");
-	}
-	if(pins == 3){
-		printf("3\r\n");
-	}
-	if(pins == 4){
-		printf("4\r\n");
-	}
-	if(pins == 5){
-		printf("5\r\n");
-	}
-	if(pins == 6){
-		printf("6\r\n");
-	}
-	if(pins == 7){
-		printf("7\r\n");
-	}
-	}
-}
-
 
 void checkTurn(void){
 	if ((move == 1) && (count > 600)){
@@ -152,6 +118,7 @@ void determineDir(void){
 	LCheck = 0;
 	RCheck = 0;
 }
+
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
@@ -342,6 +309,13 @@ void TIM6_DAC_IRQHandler(void)
 		determineDir();
 	}
 	count = 0;
+
+	soil_count++;
+	if(soil_count == 60){
+		check_soil();
+		soil_count = 0;
+	}
+
   /* USER CODE END TIM6_DAC_IRQn 0 */
   HAL_TIM_IRQHandler(&htim6);
   /* USER CODE BEGIN TIM6_DAC_IRQn 1 */

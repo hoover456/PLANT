@@ -42,11 +42,12 @@
 #define WHEEL_CIRCUMFRENCE 204 // Wheel Circumfrence in mm
 #define ENCODER_PPR 800 // 800 pulses per one wheel revolution.
 #define MOTOR_MAX_SPEED 65535 // uint16_t max
-// Directional Defines
+// Movement Directional Defines
 #define TURN_LEFT 0
 #define TURN_RIGHT 1
 #define FORWARD 2
 #define REVERSE 3
+// Robot Cardinal Directions
 #define ROBOT_FRONT 0
 #define ROBOT_LEFT 1
 #define ROBOT_REAR 2
@@ -163,6 +164,7 @@ int light_seeking;
 int Kp = 100;
 int i = 0;
 int hold = 0;
+int ir_seeking;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -184,7 +186,8 @@ int check_light(void);
 int light_direction(void);
 void turn_until_light(int dir, int compare_value);
 void forward_until_light(int compare_value);
-void IR_Locate(void);
+void check_soil(void);
+void IR_LOCATE(void);
 //void Read_Light_Sensors(void);
 
 /* USER CODE END PFP */
@@ -269,6 +272,7 @@ int main(void)
   ADC1->CR |= ADC_CR_ADEN;
   ADC1->CR |= ADC_CR_ADSTART;
   light_seeking = 1;
+  ir_seeking = 1;
 
   while (1)
   {
@@ -281,6 +285,11 @@ int main(void)
 			turn_until_light(dir==ROBOT_LEFT?TURN_LEFT:TURN_RIGHT, 0);
 		} else {
 			forward_until_light(-1);
+		}
+	}
+	if(ir_seeking){
+		while(1){
+			IR_LOCATE();
 		}
 	}
 	i = TIM22->CNT;
@@ -1073,6 +1082,48 @@ void RTC_Init(void){
 
 void Print_RENC_Reading(void){
 }
+
+void check_soil(void){
+	GPIOC->ODR |= (1<<5);
+	printf("soil moisture level %d\r\n", ADC_Values[4]);
+	GPIOC->ODR &= ~(1<<5);
+}
+
+void IR_LOCATE(void){
+	int pins = ((GPIOA->IDR>>10) & 7);
+	if(pins == 0){
+		printf("0\r\n");
+	}
+	if(pins == 1){
+		printf("1\r\n");
+		move_robot(0, 40000);
+	}
+	if(pins == 2){
+		printf("2\r\n");
+		move_robot(1, 40000);
+	}
+	if(pins == 3){
+		printf("3\r\n");
+		move_robot(2, 40000);
+	}
+	if(pins == 4){
+		printf("3\r\n");
+		move_robot(2, 40000);
+	}
+	if(pins == 5){
+		printf("4\r\n");
+		move_robot(0, 20000);
+	}
+	if(pins == 6){
+		printf("5\r\n");
+		move_robot(1, 20000);
+	}
+	if(pins == 7){
+		printf("6\r\n");
+		move_robot(2, 40000);
+	}
+}
+
 /* USER CODE END 4 */
 
 /**
