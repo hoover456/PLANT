@@ -66,11 +66,35 @@ void TIM22_Interrupt_Handler(void);
 void Read_Light_Sensors(void);
 void DMA1_Channel1_Handler(void);
 void ADC_ConvCpltCallback(void);
+void move_robot(short dir, int speed);
+
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define Front_Light_Sensor_Pin GPIO_PIN_0
+#define Front_Light_Sensor_GPIO_Port GPIOC
+#define Right_Light_Sensor_Pin GPIO_PIN_1
+#define Right_Light_Sensor_GPIO_Port GPIOC
+#define Rear_Light_Sensor_Pin GPIO_PIN_2
+#define Rear_Light_Sensor_GPIO_Port GPIOC
+#define Left_Light_Sensor_Pin GPIO_PIN_3
+#define Left_Light_Sensor_GPIO_Port GPIOC
+#define Right_Motor_PWM_1_Pin GPIO_PIN_6
+#define Right_Motor_PWM_1_GPIO_Port GPIOA
+#define Right_Motor_PWM_2_Pin GPIO_PIN_7
+#define Right_Motor_PWM_2_GPIO_Port GPIOA
+#define Soil_Moisture_Sensor_Pin GPIO_PIN_4
+#define Soil_Moisture_Sensor_GPIO_Port GPIOC
 #define soil_meter_power_Pin GPIO_PIN_5
 #define soil_meter_power_GPIO_Port GPIOC
+#define Left_Motor_PWM_1_Pin GPIO_PIN_0
+#define Left_Motor_PWM_1_GPIO_Port GPIOB
+#define Left_Motor_PWM_2_Pin GPIO_PIN_1
+#define Left_Motor_PWM_2_GPIO_Port GPIOB
+#define Rotary_Encoder_Pin_1_Pin GPIO_PIN_6
+#define Rotary_Encoder_Pin_1_GPIO_Port GPIOC
+#define Rotary_Encoder_Pin_2_Pin GPIO_PIN_7
+#define Rotary_Encoder_Pin_2_GPIO_Port GPIOC
 #define IR_CLIFF_SENSOR_Pin GPIO_PIN_9
 #define IR_CLIFF_SENSOR_GPIO_Port GPIOA
 #define IR_CLIFF_SENSOR_EXTI_IRQn EXTI4_15_IRQn
@@ -80,6 +104,9 @@ void ADC_ConvCpltCallback(void);
 #define IR_LEFT_GPIO_Port GPIOA
 #define IR_RIGHT_Pin GPIO_PIN_12
 #define IR_RIGHT_GPIO_Port GPIOA
+#define Rotary_Encoder_PushButton_Pin GPIO_PIN_6
+#define Rotary_Encoder_PushButton_GPIO_Port GPIOB
+#define Rotary_Encoder_PushButton_EXTI_IRQn EXTI4_15_IRQn
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */

@@ -184,7 +184,6 @@ int check_light(void);
 int light_direction(void);
 void turn_until_light(int dir, int compare_value);
 void forward_until_light(int compare_value);
-void move_robot(short dir, int speed);
 void IR_Locate(void);
 //void Read_Light_Sensors(void);
 
@@ -804,8 +803,8 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : PB6 */
-  GPIO_InitStruct.Pin = GPIO_PIN_6;
+  /*Configure GPIO pin : Rotary_Encoder_PushButton_Pin */
+  GPIO_InitStruct.Pin = Rotary_Encoder_PushButton_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
@@ -1057,6 +1056,29 @@ int light_direction(void){
 	}
 	return maxIndex;
 }
+
+void RTC_Init(void){
+	LCD_RTC_Clock_Enable();
+	RCC->CSR |= RCC_CSR_RTCEN;
+
+	RTC->WPR = 0xCA;
+	RTC->WPR = 0x53;
+	RTC->ISR |= RTC_ISR_INIT;
+	while((RTC->ISR & RTC_ISR_INITF) == 0);
+	RTC->CR &= ~RTC_CR_FMT;
+	RTC->PRER |= (2<<7 - 1) << 16;
+	RTC->PRER |= (2<<8 - 1);
+
+	//call phills function to get time then write here.
+
+	RTC->TR = 0<<22 | 1<<20 | 1<<16 | 3<<12| 2<<8; //time
+	RTC->DR = 1<<20 | 6<<16 | 0<<12 | 5<<8 | 2<<4 | 7; //date, not used but initialized for reasons.
+
+	RTC->ISR &= ~RTC_ISR_INIT;
+	RTC->WPR = 0xFF;
+}
+
+
 /* USER CODE END 4 */
 
 /**
