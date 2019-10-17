@@ -184,7 +184,6 @@ int check_light(void);
 int light_direction(void);
 void turn_until_light(int dir, int compare_value);
 void forward_until_light(int compare_value);
-void move_robot(short dir, int speed);
 void IR_Locate(void);
 //void Read_Light_Sensors(void);
 
@@ -372,9 +371,9 @@ static void MX_ADC_Init(void)
   */
   hadc.Instance = ADC1;
   hadc.Init.OversamplingMode = DISABLE;
-  hadc.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV4;
+  hadc.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV1;
   hadc.Init.Resolution = ADC_RESOLUTION_12B;
-  hadc.Init.SamplingTime = ADC_SAMPLETIME_160CYCLES_5;
+  hadc.Init.SamplingTime = ADC_SAMPLETIME_1CYCLE_5;
   hadc.Init.ScanConvMode = ADC_SCAN_DIRECTION_FORWARD;
   hadc.Init.DataAlign = ADC_DATAALIGN_RIGHT;
   hadc.Init.ContinuousConvMode = ENABLE;
@@ -761,7 +760,7 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, DMUX1_Pin|GPIO_PIN_5|DMUX2_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4|GPIO_PIN_5|GPIO_PIN_8, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(soil_meter_power_GPIO_Port, soil_meter_power_Pin, GPIO_PIN_SET);
@@ -778,15 +777,13 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : DMUX1_Pin PA5 DMUX2_Pin */
-  GPIO_InitStruct.Pin = DMUX1_Pin|GPIO_PIN_5|DMUX2_Pin;
+  /*Configure GPIO pins : PA4 PA5 PA8 */
+  GPIO_InitStruct.Pin = GPIO_PIN_4|GPIO_PIN_5|GPIO_PIN_8;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : Rotary_Encoder_PushButton_Pin */
-  GPIO_InitStruct.Pin = Rotary_Encoder_PushButton_Pin;
   /*Configure GPIO pin : soil_meter_power_Pin */
   GPIO_InitStruct.Pin = soil_meter_power_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
@@ -806,8 +803,8 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : PB6 */
-  GPIO_InitStruct.Pin = GPIO_PIN_6;
+  /*Configure GPIO pin : Rotary_Encoder_PushButton_Pin */
+  GPIO_InitStruct.Pin = Rotary_Encoder_PushButton_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(Rotary_Encoder_PushButton_GPIO_Port, &GPIO_InitStruct);

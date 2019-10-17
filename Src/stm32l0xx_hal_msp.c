@@ -104,8 +104,8 @@ void HAL_ADC_MspInit(ADC_HandleTypeDef* hadc)
     PC3     ------> ADC_IN13
     PC4     ------> ADC_IN14 
     */
-    GPIO_InitStruct.Pin = GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3 
-                          |GPIO_PIN_4;
+    GPIO_InitStruct.Pin = Front_Light_Sensor_Pin|Right_Light_Sensor_Pin|Rear_Light_Sensor_Pin|Left_Light_Sensor_Pin 
+                          |Soil_Moisture_Sensor_Pin;
     GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
@@ -143,8 +143,8 @@ void HAL_ADC_MspDeInit(ADC_HandleTypeDef* hadc)
     PC3     ------> ADC_IN13
     PC4     ------> ADC_IN14 
     */
-    HAL_GPIO_DeInit(GPIOC, GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3 
-                          |GPIO_PIN_4);
+    HAL_GPIO_DeInit(GPIOC, Front_Light_Sensor_Pin|Right_Light_Sensor_Pin|Rear_Light_Sensor_Pin|Left_Light_Sensor_Pin 
+                          |Soil_Moisture_Sensor_Pin);
 
     /* ADC1 interrupt DeInit */
     HAL_NVIC_DisableIRQ(ADC1_COMP_IRQn);
@@ -260,7 +260,7 @@ void HAL_TIM_Encoder_MspInit(TIM_HandleTypeDef* htim_encoder)
     PC6     ------> TIM22_CH1
     PC7     ------> TIM22_CH2 
     */
-    GPIO_InitStruct.Pin = Rotary_Encoder_1_Pin|Rotary_Encoder_2_Pin;
+    GPIO_InitStruct.Pin = Rotary_Encoder_Pin_1_Pin|Rotary_Encoder_Pin_2_Pin;
     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
@@ -314,14 +314,14 @@ void HAL_TIM_MspPostInit(TIM_HandleTypeDef* htim)
     PB0     ------> TIM3_CH3
     PB1     ------> TIM3_CH4 
     */
-    GPIO_InitStruct.Pin = GPIO_PIN_6|GPIO_PIN_7;
+    GPIO_InitStruct.Pin = Right_Motor_PWM_1_Pin|Right_Motor_PWM_2_Pin;
     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
     GPIO_InitStruct.Alternate = GPIO_AF2_TIM3;
     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-    GPIO_InitStruct.Pin = GPIO_PIN_0|GPIO_PIN_1;
+    GPIO_InitStruct.Pin = Left_Motor_PWM_1_Pin|Left_Motor_PWM_2_Pin;
     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
@@ -437,7 +437,7 @@ void HAL_TIM_Encoder_MspDeInit(TIM_HandleTypeDef* htim_encoder)
     PC6     ------> TIM22_CH1
     PC7     ------> TIM22_CH2 
     */
-    HAL_GPIO_DeInit(GPIOC, Rotary_Encoder_1_Pin|Rotary_Encoder_2_Pin);
+    HAL_GPIO_DeInit(GPIOC, Rotary_Encoder_Pin_1_Pin|Rotary_Encoder_Pin_2_Pin);
 
     /* TIM22 interrupt DeInit */
     HAL_NVIC_DisableIRQ(TIM22_IRQn);
