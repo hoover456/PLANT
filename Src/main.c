@@ -23,10 +23,10 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#define ARM_MATH_CM0PLUS
+//#define ARM_MATH_CM0PLUS
 //#define ARM_MATH_CM0_FAMILY
 //#define __FPU_PRESENT 1
-#include "arm_math.h"
+//#include "arm_math.h"
 #include "stdio.h"
 #include "math.h"
 /* USER CODE END Includes */
@@ -41,7 +41,18 @@
 #define WHEEL_DIAMETER 65.0 // Wheel Diameter in mm
 #define WHEEL_CIRCUMFRENCE 204 // Wheel Circumfrence in mm
 #define ENCODER_PPR 800 // 800 pulses per one wheel revolution.
-#define MOTOR_MAX_SPEED 65535
+#define MOTOR_MAX_SPEED 65535 // uint16_t max
+// Directional Defines
+#define TURN_LEFT 0
+#define TURN_RIGHT 1
+#define FORWARD 2
+#define REVERSE 3
+#define ROBOT_FRONT 0
+#define ROBOT_LEFT 1
+#define ROBOT_REAR 2
+#define ROBOT_RIGHT 3
+
+// printf redirect
 #ifdef __GNUC__
 /* With GCC/RAISONANCE, small printf (option LD Linker->Libraries->Small printf
  set to 'Yes') calls __io_putchar() */
@@ -58,6 +69,7 @@ void myDMAInit(uint32_t* buffer, uint32_t length);
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
 
+// Enable Left sensor
 void init_Left(){
 	GPIOA->ODR |= GPIO_PIN_4;
 }
@@ -138,8 +150,8 @@ int r_enc_setpoint = 0;
 int r_enc_currentPos = 0;
 int l_enc_setpoint = 0;
 int l_enc_currentPos = 0;
-arm_pid_instance_f32 R_PID;
-arm_pid_instance_f32 L_PID;
+//arm_pid_instance_f32 R_PID;
+//arm_pid_instance_f32 L_PID;
 uint32_t nLoop=0;
 int sense1 = 0;
 int sense2 = 0;
@@ -147,6 +159,8 @@ int sense3 = 0;
 int sense4 = 0;
 int ten_hz_counter=0;
 uint16_t ADC_Values[5], buffer[5];
+int light_seeking;
+int Kp = 100;
 //int i = 0;
 //int hold = 0;
 /* USER CODE END PV */
@@ -163,9 +177,14 @@ static void MX_TIM3_Init(void);
 static void MX_ADC_Init(void);
 /* USER CODE BEGIN PFP */
 void Left_Motor_PWM_Gen(int speed, int brake);
-void Left_Motor_Controller(void);
-void Right_Motor_Controller(void);
+void Left_Motor_Position_Controller(void);
+void Right_Motor_Position_Controller(void);
 void Right_Motor_PWM_Gen(int speed, int brake);
+int check_light(void);
+int light_direction(void);
+void turn_until_light(int dir, int compare_value);
+void forward_until_light(int compare_value);
+void move_robot(short dir, int speed);
 void IR_Locate(void);
 //void Read_Light_Sensors(void);
 
@@ -192,14 +211,14 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-  R_PID.Kp = 500;
-  R_PID.Kd = 0;
-  R_PID.Ki = 0;
-  arm_pid_init_f32(&R_PID, 1);
-  L_PID.Kp = 500;
-  L_PID.Kd = 0;
-  L_PID.Ki = 0;
-  arm_pid_init_f32(&L_PID, 1);
+//  R_PID.Kp = 500;
+//  R_PID.Kd = 0;
+//  R_PID.Ki = 0;
+//  arm_pid_init_f32(&R_PID, 1);
+//  L_PID.Kp = 500;
+//  L_PID.Kd = 0;
+//  L_PID.Ki = 0;
+//  arm_pid_init_f32(&L_PID, 1);
   /* USER CODE END Init */
 
   /* Configure the system clock */
@@ -219,11 +238,11 @@ int main(void)
   MX_TIM3_Init();
   MX_ADC_Init();
   /* USER CODE BEGIN 2 */
-  r_enc_setpoint = -1600;
-//  r_dir = 1;
-  l_enc_setpoint = 1600;
-//  l_dir = 1;
+  r_enc_setpoint = 0;
+  l_enc_setpoint = 0;
+
   printf("Hello...\r\n");
+  HAL_ADCEx_Calibration_Start(&hadc, ADC_SINGLE_ENDED);
   HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
   HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);
   HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_3);
@@ -243,6 +262,8 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   int i = 0;
   int hold = 0;
+  int dir = 0;
+  // ADC DMA Config
   myDMAInit((uint32_t*) buffer, 5);
   ADC1->CFGR1 |= ADC_CFGR1_DMACFG;
   ADC1->CFGR1 |= ADC_CFGR1_DMAEN;
@@ -250,23 +271,31 @@ int main(void)
   ADC1->IER |= ADC_IER_EOSIE;
   ADC1->CR |= ADC_CR_ADEN;
   ADC1->CR |= ADC_CR_ADSTART;
-
-
-//  while(1){
-//	 printf("%u\r\n", ADC_Values[4]);
-//  }
-
+  light_seeking = 1;
 
   while (1)
   {
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+//	printf("Test\r\n");
+	if(light_seeking){
+		dir = check_light();
+//		printf("dir = %d\r\n", dir);
+		if(dir != -1 && dir != ROBOT_FRONT){
+//			printf("Turning to face light\r\n");
+//			void (*light_direction)(void) = &light_direction;
+			turn_until_light(dir==ROBOT_LEFT?TURN_LEFT:TURN_RIGHT, 0);
+		} else {
+//			printf("Moving to Light\r\n");
+			forward_until_light(-1);
+		}
+	}
 	i = TIM22->CNT;
 	HAL_Delay(200);
 //	printf("i = %d\r\n", i);
 	if (hold > i){
-	printf("turn left\r\n");
+		printf("turn left\r\n");
 	  hold = i;
 	}
 	else if (hold < i) {
@@ -343,9 +372,9 @@ static void MX_ADC_Init(void)
   */
   hadc.Instance = ADC1;
   hadc.Init.OversamplingMode = DISABLE;
-  hadc.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV1;
+  hadc.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV4;
   hadc.Init.Resolution = ADC_RESOLUTION_12B;
-  hadc.Init.SamplingTime = ADC_SAMPLETIME_1CYCLE_5;
+  hadc.Init.SamplingTime = ADC_SAMPLETIME_160CYCLES_5;
   hadc.Init.ScanConvMode = ADC_SCAN_DIRECTION_FORWARD;
   hadc.Init.DataAlign = ADC_DATAALIGN_RIGHT;
   hadc.Init.ContinuousConvMode = ENABLE;
@@ -732,7 +761,7 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4|GPIO_PIN_5|GPIO_PIN_8, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, DMUX1_Pin|GPIO_PIN_5|DMUX2_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(soil_meter_power_GPIO_Port, soil_meter_power_Pin, GPIO_PIN_SET);
@@ -749,13 +778,15 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : PA4 PA5 PA8 */
-  GPIO_InitStruct.Pin = GPIO_PIN_4|GPIO_PIN_5|GPIO_PIN_8;
+  /*Configure GPIO pins : DMUX1_Pin PA5 DMUX2_Pin */
+  GPIO_InitStruct.Pin = DMUX1_Pin|GPIO_PIN_5|DMUX2_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
+  /*Configure GPIO pin : Rotary_Encoder_PushButton_Pin */
+  GPIO_InitStruct.Pin = Rotary_Encoder_PushButton_Pin;
   /*Configure GPIO pin : soil_meter_power_Pin */
   GPIO_InitStruct.Pin = soil_meter_power_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
@@ -779,7 +810,7 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pin = GPIO_PIN_6;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+  HAL_GPIO_Init(Rotary_Encoder_PushButton_GPIO_Port, &GPIO_InitStruct);
 
   /* EXTI interrupt init*/
   HAL_NVIC_SetPriority(EXTI0_1_IRQn, 0, 0);
@@ -819,62 +850,64 @@ void Left_Encoder_Interrupt_Handler(void){
 	else
 		l_enc_currentPos--;
 }
-//
-//void Right_Motor_PWM_Gen(int speed, int brake){
-//	// if brake is true, brake and ignore speed setting
-//	if (brake){
-//		__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, MOTOR_MAX_SPEED);
-//		__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_2, MOTOR_MAX_SPEED);
-//	} else {
-//		// Negative speed corresponds to opposite direction
-//		if(speed < 0){
-//			r_dir = 0;
-//			speed = -speed;
-//		} else
-//			r_dir = 1;
-//		// can't go faster than the PWM generator can handle (100% duty cycle)
-//		if(speed > MOTOR_MAX_SPEED)
-//			speed = MOTOR_MAX_SPEED;
-//
-//		// r_dir == 1 corresponds to forward turn (PWM1 on, PWM2 off)
-//		if(r_dir==1){
-//			__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, speed);
-//			__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_2, 0);
-//		} else {
-//			__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, 0);
-//			__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_2, speed);
-//		}
-//	}
-//}
-//
-//void Left_Motor_PWM_Gen(int speed, int brake){
-//	// if brake is true, brake and ignore speed setting
-//	if (brake){
-//		__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_3, MOTOR_MAX_SPEED);
-//		__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_4, MOTOR_MAX_SPEED);
-//	} else {
-//		// Negative speed corresponds to opposite direction
-//		if(speed < 0){
-//			l_dir = 0;
-//			speed = -speed;
-//		} else
-//			l_dir = 1;
-//		// can't go faster than the PWM generator can handle (100% duty cycle)
-//		if(speed > MOTOR_MAX_SPEED)
-//			speed = MOTOR_MAX_SPEED;
-//
-//		// l_dir == 1 corresponds to forward turn (PWM1 on, PWM2 off)
-//		if(l_dir==1){
-//			__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_3, speed);
-//			__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_4, 0);
-//		} else {
-//			__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_3, 0);
-//			__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_4, speed);
-//		}
-//	}
-//}
 
-void Right_Motor_Controller(void){
+
+
+void Right_Motor_PWM_Gen(int speed, int brake){
+	// if brake is true, brake and ignore speed setting
+	if (brake){
+		__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, MOTOR_MAX_SPEED);
+		__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_2, MOTOR_MAX_SPEED);
+	} else {
+		// Negative speed corresponds to opposite direction
+		if(speed < 0){
+			r_dir = 0;
+			speed = -speed;
+		} else
+			r_dir = 1;
+		// can't go faster than the PWM generator can handle (100% duty cycle)
+		if(speed > MOTOR_MAX_SPEED)
+			speed = MOTOR_MAX_SPEED;
+
+		// r_dir == 1 corresponds to forward turn (PWM1 on, PWM2 off)
+		if(r_dir==1){
+			__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, speed);
+			__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_2, 0);
+		} else {
+			__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, 0);
+			__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_2, speed);
+		}
+	}
+}
+
+void Left_Motor_PWM_Gen(int speed, int brake){
+	// if brake is true, brake and ignore speed setting
+	if (brake){
+		__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_3, MOTOR_MAX_SPEED);
+		__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_4, MOTOR_MAX_SPEED);
+	} else {
+		// Negative speed corresponds to opposite direction
+		if(speed < 0){
+			l_dir = 0;
+			speed = -speed;
+		} else
+			l_dir = 1;
+		// can't go faster than the PWM generator can handle (100% duty cycle)
+		if(speed > MOTOR_MAX_SPEED)
+			speed = MOTOR_MAX_SPEED;
+
+		// l_dir == 1 corresponds to forward turn (PWM1 on, PWM2 off)
+		if(l_dir==1){
+			__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_3, speed);
+			__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_4, 0);
+		} else {
+			__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_3, 0);
+			__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_4, speed);
+		}
+	}
+}
+
+void Right_Motor_Position_Controller(void){
 //	if(r_enc_setpoint < 0){
 //		r_enc_setpoint = -r_enc_setpoint;
 //		r_dir = 0;
@@ -882,14 +915,17 @@ void Right_Motor_Controller(void){
 //		r_dir = 1;
 //	}
   	int r_pid_error = r_enc_setpoint - r_enc_currentPos; // Compute error
-  	int duty = (int)arm_pid_f32(&R_PID, r_pid_error); // Compute PID controller output
+//  	int duty = (int)arm_pid_f32(&R_PID, r_pid_error); // Compute PID controller output
   	if(fabs(r_pid_error)  < 5)
   		Right_Motor_PWM_Gen(0, 1); // Switch to brake mode if within 0.5% off setpoint
-  	else
+  	else{
+  		int duty = Kp * r_pid_error;
   		Right_Motor_PWM_Gen(duty, 0);
+  	}
+
 }
 
-void Left_Motor_Controller(void){
+void Left_Motor_Position_Controller(void){
 //	if(l_enc_setpoint < 0){
 //			l_enc_setpoint = -l_enc_setpoint;
 //			l_dir = 0;
@@ -897,21 +933,45 @@ void Left_Motor_Controller(void){
 //			l_dir = 1;
 //	}
   	int l_pid_error = l_enc_setpoint - l_enc_currentPos; // Compute error
-  	int duty = (int)arm_pid_f32(&L_PID, l_pid_error); // Compute PID controller output
+//  	int duty = (int)arm_pid_f32(&L_PID, l_pid_error); // Compute PID controller output
   	if(fabs(l_pid_error)  < 5)
   		Left_Motor_PWM_Gen(0, 1); // Switch to brake mode if within 0.5% off setpoint
-  	else
+  	else{
+  		int duty = Kp * l_pid_error;
   		Left_Motor_PWM_Gen(duty, 0);
+  	}
+
+}
+
+void move_robot(short dir, int speed){
+	if(speed <= 0){
+		Right_Motor_PWM_Gen(0,1);
+		Left_Motor_PWM_Gen(0,1);
+	} else {
+		if(dir == TURN_LEFT){
+			Right_Motor_PWM_Gen(speed,0);
+			Left_Motor_PWM_Gen(-speed,0);
+	} else if(dir == TURN_RIGHT){
+			Right_Motor_PWM_Gen(-speed,0);
+			Left_Motor_PWM_Gen(speed,0);
+	} else if(dir == FORWARD){
+		Right_Motor_PWM_Gen(speed,0);
+		Left_Motor_PWM_Gen(speed,0);
+	} else if(dir == REVERSE){
+		Right_Motor_PWM_Gen(-speed,0);
+		Left_Motor_PWM_Gen(-speed,0);
+	}
+	}
 }
 
 void TEN_KHZ_TIM_Interrupt_Handler(void){
-	//Right_Motor_Controller();
-	//Left_Motor_Controller();
-	ten_hz_counter++;
-	if(ten_hz_counter >= 1000){
-		Read_Light_Sensors();
-		ten_hz_counter = 0;
-	}
+//	ten_hz_counter++;
+//	if(ten_hz_counter >= 10){
+////		Right_Motor_Position_Controller();
+////		Left_Motor_Position_Controller();
+////		Read_Light_Sensors();
+//		ten_hz_counter = 0;
+//	}
 }
 
 void TIM22_Interrupt_Handler(void){
@@ -919,7 +979,8 @@ void TIM22_Interrupt_Handler(void){
 
 }
 // Debugging function - prints the right motor encoder reading when the blue button is pushed
-void Print_Encoder_Reading(void){
+void Print_Encoder_Reading(void)
+{
 	printf("Rotations: %d          \r", r_enc_currentPos);
 	fflush(stdout);
 //	r_enc_currentPos = 0;
@@ -930,17 +991,73 @@ void ADC_ConvCpltCallback(void)
 	for(int i = 0; i < 5; i++){
 		ADC_Values[i] = buffer[i];
 	}
-	//printf("%u\r\n", ADC_Values[4]);
-	//printf("%u, %u, %u, %u\r\n",ADC_Values[0], ADC_Values[1], ADC_Values[2], ADC_Values[3]);
-//	HAL_ADC_Start_DMA(hadc, buffer, 2);
+//	printf("%u, %u, %u, %u\r\n", ADC_Values[0], ADC_Values[1],ADC_Values[2], ADC_Values[3]);
 }
-void HAL_ADC_ErrorCallback(ADC_HandleTypeDef* hadc){
+
+void HAL_ADC_ErrorCallback(ADC_HandleTypeDef* hadc)
+{
 	printf("ERROR\r\n");
 }
 
-void Read_Light_Sensors(void){
-//	printf("%d, %d, %d, %d", ADC_Values[0], ADC_Values[1], ADC_Values[2], ADC_Values[3]);
+/**
+ *  @brief This function computes the optimal light direction if 1 direction is 5% brighter than the other 3, otherwise returns -1
+ */
+int check_light(void){
+//	return 0;
+	int front = (int)ADC_Values[0];
+	int left = (int)ADC_Values[1];
+	int rear = (int)ADC_Values[2];
+	int right = (int)ADC_Values[3];
 
+	int sum = front+left+rear+right;
+	int avg =  (float)sum / 4;
+
+	int max = fmax(fmax(front, left), fmax(rear, right));
+
+	float deviation = (float) (max-avg) / avg;
+	if(deviation < 0.2)
+		return -1;
+	return light_direction();
+}
+
+/**
+ * @brief Turn the robot until eval_fun returns a value equal to compare_value
+ * @param dir: direction to turn, 0 = LEFT, 1 = RIGHT
+ */
+void turn_until_light(int dir, int compare_value){
+//	move_robot(0,0);
+//	int setpoint = 800;
+	if(dir){
+		move_robot(TURN_LEFT, 30000);
+	} else {
+		move_robot(TURN_RIGHT, 30000);
+	}
+}
+
+/**
+ * @brief This function moves the robot forward until eval_fun returns a value equal to compare_value
+ */
+void forward_until_light(int compare_value){
+//	r_enc_currentPos = 0;
+//	l_enc_currentPos = 0;
+//	int setpoint = 800;
+	if(check_light() == compare_value){
+		move_robot(0, 0);
+	} else {
+		move_robot(FORWARD, 30000);
+	}
+}
+
+int light_direction(void){
+	uint16_t max = 0;
+	int maxIndex = 0;
+	for(int i = 0; i <= 3; i++){
+		if(ADC_Values[i] > max){
+			max = ADC_Values[i];
+			maxIndex = i;
+		}
+	}
+	return maxIndex;
 }
 /* USER CODE END 4 */
 
@@ -951,6 +1068,7 @@ void Read_Light_Sensors(void){
 void Error_Handler(void)
 {
   /* USER CODE BEGIN Error_Handler_Debug */
+	printf("ERRORRRRRR\r\n");
   /* User can add his own implementation to report the HAL error return state */
 
   /* USER CODE END Error_Handler_Debug */
