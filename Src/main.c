@@ -942,6 +942,29 @@ void Read_Light_Sensors(void){
 //	printf("%d, %d, %d, %d", ADC_Values[0], ADC_Values[1], ADC_Values[2], ADC_Values[3]);
 
 }
+
+void RTC_Init(void){
+	LCD_RTC_Clock_Enable();
+	RCC->BDCR |= RCC_BDCR_RTCEN;
+
+	RTC->WPR = 0xCA;
+	RTC->WPR = 0x53;
+	RTC->ISR |= RTC_ISR_INIT;
+	while((RTC->ISR & RTC_ISR_INITF) == 0);
+	RTC->CR &= ~RTC_CR_FMT;
+	RTC->PRER |= (2<<7 - 1) << 16;
+	RTC->PRER |= (2<<8 - 1);
+
+	//call phills function to get time then write here.
+
+	RTC->TR = 0<<22 | 1<<20 | 1<<16 | 3<<12| 2<<8; //time
+	RTC->DR = 1<<20 | 6<<16 | 0<<12 | 5<<8 | 2<<4 | 7; //date, not used but initialized for reasons.
+
+	RTC->ISR &= ~RTC_ISR_INIT;
+	RTC->WPR = 0xFF;
+}
+
+
 /* USER CODE END 4 */
 
 /**
