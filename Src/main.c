@@ -1062,7 +1062,7 @@ int light_direction(void){
 
 void RTC_Init(void){
 	LCD_RTC_Clock_Enable();
-	RCC->BDCR |= RCC_BDCR_RTCEN;
+	RCC->CSR |= RCC_CSR_RTCEN;
 
 	RTC->WPR = 0xCA;
 	RTC->WPR = 0x53;
