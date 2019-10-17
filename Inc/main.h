@@ -69,6 +69,17 @@ void ADC_ConvCpltCallback(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define soil_meter_power_Pin GPIO_PIN_5
+#define soil_meter_power_GPIO_Port GPIOC
+#define IR_CLIFF_SENSOR_Pin GPIO_PIN_9
+#define IR_CLIFF_SENSOR_GPIO_Port GPIOA
+#define IR_CLIFF_SENSOR_EXTI_IRQn EXTI4_15_IRQn
+#define IR_FORWARD_Pin GPIO_PIN_10
+#define IR_FORWARD_GPIO_Port GPIOA
+#define IR_LEFT_Pin GPIO_PIN_11
+#define IR_LEFT_GPIO_Port GPIOA
+#define IR_RIGHT_Pin GPIO_PIN_12
+#define IR_RIGHT_GPIO_Port GPIOA
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */

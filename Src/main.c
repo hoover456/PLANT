@@ -146,7 +146,7 @@ int sense2 = 0;
 int sense3 = 0;
 int sense4 = 0;
 int ten_hz_counter=0;
-uint16_t ADC_Values[4], buffer[4];
+uint16_t ADC_Values[5], buffer[5];
 //int i = 0;
 //int hold = 0;
 /* USER CODE END PV */
@@ -166,6 +166,7 @@ void Left_Motor_PWM_Gen(int speed, int brake);
 void Left_Motor_Controller(void);
 void Right_Motor_Controller(void);
 void Right_Motor_PWM_Gen(int speed, int brake);
+void IR_Locate(void);
 //void Read_Light_Sensors(void);
 
 /* USER CODE END PFP */
@@ -234,6 +235,7 @@ int main(void)
   HAL_TIM_Base_Start_IT(&htim21);
   HAL_TIM_Encoder_Start(&htim22,TIM_CHANNEL_ALL);
   __HAL_TIM_SET_COMPARE(&htim21, TIM_CHANNEL_1, 0);
+  IR_LOCATE();
 
   /* USER CODE END 2 */
 
@@ -241,13 +243,19 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   int i = 0;
   int hold = 0;
-  myDMAInit((uint32_t*) buffer, 4);
+  myDMAInit((uint32_t*) buffer, 5);
   ADC1->CFGR1 |= ADC_CFGR1_DMACFG;
   ADC1->CFGR1 |= ADC_CFGR1_DMAEN;
   ADC1->CFGR1 |= ADC_CFGR1_CONT;
   ADC1->IER |= ADC_IER_EOSIE;
   ADC1->CR |= ADC_CR_ADEN;
   ADC1->CR |= ADC_CR_ADSTART;
+
+
+//  while(1){
+//	 printf("%u\r\n", ADC_Values[4]);
+//  }
+
 
   while (1)
   {
@@ -379,6 +387,13 @@ static void MX_ADC_Init(void)
   /** Configure for the selected ADC regular channel to be converted. 
   */
   sConfig.Channel = ADC_CHANNEL_13;
+  if (HAL_ADC_ConfigChannel(&hadc, &sConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /** Configure for the selected ADC regular channel to be converted. 
+  */
+  sConfig.Channel = ADC_CHANNEL_14;
   if (HAL_ADC_ConfigChannel(&hadc, &sConfig) != HAL_OK)
   {
     Error_Handler();
@@ -719,8 +734,11 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4|GPIO_PIN_5|GPIO_PIN_8, GPIO_PIN_RESET);
 
-  /*Configure GPIO pin : PC13 */
-  GPIO_InitStruct.Pin = GPIO_PIN_13;
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(soil_meter_power_GPIO_Port, soil_meter_power_Pin, GPIO_PIN_SET);
+
+  /*Configure GPIO pins : PC13 PC11 PC12 */
+  GPIO_InitStruct.Pin = GPIO_PIN_13|GPIO_PIN_11|GPIO_PIN_12;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
@@ -738,8 +756,27 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : PB11 PB12 PB6 */
-  GPIO_InitStruct.Pin = GPIO_PIN_11|GPIO_PIN_12|GPIO_PIN_6;
+  /*Configure GPIO pin : soil_meter_power_Pin */
+  GPIO_InitStruct.Pin = soil_meter_power_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(soil_meter_power_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : IR_CLIFF_SENSOR_Pin */
+  GPIO_InitStruct.Pin = IR_CLIFF_SENSOR_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(IR_CLIFF_SENSOR_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : IR_FORWARD_Pin IR_LEFT_Pin IR_RIGHT_Pin */
+  GPIO_InitStruct.Pin = IR_FORWARD_Pin|IR_LEFT_Pin|IR_RIGHT_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : PB6 */
+  GPIO_InitStruct.Pin = GPIO_PIN_6;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
@@ -890,10 +927,11 @@ void Print_Encoder_Reading(void){
 
 void ADC_ConvCpltCallback(void)
 {
-	for(int i = 0; i < 2; i++){
+	for(int i = 0; i < 5; i++){
 		ADC_Values[i] = buffer[i];
 	}
-	printf("%u, %u, %u, %u\r\n",ADC_Values[0], ADC_Values[1], ADC_Values[2], ADC_Values[3]);
+	//printf("%u\r\n", ADC_Values[4]);
+	//printf("%u, %u, %u, %u\r\n",ADC_Values[0], ADC_Values[1], ADC_Values[2], ADC_Values[3]);
 //	HAL_ADC_Start_DMA(hadc, buffer, 2);
 }
 void HAL_ADC_ErrorCallback(ADC_HandleTypeDef* hadc){

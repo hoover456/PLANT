@@ -59,6 +59,42 @@ int move = 0;
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+
+void IR_LOCATE(void){
+	while(1){
+	int pins = ((GPIOA->IDR>>10) & 7);
+
+	if(pins == 0){
+		printf("0\r\n");
+	}
+	if(pins == 1){
+		printf("1\r\n");
+	}
+	if(pins == 2){
+		printf("2\r\n");
+	}
+	if(pins == 3){
+		printf("3\r\n");
+	}
+	if(pins == 3){
+		printf("3\r\n");
+	}
+	if(pins == 4){
+		printf("4\r\n");
+	}
+	if(pins == 5){
+		printf("5\r\n");
+	}
+	if(pins == 6){
+		printf("6\r\n");
+	}
+	if(pins == 7){
+		printf("7\r\n");
+	}
+	}
+}
+
+
 void checkTurn(void){
 	if ((move == 1) && (count > 600)){
 		printf("Keep turning left\r\n");
@@ -234,6 +270,13 @@ void EXTI4_15_IRQHandler(void)
 	if (__HAL_GPIO_EXTI_GET_FLAG(GPIO_PIN_6)){
 		printf("Push Button\r\n");
 	}
+
+	//PIN 9
+	if(__HAL_GPIO_EXTI_GET_FLAG(GPIO_PIN_9)){
+		printf("FUCKING STOP\r\n");
+		//do something here to stop motors
+	}
+
 	// PIN 11
 	if(__HAL_GPIO_EXTI_GET_FLAG(GPIO_PIN_11)){
 		Left_Encoder_Interrupt_Handler();
@@ -251,6 +294,7 @@ void EXTI4_15_IRQHandler(void)
 	}
   /* USER CODE END EXTI4_15_IRQn 0 */
   HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_6);
+  HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_9);
   HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_11);
   HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_12);
   HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_13);
