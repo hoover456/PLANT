@@ -369,7 +369,7 @@ void TIM21_IRQHandler(void)
 void TIM22_IRQHandler(void)
 {
   /* USER CODE BEGIN TIM22_IRQn 0 */
-//  TIM22_Interrupt_Handler();
+	Print_RENC_Reading();
   /* USER CODE END TIM22_IRQn 0 */
   HAL_TIM_IRQHandler(&htim22);
   /* USER CODE BEGIN TIM22_IRQn 1 */

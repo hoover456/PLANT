@@ -161,8 +161,8 @@ int ten_hz_counter=0;
 uint16_t ADC_Values[5], buffer[5];
 int light_seeking;
 int Kp = 100;
-//int i = 0;
-//int hold = 0;
+int i = 0;
+int hold = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -251,16 +251,14 @@ int main(void)
   TIM6->CR1 |= 1;
   HAL_TIM_Base_Start_IT(&htim6);
   HAL_TIM_Base_Start_IT(&htim21);
-  HAL_TIM_Encoder_Start(&htim22,TIM_CHANNEL_ALL);
+  HAL_TIM_Encoder_Start_IT(&htim22,TIM_CHANNEL_ALL);
   __HAL_TIM_SET_COMPARE(&htim21, TIM_CHANNEL_1, 0);
-  IR_LOCATE();
+//  IR_LOCATE();
 
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  int i = 0;
-  int hold = 0;
   int dir = 0;
   // ADC DMA Config
   myDMAInit((uint32_t*) buffer, 5);
@@ -277,30 +275,27 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-//	printf("Test\r\n");
 	if(light_seeking){
 		dir = check_light();
-//		printf("dir = %d\r\n", dir);
 		if(dir != -1 && dir != ROBOT_FRONT){
-//			printf("Turning to face light\r\n");
-//			void (*light_direction)(void) = &light_direction;
 			turn_until_light(dir==ROBOT_LEFT?TURN_LEFT:TURN_RIGHT, 0);
 		} else {
-//			printf("Moving to Light\r\n");
 			forward_until_light(-1);
 		}
 	}
 	i = TIM22->CNT;
 	HAL_Delay(200);
-//	printf("i = %d\r\n", i);
 	if (hold > i){
 		printf("turn left\r\n");
-	  hold = i;
+		hold = i;
 	}
 	else if (hold < i) {
 	  printf("turn right\r\n");
 	  hold = i;
 	}
+
+//	HAL_Delay(200);
+//	printf("i = %d\r\n", i);
   }
   /* USER CODE END 3 */
 }
@@ -371,9 +366,9 @@ static void MX_ADC_Init(void)
   */
   hadc.Instance = ADC1;
   hadc.Init.OversamplingMode = DISABLE;
-  hadc.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV1;
+  hadc.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV4;
   hadc.Init.Resolution = ADC_RESOLUTION_12B;
-  hadc.Init.SamplingTime = ADC_SAMPLETIME_1CYCLE_5;
+  hadc.Init.SamplingTime = ADC_SAMPLETIME_79CYCLES_5;
   hadc.Init.ScanConvMode = ADC_SCAN_DIRECTION_FORWARD;
   hadc.Init.DataAlign = ADC_DATAALIGN_RIGHT;
   hadc.Init.ContinuousConvMode = ENABLE;
@@ -677,15 +672,15 @@ static void MX_TIM22_Init(void)
   htim22.Init.Period = 65000;
   htim22.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim22.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
-  sConfig.EncoderMode = TIM_ENCODERMODE_TI1;
+  sConfig.EncoderMode = TIM_ENCODERMODE_TI12;
   sConfig.IC1Polarity = TIM_ICPOLARITY_FALLING;
   sConfig.IC1Selection = TIM_ICSELECTION_DIRECTTI;
   sConfig.IC1Prescaler = TIM_ICPSC_DIV1;
-  sConfig.IC1Filter = 5;
+  sConfig.IC1Filter = 10;
   sConfig.IC2Polarity = TIM_ICPOLARITY_FALLING;
   sConfig.IC2Selection = TIM_ICSELECTION_DIRECTTI;
   sConfig.IC2Prescaler = TIM_ICPSC_DIV1;
-  sConfig.IC2Filter = 5;
+  sConfig.IC2Filter = 10;
   if (HAL_TIM_Encoder_Init(&htim22, &sConfig) != HAL_OK)
   {
     Error_Handler();
@@ -807,7 +802,7 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pin = Rotary_Encoder_PushButton_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+  HAL_GPIO_Init(Rotary_Encoder_PushButton_GPIO_Port, &GPIO_InitStruct);
 
   /* EXTI interrupt init*/
   HAL_NVIC_SetPriority(EXTI0_1_IRQn, 0, 0);
@@ -963,10 +958,8 @@ void move_robot(short dir, int speed){
 
 void TEN_KHZ_TIM_Interrupt_Handler(void){
 //	ten_hz_counter++;
-//	if(ten_hz_counter >= 10){
-////		Right_Motor_Position_Controller();
-////		Left_Motor_Position_Controller();
-////		Read_Light_Sensors();
+//	// Check 10 times per second
+//	if(ten_hz_counter >= 1000){
 //		ten_hz_counter = 0;
 //	}
 }
@@ -1012,7 +1005,7 @@ int check_light(void){
 	int max = fmax(fmax(front, left), fmax(rear, right));
 
 	float deviation = (float) (max-avg) / avg;
-	if(deviation < 0.2)
+	if(deviation < 0.25)
 		return -1;
 	return light_direction();
 }
@@ -1078,7 +1071,8 @@ void RTC_Init(void){
 	RTC->WPR = 0xFF;
 }
 
-
+void Print_RENC_Reading(void){
+}
 /* USER CODE END 4 */
 
 /**

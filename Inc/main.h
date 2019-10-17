@@ -67,6 +67,7 @@ void Read_Light_Sensors(void);
 void DMA1_Channel1_Handler(void);
 void ADC_ConvCpltCallback(void);
 void move_robot(short dir, int speed);
+void Print_RENC_Reading(void);
 
 /* USER CODE END EFP */
 
