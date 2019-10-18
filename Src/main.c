@@ -1219,19 +1219,19 @@ void IR_LOCATE(void){
 		move_robot(2, 40000);
 	}
 	if(pins == 4){
-		printf("3\r\n");
+		printf("4\r\n");
 		move_robot(2, 40000);
 	}
 	if(pins == 5){
-		printf("4\r\n");
+		printf("5\r\n");
 		move_robot(0, 20000);
 	}
 	if(pins == 6){
-		printf("5\r\n");
+		printf("6\r\n");
 		move_robot(1, 20000);
 	}
 	if(pins == 7){
-		printf("6\r\n");
+		printf("7\r\n");
 		move_robot(2, 40000);
 	}
 }

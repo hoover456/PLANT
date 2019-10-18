@@ -34,4 +34,4 @@ main.c:1062:6:RTC_Init	8	static
 main.c:1083:6:Print_RENC_Reading	8	static
 main.c:1086:6:check_soil	8	static
 main.c:1092:6:IR_LOCATE	16	static
-main.c:1133:6:Error_Handler	8	static
+main.c:1134:6:Error_Handler	8	static
