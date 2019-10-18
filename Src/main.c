@@ -271,7 +271,7 @@ int main(void)
   ADC1->IER |= ADC_IER_EOSIE;
   ADC1->CR |= ADC_CR_ADEN;
   ADC1->CR |= ADC_CR_ADSTART;
-  light_seeking = 1;
+  light_seeking = 0;
   ir_seeking = 1;
 
   while (1)
@@ -1093,6 +1093,7 @@ void IR_LOCATE(void){
 	int pins = ((GPIOA->IDR>>10) & 7);
 	if(pins == 0){
 		printf("0\r\n");
+		move_robot(0,0);
 	}
 	if(pins == 1){
 		printf("1\r\n");
@@ -1107,19 +1108,19 @@ void IR_LOCATE(void){
 		move_robot(2, 40000);
 	}
 	if(pins == 4){
-		printf("3\r\n");
+		printf("4\r\n");
 		move_robot(2, 40000);
 	}
 	if(pins == 5){
-		printf("4\r\n");
+		printf("5\r\n");
 		move_robot(0, 20000);
 	}
 	if(pins == 6){
-		printf("5\r\n");
+		printf("6\r\n");
 		move_robot(1, 20000);
 	}
 	if(pins == 7){
-		printf("6\r\n");
+		printf("7\r\n");
 		move_robot(2, 40000);
 	}
 }

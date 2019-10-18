@@ -241,7 +241,9 @@ void EXTI4_15_IRQHandler(void)
 	//PIN 9
 	if(__HAL_GPIO_EXTI_GET_FLAG(GPIO_PIN_9)){
 		printf("FUCKING STOP\r\n");
-		move_robot(0,0);
+		while(~((GPIOA->IDR>>9) & 1)){
+			move_robot(0,0);
+		}
 		//do something here to stop motors
 	}
 
