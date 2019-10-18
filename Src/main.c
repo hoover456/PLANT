@@ -132,6 +132,8 @@ void myDMAInit(uint32_t* buffer, uint32_t length){
 /* Private variables ---------------------------------------------------------*/
 ADC_HandleTypeDef hadc;
 
+RTC_HandleTypeDef hrtc;
+
 TIM_HandleTypeDef htim2;
 TIM_HandleTypeDef htim3;
 TIM_HandleTypeDef htim6;
@@ -160,11 +162,21 @@ int sense3 = 0;
 int sense4 = 0;
 int ten_hz_counter=0;
 uint16_t ADC_Values[5], buffer[5];
-int light_seeking;
+int state = 0;
 int Kp = 100;
 int i = 0;
 int hold = 0;
 int ir_seeking;
+int count = 0;
+int left = 0;
+int right = 0;
+int LCheck = 0;
+int RCheck = 0;
+int move = 0;
+char checkSoil = 0;
+char cliffDetected = 0;
+char obstacle_detected = 0;
+uint8_t next_second;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -177,6 +189,7 @@ static void MX_TIM21_Init(void);
 static void MX_TIM22_Init(void);
 static void MX_TIM3_Init(void);
 static void MX_ADC_Init(void);
+static void MX_RTC_Init(void);
 /* USER CODE BEGIN PFP */
 void Left_Motor_PWM_Gen(int speed, int brake);
 void Left_Motor_Position_Controller(void);
@@ -186,7 +199,6 @@ int check_light(void);
 int light_direction(void);
 void turn_until_light(int dir, int compare_value);
 void forward_until_light(int compare_value);
-void check_soil(void);
 void IR_LOCATE(void);
 //void Read_Light_Sensors(void);
 
@@ -239,6 +251,7 @@ int main(void)
   MX_TIM22_Init();
   MX_TIM3_Init();
   MX_ADC_Init();
+  MX_RTC_Init();
   /* USER CODE BEGIN 2 */
   r_enc_setpoint = 0;
   l_enc_setpoint = 0;
@@ -256,7 +269,7 @@ int main(void)
   HAL_TIM_Base_Start_IT(&htim21);
   HAL_TIM_Encoder_Start_IT(&htim22,TIM_CHANNEL_ALL);
   __HAL_TIM_SET_COMPARE(&htim21, TIM_CHANNEL_1, 0);
-//  IR_LOCATE();
+  __HAL_RTC_ALARM_ENABLE_IT(&hrtc, RTC_IT_ALRA);
 
   /* USER CODE END 2 */
 
@@ -271,26 +284,34 @@ int main(void)
   ADC1->IER |= ADC_IER_EOSIE;
   ADC1->CR |= ADC_CR_ADEN;
   ADC1->CR |= ADC_CR_ADSTART;
-  light_seeking = 1;
-  ir_seeking = 1;
+  state = 0;
+  ir_seeking = 0;
 
   while (1)
   {
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	if(light_seeking){
+	if(state==0){
 		dir = check_light();
-		if(dir != -1 && dir != ROBOT_FRONT){
-			turn_until_light(dir==ROBOT_LEFT?TURN_LEFT:TURN_RIGHT, 0);
-		} else {
-			forward_until_light(-1);
-		}
+
+			if(dir != -1 && dir != ROBOT_FRONT){
+				turn_until_light(dir==ROBOT_LEFT?TURN_LEFT:TURN_RIGHT, 0);
+			} else {
+				if(!obstacle_detected)
+					forward_until_light(-1);
+				else
+					move_robot(0,0);
+			}
 	}
-	if(ir_seeking){
-		while(1){
-			IR_LOCATE();
-		}
+	if(state==1){
+		// ToDo: Ultrasonic Turning Demonext
+	}
+	if(state==2){
+	// ToDo: IR Seeking Demo
+//		while(1){
+//			IR_LOCATE();
+//		}
 	}
 	i = TIM22->CNT;
 	HAL_Delay(200);
@@ -301,6 +322,11 @@ int main(void)
 	else if (hold < i) {
 	  printf("turn right\r\n");
 	  hold = i;
+	}
+
+	if(checkSoil){
+		printf("soil moisture level %d\r\n", ADC_Values[4]);
+		checkSoil = 0;
 	}
 
 //	HAL_Delay(200);
@@ -324,7 +350,8 @@ void SystemClock_Config(void)
   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
   /** Initializes the CPU, AHB and APB busses clocks 
   */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_MSI;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_LSI|RCC_OSCILLATORTYPE_MSI;
+  RCC_OscInitStruct.LSIState = RCC_LSI_ON;
   RCC_OscInitStruct.MSIState = RCC_MSI_ON;
   RCC_OscInitStruct.MSICalibrationValue = 0;
   RCC_OscInitStruct.MSIClockRange = RCC_MSIRANGE_5;
@@ -346,8 +373,9 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
-  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USART2;
+  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USART2|RCC_PERIPHCLK_RTC;
   PeriphClkInit.Usart2ClockSelection = RCC_USART2CLKSOURCE_PCLK1;
+  PeriphClkInit.RTCClockSelection = RCC_RTCCLKSOURCE_LSI;
   if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
   {
     Error_Handler();
@@ -433,6 +461,87 @@ static void MX_ADC_Init(void)
   /* USER CODE BEGIN ADC_Init 2 */
 
   /* USER CODE END ADC_Init 2 */
+
+}
+
+/**
+  * @brief RTC Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_RTC_Init(void)
+{
+
+  /* USER CODE BEGIN RTC_Init 0 */
+
+  /* USER CODE END RTC_Init 0 */
+
+  RTC_TimeTypeDef sTime = {0};
+  RTC_DateTypeDef sDate = {0};
+  RTC_AlarmTypeDef sAlarm = {0};
+
+  /* USER CODE BEGIN RTC_Init 1 */
+
+  /* USER CODE END RTC_Init 1 */
+  /** Initialize RTC Only 
+  */
+  hrtc.Instance = RTC;
+  hrtc.Init.HourFormat = RTC_HOURFORMAT_24;
+  hrtc.Init.AsynchPrediv = 127;
+  hrtc.Init.SynchPrediv = 255;
+  hrtc.Init.OutPut = RTC_OUTPUT_DISABLE;
+  hrtc.Init.OutPutRemap = RTC_OUTPUT_REMAP_NONE;
+  hrtc.Init.OutPutPolarity = RTC_OUTPUT_POLARITY_HIGH;
+  hrtc.Init.OutPutType = RTC_OUTPUT_TYPE_OPENDRAIN;
+  if (HAL_RTC_Init(&hrtc) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /* USER CODE BEGIN Check_RTC_BKUP */
+    
+  /* USER CODE END Check_RTC_BKUP */
+
+  /** Initialize RTC and set the Time and Date 
+  */
+  sTime.Hours = 0x0;
+  sTime.Minutes = 0x0;
+  sTime.Seconds = 0x0;
+  sTime.DayLightSaving = RTC_DAYLIGHTSAVING_NONE;
+  sTime.StoreOperation = RTC_STOREOPERATION_RESET;
+  if (HAL_RTC_SetTime(&hrtc, &sTime, RTC_FORMAT_BCD) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sDate.WeekDay = RTC_WEEKDAY_THURSDAY;
+  sDate.Month = RTC_MONTH_OCTOBER;
+  sDate.Date = 0x17;
+  sDate.Year = 0x19;
+
+  if (HAL_RTC_SetDate(&hrtc, &sDate, RTC_FORMAT_BCD) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /** Enable the Alarm A 
+  */
+  sAlarm.AlarmTime.Hours = 0x0;
+  sAlarm.AlarmTime.Minutes = 0x0;
+  sAlarm.AlarmTime.Seconds = 0x1;
+  sAlarm.AlarmTime.SubSeconds = 0x0;
+  sAlarm.AlarmTime.DayLightSaving = RTC_DAYLIGHTSAVING_NONE;
+  sAlarm.AlarmTime.StoreOperation = RTC_STOREOPERATION_RESET;
+  sAlarm.AlarmMask = RTC_ALARMMASK_DATEWEEKDAY;
+  sAlarm.AlarmSubSecondMask = RTC_ALARMSUBSECONDMASK_ALL;
+  sAlarm.AlarmDateWeekDaySel = RTC_ALARMDATEWEEKDAYSEL_DATE;
+  sAlarm.AlarmDateWeekDay = 0x1;
+  sAlarm.Alarm = RTC_ALARM_A;
+  if (HAL_RTC_SetAlarm_IT(&hrtc, &sAlarm, RTC_FORMAT_BCD) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN RTC_Init 2 */
+
+  /* USER CODE END RTC_Init 2 */
 
 }
 
@@ -1060,39 +1169,42 @@ int light_direction(void){
 }
 
 void RTC_Init(void){
-	LCD_RTC_Clock_Enable();
-	RCC->CSR |= RCC_CSR_RTCEN;
-
-	RTC->WPR = 0xCA;
-	RTC->WPR = 0x53;
-	RTC->ISR |= RTC_ISR_INIT;
-	while((RTC->ISR & RTC_ISR_INITF) == 0);
-	RTC->CR &= ~RTC_CR_FMT;
-	RTC->PRER |= (2<<7 - 1) << 16;
-	RTC->PRER |= (2<<8 - 1);
-
-	//call phills function to get time then write here.
-
-	RTC->TR = 0<<22 | 1<<20 | 1<<16 | 3<<12| 2<<8; //time
-	RTC->DR = 1<<20 | 6<<16 | 0<<12 | 5<<8 | 2<<4 | 7; //date, not used but initialized for reasons.
-
-	RTC->ISR &= ~RTC_ISR_INIT;
-	RTC->WPR = 0xFF;
+//	LCD_RTC_Clock_Enable();
+//	RCC->CSR |= RCC_CSR_RTCEN;
+//
+//	RTC->WPR = 0xCA;
+//	RTC->WPR = 0x53;
+//	RTC->ISR |= RTC_ISR_INIT;
+//	while((RTC->ISR & RTC_ISR_INITF) == 0);
+//	RTC->CR &= ~RTC_CR_FMT;
+//	RTC->PRER |= (2<<7 - 1) << 16;
+//	RTC->PRER |= (2<<8 - 1);
+//
+//	//call phills function to get time then write here.
+//
+//	RTC->TR = 0<<22 | 1<<20 | 1<<16 | 3<<12| 2<<8; //time
+//	RTC->DR = 1<<20 | 6<<16 | 0<<12 | 5<<8 | 2<<4 | 7; //date, not used but initialized for reasons.
+//
+//	RTC->ISR &= ~RTC_ISR_INIT;
+//	RTC->WPR = 0xFF;
 }
 
 void Print_RENC_Reading(void){
 }
 
 void check_soil(void){
-	GPIOC->ODR |= (1<<5);
-	printf("soil moisture level %d\r\n", ADC_Values[4]);
-	GPIOC->ODR &= ~(1<<5);
+	if(!checkSoil){
+		GPIOC->ODR |= (1<<5);
+		checkSoil = 1;
+	} else {
+		GPIOC->ODR &= ~(1<<5);
+	}
 }
 
 void IR_LOCATE(void){
 	int pins = ((GPIOA->IDR>>10) & 7);
 	if(pins == 0){
-		printf("0\r\n");
+//		printf("0\r\n");
 	}
 	if(pins == 1){
 		printf("1\r\n");
@@ -1124,6 +1236,137 @@ void IR_LOCATE(void){
 	}
 }
 
+void checkTurn(void){
+	if ((move == 1) && (count > 600)){
+		printf("Keep turning left\r\n");
+	}
+	else if ((move == 2) && (count > 600)){
+		printf("Keep turning right\r\n");
+	}
+	else {
+		printf("Good to go Forward\r\n");
+		move = 0;
+	}
+}
+void checkStraight(void){
+	if (count > 600){
+		if(state==0){
+			obstacle_detected = 1;
+			printf("Stop\r\n");
+		} else {
+			printf("checkDirection\r\n");
+			left = 1;
+			init_Left();
+		}
+	} else {
+		obstacle_detected = 0;
+	}
+
+}
+void checkLeft(void){
+	left++;
+	if (count > 600){
+		printf("Left Not good\r\n");
+	}
+	if (left > 3){
+		left = 0;
+		right = 1;
+		init_Right();
+	}
+	LCheck += count;
+}
+void checkRight(void){
+	right++;
+	if (count > 600){
+		printf("Right Not Good\r\n");
+
+	}
+	if (right > 3){
+		left = 0;
+		right = 0;
+	}
+	RCheck += count;
+}
+void determineDir(void){
+	if (LCheck < RCheck){
+		printf("Turn Left\r\n");
+		move = 1;
+	}
+	else {
+		printf("Turn Right\r\n");
+		move = 2;
+	}
+	init_Straight();
+	LCheck = 0;
+	RCheck = 0;
+}
+void countUp(void){
+	count++;
+}
+void TIM6_UltraSonic_Handler(void){
+//	RTC_DateTypeDef sDate;
+//	RTC_TimeTypeDef sTime;
+//	HAL_RTC_GetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
+//	HAL_RTC_GetDate(&hrtc, &sDate, RTC_FORMAT_BIN);
+////	uint8_t next_second = sTime.Seconds+5;
+//	printf("Current Time is: %u/%u/%u, %u L %u : %u\r\n", sDate.Month, sDate.Date, sDate.Year, sTime.Hours, sTime.Minutes, sTime.Seconds);
+	if (move > 0){
+		checkTurn();
+	}
+	else if ((left == right) && (LCheck == RCheck)){
+		checkStraight();
+	}
+	else if(left > 0){
+		checkLeft();
+	}
+	else if(right > 0){
+		checkRight();
+	}
+	else if ((RCheck > 0) && (LCheck > 0)){
+		determineDir();
+	}
+	count = 0;
+}
+void HAL_RTC_AlarmAEventCallback(RTC_HandleTypeDef* hrtc){
+	RTC_DateTypeDef sDate;
+	RTC_TimeTypeDef sTime;
+	HAL_RTC_GetTime(hrtc, &sTime, RTC_FORMAT_BIN);
+	HAL_RTC_GetDate(hrtc, &sDate, RTC_FORMAT_BIN);
+	next_second = (sTime.Seconds+5);
+	uint8_t next_minute = sTime.Minutes;
+	uint8_t next_hour = sTime.Hours;
+//	printf("Current Time is: %u/%u/%u, %2u:%2u:%2u\r\n", sDate.Month, sDate.Date, sDate.Year, sTime.Hours, sTime.Minutes, sTime.Seconds);
+	if (next_second > 59){
+		next_second = 0;
+		next_minute++;
+	}
+	if (next_minute > 59){
+		next_minute = 0;
+		next_hour ++;
+	}
+	if(next_hour > 23){
+		next_hour = 0;
+	}
+
+    RTC_AlarmTypeDef sAlarm;
+    sAlarm.AlarmTime.Hours = RTC_ByteToBcd2(next_hour);
+    sAlarm.AlarmTime.Minutes = RTC_ByteToBcd2(next_minute);
+    sAlarm.AlarmTime.Seconds =  RTC_ByteToBcd2(next_second);
+    sAlarm.AlarmTime.SubSeconds = 0x0;
+    sAlarm.AlarmTime.DayLightSaving = RTC_DAYLIGHTSAVING_NONE;
+    sAlarm.AlarmTime.StoreOperation = RTC_STOREOPERATION_RESET;
+    sAlarm.AlarmMask = RTC_ALARMMASK_DATEWEEKDAY;
+    sAlarm.AlarmSubSecondMask = RTC_ALARMSUBSECONDMASK_ALL;
+    sAlarm.AlarmDateWeekDaySel = RTC_ALARMDATEWEEKDAYSEL_DATE;
+    sAlarm.AlarmDateWeekDay = 0x1;
+    sAlarm.Alarm = RTC_ALARM_A;
+	HAL_RTC_SetAlarm_IT(hrtc, &sAlarm, FORMAT_BCD);
+//	RTC_AlarmTypeDef sAlarm = {0};
+}
+void nextState(void){
+	state = (++state) % 3;
+	printf("State: %d\r\n", state);
+}
 /* USER CODE END 4 */
 
 /**

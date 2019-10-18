@@ -69,6 +69,14 @@ void ADC_ConvCpltCallback(void);
 void move_robot(short dir, int speed);
 void Print_RENC_Reading(void);
 void check_soil(void);
+void checkTurn(void);
+void checkStraight(void);
+void checkLeft(void);
+void checkRight(void);
+void determineDir(void);
+void TIM6_UltraSonic_Handler(void);
+void countUp(void);
+void nextState(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/

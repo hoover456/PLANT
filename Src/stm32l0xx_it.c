@@ -44,12 +44,9 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN PV */
-int count = 0;
-int left = 0;
-int right = 0;
-int LCheck = 0;
-int RCheck = 0;
-int move = 0;
+//int LCheck = 0;
+//int RCheck = 0;
+//int count = 0;
 int soil_count = 0;
 /* USER CODE END PV */
 
@@ -61,68 +58,13 @@ int soil_count = 0;
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
-void checkTurn(void){
-	if ((move == 1) && (count > 600)){
-		printf("Keep turning left\r\n");
-	}
-	else if ((move == 2) && (count > 600)){
-		printf("Keep turning right\r\n");
-	}
-	else {
-		printf("Good to go Forward\r\n");
-		move = 0;
-	}
-}
-void checkStraight(void){
-	if (count > 600){
-		printf("checkDirection\r\n");
-		left = 1;
-		init_Left();
-	}
 
-}
-void checkLeft(void){
-	left++;
-	if (count > 600){
-		printf("Left Not good\r\n");
-	}
-	if (left > 3){
-		left = 0;
-		right = 1;
-		init_Right();
-	}
-	LCheck += count;
-}
-void checkRight(void){
-	right++;
-	if (count > 600){
-		printf("Right Not Good\r\n");
-
-	}
-	if (right > 3){
-		left = 0;
-		right = 0;
-	}
-	RCheck += count;
-}
-void determineDir(void){
-	if (LCheck < RCheck){
-		printf("Turn Left\r\n");
-		move = 1;
-	}
-	else {
-		printf("Turn Right\r\n");
-		move = 2;
-	}
-	init_Straight();
-	LCheck = 0;
-	RCheck = 0;
-}
 
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
 extern ADC_HandleTypeDef hadc;
+extern RTC_HandleTypeDef hrtc;
 extern TIM_HandleTypeDef htim6;
 extern TIM_HandleTypeDef htim21;
 extern TIM_HandleTypeDef htim22;
@@ -210,6 +152,20 @@ void SysTick_Handler(void)
 /******************************************************************************/
 
 /**
+  * @brief This function handles RTC global interrupt through EXTI lines 17, 19 and 20 and LSE CSS interrupt through EXTI line 19.
+  */
+void RTC_IRQHandler(void)
+{
+  /* USER CODE BEGIN RTC_IRQn 0 */
+
+  /* USER CODE END RTC_IRQn 0 */
+  HAL_RTC_AlarmIRQHandler(&hrtc);
+  /* USER CODE BEGIN RTC_IRQn 1 */
+
+  /* USER CODE END RTC_IRQn 1 */
+}
+
+/**
   * @brief This function handles EXTI line 0 and line 1 interrupts.
   */
 void EXTI0_1_IRQHandler(void)
@@ -217,7 +173,7 @@ void EXTI0_1_IRQHandler(void)
   /* USER CODE BEGIN EXTI0_1_IRQn 0 */
 	if (__HAL_GPIO_EXTI_GET_FLAG(GPIO_PIN_1)){
 		if (((GPIOA->IDR) > 1) & 1){
-			count++;
+			countUp();
 		}
 	}
   /* USER CODE END EXTI0_1_IRQn 0 */
@@ -258,7 +214,7 @@ void EXTI4_15_IRQHandler(void)
 	// PIN 13
 
 	if(__HAL_GPIO_EXTI_GET_FLAG(GPIO_PIN_13)){
-		Print_Encoder_Reading();
+		nextState();
 	}
   /* USER CODE END EXTI4_15_IRQn 0 */
   HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_6);
@@ -293,22 +249,7 @@ void ADC1_COMP_IRQHandler(void)
 void TIM6_DAC_IRQHandler(void)
 {
   /* USER CODE BEGIN TIM6_DAC_IRQn 0 */
-	if (move > 0){
-		checkTurn();
-	}
-	else if ((left == right) && (LCheck == RCheck)){
-		checkStraight();
-	}
-	else if(left > 0){
-		checkLeft();
-	}
-	else if(right > 0){
-		checkRight();
-	}
-	else if ((RCheck > 0) && (LCheck > 0)){
-		determineDir();
-	}
-	count = 0;
+	TIM6_UltraSonic_Handler();
 
 	soil_count++;
 	if(soil_count == 60){
