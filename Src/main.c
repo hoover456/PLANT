@@ -54,17 +54,18 @@
 #define ROBOT_RIGHT 3
 
 // printf redirect
-#ifdef __GNUC__
+//#ifdef __GNUC__
 /* With GCC/RAISONANCE, small printf (option LD Linker->Libraries->Small printf
  set to 'Yes') calls __io_putchar() */
 #define PUTCHAR_PROTOTYPE int __io_putchar(int ch)
-#else
-#define PUTCHAR_PROTOTYPE int fputc(int ch, FILE *f)
-#endif /* __GNUC__ */
+//#else
+//#define PUTCHAR_PROTOTYPE int fputc(int ch, FILE *f)
+//#endif /* __GNUC__ */
 
 
 void myTim2Init(void);
 void myDMAInit(uint32_t* buffer, uint32_t length);
+void push_button(void);
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -174,9 +175,14 @@ int LCheck = 0;
 int RCheck = 0;
 int move = 0;
 char checkSoil = 0;
-char cliffDetected = 0;
+char cliff_detected = 0;
 char obstacle_detected = 0;
 uint8_t next_second;
+int robot_x;
+int robot_y;
+float robot_theta;
+int push = 0;
+int LLevel = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -287,11 +293,20 @@ int main(void)
   state = 0;
   ir_seeking = 0;
 
+  // Intialize robot spacial reference
+  robot_x = 0;
+  robot_y = 0;
+  robot_theta = 0;
+
   while (1)
   {
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+//	  RTC_TimeTypeDef sTime;
+//	  		HAL_RTC_GetTime(&hrtc, &sTime, RTC_FORMAT_BCD);
+//	  		printf("Current Time: %2u:%2u:%2u\r\n", sTime.Hours, sTime.Minutes, sTime.Seconds);
+
 	if(state==0){
 		dir = check_light();
 
@@ -305,21 +320,43 @@ int main(void)
 			}
 	}
 	if(state==1){
-		// ToDo: Ultrasonic Turning Demonext
+		// ToDo: Ultrasonic Turning Demo next
+		if(!obstacle_detected)
+			move_robot(FORWARD,30000);
+		else {
+			if(move == 1){
+				move_robot(TURN_LEFT, 30000);
+			} else if(move == 2){
+				move_robot(TURN_RIGHT, 30000);
+			} else
+				move_robot(0,0);
+		}
 	}
-	if(state==2){
-	// ToDo: IR Seeking Demo
-//		while(1){
-//			IR_LOCATE();
-//		}
+	if(state == 2 || state == 3){
+		move_robot(0,0);
+	}
+	if(state==4){
+	// IR Seeking Demo
+			IR_LOCATE();
 	}
 	i = TIM22->CNT;
 	HAL_Delay(200);
 	if (hold > i){
+		if (push) {
+			LLevel--;
+			if (LLevel < 0){
+				LLevel = 3;
+			}
+			printf("Current Light level: %d\r\n", LLevel);
+		}
 		printf("turn left\r\n");
 		hold = i;
 	}
 	else if (hold < i) {
+		if (push){
+			LLevel = ++LLevel % 4;
+			printf("Current Light level: %d\r\n", LLevel);
+		}
 	  printf("turn right\r\n");
 	  hold = i;
 	}
@@ -328,7 +365,7 @@ int main(void)
 		printf("soil moisture level %d\r\n", ADC_Values[4]);
 		checkSoil = 0;
 	}
-
+	cliff_sense();
 //	HAL_Delay(200);
 //	printf("i = %d\r\n", i);
   }
@@ -513,10 +550,10 @@ static void MX_RTC_Init(void)
   {
     Error_Handler();
   }
-  sDate.WeekDay = RTC_WEEKDAY_THURSDAY;
-  sDate.Month = RTC_MONTH_OCTOBER;
-  sDate.Date = 0x17;
-  sDate.Year = 0x19;
+  sDate.WeekDay = RTC_WEEKDAY_MONDAY;
+  sDate.Month = RTC_MONTH_JANUARY;
+  sDate.Date = 0x1;
+  sDate.Year = 0x0;
 
   if (HAL_RTC_SetDate(&hrtc, &sDate, RTC_FORMAT_BCD) != HAL_OK)
   {
@@ -526,7 +563,7 @@ static void MX_RTC_Init(void)
   */
   sAlarm.AlarmTime.Hours = 0x0;
   sAlarm.AlarmTime.Minutes = 0x0;
-  sAlarm.AlarmTime.Seconds = 0x1;
+  sAlarm.AlarmTime.Seconds = 0x0;
   sAlarm.AlarmTime.SubSeconds = 0x0;
   sAlarm.AlarmTime.DayLightSaving = RTC_DAYLIGHTSAVING_NONE;
   sAlarm.AlarmTime.StoreOperation = RTC_STOREOPERATION_RESET;
@@ -535,12 +572,14 @@ static void MX_RTC_Init(void)
   sAlarm.AlarmDateWeekDaySel = RTC_ALARMDATEWEEKDAYSEL_DATE;
   sAlarm.AlarmDateWeekDay = 0x1;
   sAlarm.Alarm = RTC_ALARM_A;
-  if (HAL_RTC_SetAlarm_IT(&hrtc, &sAlarm, RTC_FORMAT_BCD) != HAL_OK)
+  if (HAL_RTC_SetAlarm(&hrtc, &sAlarm, RTC_FORMAT_BCD) != HAL_OK)
   {
     Error_Handler();
   }
   /* USER CODE BEGIN RTC_Init 2 */
-
+//  	  RTC_TimeTypeDef sTime;
+//  	  HAL_RTC_GetTime(&hrtc, &sTime, RTC_FORMAT_BCD);
+//  		printf("Current Time: %2u:%2u:%2u\r\n", sTime.Hours, sTime.Minutes, sTime.Seconds);
   /* USER CODE END RTC_Init 2 */
 
 }
@@ -906,7 +945,7 @@ static void MX_GPIO_Init(void)
 
   /*Configure GPIO pin : IR_CLIFF_SENSOR_Pin */
   GPIO_InitStruct.Pin = IR_CLIFF_SENSOR_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING_FALLING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(IR_CLIFF_SENSOR_GPIO_Port, &GPIO_InitStruct);
 
@@ -916,11 +955,11 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : Rotary_Encoder_PushButton_Pin */
-  GPIO_InitStruct.Pin = Rotary_Encoder_PushButton_Pin;
+  /*Configure GPIO pin : RE_PB_Pin */
+  GPIO_InitStruct.Pin = RE_PB_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(Rotary_Encoder_PushButton_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(RE_PB_GPIO_Port, &GPIO_InitStruct);
 
   /* EXTI interrupt init*/
   HAL_NVIC_SetPriority(EXTI0_1_IRQn, 0, 0);
@@ -1053,8 +1092,9 @@ void Left_Motor_Position_Controller(void){
 
 }
 
+// MOVE ROBOT
 void move_robot(short dir, int speed){
-	if(speed <= 0){
+	if(speed <= 0 || cliff_detected){
 		Right_Motor_PWM_Gen(0,1);
 		Left_Motor_PWM_Gen(0,1);
 	} else {
@@ -1149,10 +1189,14 @@ void forward_until_light(int compare_value){
 //	r_enc_currentPos = 0;
 //	l_enc_currentPos = 0;
 //	int setpoint = 800;
-	if(check_light() == compare_value){
+	if(cliff_detected)
 		move_robot(0, 0);
-	} else {
-		move_robot(FORWARD, 30000);
+	else{
+		if(check_light() == compare_value){
+			move_robot(0, 0);
+		} else {
+			move_robot(FORWARD, 30000);
+		}
 	}
 }
 
@@ -1204,35 +1248,36 @@ void check_soil(void){
 void IR_LOCATE(void){
 	int pins = ((GPIOA->IDR>>10) & 7);
 	if(pins == 0){
-//		printf("0\r\n");
+		move_robot(0,0);
+		printf("NO IR\r\n");
 	}
 	if(pins == 1){
-		printf("1\r\n");
-		move_robot(0, 40000);
+		printf("Hard Left\r\n");
+		move_robot(TURN_LEFT, 20000);
 	}
 	if(pins == 2){
-		printf("2\r\n");
-		move_robot(1, 40000);
+		printf("Hard Right\r\n");
+		move_robot(TURN_RIGHT, 20000);
 	}
 	if(pins == 3){
-		printf("3\r\n");
-		move_robot(2, 40000);
+		printf("Forward\r\n");
+		move_robot(FORWARD, 20000);
 	}
 	if(pins == 4){
-		printf("4\r\n");
-		move_robot(2, 40000);
+		printf("Forward\r\n");
+		move_robot(FORWARD, 20000);
 	}
 	if(pins == 5){
-		printf("5\r\n");
-		move_robot(0, 20000);
+		printf("Soft Left\r\n");
+		move_robot(TURN_LEFT, 10000);
 	}
 	if(pins == 6){
-		printf("6\r\n");
-		move_robot(1, 20000);
+		printf("Soft Right\r\n");
+		move_robot(TURN_RIGHT, 10000);
 	}
 	if(pins == 7){
-		printf("7\r\n");
-		move_robot(2, 40000);
+		printf("Forward\r\n");
+		move_robot(FORWARD, 20000);
 	}
 }
 
@@ -1250,8 +1295,9 @@ void checkTurn(void){
 }
 void checkStraight(void){
 	if (count > 600){
+		obstacle_detected = 1;
 		if(state==0){
-			obstacle_detected = 1;
+//			obstacle_detected = 1;
 			printf("Stop\r\n");
 		} else {
 			printf("checkDirection\r\n");
@@ -1304,6 +1350,13 @@ void countUp(void){
 	count++;
 }
 void TIM6_UltraSonic_Handler(void){
+	if(state==2){
+		RTC_TimeTypeDef sTime;
+		RTC_DateTypeDef sDate;
+		HAL_RTC_GetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
+		HAL_RTC_GetDate(&hrtc, &sDate, RTC_FORMAT_BCD);
+		printf("Current Time: %2u:%2u:%2u\r\n", sTime.Hours, sTime.Minutes, sTime.Seconds);
+	}
 //	RTC_DateTypeDef sDate;
 //	RTC_TimeTypeDef sTime;
 //	HAL_RTC_GetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
@@ -1328,44 +1381,64 @@ void TIM6_UltraSonic_Handler(void){
 	count = 0;
 }
 void HAL_RTC_AlarmAEventCallback(RTC_HandleTypeDef* hrtc){
+
 	RTC_DateTypeDef sDate;
 	RTC_TimeTypeDef sTime;
 	HAL_RTC_GetTime(hrtc, &sTime, RTC_FORMAT_BIN);
 	HAL_RTC_GetDate(hrtc, &sDate, RTC_FORMAT_BIN);
-	next_second = (sTime.Seconds+5);
-	uint8_t next_minute = sTime.Minutes;
-	uint8_t next_hour = sTime.Hours;
-//	printf("Current Time is: %u/%u/%u, %2u:%2u:%2u\r\n", sDate.Month, sDate.Date, sDate.Year, sTime.Hours, sTime.Minutes, sTime.Seconds);
-	if (next_second > 59){
-		next_second = 0;
-		next_minute++;
-	}
-	if (next_minute > 59){
-		next_minute = 0;
-		next_hour ++;
-	}
-	if(next_hour > 23){
-		next_hour = 0;
-	}
+	printf("Current Time: %2u:%2u:%2u\r\n", sTime.Hours, sTime.Minutes, sTime.Seconds);
+	printf("Returning to Base Station");
+	state = 3;
 
-    RTC_AlarmTypeDef sAlarm;
-    sAlarm.AlarmTime.Hours = RTC_ByteToBcd2(next_hour);
-    sAlarm.AlarmTime.Minutes = RTC_ByteToBcd2(next_minute);
-    sAlarm.AlarmTime.Seconds =  RTC_ByteToBcd2(next_second);
-    sAlarm.AlarmTime.SubSeconds = 0x0;
-    sAlarm.AlarmTime.DayLightSaving = RTC_DAYLIGHTSAVING_NONE;
-    sAlarm.AlarmTime.StoreOperation = RTC_STOREOPERATION_RESET;
-    sAlarm.AlarmMask = RTC_ALARMMASK_DATEWEEKDAY;
-    sAlarm.AlarmSubSecondMask = RTC_ALARMSUBSECONDMASK_ALL;
-    sAlarm.AlarmDateWeekDaySel = RTC_ALARMDATEWEEKDAYSEL_DATE;
-    sAlarm.AlarmDateWeekDay = 0x1;
-    sAlarm.Alarm = RTC_ALARM_A;
-	HAL_RTC_SetAlarm_IT(hrtc, &sAlarm, FORMAT_BCD);
+//    RTC_AlarmTypeDef sAlarm;
+//    sAlarm.AlarmTime.Hours = RTC_ByteToBcd2(next_hour);
+//    sAlarm.AlarmTime.Minutes = RTC_ByteToBcd2(next_minute);
+//    sAlarm.AlarmTime.Seconds =  RTC_ByteToBcd2(next_second);
+//    sAlarm.AlarmTime.SubSeconds = 0x0;
+//    sAlarm.AlarmTime.DayLightSaving = RTC_DAYLIGHTSAVING_NONE;
+//    sAlarm.AlarmTime.StoreOperation = RTC_STOREOPERATION_RESET;
+//    sAlarm.AlarmMask = RTC_ALARMMASK_DATEWEEKDAY;
+//    sAlarm.AlarmSubSecondMask = RTC_ALARMSUBSECONDMASK_ALL;
+//    sAlarm.AlarmDateWeekDaySel = RTC_ALARMDATEWEEKDAYSEL_DATE;
+//    sAlarm.AlarmDateWeekDay = 0x1;
+//    sAlarm.Alarm = RTC_ALARM_A;
+//	HAL_RTC_SetAlarm_IT(hrtc, &sAlarm, FORMAT_BCD);
 //	RTC_AlarmTypeDef sAlarm = {0};
 }
 void nextState(void){
-	state = (++state) % 3;
+	state = (++state) % 5;
+	if(state == 2 ){
+		RTC_TimeTypeDef sTime = {0};
+		sTime.Hours = RTC_ByteToBcd2(20);
+		sTime.Minutes = RTC_ByteToBcd2(59);
+		sTime.Seconds = RTC_ByteToBcd2(50);
+		sTime.DayLightSaving = RTC_DAYLIGHTSAVING_NONE;
+		HAL_RTC_SetTime(&hrtc, &sTime, RTC_FORMAT_BCD);
+//		RTC_TimeTypeDef sTime;
+		RTC_DateTypeDef sDate;
+		HAL_RTC_GetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
+		HAL_RTC_GetDate(&hrtc, &sDate, RTC_FORMAT_BCD);
+		printf("Current Time: %2u:%2u:%2u\r\n", sTime.Hours, sTime.Minutes, sTime.Seconds);
+	}
 	printf("State: %d\r\n", state);
+}
+
+void cliff_sense(void){
+	if(!HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_9))
+		cliff_detected = 1;
+	else
+		cliff_detected = 0;
+}
+void push_button(void){
+	if (push){
+		printf("New light level %d\n\r", LLevel);
+
+	}
+	else {
+		printf("Current light level %d\n\r", LLevel);
+	}
+	push ^= 1;
+
 }
 /* USER CODE END 4 */
 

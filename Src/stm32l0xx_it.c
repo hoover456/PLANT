@@ -64,7 +64,6 @@ int soil_count = 0;
 
 /* External variables --------------------------------------------------------*/
 extern ADC_HandleTypeDef hadc;
-extern RTC_HandleTypeDef hrtc;
 extern TIM_HandleTypeDef htim6;
 extern TIM_HandleTypeDef htim21;
 extern TIM_HandleTypeDef htim22;
@@ -152,20 +151,6 @@ void SysTick_Handler(void)
 /******************************************************************************/
 
 /**
-  * @brief This function handles RTC global interrupt through EXTI lines 17, 19 and 20 and LSE CSS interrupt through EXTI line 19.
-  */
-void RTC_IRQHandler(void)
-{
-  /* USER CODE BEGIN RTC_IRQn 0 */
-
-  /* USER CODE END RTC_IRQn 0 */
-  HAL_RTC_AlarmIRQHandler(&hrtc);
-  /* USER CODE BEGIN RTC_IRQn 1 */
-
-  /* USER CODE END RTC_IRQn 1 */
-}
-
-/**
   * @brief This function handles EXTI line 0 and line 1 interrupts.
   */
 void EXTI0_1_IRQHandler(void)
@@ -191,15 +176,13 @@ void EXTI4_15_IRQHandler(void)
   /* USER CODE BEGIN EXTI4_15_IRQn 0 */
 	// PIN 7
 	if (__HAL_GPIO_EXTI_GET_FLAG(GPIO_PIN_6)){
-		printf("Push Button\r\n");
+		push_button();
 	}
 
 	//PIN 9
 	if(__HAL_GPIO_EXTI_GET_FLAG(GPIO_PIN_9)){
-		printf("FUCKING STOP\r\n");
-		while(~((GPIOA->IDR>>9) & 1)){
-			move_robot(0,0);
-		}
+//		printf("FUCKING STOP\r\n");
+//			cliff_sense();
 		//do something here to stop motors
 	}
 

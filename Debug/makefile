@@ -37,8 +37,8 @@ PLANT.list \
 all: PLANT.elf secondary-outputs
 
 # Tool invocations
-PLANT.elf: $(OBJS) $(USER_OBJS) C:\Users\dbiegl\STM32CubeIDE\workspace_1.0.2\PLANT\STM32L073RZTX_FLASH.ld
-	arm-none-eabi-gcc -o "PLANT.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0plus -T"C:\Users\dbiegl\STM32CubeIDE\workspace_1.0.2\PLANT\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PLANT.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+PLANT.elf: $(OBJS) $(USER_OBJS) C:\Users\Assyria\STM32CubeIDE\workspace_1.0.2\PLANT\STM32L073RZTX_FLASH.ld
+	arm-none-eabi-gcc -o "PLANT.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0plus -T"C:\Users\Assyria\STM32CubeIDE\workspace_1.0.2\PLANT\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PLANT.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

@@ -77,6 +77,7 @@ void determineDir(void);
 void TIM6_UltraSonic_Handler(void);
 void countUp(void);
 void nextState(void);
+void cliff_sensing(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
@@ -100,10 +101,10 @@ void nextState(void);
 #define Left_Motor_PWM_1_GPIO_Port GPIOB
 #define Left_Motor_PWM_2_Pin GPIO_PIN_1
 #define Left_Motor_PWM_2_GPIO_Port GPIOB
-#define Rotary_Encoder_Pin_1_Pin GPIO_PIN_6
-#define Rotary_Encoder_Pin_1_GPIO_Port GPIOC
-#define Rotary_Encoder_Pin_2_Pin GPIO_PIN_7
-#define Rotary_Encoder_Pin_2_GPIO_Port GPIOC
+#define RE_1_Pin GPIO_PIN_6
+#define RE_1_GPIO_Port GPIOC
+#define RE_2_Pin GPIO_PIN_7
+#define RE_2_GPIO_Port GPIOC
 #define IR_CLIFF_SENSOR_Pin GPIO_PIN_9
 #define IR_CLIFF_SENSOR_GPIO_Port GPIOA
 #define IR_CLIFF_SENSOR_EXTI_IRQn EXTI4_15_IRQn
@@ -113,9 +114,9 @@ void nextState(void);
 #define IR_LEFT_GPIO_Port GPIOA
 #define IR_RIGHT_Pin GPIO_PIN_12
 #define IR_RIGHT_GPIO_Port GPIOA
-#define Rotary_Encoder_PushButton_Pin GPIO_PIN_6
-#define Rotary_Encoder_PushButton_GPIO_Port GPIOB
-#define Rotary_Encoder_PushButton_EXTI_IRQn EXTI4_15_IRQn
+#define RE_PB_Pin GPIO_PIN_6
+#define RE_PB_GPIO_Port GPIOB
+#define RE_PB_EXTI_IRQn EXTI4_15_IRQn
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */
