@@ -1,3 +1,4 @@
 activeuserprofiles=Assyria;Team
 eclipse.preferences.version=1
 org.eclipse.rse.systemtype.local.systemType.defaultUserId=Assyria
+useridperkey=Assyria.Local\=Assyria;
