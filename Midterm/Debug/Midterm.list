@@ -1,5 +1,5 @@
 
-PLANT.elf:     file format elf32-littlearm
+Midterm.elf:     file format elf32-littlearm
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
@@ -39,11 +39,11 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
  17 .debug_line   0000b727  00000000  00000000  0004ab1e  2**0
                   CONTENTS, READONLY, DEBUGGING
- 18 .debug_str    0008ebef  00000000  00000000  00056245  2**0
+ 18 .debug_str    0008eb2f  00000000  00000000  00056245  2**0
                   CONTENTS, READONLY, DEBUGGING
- 19 .comment      0000007b  00000000  00000000  000e4e34  2**0
+ 19 .comment      0000007b  00000000  00000000  000e4d74  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  00003edc  00000000  00000000  000e4eb0  2**2
+ 20 .debug_frame  00003edc  00000000  00000000  000e4df0  2**2
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -16256,8 +16256,8 @@ static void MX_GPIO_Init(void)
  8005cc8:	0018      	movs	r0, r3
  8005cca:	f7fb fdbd 	bl	8001848 <HAL_GPIO_Init>
 
-  /*Configure GPIO pin : Rotary_Encoder_PushButton_Pin */
-  GPIO_InitStruct.Pin = Rotary_Encoder_PushButton_Pin;
+  /*Configure GPIO pin : RE_PB_Pin */
+  GPIO_InitStruct.Pin = RE_PB_Pin;
  8005cce:	193b      	adds	r3, r7, r4
  8005cd0:	2240      	movs	r2, #64	; 0x40
  8005cd2:	601a      	str	r2, [r3, #0]
@@ -16269,7 +16269,7 @@ static void MX_GPIO_Init(void)
  8005cda:	193b      	adds	r3, r7, r4
  8005cdc:	2200      	movs	r2, #0
  8005cde:	609a      	str	r2, [r3, #8]
-  HAL_GPIO_Init(Rotary_Encoder_PushButton_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(RE_PB_GPIO_Port, &GPIO_InitStruct);
  8005ce0:	193b      	adds	r3, r7, r4
  8005ce2:	4a10      	ldr	r2, [pc, #64]	; (8005d24 <MX_GPIO_Init+0x1c0>)
  8005ce4:	0019      	movs	r1, r3
@@ -18284,7 +18284,7 @@ void HAL_TIM_Encoder_MspInit(TIM_HandleTypeDef* htim_encoder)
     PC6     ------> TIM22_CH1
     PC7     ------> TIM22_CH2 
     */
-    GPIO_InitStruct.Pin = Rotary_Encoder_Pin_1_Pin|Rotary_Encoder_Pin_2_Pin;
+    GPIO_InitStruct.Pin = RE_1_Pin|RE_2_Pin;
  8006902:	210c      	movs	r1, #12
  8006904:	187b      	adds	r3, r7, r1
  8006906:	22c0      	movs	r2, #192	; 0xc0
@@ -18986,15 +18986,26 @@ void TIM22_IRQHandler(void)
  8006c78:	20000128 	.word	0x20000128
 
 08006c7c <_read>:
+	_kill(status, -1);
+	while (1) {}		/* Make sure we hang here */
+}
+
+__attribute__((weak)) int _read(int file, char *ptr, int len)
+{
  8006c7c:	b580      	push	{r7, lr}
  8006c7e:	b086      	sub	sp, #24
  8006c80:	af00      	add	r7, sp, #0
  8006c82:	60f8      	str	r0, [r7, #12]
  8006c84:	60b9      	str	r1, [r7, #8]
  8006c86:	607a      	str	r2, [r7, #4]
+	int DataIdx;
+
+	for (DataIdx = 0; DataIdx < len; DataIdx++)
  8006c88:	2300      	movs	r3, #0
  8006c8a:	617b      	str	r3, [r7, #20]
  8006c8c:	e00a      	b.n	8006ca4 <_read+0x28>
+	{
+		*ptr++ = __io_getchar();
  8006c8e:	e000      	b.n	8006c92 <_read+0x16>
  8006c90:	bf00      	nop
  8006c92:	0001      	movs	r1, r0
@@ -19003,6 +19014,7 @@ void TIM22_IRQHandler(void)
  8006c98:	60ba      	str	r2, [r7, #8]
  8006c9a:	b2ca      	uxtb	r2, r1
  8006c9c:	701a      	strb	r2, [r3, #0]
+	for (DataIdx = 0; DataIdx < len; DataIdx++)
  8006c9e:	697b      	ldr	r3, [r7, #20]
  8006ca0:	3301      	adds	r3, #1
  8006ca2:	617b      	str	r3, [r7, #20]
@@ -19010,28 +19022,41 @@ void TIM22_IRQHandler(void)
  8006ca6:	687b      	ldr	r3, [r7, #4]
  8006ca8:	429a      	cmp	r2, r3
  8006caa:	dbf0      	blt.n	8006c8e <_read+0x12>
+	}
+
+return len;
  8006cac:	687b      	ldr	r3, [r7, #4]
+}
  8006cae:	0018      	movs	r0, r3
  8006cb0:	46bd      	mov	sp, r7
  8006cb2:	b006      	add	sp, #24
  8006cb4:	bd80      	pop	{r7, pc}
 
 08006cb6 <_write>:
+
+__attribute__((weak)) int _write(int file, char *ptr, int len)
+{
  8006cb6:	b580      	push	{r7, lr}
  8006cb8:	b086      	sub	sp, #24
  8006cba:	af00      	add	r7, sp, #0
  8006cbc:	60f8      	str	r0, [r7, #12]
  8006cbe:	60b9      	str	r1, [r7, #8]
  8006cc0:	607a      	str	r2, [r7, #4]
+	int DataIdx;
+
+	for (DataIdx = 0; DataIdx < len; DataIdx++)
  8006cc2:	2300      	movs	r3, #0
  8006cc4:	617b      	str	r3, [r7, #20]
  8006cc6:	e009      	b.n	8006cdc <_write+0x26>
+	{
+		__io_putchar(*ptr++);
  8006cc8:	68bb      	ldr	r3, [r7, #8]
  8006cca:	1c5a      	adds	r2, r3, #1
  8006ccc:	60ba      	str	r2, [r7, #8]
  8006cce:	781b      	ldrb	r3, [r3, #0]
  8006cd0:	0018      	movs	r0, r3
  8006cd2:	f7ff f829 	bl	8005d28 <__io_putchar>
+	for (DataIdx = 0; DataIdx < len; DataIdx++)
  8006cd6:	697b      	ldr	r3, [r7, #20]
  8006cd8:	3301      	adds	r3, #1
  8006cda:	617b      	str	r3, [r7, #20]
@@ -19039,59 +19064,84 @@ void TIM22_IRQHandler(void)
  8006cde:	687b      	ldr	r3, [r7, #4]
  8006ce0:	429a      	cmp	r2, r3
  8006ce2:	dbf1      	blt.n	8006cc8 <_write+0x12>
+	}
+	return len;
  8006ce4:	687b      	ldr	r3, [r7, #4]
+}
  8006ce6:	0018      	movs	r0, r3
  8006ce8:	46bd      	mov	sp, r7
  8006cea:	b006      	add	sp, #24
  8006cec:	bd80      	pop	{r7, pc}
 
 08006cee <_close>:
+
+int _close(int file)
+{
  8006cee:	b580      	push	{r7, lr}
  8006cf0:	b082      	sub	sp, #8
  8006cf2:	af00      	add	r7, sp, #0
  8006cf4:	6078      	str	r0, [r7, #4]
+	return -1;
  8006cf6:	2301      	movs	r3, #1
  8006cf8:	425b      	negs	r3, r3
+}
  8006cfa:	0018      	movs	r0, r3
  8006cfc:	46bd      	mov	sp, r7
  8006cfe:	b002      	add	sp, #8
  8006d00:	bd80      	pop	{r7, pc}
 
 08006d02 <_fstat>:
+
+
+int _fstat(int file, struct stat *st)
+{
  8006d02:	b580      	push	{r7, lr}
  8006d04:	b082      	sub	sp, #8
  8006d06:	af00      	add	r7, sp, #0
  8006d08:	6078      	str	r0, [r7, #4]
  8006d0a:	6039      	str	r1, [r7, #0]
+	st->st_mode = S_IFCHR;
  8006d0c:	683b      	ldr	r3, [r7, #0]
  8006d0e:	2280      	movs	r2, #128	; 0x80
  8006d10:	0192      	lsls	r2, r2, #6
  8006d12:	605a      	str	r2, [r3, #4]
+	return 0;
  8006d14:	2300      	movs	r3, #0
+}
  8006d16:	0018      	movs	r0, r3
  8006d18:	46bd      	mov	sp, r7
  8006d1a:	b002      	add	sp, #8
  8006d1c:	bd80      	pop	{r7, pc}
 
 08006d1e <_isatty>:
+
+int _isatty(int file)
+{
  8006d1e:	b580      	push	{r7, lr}
  8006d20:	b082      	sub	sp, #8
  8006d22:	af00      	add	r7, sp, #0
  8006d24:	6078      	str	r0, [r7, #4]
+	return 1;
  8006d26:	2301      	movs	r3, #1
+}
  8006d28:	0018      	movs	r0, r3
  8006d2a:	46bd      	mov	sp, r7
  8006d2c:	b002      	add	sp, #8
  8006d2e:	bd80      	pop	{r7, pc}
 
 08006d30 <_lseek>:
+
+int _lseek(int file, int ptr, int dir)
+{
  8006d30:	b580      	push	{r7, lr}
  8006d32:	b084      	sub	sp, #16
  8006d34:	af00      	add	r7, sp, #0
  8006d36:	60f8      	str	r0, [r7, #12]
  8006d38:	60b9      	str	r1, [r7, #8]
  8006d3a:	607a      	str	r2, [r7, #4]
+	return 0;
  8006d3c:	2300      	movs	r3, #0
+}
  8006d3e:	0018      	movs	r0, r3
  8006d40:	46bd      	mov	sp, r7
  8006d42:	b004      	add	sp, #16
@@ -19099,20 +19149,35 @@ void TIM22_IRQHandler(void)
 	...
 
 08006d48 <_sbrk>:
+/**
+ _sbrk
+ Increase program data space. Malloc and related functions depend on this
+**/
+caddr_t _sbrk(int incr)
+{
  8006d48:	b580      	push	{r7, lr}
  8006d4a:	b084      	sub	sp, #16
  8006d4c:	af00      	add	r7, sp, #0
  8006d4e:	6078      	str	r0, [r7, #4]
+	extern char end asm("end");
+	static char *heap_end;
+	char *prev_heap_end;
+
+	if (heap_end == 0)
  8006d50:	4b11      	ldr	r3, [pc, #68]	; (8006d98 <_sbrk+0x50>)
  8006d52:	681b      	ldr	r3, [r3, #0]
  8006d54:	2b00      	cmp	r3, #0
  8006d56:	d102      	bne.n	8006d5e <_sbrk+0x16>
+		heap_end = &end;
  8006d58:	4b0f      	ldr	r3, [pc, #60]	; (8006d98 <_sbrk+0x50>)
  8006d5a:	4a10      	ldr	r2, [pc, #64]	; (8006d9c <_sbrk+0x54>)
  8006d5c:	601a      	str	r2, [r3, #0]
+
+	prev_heap_end = heap_end;
  8006d5e:	4b0e      	ldr	r3, [pc, #56]	; (8006d98 <_sbrk+0x50>)
  8006d60:	681b      	ldr	r3, [r3, #0]
  8006d62:	60fb      	str	r3, [r7, #12]
+	if (heap_end + incr > stack_ptr)
  8006d64:	4b0c      	ldr	r3, [pc, #48]	; (8006d98 <_sbrk+0x50>)
  8006d66:	681a      	ldr	r2, [r3, #0]
  8006d68:	687b      	ldr	r3, [r7, #4]
@@ -19120,20 +19185,29 @@ void TIM22_IRQHandler(void)
  8006d6c:	466a      	mov	r2, sp
  8006d6e:	4293      	cmp	r3, r2
  8006d70:	d907      	bls.n	8006d82 <_sbrk+0x3a>
+	{
+		errno = ENOMEM;
  8006d72:	f000 f87d 	bl	8006e70 <__errno>
  8006d76:	0003      	movs	r3, r0
  8006d78:	220c      	movs	r2, #12
  8006d7a:	601a      	str	r2, [r3, #0]
+		return (caddr_t) -1;
  8006d7c:	2301      	movs	r3, #1
  8006d7e:	425b      	negs	r3, r3
  8006d80:	e006      	b.n	8006d90 <_sbrk+0x48>
+	}
+
+	heap_end += incr;
  8006d82:	4b05      	ldr	r3, [pc, #20]	; (8006d98 <_sbrk+0x50>)
  8006d84:	681a      	ldr	r2, [r3, #0]
  8006d86:	687b      	ldr	r3, [r7, #4]
  8006d88:	18d2      	adds	r2, r2, r3
  8006d8a:	4b03      	ldr	r3, [pc, #12]	; (8006d98 <_sbrk+0x50>)
  8006d8c:	601a      	str	r2, [r3, #0]
+
+	return (caddr_t) prev_heap_end;
  8006d8e:	68fb      	ldr	r3, [r7, #12]
+}
  8006d90:	0018      	movs	r0, r3
  8006d92:	46bd      	mov	sp, r7
  8006d94:	b004      	add	sp, #16
@@ -19234,49 +19308,108 @@ void SystemInit (void)
  8006e18:	e000ed00 	.word	0xe000ed00
 
 08006e1c <Reset_Handler>:
+
+    .section  .text.Reset_Handler
+  .weak  Reset_Handler
+  .type  Reset_Handler, %function
+Reset_Handler:  
+   ldr   r0, =_estack
  8006e1c:	480d      	ldr	r0, [pc, #52]	; (8006e54 <LoopForever+0x2>)
+   mov   sp, r0          /* set stack pointer */
  8006e1e:	4685      	mov	sp, r0
+
+/* Copy the data segment initializers from flash to SRAM */
+  movs  r1, #0
  8006e20:	2100      	movs	r1, #0
+  b  LoopCopyDataInit
  8006e22:	e003      	b.n	8006e2c <LoopCopyDataInit>
 
 08006e24 <CopyDataInit>:
+
+CopyDataInit:
+  ldr  r3, =_sidata
  8006e24:	4b0c      	ldr	r3, [pc, #48]	; (8006e58 <LoopForever+0x6>)
+  ldr  r3, [r3, r1]
  8006e26:	585b      	ldr	r3, [r3, r1]
+  str  r3, [r0, r1]
  8006e28:	5043      	str	r3, [r0, r1]
+  adds  r1, r1, #4
  8006e2a:	3104      	adds	r1, #4
 
 08006e2c <LoopCopyDataInit>:
+
+LoopCopyDataInit:
+  ldr  r0, =_sdata
  8006e2c:	480b      	ldr	r0, [pc, #44]	; (8006e5c <LoopForever+0xa>)
+  ldr  r3, =_edata
  8006e2e:	4b0c      	ldr	r3, [pc, #48]	; (8006e60 <LoopForever+0xe>)
+  adds  r2, r0, r1
  8006e30:	1842      	adds	r2, r0, r1
+  cmp  r2, r3
  8006e32:	429a      	cmp	r2, r3
+  bcc  CopyDataInit
  8006e34:	d3f6      	bcc.n	8006e24 <CopyDataInit>
+  ldr  r2, =_sbss
  8006e36:	4a0b      	ldr	r2, [pc, #44]	; (8006e64 <LoopForever+0x12>)
+  b  LoopFillZerobss
  8006e38:	e002      	b.n	8006e40 <LoopFillZerobss>
 
 08006e3a <FillZerobss>:
+/* Zero fill the bss segment. */
+FillZerobss:
+  movs  r3, #0
  8006e3a:	2300      	movs	r3, #0
+  str  r3, [r2]
  8006e3c:	6013      	str	r3, [r2, #0]
+  adds r2, r2, #4
  8006e3e:	3204      	adds	r2, #4
 
 08006e40 <LoopFillZerobss>:
+
+
+LoopFillZerobss:
+  ldr  r3, = _ebss
  8006e40:	4b09      	ldr	r3, [pc, #36]	; (8006e68 <LoopForever+0x16>)
+  cmp  r2, r3
  8006e42:	429a      	cmp	r2, r3
+  bcc  FillZerobss
  8006e44:	d3f9      	bcc.n	8006e3a <FillZerobss>
+
+/* Call the clock system intitialization function.*/
+  bl  SystemInit
  8006e46:	f7ff ffab 	bl	8006da0 <SystemInit>
+/* Call static constructors */
+    bl __libc_init_array
  8006e4a:	f000 f9a3 	bl	8007194 <__libc_init_array>
+/* Call the application's entry point.*/
+  bl  main
  8006e4e:	f7fe f8cf 	bl	8004ff0 <main>
 
 08006e52 <LoopForever>:
+
+LoopForever:
+    b LoopForever
  8006e52:	e7fe      	b.n	8006e52 <LoopForever>
+   ldr   r0, =_estack
  8006e54:	20005000 	.word	0x20005000
+  ldr  r3, =_sidata
  8006e58:	080081ec 	.word	0x080081ec
+  ldr  r0, =_sdata
  8006e5c:	20000000 	.word	0x20000000
+  ldr  r3, =_edata
  8006e60:	20000068 	.word	0x20000068
+  ldr  r2, =_sbss
  8006e64:	20000068 	.word	0x20000068
+  ldr  r3, = _ebss
  8006e68:	2000033c 	.word	0x2000033c
 
 08006e6c <DMA1_Channel1_IRQHandler>:
+ * @retval : None
+*/
+    .section  .text.Default_Handler,"ax",%progbits
+Default_Handler:
+Infinite_Loop:
+  b  Infinite_Loop
  8006e6c:	e7fe      	b.n	8006e6c <DMA1_Channel1_IRQHandler>
 	...
 

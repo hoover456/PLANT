@@ -24,21 +24,21 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-PLANT.elf \
+Midterm.elf \
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
-PLANT.list \
+Midterm.list \
 
 
 # All Target
-all: PLANT.elf secondary-outputs
+all: Midterm.elf secondary-outputs
 
 # Tool invocations
-PLANT.elf: $(OBJS) $(USER_OBJS) C:\Users\Assyria\STM32CubeIDE\workspace_1.0.2\PLANT\STM32L073RZTX_FLASH.ld
-	arm-none-eabi-gcc -o "PLANT.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0plus -T"C:\Users\Assyria\STM32CubeIDE\workspace_1.0.2\PLANT\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PLANT.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Midterm.elf: $(OBJS) $(USER_OBJS) C:\Users\Assyria\Documents\PLANT\Midterm\STM32L073RZTX_FLASH.ld
+	arm-none-eabi-gcc -o "Midterm.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0plus -T"C:\Users\Assyria\Documents\PLANT\Midterm\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Midterm.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -47,8 +47,8 @@ default.size.stdout: $(EXECUTABLES)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-PLANT.list: $(EXECUTABLES)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "PLANT.list"
+Midterm.list: $(EXECUTABLES)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "Midterm.list"
 	@echo 'Finished building: $@'
 	@echo ' '
 

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;Midterm/PLANT.elf.launch&apos;" deleteContents="false" description="Delete resource &apos;Midterm/PLANT.elf.launch&apos;" element1="/Midterm/PLANT.elf.launch" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1574740689529"/>&#x0A;<refactoring comment="Delete resource &apos;Final/Core/Startup/startup_stm32l073rztx.s&apos;" deleteContents="false" description="Delete resource &apos;Final/Core/Startup/startup_stm32l073rztx.s&apos;" element1="/Final/Core/Startup/startup_stm32l073rztx.s" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1574740822370"/>
+</session>
