@@ -1,0 +1,16 @@
+main.c:60:6:init_Left	0	static
+main.c:63:6:init_Right	0	static
+main.c:67:6:init_Straight	0	static
+main.c:70:6:myTim2Init	12	static
+main.c:244:6:SystemClock_Config	128	static
+main.c:150:5:main	136	static
+main.c:732:1:__io_putchar	16	static
+main.c:741:6:Right_Encoder_Interrupt_Handler	0	static
+main.c:749:6:Left_Encoder_Interrupt_Handler	0	static
+main.c:810:6:Right_Motor_Controller	24	static
+main.c:825:6:Left_Motor_Controller	24	static
+main.c:840:6:TEN_KHZ_TIM_Interrupt_Handler	0	static
+main.c:849:6:TIM22_Interrupt_Handler	0	static
+main.c:854:6:Print_Encoder_Reading	8	static
+main.c:860:6:Print_ADC_Reading	16	static
+main.c:876:6:Error_Handler	0	static
