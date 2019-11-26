@@ -1,4 +1,4 @@
-23:00:46 **** Incremental Build of configuration Debug for project Final ****
+00:24:11 **** Incremental Build of configuration Debug for project Final ****
 make -j8 all 
 arm-none-eabi-size   Final.elf 
    text	   data	    bss	    dec	    hex	filename

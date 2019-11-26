@@ -1,0 +1,20 @@
+/**
+******************************************************************************
+  * @file           : movement.h
+  * @brief          : Header for movement.c file.
+  *                   This file contains variable and type defines related to robot movement
+******************************************************************************
+**/
+
+// Struct representing Robot position in 2D space
+struct Robot{
+	int x; // X-coordinate of robot in world
+	int y; // Y-coordinate of robot in world
+	double theta; // Current direction of robot (0-359 degrees)
+};
+
+// Struct representing one motor
+struct Motor{
+	char dir; //Direction of rotation: 1 = forward, 0=brake, -1 = reverse
+	short encoder; // Current encoder reading
+};

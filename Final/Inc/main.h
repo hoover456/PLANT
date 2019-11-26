@@ -32,7 +32,7 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "movement.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -93,6 +93,12 @@ void Error_Handler(void);
 #define IR_LEFT_GPIO_Port GPIOA
 #define IR_RIGHT_Pin GPIO_PIN_12
 #define IR_RIGHT_GPIO_Port GPIOA
+#define Left_Motor_Enc_Pin GPIO_PIN_11
+#define Left_Motor_Enc_GPIO_Port GPIOC
+#define Left_Motor_Enc_EXTI_IRQn EXTI4_15_IRQn
+#define Right_Motor_Enc_Pin GPIO_PIN_12
+#define Right_Motor_Enc_GPIO_Port GPIOC
+#define Right_Motor_Enc_EXTI_IRQn EXTI4_15_IRQn
 #define RE_PB_Pin GPIO_PIN_6
 #define RE_PB_GPIO_Port GPIOB
 #define RE_PB_EXTI_IRQn EXTI4_15_IRQn

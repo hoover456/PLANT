@@ -6,3 +6,1524 @@
 
 
 2019-11-25 22:51:43,041 [INFO] Activator:177 - !SESSION log4j initialized
+2019-11-25 22:53:19,449 [INFO] ApplicationProperties:181 - Using Application install path: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541
+2019-11-25 22:53:19,465 [INFO] DbMcusXml:68 - Set database path to: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\/mcu/
+2019-11-25 22:53:19,465 [INFO] DbBoardsPdsc:54 - Set plugin database path to: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\/plugins/boardmanager/
+2019-11-25 22:53:19,481 [INFO] DbMcus:265 - Set plugin images path to: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\/plugins/mcufinder/images/
+2019-11-25 22:53:19,481 [INFO] DbBoards:232 - Set plugin images path to: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\/plugins/mcufinder/images/
+2019-11-25 22:53:19,481 [INFO] APIGFXSelector:72 - Set database path to: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\/plugins/mcufinder/mcu/
+2019-11-25 22:53:19,496 [INFO] DbMcusAds:72 - Set database path to: C:\Users\Assyria\.stmcufinder\plugins\mcufinder//mcu/
+2019-11-25 22:53:19,496 [INFO] DbMcusDocs:92 - Set database path to: C:\Users\Assyria\.stmcufinder\plugins\mcufinder//mcu/
+2019-11-25 22:53:19,496 [INFO] DbMcusJson:59 - Set database path to: C:\Users\Assyria\.stmcufinder\plugins\mcufinder//mcu/
+2019-11-25 22:53:19,496 [INFO] DbBoardsDocs:84 - Set database path to: C:\Users\Assyria\.stmcufinder\plugins\mcufinder//mcu/
+2019-11-25 22:53:19,496 [INFO] DbBoardsJson:51 - Set database path to: C:\Users\Assyria\.stmcufinder\plugins\mcufinder//mcu/
+2019-11-25 22:53:19,606 [INFO] CrossReferenceDbSqlite:197 - Set database path to: C:\Users\Assyria\.stmcufinder\plugins\mcufinder//mcu/cs/
+2019-11-25 22:53:19,684 [INFO] RulesReader:52 - Compatibility file has been processed (179 Rules)
+2019-11-25 22:53:19,746 [INFO] MicroXplorer:570 - Detected Java Version = 1.8.0_202
+2019-11-25 22:53:19,746 [INFO] DbMcusXml:68 - Set database path to: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\/mcu/
+2019-11-25 22:53:19,746 [INFO] DbBoardsPdsc:54 - Set plugin database path to: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\/plugins/boardmanager/
+2019-11-25 22:53:19,746 [INFO] DbMcus:265 - Set plugin images path to: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\/plugins/mcufinder/images/
+2019-11-25 22:53:19,746 [INFO] DbBoards:232 - Set plugin images path to: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\/plugins/mcufinder/images/
+2019-11-25 22:53:19,746 [INFO] APIGFXSelector:72 - Set database path to: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\/plugins/mcufinder/mcu/
+2019-11-25 22:53:19,746 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Assyria\.stmcufinder\plugins\mcufinder/ => C:\Users\Assyria\.stmcufinder\plugins\mcufinder
+2019-11-25 22:53:19,746 [INFO] DbMcusAds:72 - Set database path to: C:\Users\Assyria\.stmcufinder\plugins\mcufinder//mcu/
+2019-11-25 22:53:19,746 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Assyria\.stmcufinder\plugins\mcufinder/ => C:\Users\Assyria\.stmcufinder\plugins\mcufinder
+2019-11-25 22:53:19,746 [INFO] DbMcusDocs:92 - Set database path to: C:\Users\Assyria\.stmcufinder\plugins\mcufinder//mcu/
+2019-11-25 22:53:19,746 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Assyria\.stmcufinder\plugins\mcufinder/ => C:\Users\Assyria\.stmcufinder\plugins\mcufinder
+2019-11-25 22:53:19,746 [INFO] DbMcusJson:59 - Set database path to: C:\Users\Assyria\.stmcufinder\plugins\mcufinder//mcu/
+2019-11-25 22:53:19,746 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Assyria\.stmcufinder\plugins\mcufinder/ => C:\Users\Assyria\.stmcufinder\plugins\mcufinder
+2019-11-25 22:53:19,746 [INFO] DbBoardsDocs:84 - Set database path to: C:\Users\Assyria\.stmcufinder\plugins\mcufinder//mcu/
+2019-11-25 22:53:19,746 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Assyria\.stmcufinder\plugins\mcufinder/ => C:\Users\Assyria\.stmcufinder\plugins\mcufinder
+2019-11-25 22:53:19,746 [INFO] DbBoardsJson:51 - Set database path to: C:\Users\Assyria\.stmcufinder\plugins\mcufinder//mcu/
+2019-11-25 22:53:19,746 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Assyria\.stmcufinder\plugins\mcufinder/ => C:\Users\Assyria\.stmcufinder\plugins\mcufinder
+2019-11-25 22:53:19,746 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Assyria\.stmcufinder\plugins\mcufinder/ => C:\Users\Assyria\.stmcufinder\plugins\mcufinder
+2019-11-25 22:53:19,746 [INFO] CrossReferenceDbSqlite:197 - Set database path to: C:\Users\Assyria\.stmcufinder\plugins\mcufinder//mcu/cs/
+2019-11-25 22:53:19,809 [INFO] MainPanel:185 - HeapMemory: 275775488
+2019-11-25 22:53:19,855 [INFO] DbMcusXml:68 - Set database path to: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\/mcu/
+2019-11-25 22:53:19,855 [INFO] DbBoardsPdsc:54 - Set plugin database path to: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\/plugins/boardmanager/
+2019-11-25 22:53:19,855 [INFO] DbMcus:265 - Set plugin images path to: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\/plugins/mcufinder/images/
+2019-11-25 22:53:19,855 [INFO] DbBoards:232 - Set plugin images path to: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\/plugins/mcufinder/images/
+2019-11-25 22:53:19,855 [INFO] APIGFXSelector:72 - Set database path to: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\/plugins/mcufinder/mcu/
+2019-11-25 22:53:19,855 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Assyria\.stmcufinder\plugins\mcufinder/ => C:\Users\Assyria\.stmcufinder\plugins\mcufinder
+2019-11-25 22:53:19,855 [INFO] DbMcusAds:72 - Set database path to: C:\Users\Assyria\.stmcufinder\plugins\mcufinder//mcu/
+2019-11-25 22:53:19,855 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Assyria\.stmcufinder\plugins\mcufinder/ => C:\Users\Assyria\.stmcufinder\plugins\mcufinder
+2019-11-25 22:53:19,855 [INFO] DbMcusDocs:92 - Set database path to: C:\Users\Assyria\.stmcufinder\plugins\mcufinder//mcu/
+2019-11-25 22:53:19,855 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Assyria\.stmcufinder\plugins\mcufinder/ => C:\Users\Assyria\.stmcufinder\plugins\mcufinder
+2019-11-25 22:53:19,855 [INFO] DbMcusJson:59 - Set database path to: C:\Users\Assyria\.stmcufinder\plugins\mcufinder//mcu/
+2019-11-25 22:53:19,855 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Assyria\.stmcufinder\plugins\mcufinder/ => C:\Users\Assyria\.stmcufinder\plugins\mcufinder
+2019-11-25 22:53:19,855 [INFO] DbBoardsDocs:84 - Set database path to: C:\Users\Assyria\.stmcufinder\plugins\mcufinder//mcu/
+2019-11-25 22:53:19,855 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Assyria\.stmcufinder\plugins\mcufinder/ => C:\Users\Assyria\.stmcufinder\plugins\mcufinder
+2019-11-25 22:53:19,855 [INFO] DbBoardsJson:51 - Set database path to: C:\Users\Assyria\.stmcufinder\plugins\mcufinder//mcu/
+2019-11-25 22:53:19,855 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Assyria\.stmcufinder\plugins\mcufinder/ => C:\Users\Assyria\.stmcufinder\plugins\mcufinder
+2019-11-25 22:53:19,855 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Assyria\.stmcufinder\plugins\mcufinder/ => C:\Users\Assyria\.stmcufinder\plugins\mcufinder
+2019-11-25 22:53:19,855 [INFO] CrossReferenceDbSqlite:197 - Set database path to: C:\Users\Assyria\.stmcufinder\plugins\mcufinder//mcu/cs/
+2019-11-25 22:53:19,871 [INFO] ApplicationProperties:181 - Using Application install path: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541
+2019-11-25 22:53:19,871 [INFO] PluginManage:178 - Search for loadable plugins [exclusion list=]
+2019-11-25 22:53:19,871 [INFO] PluginManage:292 - Check plugin analytics
+2019-11-25 22:53:19,887 [INFO] PluginManage:342 - Loaded plugin analytics (category:tool,tabindex:-1)
+2019-11-25 22:53:19,887 [INFO] PluginManage:292 - Check plugin clock
+2019-11-25 22:53:19,887 [INFO] PluginManage:342 - Loaded plugin clock (category:base,tabindex:2)
+2019-11-25 22:53:19,887 [INFO] PluginManage:292 - Check plugin ddr
+2019-11-25 22:53:19,887 [INFO] PluginManage:342 - Loaded plugin ddr (category:tool,tabindex:6)
+2019-11-25 22:53:19,887 [INFO] PluginManage:292 - Check plugin filemanager
+2019-11-25 22:53:19,980 [INFO] PluginManage:342 - Loaded plugin filemanager (category:base,tabindex:10)
+2019-11-25 22:53:19,980 [INFO] PluginManage:292 - Check plugin ipmanager
+2019-11-25 22:53:19,980 [INFO] PluginManage:342 - Loaded plugin ipmanager (category:base,tabindex:5)
+2019-11-25 22:53:19,980 [INFO] PluginManage:292 - Check plugin pinoutandconfiguration
+2019-11-25 22:53:19,996 [INFO] PluginManage:342 - Loaded plugin pinoutandconfiguration (category:base,tabindex:1)
+2019-11-25 22:53:19,996 [INFO] PluginManage:292 - Check plugin pinoutconfig
+2019-11-25 22:53:20,012 [INFO] PluginManage:342 - Loaded plugin pinoutconfig (category:base,tabindex:0)
+2019-11-25 22:53:20,012 [INFO] PluginManage:292 - Check plugin power
+2019-11-25 22:53:20,012 [INFO] PluginManage:342 - Loaded plugin power (category:power,tabindex:4)
+2019-11-25 22:53:20,012 [INFO] PluginManage:292 - Check plugin projectmanager
+2019-11-25 22:53:20,027 [INFO] PluginManage:342 - Loaded plugin projectmanager (category:projectmanager,tabindex:3)
+2019-11-25 22:53:20,027 [INFO] PluginManage:292 - Check plugin thirdparty
+2019-11-25 22:53:20,074 [INFO] ThirdPartyDb:294 - Open Third Party DataBase File (C:/Users/Assyria/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml) : 15 ms. number of Sw pack : 9
+2019-11-25 22:53:20,090 [INFO] PluginManage:342 - Loaded plugin thirdparty (category:base,tabindex:-1)
+2019-11-25 22:53:20,090 [INFO] PluginManage:292 - Check plugin tools
+2019-11-25 22:53:20,090 [INFO] PluginManage:342 - Loaded plugin tools (category:base,tabindex:7)
+2019-11-25 22:53:20,090 [INFO] PluginManage:292 - Check plugin updater
+2019-11-25 22:53:20,105 [INFO] PluginManage:342 - Loaded plugin updater (category:base,tabindex:12)
+2019-11-25 22:53:20,105 [INFO] PluginManage:265 - PluginManage : Loaded plugins [12]
+2019-11-25 22:53:20,230 [INFO] PinOutPanel:1367 - setPackage(No Configuration,No Configuration)
+2019-11-25 22:53:20,293 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:20,293 [INFO] PluginManager:200 - loadIPPluginJar : add adc
+2019-11-25 22:53:20,308 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:20,308 [INFO] PluginManager:200 - loadIPPluginJar : add aes
+2019-11-25 22:53:20,308 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:20,308 [INFO] PluginManager:200 - loadIPPluginJar : add can
+2019-11-25 22:53:20,308 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:20,308 [INFO] PluginManager:200 - loadIPPluginJar : add comp
+2019-11-25 22:53:20,308 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:20,308 [INFO] PluginManager:200 - loadIPPluginJar : add cryp
+2019-11-25 22:53:20,308 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:20,308 [INFO] PluginManager:200 - loadIPPluginJar : add dfsdm
+2019-11-25 22:53:20,308 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:20,308 [INFO] PluginManager:200 - loadIPPluginJar : add dma
+2019-11-25 22:53:20,308 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:20,308 [INFO] PluginManager:200 - loadIPPluginJar : add fatfs
+2019-11-25 22:53:20,324 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:20,324 [INFO] PluginManager:200 - loadIPPluginJar : add fmc
+2019-11-25 22:53:20,324 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:20,324 [INFO] PluginManager:200 - loadIPPluginJar : add freertos
+2019-11-25 22:53:20,324 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:20,324 [INFO] PluginManager:200 - loadIPPluginJar : add genericplugin
+2019-11-25 22:53:20,324 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:20,324 [INFO] PluginManager:200 - loadIPPluginJar : add gfxmmu
+2019-11-25 22:53:20,324 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:20,324 [INFO] PluginManager:200 - loadIPPluginJar : add gfxsimulator
+2019-11-25 22:53:20,324 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:20,324 [INFO] PluginManager:200 - loadIPPluginJar : add gic
+2019-11-25 22:53:20,341 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:20,342 [INFO] PluginManager:200 - loadIPPluginJar : add gpio
+2019-11-25 22:53:20,344 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:20,344 [INFO] PluginManager:200 - loadIPPluginJar : add gtzc
+2019-11-25 22:53:20,345 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:20,345 [INFO] PluginManager:200 - loadIPPluginJar : add hash
+2019-11-25 22:53:20,347 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:20,348 [INFO] PluginManager:200 - loadIPPluginJar : add i2c
+2019-11-25 22:53:20,349 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:20,349 [INFO] PluginManager:200 - loadIPPluginJar : add i2s
+2019-11-25 22:53:20,351 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:20,351 [INFO] PluginManager:200 - loadIPPluginJar : add ipddr
+2019-11-25 22:53:20,351 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:20,351 [INFO] PluginManager:200 - loadIPPluginJar : add ltdc
+2019-11-25 22:53:20,351 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:20,351 [INFO] PluginManager:200 - loadIPPluginJar : add mdma
+2019-11-25 22:53:20,351 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:20,351 [INFO] PluginManager:200 - loadIPPluginJar : add nvic
+2019-11-25 22:53:20,351 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:20,351 [INFO] PluginManager:200 - loadIPPluginJar : add opamp
+2019-11-25 22:53:20,351 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:20,351 [INFO] PluginManager:200 - loadIPPluginJar : add pdm2pcm
+2019-11-25 22:53:20,367 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:20,367 [INFO] PluginManager:200 - loadIPPluginJar : add plateformsettings
+2019-11-25 22:53:20,367 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:20,367 [INFO] PluginManager:200 - loadIPPluginJar : add quadspi
+2019-11-25 22:53:20,367 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:20,367 [INFO] PluginManager:200 - loadIPPluginJar : add resmgrutility
+2019-11-25 22:53:20,382 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:20,382 [INFO] PluginManager:200 - loadIPPluginJar : add sai
+2019-11-25 22:53:20,382 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:20,382 [INFO] PluginManager:200 - loadIPPluginJar : add spi
+2019-11-25 22:53:20,382 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:20,382 [INFO] PluginManager:200 - loadIPPluginJar : add stm32_wpan
+2019-11-25 22:53:20,382 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:20,382 [INFO] PluginManager:200 - loadIPPluginJar : add tim
+2019-11-25 22:53:20,398 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:20,399 [INFO] PluginManager:200 - loadIPPluginJar : add touchsensing
+2019-11-25 22:53:20,400 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:20,400 [INFO] PluginManager:200 - loadIPPluginJar : add tracer_emb
+2019-11-25 22:53:20,401 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:20,402 [INFO] PluginManager:200 - loadIPPluginJar : add ts
+2019-11-25 22:53:20,403 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:20,403 [INFO] PluginManager:200 - loadIPPluginJar : add tsc
+2019-11-25 22:53:20,404 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:20,404 [INFO] PluginManager:200 - loadIPPluginJar : add ucpd
+2019-11-25 22:53:20,406 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:20,406 [INFO] PluginManager:200 - loadIPPluginJar : add usart
+2019-11-25 22:53:20,848 [INFO] BoardConnectionPanel:220 - [DDR PANEL] osNameString: Windows
+2019-11-25 22:53:20,940 [INFO] BoardConnectionPanel:3149 - [DDR PANEL] STM32CubeIDE environment
+2019-11-25 22:53:20,941 [INFO] MainDdrPanel:100 - [DDR PANEL] GETTER - cubeProgrammerPath is: null
+2019-11-25 22:53:21,104 [FATAL] Updater:277 - Updater called before beeing initialized
+2019-11-25 22:53:21,316 [FATAL] Updater:277 - Updater called before beeing initialized
+2019-11-25 22:53:21,322 [INFO] PinOutPanel:1367 - setPackage(No Configuration,No Configuration)
+2019-11-25 22:53:21,322 [FATAL] Updater:277 - Updater called before beeing initialized
+2019-11-25 22:53:21,326 [INFO] BoardConnectionPanel:3149 - [DDR PANEL] STM32CubeIDE environment
+2019-11-25 22:53:21,326 [INFO] MainDdrPanel:100 - [DDR PANEL] GETTER - cubeProgrammerPath is: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.cubeprogrammer.win32_1.1.0.201910081157\tools\bin
+2019-11-25 22:53:21,330 [INFO] ProgrammerExecThread:148 - [ProgrammerAPI] CubeProgrammer command construction: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.cubeprogrammer.win32_1.1.0.201910081157\tools\bin\STM32_Programmer_CLI.exe -l
+2019-11-25 22:53:21,433 [INFO] MainDdrPanel:90 - [DDR PANEL] SETTER - Set cubeProgrammerPath to: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.cubeprogrammer.win32_1.1.0.201910081157\tools\bin
+2019-11-25 22:53:21,433 [INFO] Updater:886 - Updater Version found : 5.4.0
+2019-11-25 22:53:21,449 [INFO] ApplicationProperties:181 - Using Application install path: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541
+2019-11-25 22:53:21,679 [INFO] MainUpdater:2232 - connection check result : 10
+2019-11-25 22:53:21,679 [INFO] MainUpdater:236 - Updater Check For Update Now.
+2019-11-25 22:53:21,679 [INFO] MicroXplorer:420 - Change Database Version : DB.5.0.40
+2019-11-25 22:53:21,710 [INFO] CheckServerUpdateThread:92 - End of CheckServer Thread
+2019-11-25 22:53:21,898 [INFO] MainUpdater:2232 - connection check result : 10
+2019-11-25 22:53:21,898 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Successfull proxy connection.
+2019-11-25 22:53:21,941 [INFO] McuFinderGlobals:40 - Set McuFinder mode to 2 (CubeIDE integrated)
+2019-11-25 22:53:21,956 [INFO] FinderPluginLoader:86 - Searching for filters in installed packs
+2019-11-25 22:53:21,956 [INFO] DbMcusXml:106 - Load MCU database from C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\/mcu/families.xml
+2019-11-25 22:53:22,593 [INFO] DbMcusJson:87 - JSON generation date=Mon Sep 23 05:35:45 EDT 2019 (1569231345)
+2019-11-25 22:53:23,150 [INFO] ThirdPartyDb:264 - Close Third Party DataBase File (C:/Users/Assyria/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml)
+2019-11-25 22:53:23,216 [INFO] ThirdPartyDb:294 - Open Third Party DataBase File (C:/Users/Assyria/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml) : 6 ms. number of Sw pack : 9
+2019-11-25 22:53:23,216 [INFO] ThirdPartyDb:264 - Close Third Party DataBase File (C:/Users/Assyria/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml)
+2019-11-25 22:53:23,251 [INFO] IntegrityCheckThread:97 - End integrity checks thread
+2019-11-25 22:53:23,512 [INFO] DbMcus:193 - Found 1544 MCUs (1504 are supported by CubeMX, 1504 are visible in CubeMX)
+2019-11-25 22:53:23,512 [INFO] ApiDb:158 - Load user favorites file C:\Users\Assyria/.stm32cubeide/favorites.mcus.txt: 0 item(s)
+2019-11-25 22:53:23,512 [INFO] ApiDb:163 - User favorites MCUs=[]
+2019-11-25 22:53:23,512 [INFO] DbMcus:204 - Set 0 / 0 favorites MCUs
+2019-11-25 22:53:24,009 [INFO] DbMcusAds:130 - JSON generation date=Wed Feb 20 11:46:15 EST 2019 (1550681175)
+2019-11-25 22:53:24,009 [INFO] LoadUrlFilesThread:161 - End of LoadServerUrlFiles without Thread
+2019-11-25 22:53:24,040 [INFO] McuDetailPanel:180 - Set advertising image to C:/Users/Assyria/STM32Cube/Repository/\PRSTM32MP10219-01-med.jpg
+2019-11-25 22:53:24,506 [INFO] McuFilterPanel:282 - Update 0 favorites MCUs
+2019-11-25 22:53:24,676 [INFO] DbBoardsPdsc:92 - Found 19 items
+2019-11-25 22:53:24,678 [INFO] DbBoardsPdsc:92 - Found 9 items
+2019-11-25 22:53:24,680 [INFO] DbBoardsPdsc:92 - Found 27 items
+2019-11-25 22:53:24,681 [INFO] DbBoardsPdsc:92 - Found 1 items
+2019-11-25 22:53:24,686 [INFO] DbBoardsPdsc:92 - Found 38 items
+2019-11-25 22:53:24,691 [INFO] DbBoardsPdsc:92 - Found 38 items
+2019-11-25 22:53:24,693 [INFO] DbBoardsPdsc:92 - Found 1 items
+2019-11-25 22:53:24,721 [INFO] DbBoardsJson:79 - JSON generation date=Fri Sep 27 07:37:26 EDT 2019 (1569584246)
+2019-11-25 22:53:24,727 [INFO] DbBoards:120 - Found 133 boards (132 are supported by CubeMX)
+2019-11-25 22:53:24,733 [INFO] DbBoardsDocs:118 - JSON generation date=Mon Sep 23 05:35:45 EDT 2019 (1569231345)
+2019-11-25 22:53:24,746 [INFO] DbBoardsDocs:57 - Found 160 boards documents
+2019-11-25 22:53:24,747 [WARN] DbBoards:130 - board NUCLEO-H743ZI2 has no document id list !
+2019-11-25 22:53:24,749 [WARN] DbBoards:130 - board P-NUCLEO-WB55-Nucleo has no document id list !
+2019-11-25 22:53:24,749 [WARN] DbBoards:130 - board P-NUCLEO-WB55-USBDongle has no document id list !
+2019-11-25 22:53:24,749 [WARN] DbBoards:130 - board P-NUCLEO-WB55 has no document id list !
+2019-11-25 22:53:24,749 [WARN] DbBoards:130 - board STM32F401C-DISCO has no document id list !
+2019-11-25 22:53:24,750 [WARN] DbBoards:130 - board STM32F769I-DISC1 has no document id list !
+2019-11-25 22:53:24,750 [WARN] DbBoards:130 - board STM32L-DISCOVERY has no document id list !
+2019-11-25 22:53:24,751 [WARN] DbBoards:130 - board STM32H747I-DISC1 has no document id list !
+2019-11-25 22:53:24,751 [WARN] DbBoards:130 - board STM32MP157A-DK1 has no document id list !
+2019-11-25 22:53:24,751 [WARN] DbBoards:130 - board STM32L562E-DK has no document id list !
+2019-11-25 22:53:24,751 [WARN] DbBoards:130 - board STM32100E-EVAL has no document id list !
+2019-11-25 22:53:24,751 [WARN] DbBoards:130 - board STM32303C-EVAL has no document id list !
+2019-11-25 22:53:24,752 [WARN] DbBoards:130 - board STM32L152D-EVAL has no document id list !
+2019-11-25 22:53:24,752 [WARN] DbBoards:130 - board STM32H743I-EVAL2 has no document id list !
+2019-11-25 22:53:24,752 [WARN] DbBoards:130 - board STM32H753I-EVAL2 has no document id list !
+2019-11-25 22:53:24,752 [WARN] DbBoards:130 - board STM32G474E-EVAL1 has no document id list !
+2019-11-25 22:53:24,753 [WARN] DbBoards:130 - board STM32L552E-EV has no document id list !
+2019-11-25 22:53:24,753 [WARN] DbBoards:130 - board STEVAL-MKSBOX1V1 has no document id list !
+2019-11-25 22:53:25,243 [ERROR] DbBoards:192 - Image file not found for board STM32G0316-DISCO: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\/plugins/mcufinder/images/boards/stm32g0316discovery_small.jpg
+2019-11-25 22:53:25,528 [INFO] ApiDb:158 - Load user favorites file C:\Users\Assyria/.stm32cubeide/favorites.boards.txt: 0 item(s)
+2019-11-25 22:53:25,528 [INFO] ApiDb:163 - User favorites Boards=[]
+2019-11-25 22:53:25,528 [INFO] DbBoards:209 - Set 0 / 0 favorites Boards
+2019-11-25 22:53:25,606 [INFO] LoadUrlFilesThread:161 - End of LoadServerUrlFiles without Thread
+2019-11-25 22:53:25,606 [INFO] BoardDetailPanel:179 - Set advertising image to C:/Users/Assyria/STM32Cube/Repository/\PRSTM32MP10219-01-med.jpg
+2019-11-25 22:53:25,637 [INFO] BoardFilterPanel:211 - Update 0 favorites Boards
+2019-11-25 22:53:25,731 [INFO] CrossSelectorPresenter:1319 - Cross Selector saved comparison directory: C:\Users\Assyria\.stmcufinder\plugins\mcufinder\mcu\cs_comparisons_mx
+2019-11-25 22:53:32,465 [INFO] DbMcusDocs:126 - JSON generation date=Mon Sep 23 05:35:45 EDT 2019 (1569231345)
+2019-11-25 22:53:32,543 [INFO] DbMcusDocs:61 - Found 525 MCUs documents
+2019-11-25 22:53:38,856 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] withoutVersionV1.11.2
+2019-11-25 22:53:38,856 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] withoutVersionV1.11.0
+2019-11-25 22:53:44,605 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] File copied successfully!!
+2019-11-25 22:53:46,644 [INFO] MainUpdater:2232 - connection check result : 10
+2019-11-25 22:53:46,645 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Successfull proxy connection.
+2019-11-25 22:53:46,688 [INFO] MicroXplorer:390 - Change Database Path : 
+2019-11-25 22:53:46,689 [INFO] MicroXplorer:420 - Change Database Version : DB.5.0.40
+2019-11-25 22:53:46,691 [INFO] PinOutPanel:1367 - setPackage(No Configuration,No Configuration)
+2019-11-25 22:53:46,692 [INFO] UtilMem:74 - Begin LoadConfig() Used Memory: 296873776 Bytes (480247808)
+2019-11-25 22:53:46,693 [INFO] MicroXplorer:390 - Change Database Path : 
+2019-11-25 22:53:46,693 [INFO] MicroXplorer:420 - Change Database Version : DB.5.0.40
+2019-11-25 22:53:46,693 [INFO] OpenFileManager:269 - Change cursor
+2019-11-25 22:53:48,566 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) Unable to find key (Mcu.ThirdPartyNb) in loaded IOC file
+2019-11-25 22:53:48,566 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) Unable to find key (Mcu.PinsNb) in loaded IOC file
+2019-11-25 22:53:48,566 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) Unable to find key (Mcu.IPNb) in loaded IOC file
+2019-11-25 22:53:48,769 [INFO] UtilMem:74 - End LoadConfig() Used Memory: 237349880 Bytes (480247808)
+2019-11-25 22:53:48,778 [INFO] ThirdPartyDb:294 - Open Third Party DataBase File (C:/Users/Assyria/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml) : 3 ms. number of Sw pack : 9
+2019-11-25 22:53:48,842 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE1 4.4.0
+2019-11-25 22:53:48,842 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 6.2.0
+2019-11-25 22:53:48,842 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC4 1.4.1
+2019-11-25 22:53:48,842 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-GNSS1 3.0.0
+2019-11-25 22:53:48,843 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 7.0.0
+2019-11-25 22:53:48,843 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC4 1.5.0
+2019-11-25 22:53:48,843 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-GNSS1 3.1.0
+2019-11-25 22:53:49,061 [INFO] PinOutPanel:1367 - setPackage(No Configuration,No Configuration)
+2019-11-25 22:53:49,062 [INFO] PinOutPanel:1367 - setPackage(STM32L073RZTx,LQFP64)
+2019-11-25 22:53:49,419 [INFO] UtilMem:74 - Before build in PCC Used Memory: 331495264 Bytes (480247808)
+2019-11-25 22:53:49,700 [INFO] SharedServices:71 - Folder for power plug-in: C:/Users/Assyria/.stm32cubemx/plugins/power
+2019-11-25 22:53:49,715 [INFO] UtilMem:74 - After build in PCC Used Memory: 347746152 Bytes (480247808)
+2019-11-25 22:53:49,731 [INFO] BlockDiagram:1827 - stop enableDisableButtons
+2019-11-25 22:53:49,731 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:49,731 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:49,731 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:49,731 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:49,731 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:49,731 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:49,731 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:49,731 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:49,731 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:49,731 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:49,731 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:49,731 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:49,731 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:49,731 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:49,731 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:49,731 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:49,731 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:49,731 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:49,731 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:49,731 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:49,731 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:49,731 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:49,731 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:49,731 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:49,731 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:49,731 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:49,731 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:49,731 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:49,731 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:49,731 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:49,731 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:49,731 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:49,731 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:49,747 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:49,747 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:49,747 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:49,747 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:49,747 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:49,747 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:53:49,747 [INFO] BlockDiagram:1827 - stop enableDisableButtons
+2019-11-25 22:53:49,762 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] toolchainItems.length=====1
+2019-11-25 22:53:49,840 [INFO] OpenFileManager:289 - Restore cursor
+2019-11-25 22:53:49,903 [INFO] BlockDiagram:1827 - stop enableDisableButtons
+2019-11-25 22:53:49,934 [INFO] BlockDiagram:1827 - stop enableDisableButtons
+2019-11-25 22:53:50,059 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 387069792 Bytes (480247808)
+2019-11-25 22:53:50,075 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 390564072 Bytes (480247808)
+2019-11-25 22:53:50,528 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: NVIC
+2019-11-25 22:53:50,528 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: SYS
+2019-11-25 22:53:50,528 [INFO] CodeGenerator:598 - code generatio: config db path: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\
+2019-11-25 22:53:50,918 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Assyria\Documents\PLANT\Final\MXTmpFiles\license.tmp_save
+2019-11-25 22:53:51,231 [INFO] CodeEngine:211 - Generated code: C:\Users\Assyria\Documents\PLANT\Final\MXTmpFiles\license.tmp
+2019-11-25 22:53:51,356 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2019-11-25 22:53:51,356 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Debug : prepare data for SYS
+2019-11-25 22:53:51,356 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line test
+2019-11-25 22:53:51,356 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Debug : prepare data for NVIC
+2019-11-25 22:53:51,356 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line test
+2019-11-25 22:53:51,387 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Assyria\Documents\PLANT\Final\Core\Src\stm32l0xx_it.c_save
+2019-11-25 22:53:51,559 [INFO] CodeEngine:211 - Generated code: C:\Users\Assyria\Documents\PLANT\Final\Core\Src\stm32l0xx_it.c
+2019-11-25 22:53:51,590 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Assyria\Documents\PLANT\Final\Core\Inc\stm32l0xx_it.h_save
+2019-11-25 22:53:51,684 [INFO] CodeEngine:211 - Generated code: C:\Users\Assyria\Documents\PLANT\Final\Core\Inc\stm32l0xx_it.h
+2019-11-25 22:53:51,715 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Assyria\Documents\PLANT\Final\Core\Src\stm32l0xx_hal_msp.c_save
+2019-11-25 22:53:51,887 [INFO] CodeEngine:211 - Generated code: C:\Users\Assyria\Documents\PLANT\Final\Core\Src\stm32l0xx_hal_msp.c
+2019-11-25 22:53:51,980 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Assyria\Documents\PLANT\Final\MXTmpFiles\system.tmp_save
+2019-11-25 22:53:52,059 [INFO] CodeEngine:211 - Generated code: C:\Users\Assyria\Documents\PLANT\Final\MXTmpFiles\system.tmp
+2019-11-25 22:53:52,090 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Assyria\Documents\PLANT\Final\Core\Inc\stm32l0xx_hal_conf.h_save
+2019-11-25 22:53:52,168 [INFO] CodeEngine:211 - Generated code: C:\Users\Assyria\Documents\PLANT\Final\Core\Inc\stm32l0xx_hal_conf.h
+2019-11-25 22:53:52,230 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Assyria\Documents\PLANT\Final\Core\Inc\main.h_save
+2019-11-25 22:53:52,340 [INFO] CodeEngine:211 - Generated code: C:\Users\Assyria\Documents\PLANT\Final\Core\Inc\main.h
+2019-11-25 22:53:52,371 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Assyria\Documents\PLANT\Final\Core\Src\main.c_save
+2019-11-25 22:53:52,492 [INFO] CodeEngine:211 - Generated code: C:\Users\Assyria\Documents\PLANT\Final\Core\Src\main.c
+2019-11-25 22:53:53,497 [INFO] ProjectBuilder:1645 - Time for Copy HAL[1] : 353mS.
+2019-11-25 22:53:53,512 [INFO] ProjectBuilder:2206 - Project Generator version: 3.5.2
+2019-11-25 22:53:53,856 [INFO] ConfigFileManager:953 - The Die is : DIE447
+2019-11-25 22:54:00,067 [INFO] ProjectBuilder:2373 - Time for Generating toolchain IDE Files: 6555mS.
+2019-11-25 22:54:00,067 [INFO] ProjectBuilder:1505 - Time for Copy CMSIS : 0mS.
+2019-11-25 22:54:00,067 [INFO] ProjectBuilder:1505 - Time for Copy CMSIS : 0mS.
+2019-11-25 22:54:02,658 [INFO] BlockDiagram:1827 - stop enableDisableButtons
+2019-11-25 22:54:23,823 [INFO] MainUpdater:2232 - connection check result : 10
+2019-11-25 22:54:23,823 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Successfull proxy connection.
+2019-11-25 22:54:23,878 [INFO] MicroXplorer:390 - Change Database Path : 
+2019-11-25 22:54:23,878 [INFO] MicroXplorer:420 - Change Database Version : DB.5.0.40
+2019-11-25 22:54:23,878 [INFO] PinOutPanel:1367 - setPackage(No Configuration,No Configuration)
+2019-11-25 22:54:23,878 [INFO] UtilMem:74 - Begin LoadConfig() Used Memory: 335262592 Bytes (919601152)
+2019-11-25 22:54:23,878 [INFO] MicroXplorer:390 - Change Database Path : 
+2019-11-25 22:54:23,878 [INFO] MicroXplorer:420 - Change Database Version : DB.5.0.40
+2019-11-25 22:54:23,878 [INFO] OpenFileManager:269 - Change cursor
+2019-11-25 22:54:23,894 [INFO] RulesReader:52 - Compatibility file has been processed (179 Rules)
+2019-11-25 22:54:24,849 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (FamilyName)
+2019-11-25 22:54:24,849 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (RCC) : Parameter (RTCHSEDivFreq_Value) has invalid value (4000000)
+2019-11-25 22:54:24,849 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (TIMFreq_Value)
+2019-11-25 22:54:25,020 [INFO] UtilMem:74 - End LoadConfig() Used Memory: 433826688 Bytes (919601152)
+2019-11-25 22:54:25,052 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE1 4.4.0
+2019-11-25 22:54:25,052 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 6.2.0
+2019-11-25 22:54:25,052 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC4 1.4.1
+2019-11-25 22:54:25,052 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-GNSS1 3.0.0
+2019-11-25 22:54:25,052 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 7.0.0
+2019-11-25 22:54:25,052 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC4 1.5.0
+2019-11-25 22:54:25,052 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-GNSS1 3.1.0
+2019-11-25 22:54:25,161 [INFO] PinOutPanel:1367 - setPackage(No Configuration,No Configuration)
+2019-11-25 22:54:25,161 [INFO] PinOutPanel:1367 - setPackage(STM32L073RZTx,LQFP64)
+2019-11-25 22:54:25,348 [INFO] UtilMem:74 - Before build in PCC Used Memory: 535838432 Bytes (919601152)
+2019-11-25 22:54:25,464 [INFO] SharedServices:71 - Folder for power plug-in: C:/Users/Assyria/.stm32cubemx/plugins/power
+2019-11-25 22:54:25,476 [INFO] UtilMem:74 - After build in PCC Used Memory: 545797864 Bytes (919601152)
+2019-11-25 22:54:25,483 [INFO] BlockDiagram:1827 - stop enableDisableButtons
+2019-11-25 22:54:25,484 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:54:25,484 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:54:25,484 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:54:25,484 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:54:25,484 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:54:25,485 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:54:25,485 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:54:25,485 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:54:25,485 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:54:25,485 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:54:25,485 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:54:25,485 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:54:25,486 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:54:25,486 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:54:25,486 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:54:25,487 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:54:25,487 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:54:25,487 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:54:25,487 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:54:25,487 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:54:25,487 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:54:25,488 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:54:25,488 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:54:25,488 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:54:25,488 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:54:25,488 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:54:25,488 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:54:25,489 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:54:25,489 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:54:25,489 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:54:25,489 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:54:25,489 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:54:25,489 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:54:25,490 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:54:25,490 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:54:25,490 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:54:25,490 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:54:25,491 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:54:25,491 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:54:25,505 [INFO] BlockDiagram:1827 - stop enableDisableButtons
+2019-11-25 22:54:25,524 [INFO] OpenFileManager:289 - Restore cursor
+2019-11-25 22:54:25,656 [INFO] BlockDiagram:1827 - stop enableDisableButtons
+2019-11-25 22:54:25,671 [INFO] BlockDiagram:1827 - stop enableDisableButtons
+2019-11-25 22:54:27,942 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 645938912 Bytes (919601152)
+2019-11-25 22:54:28,067 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: ADC
+2019-11-25 22:54:28,067 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: RTC
+2019-11-25 22:54:28,067 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: NVIC
+2019-11-25 22:54:28,067 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: USART
+2019-11-25 22:54:28,067 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: TIM6_7L0
+2019-11-25 22:54:28,067 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: TIM1_8L0
+2019-11-25 22:54:28,067 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: TIM1_8L0
+2019-11-25 22:54:28,067 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: SYS
+2019-11-25 22:54:28,067 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: GPIO
+2019-11-25 22:54:28,067 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: RCC
+2019-11-25 22:54:28,067 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: TIM1_8L0
+2019-11-25 22:54:28,067 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: TIM1_8L0
+2019-11-25 22:54:28,067 [INFO] CodeGenerator:598 - code generatio: config db path: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\
+2019-11-25 22:54:28,521 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Assyria\Documents\PLANT\Final\MXTmpFiles\license.tmp_save
+2019-11-25 22:54:28,568 [INFO] CodeEngine:211 - Generated code: C:\Users\Assyria\Documents\PLANT\Final\MXTmpFiles\license.tmp
+2019-11-25 22:54:28,703 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Assyria\Documents\PLANT\Final\MXTmpFiles\gpio.tmp_save
+2019-11-25 22:54:28,770 [INFO] CodeEngine:211 - Generated code: C:\Users\Assyria\Documents\PLANT\Final\MXTmpFiles\gpio.tmp
+2019-11-25 22:54:29,991 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2019-11-25 22:54:29,991 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Debug : prepare data for ADC
+2019-11-25 22:54:29,991 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line test
+2019-11-25 22:54:29,991 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2019-11-25 22:54:29,997 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Debug : prepare data for RTC
+2019-11-25 22:54:29,997 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line test
+2019-11-25 22:54:30,000 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2019-11-25 22:54:30,000 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Debug : prepare data for SYS
+2019-11-25 22:54:30,002 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line test
+2019-11-25 22:54:30,002 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2019-11-25 22:54:30,002 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Debug : prepare data for TIM
+2019-11-25 22:54:30,002 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line test
+2019-11-25 22:54:30,008 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2019-11-25 22:54:30,008 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Debug : prepare data for USART
+2019-11-25 22:54:30,010 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line test
+2019-11-25 22:54:30,011 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Debug : prepare data for NVIC
+2019-11-25 22:54:30,011 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line test
+2019-11-25 22:54:30,041 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Assyria\Documents\PLANT\Final\Src\stm32l0xx_it.c_save
+2019-11-25 22:54:30,131 [INFO] CodeEngine:211 - Generated code: C:\Users\Assyria\Documents\PLANT\Final\Src\stm32l0xx_it.c
+2019-11-25 22:54:30,151 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Assyria\Documents\PLANT\Final\Inc\stm32l0xx_it.h_save
+2019-11-25 22:54:30,206 [INFO] CodeEngine:211 - Generated code: C:\Users\Assyria\Documents\PLANT\Final\Inc\stm32l0xx_it.h
+2019-11-25 22:54:30,231 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Assyria\Documents\PLANT\Final\Src\stm32l0xx_hal_msp.c_save
+2019-11-25 22:54:30,333 [INFO] CodeEngine:211 - Generated code: C:\Users\Assyria\Documents\PLANT\Final\Src\stm32l0xx_hal_msp.c
+2019-11-25 22:54:30,356 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Assyria\Documents\PLANT\Final\MXTmpFiles\system.tmp_save
+2019-11-25 22:54:30,407 [INFO] CodeEngine:211 - Generated code: C:\Users\Assyria\Documents\PLANT\Final\MXTmpFiles\system.tmp
+2019-11-25 22:54:30,437 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Assyria\Documents\PLANT\Final\Inc\stm32l0xx_hal_conf.h_save
+2019-11-25 22:54:30,508 [INFO] CodeEngine:211 - Generated code: C:\Users\Assyria\Documents\PLANT\Final\Inc\stm32l0xx_hal_conf.h
+2019-11-25 22:54:30,527 [WARN] IPConfigManager:2673 - IP not found : TIM
+2019-11-25 22:54:30,527 [WARN] IPConfigManager:2673 - IP not found : gpio
+2019-11-25 22:54:30,528 [WARN] CodeGenerator:2697 - IP not found : TIM
+2019-11-25 22:54:30,528 [WARN] CodeGenerator:2697 - IP not found : gpio
+2019-11-25 22:54:30,551 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Assyria\Documents\PLANT\Final\Inc\main.h_save
+2019-11-25 22:54:30,632 [INFO] CodeEngine:211 - Generated code: C:\Users\Assyria\Documents\PLANT\Final\Inc\main.h
+2019-11-25 22:54:30,655 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Assyria\Documents\PLANT\Final\Src\main.c_save
+2019-11-25 22:54:30,818 [INFO] CodeEngine:211 - Generated code: C:\Users\Assyria\Documents\PLANT\Final\Src\main.c
+2019-11-25 22:54:31,512 [INFO] ProjectBuilder:1645 - Time for Copy HAL[1] : 176mS.
+2019-11-25 22:54:31,512 [INFO] ProjectBuilder:2206 - Project Generator version: 3.5.2
+2019-11-25 22:54:31,683 [INFO] ConfigFileManager:953 - The Die is : DIE447
+2019-11-25 22:54:32,401 [ERROR] root:77 - Fail to recover any existing build configuration matching on going update process 
+2019-11-25 22:54:32,401 [INFO] ProjectBuilder:2373 - Time for Generating toolchain IDE Files: 889mS.
+2019-11-25 22:54:32,402 [INFO] ProjectBuilder:1505 - Time for Copy CMSIS : 1mS.
+2019-11-25 22:54:32,405 [INFO] ProjectBuilder:1505 - Time for Copy CMSIS : 0mS.
+2019-11-25 22:54:33,685 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Tab changed to: Tools
+2019-11-25 22:54:40,559 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Tab changed to: Project Manager
+2019-11-25 22:54:47,497 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Tab changed to: Pinout & Configuration
+2019-11-25 22:55:39,809 [INFO] MainUpdater:2232 - connection check result : 10
+2019-11-25 22:55:39,809 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Successfull proxy connection.
+2019-11-25 22:55:39,809 [INFO] McuFinderGlobals:40 - Set McuFinder mode to 2 (CubeIDE integrated)
+2019-11-25 22:55:39,809 [INFO] FinderPluginLoader:86 - Searching for filters in installed packs
+2019-11-25 22:55:40,232 [INFO] LoadUrlFilesThread:161 - End of LoadServerUrlFiles without Thread
+2019-11-25 22:55:40,232 [INFO] McuDetailPanel:180 - Set advertising image to C:/Users/Assyria/STM32Cube/Repository/\PRSTM32MP10219-01-med.jpg
+2019-11-25 22:55:40,372 [INFO] McuFilterPanel:282 - Update 0 favorites MCUs
+2019-11-25 22:55:40,466 [INFO] LoadUrlFilesThread:161 - End of LoadServerUrlFiles without Thread
+2019-11-25 22:55:40,482 [INFO] BoardDetailPanel:179 - Set advertising image to C:/Users/Assyria/STM32Cube/Repository/\PRSTM32MP10219-01-med.jpg
+2019-11-25 22:55:40,497 [INFO] BoardFilterPanel:211 - Update 0 favorites Boards
+2019-11-25 22:55:40,513 [INFO] CrossSelectorPresenter:1319 - Cross Selector saved comparison directory: C:\Users\Assyria\.stmcufinder\plugins\mcufinder\mcu\cs_comparisons_mx
+2019-11-25 22:57:55,738 [INFO] BlockDiagram:1827 - stop enableDisableButtons
+2019-11-25 22:57:55,844 [INFO] MainUpdater:2232 - connection check result : 10
+2019-11-25 22:57:55,846 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Successfull proxy connection.
+2019-11-25 22:57:55,877 [INFO] MicroXplorer:390 - Change Database Path : 
+2019-11-25 22:57:55,877 [INFO] MicroXplorer:420 - Change Database Version : DB.5.0.40
+2019-11-25 22:57:55,878 [INFO] PinOutPanel:1367 - setPackage(No Configuration,No Configuration)
+2019-11-25 22:57:55,880 [INFO] UtilMem:74 - Begin LoadConfig() Used Memory: 539081680 Bytes (991952896)
+2019-11-25 22:57:55,880 [INFO] MicroXplorer:390 - Change Database Path : 
+2019-11-25 22:57:55,881 [INFO] MicroXplorer:420 - Change Database Version : DB.5.0.40
+2019-11-25 22:57:55,881 [INFO] OpenFileManager:269 - Change cursor
+2019-11-25 22:57:55,889 [INFO] RulesReader:52 - Compatibility file has been processed (179 Rules)
+2019-11-25 22:57:56,830 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (FamilyName)
+2019-11-25 22:57:56,831 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (RCC) : Parameter (RTCHSEDivFreq_Value) has invalid value (4000000)
+2019-11-25 22:57:56,831 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (TIMFreq_Value)
+2019-11-25 22:57:56,938 [INFO] UtilMem:74 - End LoadConfig() Used Memory: 644883800 Bytes (991952896)
+2019-11-25 22:57:56,962 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE1 4.4.0
+2019-11-25 22:57:56,962 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 6.2.0
+2019-11-25 22:57:56,962 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC4 1.4.1
+2019-11-25 22:57:56,962 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-GNSS1 3.0.0
+2019-11-25 22:57:56,962 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 7.0.0
+2019-11-25 22:57:56,963 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC4 1.5.0
+2019-11-25 22:57:56,963 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-GNSS1 3.1.0
+2019-11-25 22:57:57,076 [INFO] PinOutPanel:1367 - setPackage(No Configuration,No Configuration)
+2019-11-25 22:57:57,077 [INFO] PinOutPanel:1367 - setPackage(STM32L073RZTx,LQFP64)
+2019-11-25 22:57:57,240 [INFO] UtilMem:74 - Before build in PCC Used Memory: 742174912 Bytes (991952896)
+2019-11-25 22:57:57,331 [INFO] SharedServices:71 - Folder for power plug-in: C:/Users/Assyria/.stm32cubemx/plugins/power
+2019-11-25 22:57:57,342 [INFO] UtilMem:74 - After build in PCC Used Memory: 752138424 Bytes (991952896)
+2019-11-25 22:57:57,348 [INFO] BlockDiagram:1827 - stop enableDisableButtons
+2019-11-25 22:57:57,349 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:57:57,349 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:57:57,349 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:57:57,349 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:57:57,349 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:57:57,350 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:57:57,350 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:57:57,350 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:57:57,350 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:57:57,350 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:57:57,350 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:57:57,351 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:57:57,351 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:57:57,351 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:57:57,351 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:57:57,351 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:57:57,352 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:57:57,352 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:57:57,352 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:57:57,352 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:57:57,352 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:57:57,352 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:57:57,353 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:57:57,353 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:57:57,353 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:57:57,353 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:57:57,354 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:57:57,354 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:57:57,354 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:57:57,354 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:57:57,355 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:57:57,355 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:57:57,355 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:57:57,355 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:57:57,356 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:57:57,356 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:57:57,356 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:57:57,357 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:57:57,357 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:57:57,360 [INFO] BlockDiagram:1827 - stop enableDisableButtons
+2019-11-25 22:57:57,376 [INFO] OpenFileManager:289 - Restore cursor
+2019-11-25 22:57:57,507 [INFO] BlockDiagram:1827 - stop enableDisableButtons
+2019-11-25 22:57:57,522 [INFO] BlockDiagram:1827 - stop enableDisableButtons
+2019-11-25 22:58:22,568 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 434419896 Bytes (991952896)
+2019-11-25 22:58:22,711 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: ADC
+2019-11-25 22:58:22,711 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: RTC
+2019-11-25 22:58:22,711 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: NVIC
+2019-11-25 22:58:22,711 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: USART
+2019-11-25 22:58:22,711 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: TIM6_7L0
+2019-11-25 22:58:22,711 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: TIM1_8L0
+2019-11-25 22:58:22,711 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: TIM1_8L0
+2019-11-25 22:58:22,711 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: SYS
+2019-11-25 22:58:22,711 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: GPIO
+2019-11-25 22:58:22,711 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: RCC
+2019-11-25 22:58:22,712 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: TIM1_8L0
+2019-11-25 22:58:22,712 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: TIM1_8L0
+2019-11-25 22:58:22,712 [INFO] CodeGenerator:598 - code generatio: config db path: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\
+2019-11-25 22:58:22,914 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Assyria\Documents\PLANT\Midterm\MXTmpFiles\license.tmp_save
+2019-11-25 22:58:22,959 [INFO] CodeEngine:211 - Generated code: C:\Users\Assyria\Documents\PLANT\Midterm\MXTmpFiles\license.tmp
+2019-11-25 22:58:23,056 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Assyria\Documents\PLANT\Midterm\MXTmpFiles\gpio.tmp_save
+2019-11-25 22:58:23,104 [INFO] CodeEngine:211 - Generated code: C:\Users\Assyria\Documents\PLANT\Midterm\MXTmpFiles\gpio.tmp
+2019-11-25 22:58:23,977 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2019-11-25 22:58:23,978 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Debug : prepare data for ADC
+2019-11-25 22:58:23,978 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line test
+2019-11-25 22:58:23,979 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2019-11-25 22:58:23,980 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Debug : prepare data for RTC
+2019-11-25 22:58:23,981 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line test
+2019-11-25 22:58:23,982 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2019-11-25 22:58:23,982 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Debug : prepare data for SYS
+2019-11-25 22:58:23,983 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line test
+2019-11-25 22:58:23,984 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2019-11-25 22:58:23,985 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Debug : prepare data for TIM
+2019-11-25 22:58:23,985 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line test
+2019-11-25 22:58:23,987 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2019-11-25 22:58:23,988 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Debug : prepare data for USART
+2019-11-25 22:58:23,988 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line test
+2019-11-25 22:58:23,990 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Debug : prepare data for NVIC
+2019-11-25 22:58:23,990 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line test
+2019-11-25 22:58:24,025 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Assyria\Documents\PLANT\Midterm\Src\stm32l0xx_it.c_save
+2019-11-25 22:58:24,109 [INFO] CodeEngine:211 - Generated code: C:\Users\Assyria\Documents\PLANT\Midterm\Src\stm32l0xx_it.c
+2019-11-25 22:58:24,129 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Assyria\Documents\PLANT\Midterm\Inc\stm32l0xx_it.h_save
+2019-11-25 22:58:24,201 [INFO] CodeEngine:211 - Generated code: C:\Users\Assyria\Documents\PLANT\Midterm\Inc\stm32l0xx_it.h
+2019-11-25 22:58:24,228 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Assyria\Documents\PLANT\Midterm\Src\stm32l0xx_hal_msp.c_save
+2019-11-25 22:58:24,347 [INFO] CodeEngine:211 - Generated code: C:\Users\Assyria\Documents\PLANT\Midterm\Src\stm32l0xx_hal_msp.c
+2019-11-25 22:58:24,363 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Assyria\Documents\PLANT\Midterm\MXTmpFiles\system.tmp_save
+2019-11-25 22:58:24,403 [INFO] CodeEngine:211 - Generated code: C:\Users\Assyria\Documents\PLANT\Midterm\MXTmpFiles\system.tmp
+2019-11-25 22:58:24,431 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Assyria\Documents\PLANT\Midterm\Inc\stm32l0xx_hal_conf.h_save
+2019-11-25 22:58:24,583 [INFO] CodeEngine:211 - Generated code: C:\Users\Assyria\Documents\PLANT\Midterm\Inc\stm32l0xx_hal_conf.h
+2019-11-25 22:58:24,596 [WARN] IPConfigManager:2673 - IP not found : TIM
+2019-11-25 22:58:24,596 [WARN] IPConfigManager:2673 - IP not found : gpio
+2019-11-25 22:58:24,597 [WARN] CodeGenerator:2697 - IP not found : TIM
+2019-11-25 22:58:24,597 [WARN] CodeGenerator:2697 - IP not found : gpio
+2019-11-25 22:58:24,620 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Assyria\Documents\PLANT\Midterm\Inc\main.h_save
+2019-11-25 22:58:24,676 [INFO] CodeEngine:211 - Generated code: C:\Users\Assyria\Documents\PLANT\Midterm\Inc\main.h
+2019-11-25 22:58:24,702 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Assyria\Documents\PLANT\Midterm\Src\main.c_save
+2019-11-25 22:58:24,858 [INFO] CodeEngine:211 - Generated code: C:\Users\Assyria\Documents\PLANT\Midterm\Src\main.c
+2019-11-25 22:58:25,248 [INFO] ProjectBuilder:1645 - Time for Copy HAL[1] : 96mS.
+2019-11-25 22:58:25,249 [INFO] ProjectBuilder:2206 - Project Generator version: 3.5.2
+2019-11-25 22:58:25,408 [INFO] ConfigFileManager:953 - The Die is : DIE447
+2019-11-25 22:58:27,749 [INFO] ProjectBuilder:2373 - Time for Generating toolchain IDE Files: 2500mS.
+2019-11-25 22:58:27,750 [INFO] ProjectBuilder:1505 - Time for Copy CMSIS : 0mS.
+2019-11-25 22:58:27,754 [INFO] ProjectBuilder:1505 - Time for Copy CMSIS : 0mS.
+2019-11-25 22:59:35,147 [INFO] BlockDiagram:1827 - stop enableDisableButtons
+2019-11-25 22:59:35,288 [INFO] MainUpdater:2232 - connection check result : 10
+2019-11-25 22:59:35,290 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Successfull proxy connection.
+2019-11-25 22:59:35,352 [INFO] MicroXplorer:390 - Change Database Path : 
+2019-11-25 22:59:35,352 [INFO] MicroXplorer:420 - Change Database Version : DB.5.0.40
+2019-11-25 22:59:35,353 [INFO] PinOutPanel:1367 - setPackage(No Configuration,No Configuration)
+2019-11-25 22:59:35,356 [INFO] UtilMem:74 - Begin LoadConfig() Used Memory: 427833208 Bytes (1022361600)
+2019-11-25 22:59:35,357 [INFO] MicroXplorer:390 - Change Database Path : 
+2019-11-25 22:59:35,358 [INFO] MicroXplorer:420 - Change Database Version : DB.5.0.40
+2019-11-25 22:59:35,358 [INFO] OpenFileManager:269 - Change cursor
+2019-11-25 22:59:35,364 [INFO] RulesReader:52 - Compatibility file has been processed (179 Rules)
+2019-11-25 22:59:36,128 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (FamilyName)
+2019-11-25 22:59:36,129 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (RCC) : Parameter (RTCHSEDivFreq_Value) has invalid value (4000000)
+2019-11-25 22:59:36,129 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (TIMFreq_Value)
+2019-11-25 22:59:36,221 [INFO] UtilMem:74 - End LoadConfig() Used Memory: 833600088 Bytes (1022361600)
+2019-11-25 22:59:36,274 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE1 4.4.0
+2019-11-25 22:59:36,274 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 6.2.0
+2019-11-25 22:59:36,274 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC4 1.4.1
+2019-11-25 22:59:36,274 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-GNSS1 3.0.0
+2019-11-25 22:59:36,274 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 7.0.0
+2019-11-25 22:59:36,274 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC4 1.5.0
+2019-11-25 22:59:36,274 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-GNSS1 3.1.0
+2019-11-25 22:59:36,371 [INFO] PinOutPanel:1367 - setPackage(No Configuration,No Configuration)
+2019-11-25 22:59:36,372 [INFO] PinOutPanel:1367 - setPackage(STM32L073RZTx,LQFP64)
+2019-11-25 22:59:36,538 [INFO] UtilMem:74 - Before build in PCC Used Memory: 489379560 Bytes (1022361600)
+2019-11-25 22:59:36,607 [INFO] SharedServices:71 - Folder for power plug-in: C:/Users/Assyria/.stm32cubemx/plugins/power
+2019-11-25 22:59:36,615 [INFO] UtilMem:74 - After build in PCC Used Memory: 499343072 Bytes (1022361600)
+2019-11-25 22:59:36,620 [INFO] BlockDiagram:1827 - stop enableDisableButtons
+2019-11-25 22:59:36,620 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:59:36,620 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:59:36,621 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:59:36,621 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:59:36,621 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:59:36,621 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:59:36,621 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:59:36,621 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:59:36,621 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:59:36,621 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:59:36,621 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:59:36,622 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:59:36,622 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:59:36,622 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:59:36,622 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:59:36,622 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:59:36,622 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:59:36,622 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:59:36,622 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:59:36,623 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:59:36,623 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:59:36,623 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:59:36,623 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:59:36,624 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:59:36,624 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:59:36,624 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:59:36,624 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:59:36,624 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:59:36,624 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:59:36,624 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:59:36,625 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:59:36,625 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:59:36,625 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:59:36,625 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:59:36,625 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:59:36,626 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:59:36,626 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:59:36,626 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:59:36,626 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 22:59:36,628 [INFO] BlockDiagram:1827 - stop enableDisableButtons
+2019-11-25 22:59:36,645 [INFO] OpenFileManager:289 - Restore cursor
+2019-11-25 22:59:36,735 [INFO] BlockDiagram:1827 - stop enableDisableButtons
+2019-11-25 22:59:36,747 [INFO] BlockDiagram:1827 - stop enableDisableButtons
+2019-11-25 22:59:39,041 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 588994280 Bytes (1022361600)
+2019-11-25 22:59:39,153 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: ADC
+2019-11-25 22:59:39,153 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: RTC
+2019-11-25 22:59:39,153 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: NVIC
+2019-11-25 22:59:39,153 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: USART
+2019-11-25 22:59:39,153 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: TIM6_7L0
+2019-11-25 22:59:39,153 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: TIM1_8L0
+2019-11-25 22:59:39,153 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: TIM1_8L0
+2019-11-25 22:59:39,153 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: SYS
+2019-11-25 22:59:39,154 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: GPIO
+2019-11-25 22:59:39,154 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: RCC
+2019-11-25 22:59:39,154 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: TIM1_8L0
+2019-11-25 22:59:39,154 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: TIM1_8L0
+2019-11-25 22:59:39,154 [INFO] CodeGenerator:598 - code generatio: config db path: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\
+2019-11-25 22:59:39,326 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Assyria\Documents\PLANT\Final\MXTmpFiles\license.tmp_save
+2019-11-25 22:59:39,371 [INFO] CodeEngine:211 - Generated code: C:\Users\Assyria\Documents\PLANT\Final\MXTmpFiles\license.tmp
+2019-11-25 22:59:39,469 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Assyria\Documents\PLANT\Final\MXTmpFiles\gpio.tmp_save
+2019-11-25 22:59:39,525 [INFO] CodeEngine:211 - Generated code: C:\Users\Assyria\Documents\PLANT\Final\MXTmpFiles\gpio.tmp
+2019-11-25 22:59:40,326 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2019-11-25 22:59:40,326 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Debug : prepare data for ADC
+2019-11-25 22:59:40,327 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line test
+2019-11-25 22:59:40,327 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2019-11-25 22:59:40,328 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Debug : prepare data for RTC
+2019-11-25 22:59:40,328 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line test
+2019-11-25 22:59:40,329 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2019-11-25 22:59:40,330 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Debug : prepare data for SYS
+2019-11-25 22:59:40,330 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line test
+2019-11-25 22:59:40,331 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2019-11-25 22:59:40,331 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Debug : prepare data for TIM
+2019-11-25 22:59:40,332 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line test
+2019-11-25 22:59:40,333 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2019-11-25 22:59:40,334 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Debug : prepare data for USART
+2019-11-25 22:59:40,334 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line test
+2019-11-25 22:59:40,335 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Debug : prepare data for NVIC
+2019-11-25 22:59:40,335 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line test
+2019-11-25 22:59:40,359 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Assyria\Documents\PLANT\Final\Src\stm32l0xx_it.c_save
+2019-11-25 22:59:40,421 [INFO] CodeEngine:211 - Generated code: C:\Users\Assyria\Documents\PLANT\Final\Src\stm32l0xx_it.c
+2019-11-25 22:59:40,445 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Assyria\Documents\PLANT\Final\Inc\stm32l0xx_it.h_save
+2019-11-25 22:59:40,504 [INFO] CodeEngine:211 - Generated code: C:\Users\Assyria\Documents\PLANT\Final\Inc\stm32l0xx_it.h
+2019-11-25 22:59:40,535 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Assyria\Documents\PLANT\Final\Src\stm32l0xx_hal_msp.c_save
+2019-11-25 22:59:40,672 [INFO] CodeEngine:211 - Generated code: C:\Users\Assyria\Documents\PLANT\Final\Src\stm32l0xx_hal_msp.c
+2019-11-25 22:59:40,690 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Assyria\Documents\PLANT\Final\MXTmpFiles\system.tmp_save
+2019-11-25 22:59:40,727 [INFO] CodeEngine:211 - Generated code: C:\Users\Assyria\Documents\PLANT\Final\MXTmpFiles\system.tmp
+2019-11-25 22:59:40,751 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Assyria\Documents\PLANT\Final\Inc\stm32l0xx_hal_conf.h_save
+2019-11-25 22:59:40,823 [INFO] CodeEngine:211 - Generated code: C:\Users\Assyria\Documents\PLANT\Final\Inc\stm32l0xx_hal_conf.h
+2019-11-25 22:59:40,837 [WARN] IPConfigManager:2673 - IP not found : TIM
+2019-11-25 22:59:40,837 [WARN] IPConfigManager:2673 - IP not found : gpio
+2019-11-25 22:59:40,838 [WARN] CodeGenerator:2697 - IP not found : TIM
+2019-11-25 22:59:40,838 [WARN] CodeGenerator:2697 - IP not found : gpio
+2019-11-25 22:59:40,866 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Assyria\Documents\PLANT\Final\Inc\main.h_save
+2019-11-25 22:59:40,927 [INFO] CodeEngine:211 - Generated code: C:\Users\Assyria\Documents\PLANT\Final\Inc\main.h
+2019-11-25 22:59:40,951 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Assyria\Documents\PLANT\Final\Src\main.c_save
+2019-11-25 22:59:41,075 [INFO] CodeEngine:211 - Generated code: C:\Users\Assyria\Documents\PLANT\Final\Src\main.c
+2019-11-25 22:59:41,583 [INFO] ProjectBuilder:1645 - Time for Copy HAL[1] : 100mS.
+2019-11-25 22:59:41,584 [INFO] ProjectBuilder:2206 - Project Generator version: 3.5.2
+2019-11-25 22:59:41,737 [INFO] ConfigFileManager:953 - The Die is : DIE447
+2019-11-25 22:59:42,368 [ERROR] root:77 - Fail to recover any existing build configuration matching on going update process 
+2019-11-25 22:59:42,369 [INFO] ProjectBuilder:2373 - Time for Generating toolchain IDE Files: 785mS.
+2019-11-25 22:59:42,370 [INFO] ProjectBuilder:1505 - Time for Copy CMSIS : 1mS.
+2019-11-25 22:59:42,373 [INFO] ProjectBuilder:1505 - Time for Copy CMSIS : 0mS.
+2019-11-25 23:00:25,518 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 520101264 Bytes (1022361600)
+2019-11-25 23:00:25,638 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: ADC
+2019-11-25 23:00:25,638 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: RTC
+2019-11-25 23:00:25,638 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: NVIC
+2019-11-25 23:00:25,638 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: USART
+2019-11-25 23:00:25,638 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: TIM6_7L0
+2019-11-25 23:00:25,638 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: TIM1_8L0
+2019-11-25 23:00:25,638 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: TIM1_8L0
+2019-11-25 23:00:25,638 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: SYS
+2019-11-25 23:00:25,639 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: GPIO
+2019-11-25 23:00:25,639 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: RCC
+2019-11-25 23:00:25,639 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: TIM1_8L0
+2019-11-25 23:00:25,639 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: TIM1_8L0
+2019-11-25 23:00:25,639 [INFO] CodeGenerator:598 - code generatio: config db path: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\
+2019-11-25 23:00:25,807 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Assyria\Documents\PLANT\Final\MXTmpFiles\license.tmp_save
+2019-11-25 23:00:25,853 [INFO] CodeEngine:211 - Generated code: C:\Users\Assyria\Documents\PLANT\Final\MXTmpFiles\license.tmp
+2019-11-25 23:00:26,034 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Assyria\Documents\PLANT\Final\MXTmpFiles\gpio.tmp_save
+2019-11-25 23:00:26,088 [INFO] CodeEngine:211 - Generated code: C:\Users\Assyria\Documents\PLANT\Final\MXTmpFiles\gpio.tmp
+2019-11-25 23:00:26,701 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2019-11-25 23:00:26,702 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Debug : prepare data for ADC
+2019-11-25 23:00:26,702 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line test
+2019-11-25 23:00:26,703 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2019-11-25 23:00:26,703 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Debug : prepare data for RTC
+2019-11-25 23:00:26,704 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line test
+2019-11-25 23:00:26,704 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2019-11-25 23:00:26,705 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Debug : prepare data for SYS
+2019-11-25 23:00:26,705 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line test
+2019-11-25 23:00:26,706 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2019-11-25 23:00:26,707 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Debug : prepare data for TIM
+2019-11-25 23:00:26,707 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line test
+2019-11-25 23:00:26,708 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2019-11-25 23:00:26,709 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Debug : prepare data for USART
+2019-11-25 23:00:26,709 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line test
+2019-11-25 23:00:26,710 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Debug : prepare data for NVIC
+2019-11-25 23:00:26,711 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line test
+2019-11-25 23:00:26,735 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Assyria\Documents\PLANT\Final\Src\stm32l0xx_it.c_save
+2019-11-25 23:00:26,814 [INFO] CodeEngine:211 - Generated code: C:\Users\Assyria\Documents\PLANT\Final\Src\stm32l0xx_it.c
+2019-11-25 23:00:26,833 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Assyria\Documents\PLANT\Final\Inc\stm32l0xx_it.h_save
+2019-11-25 23:00:26,875 [INFO] CodeEngine:211 - Generated code: C:\Users\Assyria\Documents\PLANT\Final\Inc\stm32l0xx_it.h
+2019-11-25 23:00:26,902 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Assyria\Documents\PLANT\Final\Src\stm32l0xx_hal_msp.c_save
+2019-11-25 23:00:27,006 [INFO] CodeEngine:211 - Generated code: C:\Users\Assyria\Documents\PLANT\Final\Src\stm32l0xx_hal_msp.c
+2019-11-25 23:00:27,021 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Assyria\Documents\PLANT\Final\MXTmpFiles\system.tmp_save
+2019-11-25 23:00:27,060 [INFO] CodeEngine:211 - Generated code: C:\Users\Assyria\Documents\PLANT\Final\MXTmpFiles\system.tmp
+2019-11-25 23:00:27,085 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Assyria\Documents\PLANT\Final\Inc\stm32l0xx_hal_conf.h_save
+2019-11-25 23:00:27,152 [INFO] CodeEngine:211 - Generated code: C:\Users\Assyria\Documents\PLANT\Final\Inc\stm32l0xx_hal_conf.h
+2019-11-25 23:00:27,163 [WARN] IPConfigManager:2673 - IP not found : TIM
+2019-11-25 23:00:27,164 [WARN] IPConfigManager:2673 - IP not found : gpio
+2019-11-25 23:00:27,164 [WARN] CodeGenerator:2697 - IP not found : TIM
+2019-11-25 23:00:27,164 [WARN] CodeGenerator:2697 - IP not found : gpio
+2019-11-25 23:00:27,186 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Assyria\Documents\PLANT\Final\Inc\main.h_save
+2019-11-25 23:00:27,232 [INFO] CodeEngine:211 - Generated code: C:\Users\Assyria\Documents\PLANT\Final\Inc\main.h
+2019-11-25 23:00:27,257 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Assyria\Documents\PLANT\Final\Src\main.c_save
+2019-11-25 23:00:27,369 [INFO] CodeEngine:211 - Generated code: C:\Users\Assyria\Documents\PLANT\Final\Src\main.c
+2019-11-25 23:00:27,737 [INFO] ProjectBuilder:1645 - Time for Copy HAL[1] : 84mS.
+2019-11-25 23:00:27,739 [INFO] ProjectBuilder:2206 - Project Generator version: 3.5.2
+2019-11-25 23:00:27,893 [INFO] ConfigFileManager:953 - The Die is : DIE447
+2019-11-25 23:00:28,637 [ERROR] root:77 - Fail to recover any existing build configuration matching on going update process 
+2019-11-25 23:00:28,638 [INFO] ProjectBuilder:2373 - Time for Generating toolchain IDE Files: 899mS.
+2019-11-25 23:00:28,639 [INFO] ProjectBuilder:1505 - Time for Copy CMSIS : 0mS.
+2019-11-25 23:00:28,642 [INFO] ProjectBuilder:1505 - Time for Copy CMSIS : 0mS.
+2019-11-25 23:06:41,801 [INFO] BlockDiagram:1827 - stop enableDisableButtons
+2019-11-25 23:08:19,792 [INFO] Activator:176 - 
+
+
+2019-11-25 23:08:19,792 [INFO] Activator:177 - !SESSION log4j initialized
+2019-11-25 23:08:21,213 [INFO] ApplicationProperties:181 - Using Application install path: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541
+2019-11-25 23:08:21,213 [INFO] DbMcusXml:68 - Set database path to: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\/mcu/
+2019-11-25 23:08:21,229 [INFO] DbBoardsPdsc:54 - Set plugin database path to: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\/plugins/boardmanager/
+2019-11-25 23:08:21,229 [INFO] DbMcus:265 - Set plugin images path to: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\/plugins/mcufinder/images/
+2019-11-25 23:08:21,229 [INFO] DbBoards:232 - Set plugin images path to: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\/plugins/mcufinder/images/
+2019-11-25 23:08:21,229 [INFO] APIGFXSelector:72 - Set database path to: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\/plugins/mcufinder/mcu/
+2019-11-25 23:08:21,229 [INFO] DbMcusAds:72 - Set database path to: C:\Users\Assyria\.stmcufinder\plugins\mcufinder//mcu/
+2019-11-25 23:08:21,229 [INFO] DbMcusDocs:92 - Set database path to: C:\Users\Assyria\.stmcufinder\plugins\mcufinder//mcu/
+2019-11-25 23:08:21,229 [INFO] DbMcusJson:59 - Set database path to: C:\Users\Assyria\.stmcufinder\plugins\mcufinder//mcu/
+2019-11-25 23:08:21,229 [INFO] DbBoardsDocs:84 - Set database path to: C:\Users\Assyria\.stmcufinder\plugins\mcufinder//mcu/
+2019-11-25 23:08:21,229 [INFO] DbBoardsJson:51 - Set database path to: C:\Users\Assyria\.stmcufinder\plugins\mcufinder//mcu/
+2019-11-25 23:08:21,401 [INFO] CrossReferenceDbSqlite:197 - Set database path to: C:\Users\Assyria\.stmcufinder\plugins\mcufinder//mcu/cs/
+2019-11-25 23:08:21,495 [INFO] RulesReader:52 - Compatibility file has been processed (179 Rules)
+2019-11-25 23:08:21,635 [INFO] MicroXplorer:570 - Detected Java Version = 1.8.0_202
+2019-11-25 23:08:21,635 [INFO] DbMcusXml:68 - Set database path to: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\/mcu/
+2019-11-25 23:08:21,635 [INFO] DbBoardsPdsc:54 - Set plugin database path to: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\/plugins/boardmanager/
+2019-11-25 23:08:21,635 [INFO] DbMcus:265 - Set plugin images path to: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\/plugins/mcufinder/images/
+2019-11-25 23:08:21,635 [INFO] DbBoards:232 - Set plugin images path to: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\/plugins/mcufinder/images/
+2019-11-25 23:08:21,635 [INFO] APIGFXSelector:72 - Set database path to: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\/plugins/mcufinder/mcu/
+2019-11-25 23:08:21,635 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Assyria\.stmcufinder\plugins\mcufinder/ => C:\Users\Assyria\.stmcufinder\plugins\mcufinder
+2019-11-25 23:08:21,635 [INFO] DbMcusAds:72 - Set database path to: C:\Users\Assyria\.stmcufinder\plugins\mcufinder//mcu/
+2019-11-25 23:08:21,635 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Assyria\.stmcufinder\plugins\mcufinder/ => C:\Users\Assyria\.stmcufinder\plugins\mcufinder
+2019-11-25 23:08:21,635 [INFO] DbMcusDocs:92 - Set database path to: C:\Users\Assyria\.stmcufinder\plugins\mcufinder//mcu/
+2019-11-25 23:08:21,635 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Assyria\.stmcufinder\plugins\mcufinder/ => C:\Users\Assyria\.stmcufinder\plugins\mcufinder
+2019-11-25 23:08:21,635 [INFO] DbMcusJson:59 - Set database path to: C:\Users\Assyria\.stmcufinder\plugins\mcufinder//mcu/
+2019-11-25 23:08:21,635 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Assyria\.stmcufinder\plugins\mcufinder/ => C:\Users\Assyria\.stmcufinder\plugins\mcufinder
+2019-11-25 23:08:21,635 [INFO] DbBoardsDocs:84 - Set database path to: C:\Users\Assyria\.stmcufinder\plugins\mcufinder//mcu/
+2019-11-25 23:08:21,635 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Assyria\.stmcufinder\plugins\mcufinder/ => C:\Users\Assyria\.stmcufinder\plugins\mcufinder
+2019-11-25 23:08:21,635 [INFO] DbBoardsJson:51 - Set database path to: C:\Users\Assyria\.stmcufinder\plugins\mcufinder//mcu/
+2019-11-25 23:08:21,635 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Assyria\.stmcufinder\plugins\mcufinder/ => C:\Users\Assyria\.stmcufinder\plugins\mcufinder
+2019-11-25 23:08:21,635 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Assyria\.stmcufinder\plugins\mcufinder/ => C:\Users\Assyria\.stmcufinder\plugins\mcufinder
+2019-11-25 23:08:21,635 [INFO] CrossReferenceDbSqlite:197 - Set database path to: C:\Users\Assyria\.stmcufinder\plugins\mcufinder//mcu/cs/
+2019-11-25 23:08:21,682 [INFO] MainPanel:185 - HeapMemory: 268435456
+2019-11-25 23:08:21,729 [INFO] DbMcusXml:68 - Set database path to: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\/mcu/
+2019-11-25 23:08:21,729 [INFO] DbBoardsPdsc:54 - Set plugin database path to: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\/plugins/boardmanager/
+2019-11-25 23:08:21,729 [INFO] DbMcus:265 - Set plugin images path to: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\/plugins/mcufinder/images/
+2019-11-25 23:08:21,729 [INFO] DbBoards:232 - Set plugin images path to: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\/plugins/mcufinder/images/
+2019-11-25 23:08:21,729 [INFO] APIGFXSelector:72 - Set database path to: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\/plugins/mcufinder/mcu/
+2019-11-25 23:08:21,729 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Assyria\.stmcufinder\plugins\mcufinder/ => C:\Users\Assyria\.stmcufinder\plugins\mcufinder
+2019-11-25 23:08:21,729 [INFO] DbMcusAds:72 - Set database path to: C:\Users\Assyria\.stmcufinder\plugins\mcufinder//mcu/
+2019-11-25 23:08:21,745 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Assyria\.stmcufinder\plugins\mcufinder/ => C:\Users\Assyria\.stmcufinder\plugins\mcufinder
+2019-11-25 23:08:21,745 [INFO] DbMcusDocs:92 - Set database path to: C:\Users\Assyria\.stmcufinder\plugins\mcufinder//mcu/
+2019-11-25 23:08:21,745 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Assyria\.stmcufinder\plugins\mcufinder/ => C:\Users\Assyria\.stmcufinder\plugins\mcufinder
+2019-11-25 23:08:21,745 [INFO] DbMcusJson:59 - Set database path to: C:\Users\Assyria\.stmcufinder\plugins\mcufinder//mcu/
+2019-11-25 23:08:21,745 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Assyria\.stmcufinder\plugins\mcufinder/ => C:\Users\Assyria\.stmcufinder\plugins\mcufinder
+2019-11-25 23:08:21,745 [INFO] DbBoardsDocs:84 - Set database path to: C:\Users\Assyria\.stmcufinder\plugins\mcufinder//mcu/
+2019-11-25 23:08:21,745 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Assyria\.stmcufinder\plugins\mcufinder/ => C:\Users\Assyria\.stmcufinder\plugins\mcufinder
+2019-11-25 23:08:21,745 [INFO] DbBoardsJson:51 - Set database path to: C:\Users\Assyria\.stmcufinder\plugins\mcufinder//mcu/
+2019-11-25 23:08:21,745 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Assyria\.stmcufinder\plugins\mcufinder/ => C:\Users\Assyria\.stmcufinder\plugins\mcufinder
+2019-11-25 23:08:21,745 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Assyria\.stmcufinder\plugins\mcufinder/ => C:\Users\Assyria\.stmcufinder\plugins\mcufinder
+2019-11-25 23:08:21,745 [INFO] CrossReferenceDbSqlite:197 - Set database path to: C:\Users\Assyria\.stmcufinder\plugins\mcufinder//mcu/cs/
+2019-11-25 23:08:21,760 [INFO] ApplicationProperties:181 - Using Application install path: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541
+2019-11-25 23:08:21,760 [INFO] PluginManage:178 - Search for loadable plugins [exclusion list=]
+2019-11-25 23:08:21,760 [INFO] PluginManage:292 - Check plugin analytics
+2019-11-25 23:08:21,760 [INFO] PluginManage:342 - Loaded plugin analytics (category:tool,tabindex:-1)
+2019-11-25 23:08:21,760 [INFO] PluginManage:292 - Check plugin clock
+2019-11-25 23:08:21,760 [INFO] PluginManage:342 - Loaded plugin clock (category:base,tabindex:2)
+2019-11-25 23:08:21,760 [INFO] PluginManage:292 - Check plugin ddr
+2019-11-25 23:08:21,776 [INFO] PluginManage:342 - Loaded plugin ddr (category:tool,tabindex:6)
+2019-11-25 23:08:21,776 [INFO] PluginManage:292 - Check plugin filemanager
+2019-11-25 23:08:21,870 [INFO] PluginManage:342 - Loaded plugin filemanager (category:base,tabindex:10)
+2019-11-25 23:08:21,870 [INFO] PluginManage:292 - Check plugin ipmanager
+2019-11-25 23:08:21,870 [INFO] PluginManage:342 - Loaded plugin ipmanager (category:base,tabindex:5)
+2019-11-25 23:08:21,870 [INFO] PluginManage:292 - Check plugin pinoutandconfiguration
+2019-11-25 23:08:21,885 [INFO] PluginManage:342 - Loaded plugin pinoutandconfiguration (category:base,tabindex:1)
+2019-11-25 23:08:21,885 [INFO] PluginManage:292 - Check plugin pinoutconfig
+2019-11-25 23:08:21,901 [INFO] PluginManage:342 - Loaded plugin pinoutconfig (category:base,tabindex:0)
+2019-11-25 23:08:21,901 [INFO] PluginManage:292 - Check plugin power
+2019-11-25 23:08:21,901 [INFO] PluginManage:342 - Loaded plugin power (category:power,tabindex:4)
+2019-11-25 23:08:21,901 [INFO] PluginManage:292 - Check plugin projectmanager
+2019-11-25 23:08:21,916 [INFO] PluginManage:342 - Loaded plugin projectmanager (category:projectmanager,tabindex:3)
+2019-11-25 23:08:21,916 [INFO] PluginManage:292 - Check plugin thirdparty
+2019-11-25 23:08:21,963 [INFO] ThirdPartyDb:294 - Open Third Party DataBase File (C:/Users/Assyria/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml) : 31 ms. number of Sw pack : 9
+2019-11-25 23:08:21,979 [INFO] PluginManage:342 - Loaded plugin thirdparty (category:base,tabindex:-1)
+2019-11-25 23:08:21,979 [INFO] PluginManage:292 - Check plugin tools
+2019-11-25 23:08:21,979 [INFO] PluginManage:342 - Loaded plugin tools (category:base,tabindex:7)
+2019-11-25 23:08:21,979 [INFO] PluginManage:292 - Check plugin updater
+2019-11-25 23:08:21,995 [INFO] PluginManage:342 - Loaded plugin updater (category:base,tabindex:12)
+2019-11-25 23:08:21,995 [INFO] PluginManage:265 - PluginManage : Loaded plugins [12]
+2019-11-25 23:08:22,135 [INFO] PinOutPanel:1367 - setPackage(No Configuration,No Configuration)
+2019-11-25 23:08:22,213 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:22,213 [INFO] PluginManager:200 - loadIPPluginJar : add adc
+2019-11-25 23:08:22,213 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:22,213 [INFO] PluginManager:200 - loadIPPluginJar : add aes
+2019-11-25 23:08:22,213 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:22,213 [INFO] PluginManager:200 - loadIPPluginJar : add can
+2019-11-25 23:08:22,213 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:22,213 [INFO] PluginManager:200 - loadIPPluginJar : add comp
+2019-11-25 23:08:22,229 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:22,229 [INFO] PluginManager:200 - loadIPPluginJar : add cryp
+2019-11-25 23:08:22,229 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:22,229 [INFO] PluginManager:200 - loadIPPluginJar : add dfsdm
+2019-11-25 23:08:22,229 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:22,229 [INFO] PluginManager:200 - loadIPPluginJar : add dma
+2019-11-25 23:08:22,229 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:22,229 [INFO] PluginManager:200 - loadIPPluginJar : add fatfs
+2019-11-25 23:08:22,229 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:22,229 [INFO] PluginManager:200 - loadIPPluginJar : add fmc
+2019-11-25 23:08:22,244 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:22,244 [INFO] PluginManager:200 - loadIPPluginJar : add freertos
+2019-11-25 23:08:22,244 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:22,244 [INFO] PluginManager:200 - loadIPPluginJar : add genericplugin
+2019-11-25 23:08:22,244 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:22,244 [INFO] PluginManager:200 - loadIPPluginJar : add gfxmmu
+2019-11-25 23:08:22,244 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:22,244 [INFO] PluginManager:200 - loadIPPluginJar : add gfxsimulator
+2019-11-25 23:08:22,244 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:22,244 [INFO] PluginManager:200 - loadIPPluginJar : add gic
+2019-11-25 23:08:22,260 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:22,260 [INFO] PluginManager:200 - loadIPPluginJar : add gpio
+2019-11-25 23:08:22,260 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:22,260 [INFO] PluginManager:200 - loadIPPluginJar : add gtzc
+2019-11-25 23:08:22,260 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:22,260 [INFO] PluginManager:200 - loadIPPluginJar : add hash
+2019-11-25 23:08:22,260 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:22,260 [INFO] PluginManager:200 - loadIPPluginJar : add i2c
+2019-11-25 23:08:22,260 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:22,260 [INFO] PluginManager:200 - loadIPPluginJar : add i2s
+2019-11-25 23:08:22,260 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:22,260 [INFO] PluginManager:200 - loadIPPluginJar : add ipddr
+2019-11-25 23:08:22,260 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:22,260 [INFO] PluginManager:200 - loadIPPluginJar : add ltdc
+2019-11-25 23:08:22,260 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:22,276 [INFO] PluginManager:200 - loadIPPluginJar : add mdma
+2019-11-25 23:08:22,276 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:22,276 [INFO] PluginManager:200 - loadIPPluginJar : add nvic
+2019-11-25 23:08:22,276 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:22,276 [INFO] PluginManager:200 - loadIPPluginJar : add opamp
+2019-11-25 23:08:22,276 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:22,276 [INFO] PluginManager:200 - loadIPPluginJar : add pdm2pcm
+2019-11-25 23:08:22,276 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:22,276 [INFO] PluginManager:200 - loadIPPluginJar : add plateformsettings
+2019-11-25 23:08:22,276 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:22,276 [INFO] PluginManager:200 - loadIPPluginJar : add quadspi
+2019-11-25 23:08:22,291 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:22,291 [INFO] PluginManager:200 - loadIPPluginJar : add resmgrutility
+2019-11-25 23:08:22,291 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:22,291 [INFO] PluginManager:200 - loadIPPluginJar : add sai
+2019-11-25 23:08:22,291 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:22,291 [INFO] PluginManager:200 - loadIPPluginJar : add spi
+2019-11-25 23:08:22,291 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:22,291 [INFO] PluginManager:200 - loadIPPluginJar : add stm32_wpan
+2019-11-25 23:08:22,291 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:22,291 [INFO] PluginManager:200 - loadIPPluginJar : add tim
+2019-11-25 23:08:22,291 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:22,291 [INFO] PluginManager:200 - loadIPPluginJar : add touchsensing
+2019-11-25 23:08:22,291 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:22,291 [INFO] PluginManager:200 - loadIPPluginJar : add tracer_emb
+2019-11-25 23:08:22,291 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:22,291 [INFO] PluginManager:200 - loadIPPluginJar : add ts
+2019-11-25 23:08:22,307 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:22,307 [INFO] PluginManager:200 - loadIPPluginJar : add tsc
+2019-11-25 23:08:22,307 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:22,307 [INFO] PluginManager:200 - loadIPPluginJar : add ucpd
+2019-11-25 23:08:22,307 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:22,307 [INFO] PluginManager:200 - loadIPPluginJar : add usart
+2019-11-25 23:08:22,739 [INFO] BoardConnectionPanel:220 - [DDR PANEL] osNameString: Windows
+2019-11-25 23:08:22,843 [INFO] BoardConnectionPanel:3149 - [DDR PANEL] STM32CubeIDE environment
+2019-11-25 23:08:22,843 [INFO] MainDdrPanel:100 - [DDR PANEL] GETTER - cubeProgrammerPath is: null
+2019-11-25 23:08:23,001 [FATAL] Updater:277 - Updater called before beeing initialized
+2019-11-25 23:08:23,157 [FATAL] Updater:277 - Updater called before beeing initialized
+2019-11-25 23:08:23,157 [INFO] PinOutPanel:1367 - setPackage(No Configuration,No Configuration)
+2019-11-25 23:08:23,157 [FATAL] Updater:277 - Updater called before beeing initialized
+2019-11-25 23:08:23,188 [INFO] BoardConnectionPanel:3149 - [DDR PANEL] STM32CubeIDE environment
+2019-11-25 23:08:23,188 [INFO] MainDdrPanel:100 - [DDR PANEL] GETTER - cubeProgrammerPath is: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.cubeprogrammer.win32_1.1.0.201910081157\tools\bin
+2019-11-25 23:08:23,188 [INFO] ProgrammerExecThread:148 - [ProgrammerAPI] CubeProgrammer command construction: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.cubeprogrammer.win32_1.1.0.201910081157\tools\bin\STM32_Programmer_CLI.exe -l
+2019-11-25 23:08:23,297 [INFO] MainDdrPanel:90 - [DDR PANEL] SETTER - Set cubeProgrammerPath to: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.cubeprogrammer.win32_1.1.0.201910081157\tools\bin
+2019-11-25 23:08:23,329 [INFO] Updater:886 - Updater Version found : 5.4.0
+2019-11-25 23:08:23,329 [INFO] ApplicationProperties:181 - Using Application install path: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541
+2019-11-25 23:08:23,735 [INFO] MainUpdater:2232 - connection check result : 10
+2019-11-25 23:08:23,735 [INFO] MainUpdater:236 - Updater Check For Update Now.
+2019-11-25 23:08:23,735 [INFO] MicroXplorer:420 - Change Database Version : DB.5.0.40
+2019-11-25 23:08:23,766 [INFO] CheckServerUpdateThread:92 - End of CheckServer Thread
+2019-11-25 23:08:23,939 [INFO] MainUpdater:2232 - connection check result : 10
+2019-11-25 23:08:23,939 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Successfull proxy connection.
+2019-11-25 23:08:24,044 [INFO] MicroXplorer:390 - Change Database Path : 
+2019-11-25 23:08:24,045 [INFO] MicroXplorer:420 - Change Database Version : DB.5.0.40
+2019-11-25 23:08:24,049 [INFO] PinOutPanel:1367 - setPackage(No Configuration,No Configuration)
+2019-11-25 23:08:24,050 [INFO] UtilMem:74 - Begin LoadConfig() Used Memory: 125957728 Bytes (268435456)
+2019-11-25 23:08:24,052 [INFO] MicroXplorer:390 - Change Database Path : 
+2019-11-25 23:08:24,052 [INFO] MicroXplorer:420 - Change Database Version : DB.5.0.40
+2019-11-25 23:08:24,052 [INFO] OpenFileManager:269 - Change cursor
+2019-11-25 23:08:25,032 [INFO] ThirdPartyDb:264 - Close Third Party DataBase File (C:/Users/Assyria/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml)
+2019-11-25 23:08:25,079 [INFO] ThirdPartyDb:294 - Open Third Party DataBase File (C:/Users/Assyria/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml) : 0 ms. number of Sw pack : 9
+2019-11-25 23:08:25,079 [INFO] ThirdPartyDb:264 - Close Third Party DataBase File (C:/Users/Assyria/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml)
+2019-11-25 23:08:25,110 [INFO] IntegrityCheckThread:97 - End integrity checks thread
+2019-11-25 23:08:25,813 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (FamilyName)
+2019-11-25 23:08:25,813 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (RCC) : Parameter (RTCHSEDivFreq_Value) has invalid value (4000000)
+2019-11-25 23:08:25,813 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (TIMFreq_Value)
+2019-11-25 23:08:25,953 [INFO] UtilMem:74 - End LoadConfig() Used Memory: 191690880 Bytes (268435456)
+2019-11-25 23:08:25,969 [INFO] ThirdPartyDb:294 - Open Third Party DataBase File (C:/Users/Assyria/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml) : 16 ms. number of Sw pack : 9
+2019-11-25 23:08:26,032 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE1 4.4.0
+2019-11-25 23:08:26,032 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 6.2.0
+2019-11-25 23:08:26,032 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC4 1.4.1
+2019-11-25 23:08:26,032 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-GNSS1 3.0.0
+2019-11-25 23:08:26,032 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 7.0.0
+2019-11-25 23:08:26,032 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC4 1.5.0
+2019-11-25 23:08:26,032 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-GNSS1 3.1.0
+2019-11-25 23:08:26,391 [INFO] PinOutPanel:1367 - setPackage(No Configuration,No Configuration)
+2019-11-25 23:08:26,391 [INFO] PinOutPanel:1367 - setPackage(STM32L073RZTx,LQFP64)
+2019-11-25 23:08:26,813 [INFO] UtilMem:74 - Before build in PCC Used Memory: 180978664 Bytes (268435456)
+2019-11-25 23:08:27,089 [INFO] SharedServices:71 - Folder for power plug-in: C:/Users/Assyria/.stm32cubemx/plugins/power
+2019-11-25 23:08:27,104 [INFO] UtilMem:74 - After build in PCC Used Memory: 197755880 Bytes (268435456)
+2019-11-25 23:08:27,120 [INFO] BlockDiagram:1827 - stop enableDisableButtons
+2019-11-25 23:08:27,120 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:27,120 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:27,120 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:27,120 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:27,120 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:27,120 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:27,120 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:27,120 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:27,120 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:27,120 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:27,120 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:27,120 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:27,120 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:27,120 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:27,120 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:27,120 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:27,120 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:27,120 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:27,120 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:27,120 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:27,120 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:27,120 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:27,120 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:27,120 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:27,120 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:27,120 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:27,120 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:27,120 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:27,120 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:27,120 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:27,120 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:27,136 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:27,136 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:27,136 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:27,136 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:27,136 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:27,136 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:27,136 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:27,136 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-25 23:08:27,151 [INFO] BlockDiagram:1827 - stop enableDisableButtons
+2019-11-25 23:08:27,167 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] toolchainItems.length=====1
+2019-11-25 23:08:27,245 [INFO] OpenFileManager:289 - Restore cursor
+2019-11-25 23:08:27,245 [INFO] DbMcusXml:106 - Load MCU database from C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\/mcu/families.xml
+2019-11-25 23:08:27,526 [INFO] BlockDiagram:1827 - stop enableDisableButtons
+2019-11-25 23:08:27,635 [INFO] BlockDiagram:1827 - stop enableDisableButtons
+2019-11-25 23:08:27,917 [INFO] DbMcusJson:87 - JSON generation date=Mon Sep 23 05:35:45 EDT 2019 (1569231345)
+2019-11-25 23:08:29,445 [INFO] DbMcus:193 - Found 1544 MCUs (1504 are supported by CubeMX, 1504 are visible in CubeMX)
+2019-11-25 23:08:29,445 [INFO] ApiDb:147 - User favorites file not found: C:\Users\Assyria/.stm32cubemx/favorites.mcus.txt
+2019-11-25 23:08:29,445 [INFO] DbMcus:204 - Set 0 / 0 favorites MCUs
+2019-11-25 23:08:43,981 [INFO] BlockDiagram:1827 - stop enableDisableButtons
+2019-11-25 23:10:25,135 [INFO] Activator:176 - 
+
+
+2019-11-25 23:10:25,137 [INFO] Activator:177 - !SESSION log4j initialized
+2019-11-26 00:14:43,054 [INFO] ApplicationProperties:181 - Using Application install path: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541
+2019-11-26 00:14:43,065 [INFO] DbMcusXml:68 - Set database path to: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\/mcu/
+2019-11-26 00:14:43,069 [INFO] DbBoardsPdsc:54 - Set plugin database path to: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\/plugins/boardmanager/
+2019-11-26 00:14:43,069 [INFO] DbMcus:265 - Set plugin images path to: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\/plugins/mcufinder/images/
+2019-11-26 00:14:43,069 [INFO] DbBoards:232 - Set plugin images path to: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\/plugins/mcufinder/images/
+2019-11-26 00:14:43,071 [INFO] APIGFXSelector:72 - Set database path to: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\/plugins/mcufinder/mcu/
+2019-11-26 00:14:43,077 [INFO] DbMcusAds:72 - Set database path to: C:\Users\Assyria\.stmcufinder\plugins\mcufinder//mcu/
+2019-11-26 00:14:43,078 [INFO] DbMcusDocs:92 - Set database path to: C:\Users\Assyria\.stmcufinder\plugins\mcufinder//mcu/
+2019-11-26 00:14:43,079 [INFO] DbMcusJson:59 - Set database path to: C:\Users\Assyria\.stmcufinder\plugins\mcufinder//mcu/
+2019-11-26 00:14:43,080 [INFO] DbBoardsDocs:84 - Set database path to: C:\Users\Assyria\.stmcufinder\plugins\mcufinder//mcu/
+2019-11-26 00:14:43,081 [INFO] DbBoardsJson:51 - Set database path to: C:\Users\Assyria\.stmcufinder\plugins\mcufinder//mcu/
+2019-11-26 00:14:43,109 [INFO] CrossReferenceDbSqlite:197 - Set database path to: C:\Users\Assyria\.stmcufinder\plugins\mcufinder//mcu/cs/
+2019-11-26 00:14:43,198 [INFO] RulesReader:52 - Compatibility file has been processed (179 Rules)
+2019-11-26 00:14:43,297 [INFO] MicroXplorer:570 - Detected Java Version = 1.8.0_202
+2019-11-26 00:14:43,297 [INFO] DbMcusXml:68 - Set database path to: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\/mcu/
+2019-11-26 00:14:43,297 [INFO] DbBoardsPdsc:54 - Set plugin database path to: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\/plugins/boardmanager/
+2019-11-26 00:14:43,298 [INFO] DbMcus:265 - Set plugin images path to: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\/plugins/mcufinder/images/
+2019-11-26 00:14:43,298 [INFO] DbBoards:232 - Set plugin images path to: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\/plugins/mcufinder/images/
+2019-11-26 00:14:43,300 [INFO] APIGFXSelector:72 - Set database path to: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\/plugins/mcufinder/mcu/
+2019-11-26 00:14:43,300 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Assyria\.stmcufinder\plugins\mcufinder/ => C:\Users\Assyria\.stmcufinder\plugins\mcufinder
+2019-11-26 00:14:43,300 [INFO] DbMcusAds:72 - Set database path to: C:\Users\Assyria\.stmcufinder\plugins\mcufinder//mcu/
+2019-11-26 00:14:43,300 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Assyria\.stmcufinder\plugins\mcufinder/ => C:\Users\Assyria\.stmcufinder\plugins\mcufinder
+2019-11-26 00:14:43,300 [INFO] DbMcusDocs:92 - Set database path to: C:\Users\Assyria\.stmcufinder\plugins\mcufinder//mcu/
+2019-11-26 00:14:43,300 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Assyria\.stmcufinder\plugins\mcufinder/ => C:\Users\Assyria\.stmcufinder\plugins\mcufinder
+2019-11-26 00:14:43,300 [INFO] DbMcusJson:59 - Set database path to: C:\Users\Assyria\.stmcufinder\plugins\mcufinder//mcu/
+2019-11-26 00:14:43,300 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Assyria\.stmcufinder\plugins\mcufinder/ => C:\Users\Assyria\.stmcufinder\plugins\mcufinder
+2019-11-26 00:14:43,300 [INFO] DbBoardsDocs:84 - Set database path to: C:\Users\Assyria\.stmcufinder\plugins\mcufinder//mcu/
+2019-11-26 00:14:43,300 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Assyria\.stmcufinder\plugins\mcufinder/ => C:\Users\Assyria\.stmcufinder\plugins\mcufinder
+2019-11-26 00:14:43,301 [INFO] DbBoardsJson:51 - Set database path to: C:\Users\Assyria\.stmcufinder\plugins\mcufinder//mcu/
+2019-11-26 00:14:43,301 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Assyria\.stmcufinder\plugins\mcufinder/ => C:\Users\Assyria\.stmcufinder\plugins\mcufinder
+2019-11-26 00:14:43,301 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Assyria\.stmcufinder\plugins\mcufinder/ => C:\Users\Assyria\.stmcufinder\plugins\mcufinder
+2019-11-26 00:14:43,301 [INFO] CrossReferenceDbSqlite:197 - Set database path to: C:\Users\Assyria\.stmcufinder\plugins\mcufinder//mcu/cs/
+2019-11-26 00:14:43,361 [INFO] MainPanel:185 - HeapMemory: 276824064
+2019-11-26 00:14:43,414 [INFO] DbMcusXml:68 - Set database path to: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\/mcu/
+2019-11-26 00:14:43,414 [INFO] DbBoardsPdsc:54 - Set plugin database path to: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\/plugins/boardmanager/
+2019-11-26 00:14:43,414 [INFO] DbMcus:265 - Set plugin images path to: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\/plugins/mcufinder/images/
+2019-11-26 00:14:43,414 [INFO] DbBoards:232 - Set plugin images path to: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\/plugins/mcufinder/images/
+2019-11-26 00:14:43,415 [INFO] APIGFXSelector:72 - Set database path to: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\/plugins/mcufinder/mcu/
+2019-11-26 00:14:43,415 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Assyria\.stmcufinder\plugins\mcufinder/ => C:\Users\Assyria\.stmcufinder\plugins\mcufinder
+2019-11-26 00:14:43,415 [INFO] DbMcusAds:72 - Set database path to: C:\Users\Assyria\.stmcufinder\plugins\mcufinder//mcu/
+2019-11-26 00:14:43,415 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Assyria\.stmcufinder\plugins\mcufinder/ => C:\Users\Assyria\.stmcufinder\plugins\mcufinder
+2019-11-26 00:14:43,416 [INFO] DbMcusDocs:92 - Set database path to: C:\Users\Assyria\.stmcufinder\plugins\mcufinder//mcu/
+2019-11-26 00:14:43,416 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Assyria\.stmcufinder\plugins\mcufinder/ => C:\Users\Assyria\.stmcufinder\plugins\mcufinder
+2019-11-26 00:14:43,416 [INFO] DbMcusJson:59 - Set database path to: C:\Users\Assyria\.stmcufinder\plugins\mcufinder//mcu/
+2019-11-26 00:14:43,416 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Assyria\.stmcufinder\plugins\mcufinder/ => C:\Users\Assyria\.stmcufinder\plugins\mcufinder
+2019-11-26 00:14:43,417 [INFO] DbBoardsDocs:84 - Set database path to: C:\Users\Assyria\.stmcufinder\plugins\mcufinder//mcu/
+2019-11-26 00:14:43,417 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Assyria\.stmcufinder\plugins\mcufinder/ => C:\Users\Assyria\.stmcufinder\plugins\mcufinder
+2019-11-26 00:14:43,417 [INFO] DbBoardsJson:51 - Set database path to: C:\Users\Assyria\.stmcufinder\plugins\mcufinder//mcu/
+2019-11-26 00:14:43,417 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Assyria\.stmcufinder\plugins\mcufinder/ => C:\Users\Assyria\.stmcufinder\plugins\mcufinder
+2019-11-26 00:14:43,417 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Assyria\.stmcufinder\plugins\mcufinder/ => C:\Users\Assyria\.stmcufinder\plugins\mcufinder
+2019-11-26 00:14:43,417 [INFO] CrossReferenceDbSqlite:197 - Set database path to: C:\Users\Assyria\.stmcufinder\plugins\mcufinder//mcu/cs/
+2019-11-26 00:14:43,434 [INFO] ApplicationProperties:181 - Using Application install path: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541
+2019-11-26 00:14:43,436 [INFO] PluginManage:178 - Search for loadable plugins [exclusion list=]
+2019-11-26 00:14:43,437 [INFO] PluginManage:292 - Check plugin analytics
+2019-11-26 00:14:43,443 [INFO] PluginManage:342 - Loaded plugin analytics (category:tool,tabindex:-1)
+2019-11-26 00:14:43,443 [INFO] PluginManage:292 - Check plugin clock
+2019-11-26 00:14:43,452 [INFO] PluginManage:342 - Loaded plugin clock (category:base,tabindex:2)
+2019-11-26 00:14:43,453 [INFO] PluginManage:292 - Check plugin ddr
+2019-11-26 00:14:43,455 [INFO] PluginManage:342 - Loaded plugin ddr (category:tool,tabindex:6)
+2019-11-26 00:14:43,455 [INFO] PluginManage:292 - Check plugin filemanager
+2019-11-26 00:14:43,557 [INFO] PluginManage:342 - Loaded plugin filemanager (category:base,tabindex:10)
+2019-11-26 00:14:43,558 [INFO] PluginManage:292 - Check plugin ipmanager
+2019-11-26 00:14:43,567 [INFO] PluginManage:342 - Loaded plugin ipmanager (category:base,tabindex:5)
+2019-11-26 00:14:43,567 [INFO] PluginManage:292 - Check plugin pinoutandconfiguration
+2019-11-26 00:14:43,575 [INFO] PluginManage:342 - Loaded plugin pinoutandconfiguration (category:base,tabindex:1)
+2019-11-26 00:14:43,575 [INFO] PluginManage:292 - Check plugin pinoutconfig
+2019-11-26 00:14:43,595 [INFO] PluginManage:342 - Loaded plugin pinoutconfig (category:base,tabindex:0)
+2019-11-26 00:14:43,595 [INFO] PluginManage:292 - Check plugin power
+2019-11-26 00:14:43,602 [INFO] PluginManage:342 - Loaded plugin power (category:power,tabindex:4)
+2019-11-26 00:14:43,602 [INFO] PluginManage:292 - Check plugin projectmanager
+2019-11-26 00:14:43,616 [INFO] PluginManage:342 - Loaded plugin projectmanager (category:projectmanager,tabindex:3)
+2019-11-26 00:14:43,617 [INFO] PluginManage:292 - Check plugin thirdparty
+2019-11-26 00:14:43,654 [INFO] ThirdPartyDb:294 - Open Third Party DataBase File (C:/Users/Assyria/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml) : 22 ms. number of Sw pack : 9
+2019-11-26 00:14:43,677 [INFO] PluginManage:342 - Loaded plugin thirdparty (category:base,tabindex:-1)
+2019-11-26 00:14:43,678 [INFO] PluginManage:292 - Check plugin tools
+2019-11-26 00:14:43,680 [INFO] PluginManage:342 - Loaded plugin tools (category:base,tabindex:7)
+2019-11-26 00:14:43,680 [INFO] PluginManage:292 - Check plugin updater
+2019-11-26 00:14:43,694 [INFO] PluginManage:342 - Loaded plugin updater (category:base,tabindex:12)
+2019-11-26 00:14:43,694 [INFO] PluginManage:265 - PluginManage : Loaded plugins [12]
+2019-11-26 00:14:43,857 [INFO] PinOutPanel:1367 - setPackage(No Configuration,No Configuration)
+2019-11-26 00:14:43,940 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:43,940 [INFO] PluginManager:200 - loadIPPluginJar : add adc
+2019-11-26 00:14:43,942 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:43,942 [INFO] PluginManager:200 - loadIPPluginJar : add aes
+2019-11-26 00:14:43,944 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:43,944 [INFO] PluginManager:200 - loadIPPluginJar : add can
+2019-11-26 00:14:43,945 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:43,945 [INFO] PluginManager:200 - loadIPPluginJar : add comp
+2019-11-26 00:14:43,947 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:43,947 [INFO] PluginManager:200 - loadIPPluginJar : add cryp
+2019-11-26 00:14:43,955 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:43,956 [INFO] PluginManager:200 - loadIPPluginJar : add dfsdm
+2019-11-26 00:14:43,960 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:43,961 [INFO] PluginManager:200 - loadIPPluginJar : add dma
+2019-11-26 00:14:43,962 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:43,963 [INFO] PluginManager:200 - loadIPPluginJar : add fatfs
+2019-11-26 00:14:43,966 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:43,966 [INFO] PluginManager:200 - loadIPPluginJar : add fmc
+2019-11-26 00:14:43,971 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:43,971 [INFO] PluginManager:200 - loadIPPluginJar : add freertos
+2019-11-26 00:14:43,972 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:43,973 [INFO] PluginManager:200 - loadIPPluginJar : add genericplugin
+2019-11-26 00:14:43,974 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:43,974 [INFO] PluginManager:200 - loadIPPluginJar : add gfxmmu
+2019-11-26 00:14:43,978 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:43,978 [INFO] PluginManager:200 - loadIPPluginJar : add gfxsimulator
+2019-11-26 00:14:43,983 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:43,983 [INFO] PluginManager:200 - loadIPPluginJar : add gic
+2019-11-26 00:14:43,986 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:43,987 [INFO] PluginManager:200 - loadIPPluginJar : add gpio
+2019-11-26 00:14:43,989 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:43,989 [INFO] PluginManager:200 - loadIPPluginJar : add gtzc
+2019-11-26 00:14:43,991 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:43,991 [INFO] PluginManager:200 - loadIPPluginJar : add hash
+2019-11-26 00:14:43,993 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:43,993 [INFO] PluginManager:200 - loadIPPluginJar : add i2c
+2019-11-26 00:14:43,995 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:43,995 [INFO] PluginManager:200 - loadIPPluginJar : add i2s
+2019-11-26 00:14:43,997 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:43,997 [INFO] PluginManager:200 - loadIPPluginJar : add ipddr
+2019-11-26 00:14:43,998 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:43,999 [INFO] PluginManager:200 - loadIPPluginJar : add ltdc
+2019-11-26 00:14:44,002 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:44,002 [INFO] PluginManager:200 - loadIPPluginJar : add mdma
+2019-11-26 00:14:44,006 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:44,006 [INFO] PluginManager:200 - loadIPPluginJar : add nvic
+2019-11-26 00:14:44,009 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:44,009 [INFO] PluginManager:200 - loadIPPluginJar : add opamp
+2019-11-26 00:14:44,013 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:44,013 [INFO] PluginManager:200 - loadIPPluginJar : add pdm2pcm
+2019-11-26 00:14:44,020 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:44,023 [INFO] PluginManager:200 - loadIPPluginJar : add plateformsettings
+2019-11-26 00:14:44,024 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:44,024 [INFO] PluginManager:200 - loadIPPluginJar : add quadspi
+2019-11-26 00:14:44,026 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:44,027 [INFO] PluginManager:200 - loadIPPluginJar : add resmgrutility
+2019-11-26 00:14:44,029 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:44,029 [INFO] PluginManager:200 - loadIPPluginJar : add sai
+2019-11-26 00:14:44,031 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:44,031 [INFO] PluginManager:200 - loadIPPluginJar : add spi
+2019-11-26 00:14:44,033 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:44,034 [INFO] PluginManager:200 - loadIPPluginJar : add stm32_wpan
+2019-11-26 00:14:44,035 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:44,036 [INFO] PluginManager:200 - loadIPPluginJar : add tim
+2019-11-26 00:14:44,038 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:44,039 [INFO] PluginManager:200 - loadIPPluginJar : add touchsensing
+2019-11-26 00:14:44,040 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:44,040 [INFO] PluginManager:200 - loadIPPluginJar : add tracer_emb
+2019-11-26 00:14:44,042 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:44,042 [INFO] PluginManager:200 - loadIPPluginJar : add ts
+2019-11-26 00:14:44,043 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:44,044 [INFO] PluginManager:200 - loadIPPluginJar : add tsc
+2019-11-26 00:14:44,045 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:44,045 [INFO] PluginManager:200 - loadIPPluginJar : add ucpd
+2019-11-26 00:14:44,047 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:44,048 [INFO] PluginManager:200 - loadIPPluginJar : add usart
+2019-11-26 00:14:44,534 [INFO] BoardConnectionPanel:220 - [DDR PANEL] osNameString: Windows
+2019-11-26 00:14:44,643 [INFO] BoardConnectionPanel:3149 - [DDR PANEL] STM32CubeIDE environment
+2019-11-26 00:14:44,643 [INFO] MainDdrPanel:100 - [DDR PANEL] GETTER - cubeProgrammerPath is: null
+2019-11-26 00:14:44,799 [FATAL] Updater:277 - Updater called before beeing initialized
+2019-11-26 00:14:44,998 [FATAL] Updater:277 - Updater called before beeing initialized
+2019-11-26 00:14:45,004 [INFO] PinOutPanel:1367 - setPackage(No Configuration,No Configuration)
+2019-11-26 00:14:45,005 [FATAL] Updater:277 - Updater called before beeing initialized
+2019-11-26 00:14:45,008 [INFO] BoardConnectionPanel:3149 - [DDR PANEL] STM32CubeIDE environment
+2019-11-26 00:14:45,009 [INFO] MainDdrPanel:100 - [DDR PANEL] GETTER - cubeProgrammerPath is: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.cubeprogrammer.win32_1.1.0.201910081157\tools\bin
+2019-11-26 00:14:45,013 [INFO] ProgrammerExecThread:148 - [ProgrammerAPI] CubeProgrammer command construction: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.cubeprogrammer.win32_1.1.0.201910081157\tools\bin\STM32_Programmer_CLI.exe -l
+2019-11-26 00:14:45,113 [INFO] MainDdrPanel:90 - [DDR PANEL] SETTER - Set cubeProgrammerPath to: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.cubeprogrammer.win32_1.1.0.201910081157\tools\bin
+2019-11-26 00:14:45,124 [INFO] Updater:886 - Updater Version found : 5.4.0
+2019-11-26 00:14:45,143 [INFO] ApplicationProperties:181 - Using Application install path: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541
+2019-11-26 00:14:45,374 [INFO] MainUpdater:2232 - connection check result : 10
+2019-11-26 00:14:45,375 [INFO] MainUpdater:236 - Updater Check For Update Now.
+2019-11-26 00:14:45,375 [INFO] MicroXplorer:420 - Change Database Version : DB.5.0.40
+2019-11-26 00:14:45,402 [INFO] CheckServerUpdateThread:92 - End of CheckServer Thread
+2019-11-26 00:14:45,579 [INFO] MainUpdater:2232 - connection check result : 10
+2019-11-26 00:14:45,580 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Successfull proxy connection.
+2019-11-26 00:14:45,647 [INFO] MicroXplorer:390 - Change Database Path : 
+2019-11-26 00:14:45,647 [INFO] MicroXplorer:420 - Change Database Version : DB.5.0.40
+2019-11-26 00:14:45,651 [INFO] PinOutPanel:1367 - setPackage(No Configuration,No Configuration)
+2019-11-26 00:14:45,651 [INFO] UtilMem:74 - Begin LoadConfig() Used Memory: 150528016 Bytes (276824064)
+2019-11-26 00:14:45,652 [INFO] MicroXplorer:390 - Change Database Path : 
+2019-11-26 00:14:45,652 [INFO] MicroXplorer:420 - Change Database Version : DB.5.0.40
+2019-11-26 00:14:45,653 [INFO] OpenFileManager:269 - Change cursor
+2019-11-26 00:14:46,746 [INFO] ThirdPartyDb:264 - Close Third Party DataBase File (C:/Users/Assyria/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml)
+2019-11-26 00:14:46,808 [INFO] ThirdPartyDb:294 - Open Third Party DataBase File (C:/Users/Assyria/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml) : 4 ms. number of Sw pack : 9
+2019-11-26 00:14:46,809 [INFO] ThirdPartyDb:264 - Close Third Party DataBase File (C:/Users/Assyria/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml)
+2019-11-26 00:14:46,844 [INFO] IntegrityCheckThread:97 - End integrity checks thread
+2019-11-26 00:14:47,372 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (FamilyName)
+2019-11-26 00:14:47,374 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (RCC) : Parameter (RTCHSEDivFreq_Value) has invalid value (4000000)
+2019-11-26 00:14:47,374 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (TIMFreq_Value)
+2019-11-26 00:14:47,534 [INFO] UtilMem:74 - End LoadConfig() Used Memory: 161683968 Bytes (276824064)
+2019-11-26 00:14:47,542 [INFO] ThirdPartyDb:294 - Open Third Party DataBase File (C:/Users/Assyria/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml) : 2 ms. number of Sw pack : 9
+2019-11-26 00:14:47,599 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE1 4.4.0
+2019-11-26 00:14:47,599 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 6.2.0
+2019-11-26 00:14:47,599 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC4 1.4.1
+2019-11-26 00:14:47,599 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-GNSS1 3.0.0
+2019-11-26 00:14:47,599 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 7.0.0
+2019-11-26 00:14:47,599 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC4 1.5.0
+2019-11-26 00:14:47,599 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-GNSS1 3.1.0
+2019-11-26 00:14:47,848 [INFO] PinOutPanel:1367 - setPackage(No Configuration,No Configuration)
+2019-11-26 00:14:47,850 [INFO] PinOutPanel:1367 - setPackage(STM32L073RZTx,LQFP64)
+2019-11-26 00:14:48,227 [INFO] UtilMem:74 - Before build in PCC Used Memory: 166698344 Bytes (276824064)
+2019-11-26 00:14:48,518 [INFO] SharedServices:71 - Folder for power plug-in: C:/Users/Assyria/.stm32cubemx/plugins/power
+2019-11-26 00:14:48,534 [INFO] UtilMem:74 - After build in PCC Used Memory: 182953312 Bytes (276824064)
+2019-11-26 00:14:48,543 [INFO] BlockDiagram:1827 - stop enableDisableButtons
+2019-11-26 00:14:48,543 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:48,544 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:48,544 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:48,544 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:48,544 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:48,544 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:48,544 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:48,544 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:48,545 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:48,545 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:48,545 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:48,545 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:48,545 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:48,545 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:48,546 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:48,546 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:48,546 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:48,546 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:48,546 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:48,546 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:48,547 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:48,547 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:48,547 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:48,547 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:48,547 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:48,547 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:48,548 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:48,548 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:48,548 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:48,548 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:48,548 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:48,548 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:48,548 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:48,549 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:48,549 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:48,549 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:48,549 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:48,549 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:48,550 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:14:48,568 [INFO] BlockDiagram:1827 - stop enableDisableButtons
+2019-11-26 00:14:48,580 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] toolchainItems.length=====1
+2019-11-26 00:14:48,661 [INFO] OpenFileManager:289 - Restore cursor
+2019-11-26 00:14:48,665 [INFO] DbMcusXml:106 - Load MCU database from C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\/mcu/families.xml
+2019-11-26 00:14:48,934 [INFO] BlockDiagram:1827 - stop enableDisableButtons
+2019-11-26 00:14:49,029 [INFO] BlockDiagram:1827 - stop enableDisableButtons
+2019-11-26 00:14:49,377 [INFO] DbMcusJson:87 - JSON generation date=Mon Sep 23 05:35:45 EDT 2019 (1569231345)
+2019-11-26 00:14:50,343 [INFO] DbMcus:193 - Found 1544 MCUs (1504 are supported by CubeMX, 1504 are visible in CubeMX)
+2019-11-26 00:14:50,344 [INFO] ApiDb:147 - User favorites file not found: C:\Users\Assyria/.stm32cubemx/favorites.mcus.txt
+2019-11-26 00:14:50,344 [INFO] DbMcus:204 - Set 0 / 0 favorites MCUs
+2019-11-26 00:15:21,054 [INFO] BlockDiagram:1827 - stop enableDisableButtons
+2019-11-26 00:15:21,297 [INFO] MainUpdater:2232 - connection check result : 10
+2019-11-26 00:15:21,298 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Successfull proxy connection.
+2019-11-26 00:15:21,350 [INFO] MicroXplorer:390 - Change Database Path : 
+2019-11-26 00:15:21,350 [INFO] MicroXplorer:420 - Change Database Version : DB.5.0.40
+2019-11-26 00:15:21,353 [INFO] PinOutPanel:1367 - setPackage(No Configuration,No Configuration)
+2019-11-26 00:15:21,356 [INFO] UtilMem:74 - Begin LoadConfig() Used Memory: 233782896 Bytes (332398592)
+2019-11-26 00:15:21,357 [INFO] MicroXplorer:390 - Change Database Path : 
+2019-11-26 00:15:21,357 [INFO] MicroXplorer:420 - Change Database Version : DB.5.0.40
+2019-11-26 00:15:21,357 [INFO] OpenFileManager:269 - Change cursor
+2019-11-26 00:15:22,623 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (FamilyName)
+2019-11-26 00:15:22,624 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (RCC) : Parameter (RTCHSEDivFreq_Value) has invalid value (4000000)
+2019-11-26 00:15:22,625 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (TIMFreq_Value)
+2019-11-26 00:15:22,765 [INFO] UtilMem:74 - End LoadConfig() Used Memory: 189634904 Bytes (332398592)
+2019-11-26 00:15:22,791 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE1 4.4.0
+2019-11-26 00:15:22,791 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 6.2.0
+2019-11-26 00:15:22,791 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC4 1.4.1
+2019-11-26 00:15:22,791 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-GNSS1 3.0.0
+2019-11-26 00:15:22,791 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 7.0.0
+2019-11-26 00:15:22,791 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC4 1.5.0
+2019-11-26 00:15:22,792 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-GNSS1 3.1.0
+2019-11-26 00:15:22,921 [INFO] PinOutPanel:1367 - setPackage(No Configuration,No Configuration)
+2019-11-26 00:15:22,923 [INFO] PinOutPanel:1367 - setPackage(STM32L073RZTx,LQFP64)
+2019-11-26 00:15:23,151 [INFO] UtilMem:74 - Before build in PCC Used Memory: 162143424 Bytes (332398592)
+2019-11-26 00:15:23,257 [INFO] SharedServices:71 - Folder for power plug-in: C:/Users/Assyria/.stm32cubemx/plugins/power
+2019-11-26 00:15:23,269 [INFO] UtilMem:74 - After build in PCC Used Memory: 172106936 Bytes (332398592)
+2019-11-26 00:15:23,274 [INFO] BlockDiagram:1827 - stop enableDisableButtons
+2019-11-26 00:15:23,274 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:23,274 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:23,274 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:23,275 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:23,275 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:23,275 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:23,276 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:23,276 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:23,276 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:23,276 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:23,276 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:23,276 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:23,276 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:23,277 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:23,277 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:23,277 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:23,277 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:23,278 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:23,278 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:23,278 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:23,278 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:23,278 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:23,278 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:23,279 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:23,279 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:23,279 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:23,279 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:23,279 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:23,279 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:23,279 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:23,280 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:23,280 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:23,280 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:23,280 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:23,280 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:23,280 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:23,280 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:23,281 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:23,281 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:23,283 [INFO] BlockDiagram:1827 - stop enableDisableButtons
+2019-11-26 00:15:23,304 [INFO] OpenFileManager:289 - Restore cursor
+2019-11-26 00:15:23,449 [INFO] BlockDiagram:1827 - stop enableDisableButtons
+2019-11-26 00:15:23,471 [INFO] BlockDiagram:1827 - stop enableDisableButtons
+2019-11-26 00:15:42,560 [INFO] BlockDiagram:1827 - stop enableDisableButtons
+2019-11-26 00:15:42,935 [INFO] MainUpdater:2232 - connection check result : 10
+2019-11-26 00:15:42,936 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Successfull proxy connection.
+2019-11-26 00:15:42,979 [INFO] MicroXplorer:390 - Change Database Path : 
+2019-11-26 00:15:42,979 [INFO] MicroXplorer:420 - Change Database Version : DB.5.0.40
+2019-11-26 00:15:42,981 [INFO] PinOutPanel:1367 - setPackage(No Configuration,No Configuration)
+2019-11-26 00:15:42,984 [INFO] UtilMem:74 - Begin LoadConfig() Used Memory: 185259232 Bytes (332398592)
+2019-11-26 00:15:42,985 [INFO] MicroXplorer:390 - Change Database Path : 
+2019-11-26 00:15:42,985 [INFO] MicroXplorer:420 - Change Database Version : DB.5.0.40
+2019-11-26 00:15:42,985 [INFO] OpenFileManager:269 - Change cursor
+2019-11-26 00:15:44,156 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (FamilyName)
+2019-11-26 00:15:44,157 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (RCC) : Parameter (RTCHSEDivFreq_Value) has invalid value (4000000)
+2019-11-26 00:15:44,157 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (TIMFreq_Value)
+2019-11-26 00:15:44,326 [INFO] UtilMem:74 - End LoadConfig() Used Memory: 166834744 Bytes (332398592)
+2019-11-26 00:15:44,369 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE1 4.4.0
+2019-11-26 00:15:44,369 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 6.2.0
+2019-11-26 00:15:44,369 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC4 1.4.1
+2019-11-26 00:15:44,369 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-GNSS1 3.0.0
+2019-11-26 00:15:44,370 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 7.0.0
+2019-11-26 00:15:44,370 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC4 1.5.0
+2019-11-26 00:15:44,370 [INFO] ThirdParty:897 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-GNSS1 3.1.0
+2019-11-26 00:15:44,517 [INFO] PinOutPanel:1367 - setPackage(No Configuration,No Configuration)
+2019-11-26 00:15:44,519 [INFO] PinOutPanel:1367 - setPackage(STM32L073RZTx,LQFP64)
+2019-11-26 00:15:44,736 [INFO] UtilMem:74 - Before build in PCC Used Memory: 215536840 Bytes (481296384)
+2019-11-26 00:15:44,856 [INFO] SharedServices:71 - Folder for power plug-in: C:/Users/Assyria/.stm32cubemx/plugins/power
+2019-11-26 00:15:44,867 [INFO] UtilMem:74 - After build in PCC Used Memory: 225496272 Bytes (481296384)
+2019-11-26 00:15:44,874 [INFO] BlockDiagram:1827 - stop enableDisableButtons
+2019-11-26 00:15:44,874 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:44,875 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:44,875 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:44,875 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:44,875 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:44,875 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:44,876 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:44,876 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:44,876 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:44,876 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:44,877 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:44,877 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:44,877 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:44,877 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:44,878 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:44,878 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:44,878 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:44,878 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:44,878 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:44,879 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:44,879 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:44,879 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:44,879 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:44,880 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:44,880 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:44,880 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:44,881 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:44,881 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:44,882 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:44,882 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:44,882 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:44,882 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:44,883 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:44,883 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:44,883 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:44,884 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:44,884 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:44,884 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:44,885 [INFO] IPUIPlugin:63 - create IPUIPlugin
+2019-11-26 00:15:44,889 [INFO] BlockDiagram:1827 - stop enableDisableButtons
+2019-11-26 00:15:44,911 [INFO] OpenFileManager:289 - Restore cursor
+2019-11-26 00:15:45,059 [INFO] BlockDiagram:1827 - stop enableDisableButtons
+2019-11-26 00:15:45,075 [INFO] BlockDiagram:1827 - stop enableDisableButtons
+2019-11-26 00:19:42,441 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 213022344 Bytes (599785472)
+2019-11-26 00:19:43,833 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 221937280 Bytes (599785472)
+2019-11-26 00:19:43,979 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 231374464 Bytes (599785472)
+2019-11-26 00:19:44,374 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: ADC
+2019-11-26 00:19:44,374 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: RTC
+2019-11-26 00:19:44,374 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: NVIC
+2019-11-26 00:19:44,374 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: USART
+2019-11-26 00:19:44,374 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: TIM6_7L0
+2019-11-26 00:19:44,374 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: TIM1_8L0
+2019-11-26 00:19:44,374 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: TIM1_8L0
+2019-11-26 00:19:44,374 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: SYS
+2019-11-26 00:19:44,375 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: GPIO
+2019-11-26 00:19:44,375 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: RCC
+2019-11-26 00:19:44,375 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: TIM1_8L0
+2019-11-26 00:19:44,375 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: TIM1_8L0
+2019-11-26 00:19:44,376 [INFO] CodeGenerator:598 - code generatio: config db path: C:\ST\STM32CubeIDE_1.0.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\
+2019-11-26 00:19:44,916 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Assyria\Documents\PLANT\Final\MXTmpFiles\license.tmp_save
+2019-11-26 00:19:45,335 [INFO] CodeEngine:211 - Generated code: C:\Users\Assyria\Documents\PLANT\Final\MXTmpFiles\license.tmp
+2019-11-26 00:19:45,642 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Assyria\Documents\PLANT\Final\MXTmpFiles\gpio.tmp_save
+2019-11-26 00:19:45,784 [INFO] CodeEngine:211 - Generated code: C:\Users\Assyria\Documents\PLANT\Final\MXTmpFiles\gpio.tmp
+2019-11-26 00:19:46,803 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2019-11-26 00:19:46,804 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Debug : prepare data for ADC
+2019-11-26 00:19:46,805 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line test
+2019-11-26 00:19:46,806 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2019-11-26 00:19:46,807 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Debug : prepare data for RTC
+2019-11-26 00:19:46,807 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line test
+2019-11-26 00:19:46,808 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2019-11-26 00:19:46,809 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Debug : prepare data for SYS
+2019-11-26 00:19:46,810 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line test
+2019-11-26 00:19:46,811 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2019-11-26 00:19:46,812 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Debug : prepare data for TIM
+2019-11-26 00:19:46,813 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line test
+2019-11-26 00:19:46,816 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2019-11-26 00:19:46,817 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Debug : prepare data for USART
+2019-11-26 00:19:46,818 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line test
+2019-11-26 00:19:46,819 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Debug : prepare data for NVIC
+2019-11-26 00:19:46,820 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line test
+2019-11-26 00:19:46,851 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Assyria\Documents\PLANT\Final\Src\stm32l0xx_it.c_save
+2019-11-26 00:19:47,047 [INFO] CodeEngine:211 - Generated code: C:\Users\Assyria\Documents\PLANT\Final\Src\stm32l0xx_it.c
+2019-11-26 00:19:47,076 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Assyria\Documents\PLANT\Final\Inc\stm32l0xx_it.h_save
+2019-11-26 00:19:47,168 [INFO] CodeEngine:211 - Generated code: C:\Users\Assyria\Documents\PLANT\Final\Inc\stm32l0xx_it.h
+2019-11-26 00:19:47,209 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Assyria\Documents\PLANT\Final\Src\stm32l0xx_hal_msp.c_save
+2019-11-26 00:19:47,433 [INFO] CodeEngine:211 - Generated code: C:\Users\Assyria\Documents\PLANT\Final\Src\stm32l0xx_hal_msp.c
+2019-11-26 00:19:47,455 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Assyria\Documents\PLANT\Final\MXTmpFiles\system.tmp_save
+2019-11-26 00:19:47,586 [INFO] CodeEngine:211 - Generated code: C:\Users\Assyria\Documents\PLANT\Final\MXTmpFiles\system.tmp
+2019-11-26 00:19:47,629 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Assyria\Documents\PLANT\Final\Inc\stm32l0xx_hal_conf.h_save
+2019-11-26 00:19:47,748 [INFO] CodeEngine:211 - Generated code: C:\Users\Assyria\Documents\PLANT\Final\Inc\stm32l0xx_hal_conf.h
+2019-11-26 00:19:47,767 [WARN] IPConfigManager:2673 - IP not found : TIM
+2019-11-26 00:19:47,767 [WARN] IPConfigManager:2673 - IP not found : gpio
+2019-11-26 00:19:47,768 [WARN] CodeGenerator:2697 - IP not found : TIM
+2019-11-26 00:19:47,768 [WARN] CodeGenerator:2697 - IP not found : gpio
+2019-11-26 00:19:47,801 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Assyria\Documents\PLANT\Final\Inc\main.h_save
+2019-11-26 00:19:47,901 [INFO] CodeEngine:211 - Generated code: C:\Users\Assyria\Documents\PLANT\Final\Inc\main.h
+2019-11-26 00:19:47,939 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Assyria\Documents\PLANT\Final\Src\main.c_save
+2019-11-26 00:19:48,164 [INFO] CodeEngine:211 - Generated code: C:\Users\Assyria\Documents\PLANT\Final\Src\main.c
+2019-11-26 00:19:48,675 [INFO] ProjectBuilder:1645 - Time for Copy HAL[1] : 124mS.
+2019-11-26 00:19:48,680 [INFO] ProjectBuilder:2206 - Project Generator version: 3.5.2
+2019-11-26 00:19:49,128 [INFO] ConfigFileManager:953 - The Die is : DIE447
+2019-11-26 00:19:50,005 [ERROR] root:77 - Fail to recover any existing build configuration matching on going update process 
+2019-11-26 00:19:50,006 [INFO] ProjectBuilder:2373 - Time for Generating toolchain IDE Files: 1326mS.
+2019-11-26 00:19:50,007 [INFO] ProjectBuilder:1505 - Time for Copy CMSIS : 1mS.
+2019-11-26 00:19:50,010 [INFO] ProjectBuilder:1505 - Time for Copy CMSIS : 0mS.
+2019-11-26 00:34:33,565 [INFO] BlockDiagram:1827 - stop enableDisableButtons

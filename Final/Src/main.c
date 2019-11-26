@@ -23,7 +23,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "movement.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -116,6 +116,20 @@ int main(void)
   MX_RTC_Init();
   /* USER CODE BEGIN 2 */
 
+  // Initialize Robot
+  Robot robot;
+  robot.x = 0;
+  robot.y = 0;
+  robot.theta=0;
+
+  // Initialize Motors
+  Motor left_motor;
+  left_motor.dir = 0;
+  left_motor.encoder = 0;
+
+  Motor right_motor;
+  right_motor.dir = 0;
+  right_motor.encoder = 0;
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -669,8 +683,8 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(soil_meter_power_GPIO_Port, soil_meter_power_Pin, GPIO_PIN_SET);
 
-  /*Configure GPIO pins : PC13 PC11 PC12 */
-  GPIO_InitStruct.Pin = GPIO_PIN_13|GPIO_PIN_11|GPIO_PIN_12;
+  /*Configure GPIO pins : PC13 Left_Motor_Enc_Pin Right_Motor_Enc_Pin */
+  GPIO_InitStruct.Pin = GPIO_PIN_13|Left_Motor_Enc_Pin|Right_Motor_Enc_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);

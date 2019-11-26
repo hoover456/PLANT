@@ -162,7 +162,14 @@ void EXTI0_1_IRQHandler(void)
 void EXTI4_15_IRQHandler(void)
 {
   /* USER CODE BEGIN EXTI4_15_IRQn 0 */
-
+	// Left motor Encoder interrupt
+	if(__HAL_GPIO_EXTI_GET_FLAG(Left_Motor_Enc_Pin)){
+		encoderUpdate(left_motor);
+	}
+	// Right motor Encoder interrupt
+	if(__HAL_GPIO_EXTI_GET_FLAG(Right_Motor_Enc_Pin)){
+		encoderUpdate(right_motor);
+	}
   /* USER CODE END EXTI4_15_IRQn 0 */
   HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_6);
   HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_9);
