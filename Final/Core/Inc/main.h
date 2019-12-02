@@ -50,6 +50,8 @@ extern "C" {
 
 /* USER CODE END EM */
 
+void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
+
 /* Exported functions prototypes ---------------------------------------------*/
 void Error_Handler(void);
 
@@ -58,8 +60,42 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define LM_PWM_1_Pin GPIO_PIN_6
+#define LM_PWM_1_GPIO_Port GPIOA
+#define LM_PWM_2_Pin GPIO_PIN_7
+#define LM_PWM_2_GPIO_Port GPIOA
+#define RM_PWM_1_Pin GPIO_PIN_0
+#define RM_PWM_1_GPIO_Port GPIOB
+#define RM_PWM_2_Pin GPIO_PIN_1
+#define RM_PWM_2_GPIO_Port GPIOB
+#define L_MTR_ENC_Pin GPIO_PIN_11
+#define L_MTR_ENC_GPIO_Port GPIOC
+#define L_MTR_ENC_EXTI_IRQn EXTI4_15_IRQn
+#define R_MTR_ENC_Pin GPIO_PIN_12
+#define R_MTR_ENC_GPIO_Port GPIOC
+#define R_MTR_ENC_EXTI_IRQn EXTI4_15_IRQn
 /* USER CODE BEGIN Private defines */
 
+typedef struct{
+	signed char dir;
+	int encoder;
+	int ch1;
+	int ch2;
+}Motor;
+
+typedef struct{
+	Motor left;
+	Motor right;
+	double x;
+	double y;
+	double theta;
+}Robot;
+
+void pwm_gen(Motor* motor, int speed);
+void update_pos(Robot* robot);
+char turn(Robot* robot, float target);
+char move_x(Robot* robot, float target);
+char move_y(Robot* robot, float target);
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

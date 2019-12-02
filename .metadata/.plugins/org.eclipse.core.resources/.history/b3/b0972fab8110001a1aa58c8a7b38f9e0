@@ -1,0 +1,36 @@
+#include "movement.h"
+
+void encoderUpdate(Motor motor){
+	motor.encoder += motor.dir
+}
+
+void robotPos(Robot robot){
+
+}
+
+void robot_move(Motor* left_motor, Motor* right_Motor, int left_speed, int right_speed){
+	if(left_speed < 0){
+		left_motor.dir = -left_motor.dir;
+		left_speed = -left_speed;
+	} else if (left_speed == 0){
+		left_motor.dir = 0;
+	}
+	if(right_speed < 0){
+			right_motor.dir = -right_motor.dir;
+			right_speed = -right_speed;
+	} else if (right_speed == 0){
+		right_mtor.dir = 0;
+	}
+
+	pwm_gen(left_motor, left_speed);
+	pwm_gen(right_motor, right_speed);
+}
+
+void pwm_gen(Motor* motor, int speed){
+	if(motor.dir == 0){
+		__HAL_TIM_SET_COMPARE(motor->timer, motor->channel1, speed);
+		__HAL_TIM_SET_COMPARE(motor->timer, motor->channel1, speed);
+	} else if (motor.dir == 1){
+
+	}
+}

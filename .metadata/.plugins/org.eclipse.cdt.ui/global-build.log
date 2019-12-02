@@ -1,7 +1,162 @@
-00:24:11 **** Incremental Build of configuration Debug for project Final ****
+16:17:44 **** Incremental Build of configuration Debug for project Final ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L073xx -DDEBUG -c -I../Drivers/CMSIS/Include -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Final.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Assyria\Documents\PLANT\Final\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Final.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Final.elf
+ 
+arm-none-eabi-objdump -h -S  Final.elf  > "Final.list"
+arm-none-eabi-size   Final.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27732	    116	   1728	  29576	   7388	Final.elf
+Finished building: default.size.stdout
+ 
+Finished building: Final.list
+ 
+16:17:48 **** Incremental Build of configuration Debug for project Final ****
 make -j8 all 
 arm-none-eabi-size   Final.elf 
    text	   data	    bss	    dec	    hex	filename
-     96	      8	   1568	   1672	    688	Final.elf
+  27732	    116	   1728	  29576	   7388	Final.elf
 Finished building: default.size.stdout
+ 
+16:20:36 **** Incremental Build of configuration Debug for project Final ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L073xx -DDEBUG -c -I../Drivers/CMSIS/Include -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Final.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Assyria\Documents\PLANT\Final\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Final.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Final.elf
+ 
+arm-none-eabi-objdump -h -S  Final.elf  > "Final.list"
+arm-none-eabi-size   Final.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27736	    116	   1728	  29580	   738c	Final.elf
+Finished building: default.size.stdout
+ 
+Finished building: Final.list
+ 
+16:23:25 **** Incremental Build of configuration Debug for project Final ****
+make -j8 all 
+arm-none-eabi-size   Final.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27736	    116	   1728	  29580	   738c	Final.elf
+Finished building: default.size.stdout
+ 
+16:24:09 **** Incremental Build of configuration Debug for project Final ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L073xx -DDEBUG -c -I../Drivers/CMSIS/Include -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Final.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Assyria\Documents\PLANT\Final\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Final.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Final.elf
+ 
+arm-none-eabi-objdump -h -S  Final.elf  > "Final.list"
+arm-none-eabi-size   Final.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27688	    116	   1728	  29532	   735c	Final.elf
+Finished building: default.size.stdout
+ 
+Finished building: Final.list
+ 
+16:24:55 **** Incremental Build of configuration Debug for project Final ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/stm32l0xx_it.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L073xx -DDEBUG -c -I../Drivers/CMSIS/Include -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32l0xx_it.d" -MT"Core/Src/stm32l0xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32l0xx_it.o"
+../Core/Src/stm32l0xx_it.c: In function 'EXTI4_15_IRQHandler':
+../Core/Src/stm32l0xx_it.c:151:6: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+   if(abs(robot.left.encoder) > 50) update_pos(&robot);
+      ^~~
+arm-none-eabi-gcc -o "Final.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Assyria\Documents\PLANT\Final\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Final.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Final.elf
+ 
+arm-none-eabi-objdump -h -S  Final.elf  > "Final.list"
+arm-none-eabi-size   Final.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27680	    116	   1728	  29524	   7354	Final.elf
+Finished building: default.size.stdout
+ 
+Finished building: Final.list
+ 
+16:25:12 **** Incremental Build of configuration Debug for project Final ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/stm32l0xx_it.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L073xx -DDEBUG -c -I../Drivers/CMSIS/Include -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32l0xx_it.d" -MT"Core/Src/stm32l0xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32l0xx_it.o"
+../Core/Src/stm32l0xx_it.c: In function 'EXTI4_15_IRQHandler':
+../Core/Src/stm32l0xx_it.c:152:6: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+   if(abs(robot.left.encoder) > 50) update_pos(&robot);
+      ^~~
+arm-none-eabi-gcc -o "Final.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Assyria\Documents\PLANT\Final\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Final.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Final.elf
+ 
+arm-none-eabi-objdump -h -S  Final.elf  > "Final.list"
+arm-none-eabi-size   Final.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27680	    116	   1728	  29524	   7354	Final.elf
+Finished building: default.size.stdout
+ 
+Finished building: Final.list
+ 
+16:28:53 **** Incremental Build of configuration Debug for project Final ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L073xx -DDEBUG -c -I../Drivers/CMSIS/Include -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Final.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Assyria\Documents\PLANT\Final\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Final.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Final.elf
+ 
+arm-none-eabi-objdump -h -S  Final.elf  > "Final.list"
+arm-none-eabi-size   Final.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27716	    116	   1728	  29560	   7378	Final.elf
+Finished building: default.size.stdout
+ 
+Finished building: Final.list
+ 
+16:30:29 **** Incremental Build of configuration Debug for project Final ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L073xx -DDEBUG -c -I../Drivers/CMSIS/Include -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Final.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Assyria\Documents\PLANT\Final\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Final.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Final.elf
+ 
+arm-none-eabi-objdump -h -S  Final.elf  > "Final.list"
+arm-none-eabi-size   Final.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27776	    116	   1728	  29620	   73b4	Final.elf
+Finished building: default.size.stdout
+ 
+Finished building: Final.list
+ 
+16:31:11 **** Incremental Build of configuration Debug for project Final ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L073xx -DDEBUG -c -I../Drivers/CMSIS/Include -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Final.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Assyria\Documents\PLANT\Final\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Final.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Final.elf
+ 
+arm-none-eabi-objdump -h -S  Final.elf  > "Final.list"
+arm-none-eabi-size   Final.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27776	    116	   1728	  29620	   73b4	Final.elf
+Finished building: default.size.stdout
+ 
+Finished building: Final.list
+ 
+16:32:00 **** Incremental Build of configuration Debug for project Final ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L073xx -DDEBUG -c -I../Drivers/CMSIS/Include -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Final.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Assyria\Documents\PLANT\Final\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Final.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Final.elf
+ 
+arm-none-eabi-objdump -h -S  Final.elf  > "Final.list"
+arm-none-eabi-size   Final.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27776	    116	   1728	  29620	   73b4	Final.elf
+Finished building: default.size.stdout
+ 
+Finished building: Final.list
+ 
+16:33:38 **** Incremental Build of configuration Debug for project Final ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L073xx -DDEBUG -c -I../Drivers/CMSIS/Include -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Final.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Assyria\Documents\PLANT\Final\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Final.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Final.elf
+ 
+arm-none-eabi-objdump -h -S  Final.elf  > "Final.list"
+arm-none-eabi-size   Final.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27832	    116	   1736	  29684	   73f4	Final.elf
+Finished building: default.size.stdout
+ 
+Finished building: Final.list
  
