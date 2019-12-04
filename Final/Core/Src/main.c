@@ -19,11 +19,11 @@
 /* USER CODE END Header */
 
 /* Includes ------------------------------------------------------------------*/
+#include <menu.h>
 #include "main.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -46,6 +46,7 @@ ADC_HandleTypeDef hadc;
 TIM_HandleTypeDef htim2;
 TIM_HandleTypeDef htim3;
 TIM_HandleTypeDef htim6;
+TIM_HandleTypeDef htim22;
 
 /* USER CODE BEGIN PV */
 Motor left_motor;
@@ -62,6 +63,7 @@ static void MX_TIM3_Init(void);
 static void MX_TIM2_Init(void);
 static void MX_TIM6_Init(void);
 static void MX_ADC_Init(void);
+static void MX_TIM22_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -104,6 +106,7 @@ int main(void)
   MX_TIM2_Init();
   MX_TIM6_Init();
   MX_ADC_Init();
+  MX_TIM22_Init();
   /* USER CODE BEGIN 2 */
 	HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
 	HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);
@@ -148,6 +151,10 @@ int main(void)
 	robot.theta = 0;
 
 	HAL_ADCEx_Calibration_Start(&hadc, ADC_SINGLE_ENDED);
+	TIM22->CR1 |= TIM_CR1_CEN;
+	  RCC->IOPENR |= RCC_IOPENR_GPIOBEN;
+	  bitbang_init_lcd();
+	  TIM22->CNT = 30000;
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -165,7 +172,7 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-
+		Menu_Main();
 		if(sw == 0){
 				if(robot.x < 12){
 					move_x(&robot, 12);
@@ -483,6 +490,59 @@ static void MX_TIM6_Init(void)
 }
 
 /**
+  * @brief TIM22 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM22_Init(void)
+{
+
+  /* USER CODE BEGIN TIM22_Init 0 */
+
+  /* USER CODE END TIM22_Init 0 */
+
+  TIM_Encoder_InitTypeDef sConfig = {0};
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+
+  /* USER CODE BEGIN TIM22_Init 1 */
+
+  /* USER CODE END TIM22_Init 1 */
+  htim22.Instance = TIM22;
+  htim22.Init.Prescaler = 0;
+  htim22.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim22.Init.Period = 65000;
+  htim22.Init.ClockDivision = TIM_CLOCKDIVISION_DIV4;
+  htim22.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  sConfig.EncoderMode = TIM_ENCODERMODE_TI12;
+  sConfig.IC1Polarity = TIM_ICPOLARITY_FALLING;
+  sConfig.IC1Selection = TIM_ICSELECTION_DIRECTTI;
+  sConfig.IC1Prescaler = TIM_ICPSC_DIV1;
+  sConfig.IC1Filter = 4;
+  sConfig.IC2Polarity = TIM_ICPOLARITY_FALLING;
+  sConfig.IC2Selection = TIM_ICSELECTION_DIRECTTI;
+  sConfig.IC2Prescaler = TIM_ICPSC_DIV4;
+  sConfig.IC2Filter = 0;
+  if (HAL_TIM_Encoder_Init(&htim22, &sConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim22, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  if (HAL_TIMEx_RemapConfig(&htim22, TIM3_TI1_GPIO) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM22_Init 2 */
+
+  /* USER CODE END TIM22_Init 2 */
+
+}
+
+/**
   * @brief GPIO Initialization Function
   * @param None
   * @retval None
@@ -533,6 +593,12 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : PB6 */
+  GPIO_InitStruct.Pin = GPIO_PIN_6;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
   /* EXTI interrupt init*/
   HAL_NVIC_SetPriority(EXTI0_1_IRQn, 0, 0);

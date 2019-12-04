@@ -107,6 +107,7 @@ void Error_Handler(void);
 #define R_MTR_ENC_Pin GPIO_PIN_12
 #define R_MTR_ENC_GPIO_Port GPIOC
 #define R_MTR_ENC_EXTI_IRQn EXTI4_15_IRQn
+
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */
