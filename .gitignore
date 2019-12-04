@@ -2,3 +2,5 @@
 OLED/
 *.o
 *.elf
+*.map
+*.list
