@@ -200,6 +200,7 @@ void push_button() {
 	if (STOP){
 		stop(&robot);
 		robot.stop = 1;
+		Display();
 	}
 	if (ChangeHour == 1){
 		ChangeHour = 0;
