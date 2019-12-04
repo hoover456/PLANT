@@ -146,12 +146,7 @@ void SysTick_Handler(void)
 void EXTI0_1_IRQHandler(void)
 {
   /* USER CODE BEGIN EXTI0_1_IRQn 0 */
-	if (__HAL_GPIO_EXTI_GET_FLAG(GPIO_PIN_1)){
-		if (((GPIOA->IDR) > 1) & 1){
-			extern count;
-			count++;
-		}
-	}
+
   /* USER CODE END EXTI0_1_IRQn 0 */
   HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_1);
   /* USER CODE BEGIN EXTI0_1_IRQn 1 */
@@ -168,7 +163,7 @@ void EXTI4_15_IRQHandler(void)
 	if(__HAL_GPIO_EXTI_GET_FLAG(L_MTR_ENC_Pin)){
 		extern Robot robot;
 		robot.left.encoder+= robot.left.dir;
-		Menu_Main();
+//		Menu_Main();
 		if(abs(robot.left.encoder) > 50) update_pos(&robot);
 	}
 	if(__HAL_GPIO_EXTI_GET_FLAG(R_MTR_ENC_Pin)){
@@ -181,12 +176,16 @@ void EXTI4_15_IRQHandler(void)
 		extern Robot robot;
 		robot.cliff = !HAL_GPIO_ReadPin(CLIFF_GPIO_Port, CLIFF_Pin);
 	}
-
+	if (__HAL_GPIO_EXTI_GET_FLAG(GPIO_PIN_15)){
+				extern count;
+				count++;
+		}
   /* USER CODE END EXTI4_15_IRQn 0 */
   HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_6);
   HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_9);
   HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_11);
   HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_12);
+  HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_15);
   /* USER CODE BEGIN EXTI4_15_IRQn 1 */
 
   /* USER CODE END EXTI4_15_IRQn 1 */

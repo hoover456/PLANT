@@ -24,4 +24,5 @@ void determineDir(void);
 void init_Left();
 void init_Right();
 void init_Straight();
+void TIM2_conf(void);
 #endif

@@ -17,6 +17,7 @@ int right = 0;
 int LCheck = 0;
 int RCheck = 0;
 char obstacle_detected = 0;
+extern Robot robot;
 
 
 /**
@@ -108,7 +109,7 @@ int check_light_direction(void){
 
 int IR_align(void){
 	int IR_Pins = ((GPIOA->IDR>>10) & 7);
-	if(IR_Pins == 1 || IR_Pins == 5) return -1;
+             	if(IR_Pins == 1 || IR_Pins == 5) return -1;
 	if(IR_Pins == 2 || IR_Pins == 6) return 1;
 	return 0;
 }
@@ -117,43 +118,6 @@ int IR_dock(void){
 	int IR_Pins = ((GPIOA->IDR>>10) & 7);
 	return IR_Pins != 0;
 }
-
-
-//void IR_LOCATE(void){
-//	int pins = ((GPIOA->IDR>>10) & 7);
-//	if(pins == 0){
-//		move_robot(0,0);
-//		printf("NO IR\r\n");
-//	}
-//	if(pins == 1){
-//		printf("Hard Left\r\n");
-//		move_robot(TURN_LEFT, 20000);
-//	}
-//	if(pins == 2){
-//		printf("Hard Right\r\n");
-//		move_robot(TURN_RIGHT, 20000);
-//	}
-//	if(pins == 3){
-//		printf("Forward\r\n");
-//		move_robot(FORWARD, 20000);
-//	}
-//	if(pins == 4){
-//		printf("Forward\r\n");
-//		move_robot(FORWARD, 20000);
-//	}
-//	if(pins == 5){
-//		printf("Soft Left\r\n");
-//		move_robot(TURN_LEFT, 10000);
-//	}
-//	if(pins == 6){
-//		printf("Soft Right\r\n");
-//		move_robot(TURN_RIGHT, 10000);
-//	}
-//	if(pins == 7){
-//		printf("Forward\r\n");
-//		move_robot(FORWARD, 20000);
-//	}
-//}
 
 
 /***
@@ -179,10 +143,10 @@ void TIM6_UltraSonic_Handler(void){
 	count = 0;
 }
 void checkTurn(void){
-	if ((UltraTurn == UltraLeft) && (count > 300)){
+	if ((UltraTurn == UltraLeft) && (count > 100)){
 		printf("Keep turning left\r\n");
 	}
-	else if ((UltraTurn == UltraRight) && (count > 300)){
+	else if ((UltraTurn == UltraRight) && (count > 100)){
 		printf("Keep turning right\r\n");
 	}
 	else {
@@ -191,25 +155,20 @@ void checkTurn(void){
 	}
 }
 void checkStraight(void){
-	if (count > 300){
-		obstacle_detected = 1;
-//		if(state==0){
-////			obstacle_detected = 1;
-//			printf("Stop\r\n");
-//		} else {
-//			printf("checkDirection\r\n");
-//			left = 1;
-//			init_Left();
-//		}
+	if (count > 100){
+		robot.obstacle[1] = 1;
+		printf("checkDirection\r\n");
+		left = 1;
+		init_Left();
 	} else {
-		obstacle_detected = 0;
+		robot.obstacle[1] = 0;
 	}
 }
 void checkLeft(void){
 	left++;
-	if (count > 300){
-		printf("Left Not good\r\n");
-	}
+	if (count > 100){
+		robot.obstacle[0] = 1;
+	} else robot.obstacle[0] = 0;
 	if (left > 3){
 		left = 0;
 		right = 1;
@@ -219,10 +178,9 @@ void checkLeft(void){
 }
 void checkRight(void){
 	right++;
-	if (count > 300){
-		printf("Right Not Good\r\n");
-
-	}
+	if (count > 100){
+		robot.obstacle[2] = 1;
+	} else robot.obstacle[2] = 0;
 	if (right > 3){
 		left = 0;
 		right = 0;
@@ -255,3 +213,18 @@ void init_Straight() {
 	GPIOC->ODR &= ~(1 << 13);
 }
 
+void TIM2_conf(void){
+	RCC->IOPENR |= RCC_IOPENR_IOPAEN;
+	RCC->APB1ENR |= RCC_APB1ENR_TIM2EN;
+	GPIOA->MODER |= 2;
+	GPIOA->AFR[0] |= 2;
+	GPIOA->OSPEEDR |= 2;
+	TIM2->PSC = 20;
+	TIM2->ARR = 9;
+	TIM2->CCMR1 |= TIM_CCMR1_OC1M_2 | TIM_CCMR1_OC1M_1;
+	TIM2->CCR1 = 9;
+	TIM2->CCER |= 1;
+	TIM2->CR1 |= 1;
+	RCC->APB1ENR |= RCC_APB1ENR_TIM2EN;
+	RCC->APB1ENR |= RCC_APB1ENR_TIM6EN;
+}

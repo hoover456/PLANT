@@ -51,6 +51,7 @@ typedef struct{
 	double y;
 	double theta;
 	char stop;
+	char obstacle[3]; // 0:Left, 1:Center, 2:Right
 }Robot;
 
 // Function declarations

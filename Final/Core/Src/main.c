@@ -147,25 +147,30 @@ int main(void)
 	robot.x = 0;
 	robot.y = 0;
 	robot.theta = 0;
-	robot.stop = 1;
+	robot.stop = 0;
+	robot.cliff = 0;
 
 	HAL_ADCEx_Calibration_Start(&hadc, ADC_SINGLE_ENDED);
 	TIM22->CR1 |= TIM_CR1_CEN;
 	  RCC->IOPENR |= RCC_IOPENR_GPIOBEN;
 	  bitbang_init_lcd();
 	  TIM22->CNT = 30000;
+
+
+	  HAL_TIM_Base_Start_IT(&htim6);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 	DMAInit((uint32_t*) buffer, 5);
+	TIM2_conf();
 	arm_pid_init_f32(&robot.right.pos_pid,1);
 	arm_pid_init_f32(&robot.right.rad_pid,1);
 	arm_pid_init_f32(&robot.left.pos_pid,1);
 	arm_pid_init_f32(&robot.left.rad_pid,1);
 
 	int sw = 0;
-	Menu_Main();
+//	Menu_Main();
 	while (1)
 	{
     /* USER CODE END WHILE */
@@ -581,6 +586,12 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(Ultrasonic_B_GPIO_Port, &GPIO_InitStruct);
 
+  /*Configure GPIO pins : PC15 L_MTR_ENC_Pin R_MTR_ENC_Pin */
+  GPIO_InitStruct.Pin = GPIO_PIN_15|L_MTR_ENC_Pin|R_MTR_ENC_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+
   /*Configure GPIO pins : Ultrasonic_Echo_Pin CLIFF_Pin */
   GPIO_InitStruct.Pin = Ultrasonic_Echo_Pin|CLIFF_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
@@ -599,12 +610,6 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
-
-  /*Configure GPIO pins : L_MTR_ENC_Pin R_MTR_ENC_Pin */
-  GPIO_InitStruct.Pin = L_MTR_ENC_Pin|R_MTR_ENC_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
   /*Configure GPIO pin : PB6 */
   GPIO_InitStruct.Pin = GPIO_PIN_6;
