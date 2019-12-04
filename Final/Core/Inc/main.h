@@ -95,6 +95,12 @@ void Error_Handler(void);
 #define CLIFF_Pin GPIO_PIN_9
 #define CLIFF_GPIO_Port GPIOA
 #define CLIFF_EXTI_IRQn EXTI4_15_IRQn
+#define IR_MI_Pin GPIO_PIN_10
+#define IR_MI_GPIO_Port GPIOA
+#define IR_LE_Pin GPIO_PIN_11
+#define IR_LE_GPIO_Port GPIOA
+#define IR_RI_Pin GPIO_PIN_12
+#define IR_RI_GPIO_Port GPIOA
 #define L_MTR_ENC_Pin GPIO_PIN_11
 #define L_MTR_ENC_GPIO_Port GPIOC
 #define L_MTR_ENC_EXTI_IRQn EXTI4_15_IRQn
