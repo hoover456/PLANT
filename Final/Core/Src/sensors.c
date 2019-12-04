@@ -9,7 +9,6 @@
 
 #define UltraLeft 1
 #define UltraRight 2
-
 int UltraTurn = 0;
 int count = 0;
 int left = 0;
@@ -18,6 +17,8 @@ int LCheck = 0;
 int RCheck = 0;
 char obstacle_detected = 0;
 extern Robot robot;
+char TrackSet = 0;
+int Track = 0;
 
 
 /**
@@ -125,37 +126,57 @@ int IR_dock(void){
  * 	Author: Phill Spiritoso
  */
 void TIM6_UltraSonic_Handler(void){
-	if (UltraTurn > 0){
-		checkTurn();
+	if (TrackSet == 0){
+		if (UltraTurn > 0){
+			checkTurn();
+		}
+		else if ((left == right) && (LCheck == RCheck)){
+			checkStraight();
+		}
+		else if(left > 0){
+			checkLeft();
+		}
+		else if(right > 0){
+			checkRight();
+		}
+		else if ((RCheck > 0) && (LCheck > 0)){
+			determineDir();
+		}
+		if (UltraTurn == 0) {
+		Track++;
+		}
 	}
-	else if ((left == right) && (LCheck == RCheck)){
-		checkStraight();
-	}
-	else if(left > 0){
-		checkLeft();
-	}
-	else if(right > 0){
-		checkRight();
-	}
-	else if ((RCheck > 0) && (LCheck > 0)){
-		determineDir();
+		if (UltraTurn == 0) {
+			if (Track == 2){
+				init_Left();
+				TrackLeft();
+			}
+			if (Track == 3){
+				init_Right();
+				TrackRight();
+				Track = 0;
+			}
 	}
 	count = 0;
+
 }
 void checkTurn(void){
-	if ((UltraTurn == UltraLeft) && (count > 100)){
+	if ((UltraTurn == UltraLeft) && (count > 50)){
 		printf("Keep turning left\r\n");
 	}
-	else if ((UltraTurn == UltraRight) && (count > 100)){
+	else if ((UltraTurn == UltraRight) && (count > 50)){
 		printf("Keep turning right\r\n");
 	}
 	else {
 		printf("Good to go Forward\r\n");
+		robot.obstacle[1] = 0;
+		robot.obstacle[2] = 0;
+		robot.obstacle[0] = 0;
 		UltraTurn = 0;
 	}
 }
 void checkStraight(void){
-	if (count > 100){
+	if (count > 50){
 		robot.obstacle[1] = 1;
 		printf("checkDirection\r\n");
 		left = 1;
@@ -166,7 +187,7 @@ void checkStraight(void){
 }
 void checkLeft(void){
 	left++;
-	if (count > 100){
+	if (count > 50){
 		robot.obstacle[0] = 1;
 	} else robot.obstacle[0] = 0;
 	if (left > 3){
@@ -178,7 +199,7 @@ void checkLeft(void){
 }
 void checkRight(void){
 	right++;
-	if (count > 100){
+	if (count > 50){
 		robot.obstacle[2] = 1;
 	} else robot.obstacle[2] = 0;
 	if (right > 3){
@@ -211,6 +232,26 @@ void init_Right() {
 void init_Straight() {
 	GPIOA->ODR &= ~(1 << 4);
 	GPIOC->ODR &= ~(1 << 13);
+}
+void TrackLeft(){
+	if (count > 50){
+		robot.obstacle[0] = 1;
+		TrackSet=1;
+	}
+	else{
+		robot.obstacle[0] = 0;
+		TrackSet = 0;
+	}
+}
+void TrackRight(){
+	if (count > 50){
+		robot.obstacle[2] = 1;
+		TrackSet=1;
+	}
+	else {
+		robot.obstacle[2] = 0;
+		TrackSet = 0;
+	}
 }
 
 void TIM2_conf(void){
