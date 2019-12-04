@@ -40,8 +40,6 @@
 #define ENC_FRAC 0.003125
 #define RAD_ERR 0.01
 #define POS_ERR 0.1
-#define UltraLeft 1
-#define UltraRight 2
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -60,14 +58,6 @@ Motor right_motor;
 Robot robot;
 float pos_integral;
 float rad_integral;
-int UltraTurn = 0;
-int count = 0;
-int left = 0;
-int right = 0;
-int LCheck = 0;
-int RCheck = 0;
-char obstacle_detected = 0;
-
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -561,88 +551,6 @@ char turn(Robot* robot, float target){
 	}
 	return fabs(error) <= RAD_ERR;
 
-}
-void TIM6_UltraSonic_Handler(void){
-	if (UltraTurn > 0){
-		checkTurn();
-	}
-	else if ((left == right) && (LCheck == RCheck)){
-		checkStraight();
-	}
-	else if(left > 0){
-		checkLeft();
-	}
-	else if(right > 0){
-		checkRight();
-	}
-	else if ((RCheck > 0) && (LCheck > 0)){
-		determineDir();
-	}
-	count = 0;
-}
-void checkTurn(void){
-	if ((UltraTurn == UltraLeft) && (count > 300)){
-		printf("Keep turning left\r\n");
-	}
-	else if ((UltraTurn == UltraRight) && (count > 300)){
-		printf("Keep turning right\r\n");
-	}
-	else {
-		printf("Good to go Forward\r\n");
-		UltraTurn = 0;
-	}
-}
-void checkStraight(void){
-	if (count > 300){
-		obstacle_detected = 1;
-		if(state==0){
-//			obstacle_detected = 1;
-			printf("Stop\r\n");
-		} else {
-			printf("checkDirection\r\n");
-			left = 1;
-			init_Left();
-		}
-	} else {
-		obstacle_detected = 0;
-	}
-}
-void checkLeft(void){
-	left++;
-	if (count > 300){
-		printf("Left Not good\r\n");
-	}
-	if (left > 3){
-		left = 0;
-		right = 1;
-		init_Right();
-	}
-	LCheck += count;
-}
-void checkRight(void){
-	right++;
-	if (count > 300){
-		printf("Right Not Good\r\n");
-
-	}
-	if (right > 3){
-		left = 0;
-		right = 0;
-	}
-	RCheck += count;
-}
-void determineDir(void){
-	if (LCheck < RCheck){
-		printf("Turn Left\r\n");
-		UltraTurn = UltraLeft;
-	}
-	else {
-		printf("Turn Right\r\n");
-		UltraTurn = UltraRight;
-	}
-	init_Straight();
-	LCheck = 0;
-	RCheck = 0;
 }
 /* USER CODE END 4 */
 
