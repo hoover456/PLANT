@@ -5,4 +5,4 @@ main.c:324:13:MX_TIM2_Init	32	static
 main.c:377:13:MX_TIM3_Init	48	static
 main.c:452:13:MX_TIM6_Init	16	static
 main.c:490:13:MX_GPIO_Init	48	static
-main.c:548:6:Error_Handler	8	static
+main.c:554:6:Error_Handler	8	static
