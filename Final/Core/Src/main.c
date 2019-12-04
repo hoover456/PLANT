@@ -127,7 +127,6 @@ int main(void)
 	right_motor.pos_pid.Kd = 0;
 
 
-
 	// left motor
 	Motor left_motor;
 	left_motor.dir = 0;
@@ -148,6 +147,7 @@ int main(void)
 	robot.x = 0;
 	robot.y = 0;
 	robot.theta = 0;
+	robot.stop = 1;
 
 	HAL_ADCEx_Calibration_Start(&hadc, ADC_SINGLE_ENDED);
 	TIM22->CR1 |= TIM_CR1_CEN;
