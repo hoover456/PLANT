@@ -15,3 +15,6 @@ sensors.c:232:6:init_Straight	8	static
 sensors.c:236:6:TrackLeft	8	static
 sensors.c:246:6:TrackRight	8	static
 sensors.c:257:6:TIM2_conf	8	static
+sensors.c:273:5:obstacle_right	8	static
+sensors.c:277:5:obstacle_left	8	static
+sensors.c:281:5:ret_one	8	static

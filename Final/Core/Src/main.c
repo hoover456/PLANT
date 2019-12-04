@@ -185,8 +185,7 @@ int main(void)
 			stop(&robot);
 		} else {
 			if(check_light_variance()){
-				if(turn_until(&robot, check_light_direction)){
-					if(!robot.obstacle[1]){
+				if(turn_until(&robot, check_light_direction) && !robot.obstacle[1]){
 						if(robot.obstacle[0]){
 							if(turn_until(&robot, obstacle_left)){
 								move_until(&robot, ret_one, 1);
@@ -199,7 +198,6 @@ int main(void)
 							}
 						} else move_until(&robot, check_light_variance, 0);
 					}
-				}
 			} else{
 				stop(&robot);
 			}
@@ -515,7 +513,7 @@ static void MX_TIM6_Init(void)
   htim6.Instance = TIM6;
   htim6.Init.Prescaler = 2099;
   htim6.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim6.Init.Period = 249;
+  htim6.Init.Period = 99;
   htim6.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_Base_Init(&htim6) != HAL_OK)
   {
