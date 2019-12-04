@@ -10,4 +10,3 @@ sensors.c:183:6:determineDir	8	static
 sensors.c:196:6:init_Left	8	static
 sensors.c:200:6:init_Right	8	static
 sensors.c:204:6:init_Straight	8	static
-sensors.c:208:6:countUp	8	static

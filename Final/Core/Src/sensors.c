@@ -205,7 +205,4 @@ void init_Straight() {
 	GPIOA->ODR &= ~(1 << 4);
 	GPIOC->ODR &= ~(1 << 13);
 }
-void countUp() {
-	count++;
-}
 

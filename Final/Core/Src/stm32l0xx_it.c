@@ -148,7 +148,8 @@ void EXTI0_1_IRQHandler(void)
   /* USER CODE BEGIN EXTI0_1_IRQn 0 */
 	if (__HAL_GPIO_EXTI_GET_FLAG(GPIO_PIN_1)){
 		if (((GPIOA->IDR) > 1) & 1){
-			countUp();
+			extern count;
+			count++;
 		}
 	}
   /* USER CODE END EXTI0_1_IRQn 0 */

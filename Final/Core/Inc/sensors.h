@@ -15,7 +15,6 @@ int check_light_direction(void);
 int check_light_variance(void);
 
 // Ultrasonics
-void countUp(void);
 void TIM6_UltraSonic_Handler(void);
 void checkTurn(void);
 void checkStraight(void);
