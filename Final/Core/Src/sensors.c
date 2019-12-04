@@ -19,6 +19,7 @@ char obstacle_detected = 0;
 extern Robot robot;
 char TrackSet = 0;
 int Track = 0;
+int firstloop = 0;
 
 
 /**
@@ -142,11 +143,11 @@ void TIM6_UltraSonic_Handler(void){
 		else if ((RCheck > 0) && (LCheck > 0)){
 			determineDir();
 		}
-		if (UltraTurn == 0) {
+		if (~firstloop) {
 		Track++;
 		}
 	}
-		if (LCheck | ~UltraTurn | left) {
+		if (~firstloop) {
 			if (Track == 2){
 				init_Left();
 				TrackLeft();
@@ -179,6 +180,7 @@ void checkStraight(void){
 	if (count > 50){
 		robot.obstacle[1] = 1;
 		printf("checkDirection\r\n");
+		firstloop = 1;
 		left = 1;
 		init_Left();
 	} else {
