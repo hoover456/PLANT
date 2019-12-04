@@ -50,6 +50,7 @@ typedef struct{
 	double x;
 	double y;
 	double theta;
+	char stop;
 }Robot;
 
 // Function declarations

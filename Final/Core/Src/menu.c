@@ -10,11 +10,11 @@ int hold = 0;
 int ChangeMen = 0;
 int ChangeHour = 0;
 char chTime[16] = "      00:00";
+char STOP = 1;
 
 
 void Menu_Main(){
 	 i = TIM22->CNT/4;
-		  	HAL_Delay(50);
 		  	if (hold > i){
 		  		if (push) {
 		  			MenuLeft();
@@ -28,6 +28,7 @@ void Menu_Main(){
 		  		else if (ChangeMen == 3){
 					WaterLLeft();
 				}
+		  		Display();
 		  	}
 		  	else if (hold < i) {
 		  		if(push){
@@ -42,52 +43,62 @@ void Menu_Main(){
 		  		else if (ChangeMen == 3){
 		  			WaterLRight();
 		  		}
+		  		Display();
 		  	}
 		  	hold = i;
-		  if (push){
-				if (menu == 0){
-					LightL[14] = '<';
-					LightL[15] = '-';
-					Time[14] = ' ';
-					Time[15] = ' ';
-					WaterL[14] = ' ';
-					WaterL[15] = ' ';
-					displayTop(LightL);
-					displayBottom(Time);
-				}
-				else if (menu == 1){
-					LightL[14] = ' ';
-					LightL[15] = ' ';
-					Time[14] = '<';
-					Time[15] = '-';
-					WaterL[14] = ' ';
-					WaterL[15] = ' ';
-					displayTop(LightL);
-					displayBottom(Time);
-				}
-				else if (menu == 2){
-					LightL[14] = ' ';
-					LightL[15] = ' ';
-					Time[14] = ' ';
-					Time[15] = ' ';
-					WaterL[14] = '<';
-					WaterL[15] = '-';
-					displayTop(Time);
-					displayBottom(WaterL);
-				}
-		  }
-		  else if (ChangeMen == 1){
-			  displayTop(LightL);
-			  displayBottom("Done <-");
-		  }
-			else if (ChangeMen == 2){
-				displayTop(Time);
-				displayBottom(chTime);
+
+}
+void Display(){
+	if (push){
+			if (menu == 0){
+				LightL[14] = '<';
+				LightL[15] = '-';
+				Time[14] = ' ';
+				Time[15] = ' ';
+				WaterL[14] = ' ';
+				WaterL[15] = ' ';
+				displayTop(LightL);
+				displayBottom(Time);
 			}
-		  else if (ChangeMen == 3){
-			  displayTop(WaterL);
-			  displayBottom("Done <-");
-		  }
+			else if (menu == 1){
+				LightL[14] = ' ';
+				LightL[15] = ' ';
+				Time[14] = '<';
+				Time[15] = '-';
+				WaterL[14] = ' ';
+				WaterL[15] = ' ';
+				displayTop(LightL);
+				displayBottom(Time);
+			}
+			else if (menu == 2){
+				LightL[14] = ' ';
+				LightL[15] = ' ';
+				Time[14] = ' ';
+				Time[15] = ' ';
+				WaterL[14] = '<';
+				WaterL[15] = '-';
+				displayTop(Time);
+				displayBottom(WaterL);
+			}
+			else if (menu == 3){
+				WaterL[14] = ' ';
+				WaterL[15] = ' ';
+				displayTop(WaterL);
+				displayBottom("Go  <-");
+			}
+	  }
+	  else if (ChangeMen == 1){
+		  displayTop(LightL);
+		  displayBottom("Done <-");
+	  }
+		else if (ChangeMen == 2){
+			displayTop(Time);
+			displayBottom(chTime);
+		}
+	  else if (ChangeMen == 3){
+		  displayTop(WaterL);
+		  displayBottom("Done <-");
+	  }
 }
 void bitbang_init_lcd(void) {
     GPIOB->BSRR = 1<<12; // set NSS high
@@ -185,6 +196,11 @@ void displayBottom(const char *s) {
         data(' ');
 }
 void push_button() {
+	extern Robot robot;
+	if (STOP){
+		stop(&robot);
+		robot.stop = 1;
+	}
 	if (ChangeHour == 1){
 		ChangeHour = 0;
 		Time[6] = chTime[6];
@@ -214,6 +230,11 @@ void push_button() {
 		else if (menu == 2){
 			ChangeMen = 3;
 		}
+		else if(menu == 3){
+			displayTop("Stop  <-");
+			displayBottom("       ");
+			robot.stop = 0;
+		}
 	}
 	else{
 		ChangeMen = 0;
@@ -221,14 +242,14 @@ void push_button() {
 }
 void MenuRight(){
 	if (push){
-		menu = ++menu % 3;
+		menu = ++menu % 4;
 	}
 }
 void MenuLeft(){
 	if (push){
 		menu--;
 		if (menu < 0){
-			menu = 2;
+			menu = 3;
 		}
 	}
 }
