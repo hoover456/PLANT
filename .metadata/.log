@@ -1,1530 +1,163 @@
-!SESSION 2019-11-25 22:45:10.700 -----------------------------------------------
-eclipse.buildId=Version 1.1.0
-java.version=1.8.0_202
-java.vendor=AdoptOpenJdk
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\Users\Assyria\Documents\PLANT
-
-!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2019-11-25 22:45:16.545
-!MESSAGE Log4j initialized with config file C:\Users\Assyria\Documents\PLANT\.metadata\.log4j.xml
-
-!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2019-11-25 22:45:18.262
-!MESSAGE Started RMI Server, listening on port 41337
-
-!ENTRY com.st.stm32cube.ide.mcu.ide 4 4 2019-11-25 22:45:18.726
-!MESSAGE com.st.stm32cube.ide.mcu.ide/META-INF/version/build_ref file not found, build reference will not be reported into properties
-!SESSION 2019-11-25 22:51:39.459 -----------------------------------------------
+!SESSION 2019-12-03 20:42:52.771 -----------------------------------------------
 eclipse.buildId=Version 1.1.0
 java.version=1.8.0_202
 java.vendor=AdoptOpenJdk
 BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
 Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
-!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2019-11-25 22:51:43.041
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2019-12-03 20:43:02.034
 !MESSAGE Log4j initialized with config file C:\Users\Assyria\Documents\PLANT\.metadata\.log4j.xml
 
-!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2019-11-25 22:51:45.779
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2019-12-03 20:43:04.473
 !MESSAGE Started RMI Server, listening on port 41337
 
-!ENTRY com.st.stm32cube.ide.mcu.ide 4 4 2019-11-25 22:51:46.313
+!ENTRY com.st.stm32cube.ide.mcu.ide 4 4 2019-12-03 20:43:05.024
 !MESSAGE com.st.stm32cube.ide.mcu.ide/META-INF/version/build_ref file not found, build reference will not be reported into properties
-
-!ENTRY org.eclipse.cdt.core 1 0 2019-11-25 22:53:55.160
-!MESSAGE Indexed 'Final' (0 sources, 0 headers) in 0 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-11-25 22:53:55.746
-!MESSAGE Type or version is empty: ; 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-11-25 22:53:55.751
-!MESSAGE Falling back to default toolchain
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-11-25 22:53:55.756
-!MESSAGE Type or version is empty: ; 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-11-25 22:53:55.761
-!MESSAGE Falling back to default toolchain
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-11-25 22:53:55.765
-!MESSAGE Type or version is empty: ; 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-11-25 22:53:55.769
-!MESSAGE Falling back to default toolchain
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-11-25 22:53:55.774
-!MESSAGE Type or version is empty: ; 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-11-25 22:53:55.778
-!MESSAGE Falling back to default toolchain
-
-!ENTRY org.eclipse.cdt.core 1 0 2019-11-25 22:53:59.278
-!MESSAGE Indexed 'Final' (20 sources, 25 headers) in 1.58 sec: 2,337 declarations; 18,702 references; 3 unresolved inclusions; 57 syntax errors; 2,170 unresolved names (9.3%)
-
-!ENTRY org.eclipse.ui 4 0 2019-11-25 22:57:48.053
-!MESSAGE Unhandled event loop exception
-!STACK 0
-java.lang.NullPointerException
-	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportWizard.performFinish(SmartImportWizard.java:269)
-	at org.eclipse.jface.wizard.WizardDialog.finishPressed(WizardDialog.java:836)
-	at org.eclipse.jface.wizard.WizardDialog.buttonPressed(WizardDialog.java:472)
-	at org.eclipse.jface.dialogs.Dialog.lambda$0(Dialog.java:619)
-	at org.eclipse.swt.events.SelectionListener$1.widgetSelected(SelectionListener.java:84)
-	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:252)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
-	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4173)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1057)
-	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3986)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3585)
-	at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
-	at org.eclipse.jface.window.Window.open(Window.java:799)
-	at org.eclipse.ui.internal.wizards.datatransfer.OpenFolderCommand.execute(OpenFolderCommand.java:42)
-	at org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:283)
-	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:95)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
-	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:318)
-	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:252)
-	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:173)
-	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:156)
-	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:498)
-	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:487)
-	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:213)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.executeItem(HandledContributionItem.java:438)
-	at org.eclipse.e4.ui.workbench.renderers.swt.AbstractContributionItem.handleWidgetSelection(AbstractContributionItem.java:449)
-	at org.eclipse.e4.ui.workbench.renderers.swt.AbstractContributionItem.lambda$2(AbstractContributionItem.java:475)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
-	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4173)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1057)
-	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3986)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3585)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:633)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:557)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:660)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
-
-!ENTRY org.eclipse.cdt.core 1 0 2019-11-25 22:57:49.028
-!MESSAGE Indexed 'Midterm' (0 sources, 0 headers) in 0 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
-
-!ENTRY org.eclipse.cdt.core 1 0 2019-11-25 22:58:29.261
-!MESSAGE Indexed 'Midterm' (28 sources, 88 headers) in 1.82 sec: 7,084 declarations; 45,576 references; 0 unresolved inclusions; 1 syntax errors; 0 unresolved names (0%)
-
-!ENTRY org.eclipse.jface 2 0 2019-11-25 22:58:43.458
-!MESSAGE Ignored reentrant call while viewer is busy. This is only logged once per viewer instance, but similar calls will still be ignored.
-!STACK 0
-java.lang.RuntimeException
-	at org.eclipse.jface.viewers.ColumnViewer.checkBusy(ColumnViewer.java:764)
-	at org.eclipse.jface.viewers.ColumnViewer.update(ColumnViewer.java:543)
-	at org.eclipse.ui.navigator.CommonViewer.update(CommonViewer.java:512)
-	at org.eclipse.jface.viewers.StructuredViewer.update(StructuredViewer.java:1965)
-	at org.eclipse.ui.internal.navigator.resources.nested.NestedProjectsLabelProvider.lambda$2(NestedProjectsLabelProvider.java:87)
-	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:656)
-	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:632)
-	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:474)
-	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1595)
-	at java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1582)
-	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
-	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
-	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
-	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
-
-!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2019-11-25 22:58:45.378
-!MESSAGE Program file does not exist
-!STACK 0
-java.io.FileNotFoundException: C:\Users\Assyria\Documents\PLANT\Midterm\Debug\PLANT.elf not found
-	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:131)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:315)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:142)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:106)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:94)
-	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:860)
-	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:719)
-	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1017)
-	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1220)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2019-11-25 22:58:45.378
-!MESSAGE C:\Users\Assyria\Documents\PLANT\Midterm\Debug\PLANT.elf not found
-!STACK 0
-java.io.FileNotFoundException: C:\Users\Assyria\Documents\PLANT\Midterm\Debug\PLANT.elf not found
-	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:131)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:315)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:142)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:106)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:94)
-	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:860)
-	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:719)
-	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1017)
-	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1220)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-11-25 23:00:36.175
-!MESSAGE Error while determining symbol addresses
-!STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$15(StackAnalyzerView.java:1223)
-	at java.lang.Thread.run(Thread.java:748)
-
-!ENTRY com.st.stm32cube.ide.mcu.debug.stlink 4 4 2019-11-25 23:00:41.789
-!MESSAGE ST-LINK GDB server failed to start (exit code = 2)
-
-!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2019-11-25 23:00:41.815
-!MESSAGE Error in final launch sequence:
-
-Error in initializing ST-LINK device.
-Reason: (2) ST-LINK DLL error.
-!STACK 1
-org.eclipse.core.runtime.CoreException: Error in initializing ST-LINK device.
-Reason: (2) ST-LINK DLL error.
-	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:242)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:106)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:94)
-	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:860)
-	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:719)
-	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1017)
-	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1220)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-!SUBENTRY 1 com.st.stm32cube.ide.mcu.debug.launch 4 0 2019-11-25 23:00:41.816
-!MESSAGE Error in initializing ST-LINK device.
-Reason: (2) ST-LINK DLL error.
-!SESSION 2019-11-25 23:10:21.389 -----------------------------------------------
+!SESSION 2019-12-03 20:43:50.599 -----------------------------------------------
 eclipse.buildId=Version 1.1.0
 java.version=1.8.0_202
 java.vendor=AdoptOpenJdk
 BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
 Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\Users\Assyria\Documents\PLANT
 
-!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2019-11-25 23:10:25.127
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2019-12-03 20:43:54.551
 !MESSAGE Log4j initialized with config file C:\Users\Assyria\Documents\PLANT\.metadata\.log4j.xml
 
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-11-25 23:10:27.102
-!MESSAGE Type or version is empty: ; 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-11-25 23:10:27.102
-!MESSAGE Falling back to default toolchain
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-11-25 23:10:27.133
-!MESSAGE Type or version is empty: ; 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-11-25 23:10:27.133
-!MESSAGE Falling back to default toolchain
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-11-25 23:10:27.133
-!MESSAGE Type or version is empty: ; 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-11-25 23:10:27.148
-!MESSAGE Falling back to default toolchain
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-11-25 23:10:27.148
-!MESSAGE Type or version is empty: ; 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-11-25 23:10:27.148
-!MESSAGE Falling back to default toolchain
-
-!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2019-11-25 23:10:28.389
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2019-12-03 20:43:57.330
 !MESSAGE Started RMI Server, listening on port 41337
 
-!ENTRY com.st.stm32cube.ide.mcu.ide 4 4 2019-11-25 23:10:28.795
+!ENTRY com.st.stm32cube.ide.mcu.ide 4 4 2019-12-03 20:43:57.826
 !MESSAGE com.st.stm32cube.ide.mcu.ide/META-INF/version/build_ref file not found, build reference will not be reported into properties
 
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-11-25 23:11:59.126
-!MESSAGE Error while determining symbol addresses
-!STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$15(StackAnalyzerView.java:1223)
-	at java.lang.Thread.run(Thread.java:748)
-
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-11-26 00:15:21.983
-!MESSAGE Error while determining symbol addresses
-!STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$14(StackAnalyzerView.java:1178)
-	at java.lang.Thread.run(Thread.java:748)
-
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-11-26 00:15:43.215
-!MESSAGE Error while determining symbol addresses
-!STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$15(StackAnalyzerView.java:1223)
-	at java.lang.Thread.run(Thread.java:748)
-
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-11-26 00:20:05.731
-!MESSAGE Error while determining symbol addresses
-!STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$14(StackAnalyzerView.java:1178)
-	at java.lang.Thread.run(Thread.java:748)
-
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-11-26 00:20:20.449
-!MESSAGE Error while determining symbol addresses
-!STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$14(StackAnalyzerView.java:1178)
-	at java.lang.Thread.run(Thread.java:748)
-
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-11-26 00:24:48.606
-!MESSAGE Error while determining symbol addresses
-!STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$14(StackAnalyzerView.java:1178)
-	at java.lang.Thread.run(Thread.java:748)
-!SESSION 2019-11-26 14:03:05.470 -----------------------------------------------
-eclipse.buildId=Version 1.1.0
-java.version=1.8.0_202
-java.vendor=AdoptOpenJdk
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
-Command-line arguments:  -os win32 -ws win32 -arch x86_64
-
-!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2019-11-26 14:03:13.718
-!MESSAGE Log4j initialized with config file C:\Users\Assyria\Documents\PLANT\.metadata\.log4j.xml
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-11-26 14:03:15.103
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 20:44:09.606
 !MESSAGE Type or version is empty: ; 
 
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-11-26 14:03:15.103
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 20:44:09.613
 !MESSAGE Falling back to default toolchain
 
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-11-26 14:03:15.228
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 20:44:09.621
 !MESSAGE Type or version is empty: ; 
 
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-11-26 14:03:15.243
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 20:44:09.628
 !MESSAGE Falling back to default toolchain
 
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-11-26 14:03:15.243
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 20:44:09.633
 !MESSAGE Type or version is empty: ; 
 
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-11-26 14:03:15.259
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 20:44:09.641
 !MESSAGE Falling back to default toolchain
 
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-11-26 14:03:15.259
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 20:44:09.646
 !MESSAGE Type or version is empty: ; 
 
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-11-26 14:03:15.259
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 20:44:09.652
 !MESSAGE Falling back to default toolchain
 
-!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2019-11-26 14:03:19.973
-!MESSAGE Started RMI Server, listening on port 41337
+!ENTRY org.eclipse.cdt.core 1 0 2019-12-03 20:44:15.766
+!MESSAGE Indexed 'Final' (21 sources, 98 headers) in 3.15 sec: 9,175 declarations; 36,457 references; 0 unresolved inclusions; 76 syntax errors; 66 unresolved names (0.14%)
 
-!ENTRY com.st.stm32cube.ide.mcu.ide 4 4 2019-11-26 14:03:20.575
-!MESSAGE com.st.stm32cube.ide.mcu.ide/META-INF/version/build_ref file not found, build reference will not be reported into properties
-
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-11-26 14:03:27.166
-!MESSAGE Error while determining symbol addresses
+!ENTRY org.eclipse.ui.ide 4 0 2019-12-03 20:53:11.069
+!MESSAGE Could not import project located at C:\Users\Assyria\Documents\PLANT\Midterm
 !STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$14(StackAnalyzerView.java:1178)
-	at java.lang.Thread.run(Thread.java:748)
-
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-11-26 14:06:11.321
-!MESSAGE Error while determining symbol addresses
-!STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$14(StackAnalyzerView.java:1178)
-	at java.lang.Thread.run(Thread.java:748)
-
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-11-26 14:07:11.667
-!MESSAGE Error while determining symbol addresses
-!STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$14(StackAnalyzerView.java:1178)
-	at java.lang.Thread.run(Thread.java:748)
-
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-11-26 14:07:29.901
-!MESSAGE Error while determining symbol addresses
-!STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$14(StackAnalyzerView.java:1178)
-	at java.lang.Thread.run(Thread.java:748)
-
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-11-26 14:07:40.345
-!MESSAGE Error while determining symbol addresses
-!STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$14(StackAnalyzerView.java:1178)
-	at java.lang.Thread.run(Thread.java:748)
-
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-11-26 14:11:00.134
-!MESSAGE Error while determining symbol addresses
-!STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$14(StackAnalyzerView.java:1178)
-	at java.lang.Thread.run(Thread.java:748)
-
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-11-26 14:12:23.224
-!MESSAGE Error while determining symbol addresses
-!STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$14(StackAnalyzerView.java:1178)
-	at java.lang.Thread.run(Thread.java:748)
-
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-11-26 14:13:02.610
-!MESSAGE Error while determining symbol addresses
-!STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$14(StackAnalyzerView.java:1178)
-	at java.lang.Thread.run(Thread.java:748)
-
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-11-26 14:14:08.296
-!MESSAGE Error while determining symbol addresses
-!STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$14(StackAnalyzerView.java:1178)
-	at java.lang.Thread.run(Thread.java:748)
-
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-11-26 14:15:37.182
-!MESSAGE Error while determining symbol addresses
-!STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$14(StackAnalyzerView.java:1178)
-	at java.lang.Thread.run(Thread.java:748)
-
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-11-26 14:16:56.189
-!MESSAGE Error while determining symbol addresses
-!STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$14(StackAnalyzerView.java:1178)
-	at java.lang.Thread.run(Thread.java:748)
-
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-11-26 14:19:02.647
-!MESSAGE Error while determining symbol addresses
-!STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$14(StackAnalyzerView.java:1178)
-	at java.lang.Thread.run(Thread.java:748)
-
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-11-26 14:19:10.306
-!MESSAGE Error while determining symbol addresses
-!STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$14(StackAnalyzerView.java:1178)
-	at java.lang.Thread.run(Thread.java:748)
-
-!ENTRY org.eclipse.cdt.dsf 4 10005 2019-11-26 14:22:30.531
-!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.debug.ui.contexts.DsfSuspendTrigger$4@32108a10): Status ERROR: org.eclipse.cdt.dsf code=10004  null children=[Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Failed to execute MI command:
--list-thread-groups i1
-Error message from debugger back end:
-Remote communication error.  Target disconnected.: Success. java.lang.Exception: Remote communication error.  Target disconnected.: Success.]' resulted in an error.
-!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-11-26 14:22:30.531
-!MESSAGE Failed to execute MI command:
--list-thread-groups i1
-Error message from debugger back end:
-Remote communication error.  Target disconnected.: Success.
-!STACK 0
-java.lang.Exception: Remote communication error.  Target disconnected.: Success.
-	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
-	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
-
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-11-26 14:24:20.415
-!MESSAGE Error while determining symbol addresses
-!STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$14(StackAnalyzerView.java:1178)
-	at java.lang.Thread.run(Thread.java:748)
-
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-11-26 14:26:48.761
-!MESSAGE Error while determining symbol addresses
-!STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$15(StackAnalyzerView.java:1223)
-	at java.lang.Thread.run(Thread.java:748)
-
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-11-26 14:27:00.022
-!MESSAGE Error while determining symbol addresses
-!STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$15(StackAnalyzerView.java:1223)
-	at java.lang.Thread.run(Thread.java:748)
-
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-11-26 14:27:08.949
-!MESSAGE Error while determining symbol addresses
-!STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$14(StackAnalyzerView.java:1178)
-	at java.lang.Thread.run(Thread.java:748)
-
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-11-26 14:30:16.075
-!MESSAGE Error while determining symbol addresses
-!STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$14(StackAnalyzerView.java:1178)
-	at java.lang.Thread.run(Thread.java:748)
-!SESSION 2019-11-26 14:36:41.779 -----------------------------------------------
-eclipse.buildId=Version 1.1.0
-java.version=1.8.0_202
-java.vendor=AdoptOpenJdk
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\Users\Assyria\Documents\PLANT
-
-!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2019-11-26 14:36:46.189
-!MESSAGE Log4j initialized with config file C:\Users\Assyria\Documents\PLANT\.metadata\.log4j.xml
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-11-26 14:36:47.314
-!MESSAGE Type or version is empty: ; 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-11-26 14:36:47.314
-!MESSAGE Falling back to default toolchain
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-11-26 14:36:47.345
-!MESSAGE Type or version is empty: ; 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-11-26 14:36:47.345
-!MESSAGE Falling back to default toolchain
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-11-26 14:36:47.345
-!MESSAGE Type or version is empty: ; 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-11-26 14:36:47.345
-!MESSAGE Falling back to default toolchain
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-11-26 14:36:47.360
-!MESSAGE Type or version is empty: ; 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-11-26 14:36:47.360
-!MESSAGE Falling back to default toolchain
-
-!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2019-11-26 14:36:50.493
-!MESSAGE Started RMI Server, listening on port 41337
-
-!ENTRY com.st.stm32cube.ide.mcu.ide 4 4 2019-11-26 14:36:50.603
-!MESSAGE com.st.stm32cube.ide.mcu.ide/META-INF/version/build_ref file not found, build reference will not be reported into properties
-
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-11-26 14:36:59.475
-!MESSAGE Error while determining symbol addresses
-!STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$15(StackAnalyzerView.java:1223)
-	at java.lang.Thread.run(Thread.java:748)
-
-!ENTRY org.eclipse.cdt.dsf 4 10005 2019-11-26 14:38:50.903
-!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.debug.ui.contexts.DsfSuspendTrigger$4@26377cfd): Status ERROR: org.eclipse.cdt.dsf code=10004  null children=[Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Failed to execute MI command:
--list-thread-groups i1
-Error message from debugger back end:
-Remote communication error.  Target disconnected.: Success. java.lang.Exception: Remote communication error.  Target disconnected.: Success.]' resulted in an error.
-!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-11-26 14:38:50.903
-!MESSAGE Failed to execute MI command:
--list-thread-groups i1
-Error message from debugger back end:
-Remote communication error.  Target disconnected.: Success.
-!STACK 0
-java.lang.Exception: Remote communication error.  Target disconnected.: Success.
-	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
-	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
-
-!ENTRY org.eclipse.cdt.core 1 0 2019-11-26 14:39:28.893
-!MESSAGE Indexed 'Final_bad' (21 sources, 74 headers) in 1.95 sec: 7,280 declarations; 27,454 references; 0 unresolved inclusions; 75 syntax errors; 62 unresolved names (0.18%)
-
-!ENTRY org.eclipse.core.jobs 4 2 2019-11-26 14:39:50.331
-!MESSAGE An internal error occurred during: "project build settings update job".
-!STACK 0
-java.lang.NullPointerException
-	at org.eclipse.cdt.managedbuilder.internal.core.BuildSettingsUtil.synchBuildInfo(BuildSettingsUtil.java:173)
-	at org.eclipse.cdt.managedbuilder.core.ManagedBuildManager.updateBuildInfo(ManagedBuildManager.java:1352)
-	at org.eclipse.cdt.managedbuilder.core.ManagedBuildManager.updateCoreSettings(ManagedBuildManager.java:1488)
-	at org.eclipse.cdt.managedbuilder.core.ResourceChangeHandler2$1.run(ResourceChangeHandler2.java:202)
+org.eclipse.ui.internal.wizards.datatransfer.CouldNotImportProjectException: Could not import project located at C:\Users\Assyria\Documents\PLANT\Midterm
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob.toExistingOrNewProject(SmartImportJob.java:565)
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob.run(SmartImportJob.java:252)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-
-!ENTRY org.eclipse.core.jobs 4 2 2019-11-26 14:39:50.347
-!MESSAGE An internal error occurred during: "project build settings update job".
-!STACK 0
-java.lang.NullPointerException
-	at org.eclipse.cdt.managedbuilder.internal.core.BuildSettingsUtil.synchBuildInfo(BuildSettingsUtil.java:173)
-	at org.eclipse.cdt.managedbuilder.core.ManagedBuildManager.updateBuildInfo(ManagedBuildManager.java:1352)
-	at org.eclipse.cdt.managedbuilder.core.ManagedBuildManager.updateCoreSettings(ManagedBuildManager.java:1488)
-	at org.eclipse.cdt.managedbuilder.core.ResourceChangeHandler2$1.run(ResourceChangeHandler2.java:202)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-
-!ENTRY org.eclipse.cdt.core 1 0 2019-11-26 14:39:55.284
-!MESSAGE Indexed 'Final' (0 sources, 0 headers) in 0 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
-
-!ENTRY org.eclipse.cdt.core 1 0 2019-11-26 14:39:57.746
-!MESSAGE Indexed 'Final' (20 sources, 20 headers) in 0.718 sec: 1,655 declarations; 10,167 references; 1 unresolved inclusions; 68 syntax errors; 3,882 unresolved names (25%)
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:40:58.384
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:40:58.399
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:40:58.399
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:40:58.399
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:40:58.415
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:40:58.415
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:40:58.430
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:40:58.446
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:40:58.446
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:40:58.446
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:40:58.462
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:40:58.462
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:40:58.477
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:40:58.477
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:40:58.477
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:40:58.493
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:40:58.493
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:40:58.493
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:40:58.509
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:40:58.509
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:40:58.509
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:40:58.524
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:40:58.524
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY org.eclipse.jface 2 0 2019-11-26 14:40:59.477
-!MESSAGE Ignored reentrant call while viewer is busy. This is only logged once per viewer instance, but similar calls will still be ignored.
-!STACK 0
-java.lang.RuntimeException
-	at org.eclipse.jface.viewers.ColumnViewer.checkBusy(ColumnViewer.java:764)
-	at org.eclipse.jface.viewers.ColumnViewer.update(ColumnViewer.java:543)
-	at org.eclipse.ui.navigator.CommonViewer.update(CommonViewer.java:512)
-	at org.eclipse.jface.viewers.StructuredViewer.update(StructuredViewer.java:1965)
-	at org.eclipse.ui.internal.navigator.resources.nested.NestedProjectsLabelProvider.lambda$2(NestedProjectsLabelProvider.java:87)
-	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:656)
-	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:632)
-	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:474)
-	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1595)
-	at java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1582)
-	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
-	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
-	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
-	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:41:23.766
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:41:23.766
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:41:23.782
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:41:23.798
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:41:23.813
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:41:23.813
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:41:23.813
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:41:23.829
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:41:23.829
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:41:23.844
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:41:23.844
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:41:23.844
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:41:23.860
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:41:23.860
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:41:23.860
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:41:23.876
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:41:23.876
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:41:23.876
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:41:23.891
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:41:23.891
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:41:23.891
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:41:23.907
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:41:23.923
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2019-11-26 14:42:06.466
-!MESSAGE Program file does not exist
-!STACK 0
-java.io.FileNotFoundException: C:\Users\Assyria\Documents\PLANT\Midterm\Debug\PLANT.elf not found
-	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:131)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:315)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:142)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:106)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:94)
-	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:860)
-	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:719)
-	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1017)
-	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1220)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2019-11-26 14:42:06.466
-!MESSAGE C:\Users\Assyria\Documents\PLANT\Midterm\Debug\PLANT.elf not found
-!STACK 0
-java.io.FileNotFoundException: C:\Users\Assyria\Documents\PLANT\Midterm\Debug\PLANT.elf not found
-	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:131)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:315)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:142)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:106)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:94)
-	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:860)
-	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:719)
-	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1017)
-	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1220)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:42:30.054
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:42:30.070
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:42:30.070
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:42:30.070
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:42:30.085
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:42:30.085
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:42:30.101
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:42:30.101
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:42:30.101
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:42:30.117
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:42:30.117
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:42:30.117
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:42:30.132
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:42:30.132
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:42:30.132
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:42:30.148
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:42:30.163
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:42:30.163
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:42:30.179
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:42:30.179
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:42:30.179
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:42:30.195
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:42:30.210
-!MESSAGE Failed to get MCU from name: 
-!SESSION 2019-11-26 14:42:42.209 -----------------------------------------------
+Caused by: org.eclipse.core.internal.resources.ResourceException: Invalid project description.
+	at org.eclipse.core.internal.resources.Project.checkDescription(Project.java:173)
+	at org.eclipse.core.internal.resources.Project.assertCreateRequirements(Project.java:57)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:267)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:251)
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob.createOrImportProject(SmartImportJob.java:604)
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob.toExistingOrNewProject(SmartImportJob.java:552)
+	... 2 more
+
+!ENTRY org.eclipse.core.resources 4 77 2019-12-03 20:53:42.280
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2019-12-03 20:53:42.280
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2019-12-03 20:53:42.280
+!MESSAGE C:\Users\Assyria\Documents\PLANT\Midterm overlaps the location of another project: 'Midterm'
+!SESSION 2019-12-03 20:54:23.155 -----------------------------------------------
 eclipse.buildId=Version 1.1.0
 java.version=1.8.0_202
 java.vendor=AdoptOpenJdk
 BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
 Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data file:/C:/Users/Assyria/Documents/PLANT/
 
-!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2019-11-26 14:42:47.355
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2019-12-03 20:54:28.162
 !MESSAGE Log4j initialized with config file C:\Users\Assyria\Documents\PLANT\.metadata\.log4j.xml
 
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-11-26 14:42:48.500
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 20:54:29.276
 !MESSAGE Type or version is empty: ; 
 
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-11-26 14:42:48.520
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 20:54:29.282
 !MESSAGE Falling back to default toolchain
 
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-11-26 14:42:48.532
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 20:54:29.307
 !MESSAGE Type or version is empty: ; 
 
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-11-26 14:42:48.532
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 20:54:29.312
 !MESSAGE Falling back to default toolchain
 
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-11-26 14:42:48.547
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 20:54:29.319
 !MESSAGE Type or version is empty: ; 
 
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-11-26 14:42:48.547
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 20:54:29.328
 !MESSAGE Falling back to default toolchain
 
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-11-26 14:42:48.547
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 20:54:29.340
 !MESSAGE Type or version is empty: ; 
 
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-11-26 14:42:48.563
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 20:54:29.347
 !MESSAGE Falling back to default toolchain
 
-!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2019-11-26 14:42:51.749
-!MESSAGE Started RMI Server, listening on port 41337
-
-!ENTRY com.st.stm32cube.ide.mcu.ide 4 4 2019-11-26 14:42:51.796
+!ENTRY com.st.stm32cube.ide.mcu.ide 4 4 2019-12-03 20:54:32.778
 !MESSAGE com.st.stm32cube.ide.mcu.ide/META-INF/version/build_ref file not found, build reference will not be reported into properties
 
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:42:57.942
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:42:57.958
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:42:57.958
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:42:57.974
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:42:57.974
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:42:57.989
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:42:58.005
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:42:58.005
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:42:58.020
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:42:58.020
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:42:58.036
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:42:58.036
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:42:58.052
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:42:58.052
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:42:58.052
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:42:58.067
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:42:58.067
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:42:58.083
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:42:58.083
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:42:58.099
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:42:58.099
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:42:58.099
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2019-11-26 14:42:58.145
-!MESSAGE Failed to get MCU from name: 
-
-!ENTRY org.eclipse.cdt.core 1 0 2019-11-26 14:43:50.629
-!MESSAGE Indexed 'Final' (0 sources, 0 headers) in 0 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
-
-!ENTRY org.eclipse.cdt.core 1 0 2019-11-26 14:43:53.456
-!MESSAGE Indexed 'Final' (24 sources, 69 headers) in 1.31 sec: 3,636 declarations; 14,020 references; 0 unresolved inclusions; 33 syntax errors; 2,879 unresolved names (14%)
-
-!ENTRY org.eclipse.jface 2 0 2019-11-26 14:44:43.545
-!MESSAGE Ignored reentrant call while viewer is busy. This is only logged once per viewer instance, but similar calls will still be ignored.
-!STACK 0
-java.lang.RuntimeException
-	at org.eclipse.jface.viewers.ColumnViewer.checkBusy(ColumnViewer.java:764)
-	at org.eclipse.jface.viewers.ColumnViewer.update(ColumnViewer.java:543)
-	at org.eclipse.ui.navigator.CommonViewer.update(CommonViewer.java:512)
-	at org.eclipse.jface.viewers.StructuredViewer.update(StructuredViewer.java:1965)
-	at org.eclipse.ui.internal.navigator.resources.nested.NestedProjectsLabelProvider.lambda$2(NestedProjectsLabelProvider.java:87)
-	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:656)
-	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:632)
-	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:474)
-	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1595)
-	at java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1582)
-	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
-	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
-	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
-	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
-
-!ENTRY org.eclipse.core.jobs 2 2 2019-11-26 14:48:39.059
-!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.cdt.dsf.gdb.internal.ui.console.GdbBasicCliConsole$InputReadJob
-
-!ENTRY org.eclipse.core.jobs 2 2 2019-11-26 14:48:39.059
-!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.debug.core.DebugPlugin$EventDispatchJob
-!SESSION 2019-11-26 14:49:14.563 -----------------------------------------------
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2019-12-03 20:54:32.967
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2019-12-03 20:55:04.359 -----------------------------------------------
 eclipse.buildId=Version 1.1.0
 java.version=1.8.0_202
 java.vendor=AdoptOpenJdk
 BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\Users\Assyria\Documents\PLANT
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data file:/C:/Users/Assyria/Documents/PLANT/
 
-!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2019-11-26 14:49:19.275
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2019-12-03 20:55:11.010
 !MESSAGE Log4j initialized with config file C:\Users\Assyria\Documents\PLANT\.metadata\.log4j.xml
 
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-11-26 14:49:20.446
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 20:55:12.276
 !MESSAGE Type or version is empty: ; 
 
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-11-26 14:49:20.462
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 20:55:12.283
 !MESSAGE Falling back to default toolchain
 
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-11-26 14:49:20.478
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 20:55:12.305
 !MESSAGE Type or version is empty: ; 
 
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-11-26 14:49:20.493
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 20:55:12.312
 !MESSAGE Falling back to default toolchain
 
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-11-26 14:49:20.509
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 20:55:12.319
 !MESSAGE Type or version is empty: ; 
 
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-11-26 14:49:20.509
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 20:55:12.325
 !MESSAGE Falling back to default toolchain
 
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-11-26 14:49:20.525
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 20:55:12.331
 !MESSAGE Type or version is empty: ; 
 
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-11-26 14:49:20.525
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 20:55:12.338
 !MESSAGE Falling back to default toolchain
 
-!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2019-11-26 14:49:24.335
-!MESSAGE Started RMI Server, listening on port 41337
-
-!ENTRY com.st.stm32cube.ide.mcu.ide 4 4 2019-11-26 14:49:24.444
+!ENTRY com.st.stm32cube.ide.mcu.ide 4 4 2019-12-03 20:55:15.997
 !MESSAGE com.st.stm32cube.ide.mcu.ide/META-INF/version/build_ref file not found, build reference will not be reported into properties
 
-!ENTRY org.eclipse.ui 4 4 2019-11-26 14:49:54.666
-!MESSAGE To avoid deadlock while executing Display.syncExec() with argument: org.eclipse.debug.internal.ui.sourcelookup.Prompter$$Lambda$697/420445051@610ed808, thread Worker-8: Launching Final Debug will interrupt UI thread.
-!SUBENTRY 1 org.eclipse.ui 4 4 2019-11-26 14:49:54.666
-!MESSAGE Worker-8: Launching Final Debug thread is an instance of Worker or owns an ILock
-!STACK 0
-java.lang.IllegalStateException: Call stack for thread Worker-8: Launching Final Debug
-	at sun.management.ThreadImpl.dumpThreads0(Native Method)
-	at sun.management.ThreadImpl.getThreadInfo(ThreadImpl.java:448)
-	at org.eclipse.ui.internal.UILockListener.reportInterruption(UILockListener.java:209)
-	at org.eclipse.ui.internal.UILockListener.interruptUI(UILockListener.java:179)
-	at org.eclipse.ui.internal.PendingSyncExec.waitUntilExecuted(PendingSyncExec.java:92)
-	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:155)
-	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4622)
-	at org.eclipse.debug.internal.ui.sourcelookup.Prompter.handleStatus(Prompter.java:81)
-	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.saveBeforeLaunch(LaunchConfigurationDelegate.java:246)
-	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.preLaunchCheck(LaunchConfigurationDelegate.java:198)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.preLaunchCheck(GdbLaunchDelegate.java:356)
-	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.preLaunchCheck(DSFDelegate.java:163)
-	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:823)
-	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:719)
-	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1017)
-	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1220)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-!SUBENTRY 1 org.eclipse.ui 4 4 2019-11-26 14:49:54.666
-!MESSAGE UI thread waiting on a job or lock.
-!STACK 0
-java.lang.IllegalStateException: Call stack for thread main
-	at java.lang.Object.wait(Native Method)
-	at org.eclipse.core.internal.jobs.Semaphore.acquire(Semaphore.java:44)
-	at org.eclipse.core.internal.jobs.OrderedLock.doAcquire(OrderedLock.java:173)
-	at org.eclipse.core.internal.jobs.OrderedLock.acquire(OrderedLock.java:109)
-	at org.eclipse.core.internal.jobs.OrderedLock.acquire(OrderedLock.java:85)
-	at org.eclipse.cdt.internal.core.settings.model.xml.XmlProjectDescriptionStorage.getProjectDescription(XmlProjectDescriptionStorage.java:233)
-	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescriptionInternal(CProjectDescriptionManager.java:426)
-	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:408)
-	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:402)
-	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:395)
-	at org.eclipse.cdt.internal.core.model.CProject.computeSourceRoots(CProject.java:610)
-	at org.eclipse.cdt.internal.core.model.CProject.computeChildren(CProject.java:631)
-	at org.eclipse.cdt.internal.core.model.CProject.buildStructure(CProject.java:595)
-	at org.eclipse.cdt.internal.core.model.Openable.generateInfos(Openable.java:264)
-	at org.eclipse.cdt.internal.core.model.CElement.openWhenClosed(CElement.java:429)
-	at org.eclipse.cdt.internal.core.model.CElement.getElementInfo(CElement.java:307)
-	at org.eclipse.cdt.internal.core.model.CElement.getElementInfo(CElement.java:297)
-	at org.eclipse.cdt.internal.core.model.Parent.getChildren(Parent.java:57)
-	at org.eclipse.cdt.internal.ui.BaseCElementContentProvider.getSourceRoots(BaseCElementContentProvider.java:429)
-	at org.eclipse.cdt.internal.ui.BaseCElementContentProvider.getChildren(BaseCElementContentProvider.java:224)
-	at org.eclipse.cdt.internal.ui.cview.CViewContentProvider.getChildren(CViewContentProvider.java:92)
-	at org.eclipse.cdt.internal.ui.navigator.CNavigatorContentProvider.getChildren(CNavigatorContentProvider.java:231)
-	at org.eclipse.cdt.internal.ui.navigator.CNavigatorContentProvider.getPipelinedChildren(CNavigatorContentProvider.java:256)
-	at org.eclipse.ui.internal.navigator.extensions.SafeDelegateTreeContentProvider.getPipelinedChildren(SafeDelegateTreeContentProvider.java:173)
-	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider.pipelineChildren(NavigatorContentServiceContentProvider.java:213)
-	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider.access$1(NavigatorContentServiceContentProvider.java:201)
-	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider$1.run(NavigatorContentServiceContentProvider.java:169)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
-	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider.internalGetChildren(NavigatorContentServiceContentProvider.java:146)
-	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider.getChildren(NavigatorContentServiceContentProvider.java:132)
-	at org.eclipse.jface.viewers.AbstractTreeViewer.getRawChildren(AbstractTreeViewer.java:1414)
-	at org.eclipse.jface.viewers.TreeViewer.getRawChildren(TreeViewer.java:350)
-	at org.eclipse.jface.viewers.StructuredViewer.getFilteredChildren(StructuredViewer.java:847)
-	at org.eclipse.jface.viewers.AbstractTreeViewer.getSortedChildren(AbstractTreeViewer.java:621)
-	at org.eclipse.jface.viewers.AbstractTreeViewer.updateChildren(AbstractTreeViewer.java:2661)
-	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefreshStruct(AbstractTreeViewer.java:1951)
-	at org.eclipse.jface.viewers.TreeViewer.internalRefreshStruct(TreeViewer.java:677)
-	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1927)
-	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1884)
-	at org.eclipse.ui.navigator.CommonViewer.internalRefresh(CommonViewer.java:532)
-	at org.eclipse.jface.viewers.StructuredViewer.lambda$3(StructuredViewer.java:1477)
-	at org.eclipse.jface.viewers.StructuredViewer$$Lambda$268/2089747578.run(Unknown Source)
-	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1393)
-	at org.eclipse.jface.viewers.TreeViewer.preservingSelection(TreeViewer.java:363)
-	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1354)
-	at org.eclipse.jface.viewers.StructuredViewer.refresh(StructuredViewer.java:1477)
-	at org.eclipse.jface.viewers.ColumnViewer.refresh(ColumnViewer.java:538)
-	at org.eclipse.ui.navigator.CommonViewer.refresh(CommonViewer.java:349)
-	at org.eclipse.ui.navigator.CommonViewer.refresh(CommonViewer.java:495)
-	at org.eclipse.cdt.ui.CElementContentProvider$RefreshElement.refresh(CElementContentProvider.java:367)
-	at org.eclipse.cdt.ui.CElementContentProvider.lambda$0(CElementContentProvider.java:450)
-	at org.eclipse.cdt.ui.CElementContentProvider$$Lambda$604/1095620194.run(Unknown Source)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3961)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3588)
-	at org.eclipse.jface.operation.ModalContext$ModalContextThread.block(ModalContext.java:166)
-	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:368)
-	at org.eclipse.jface.dialogs.ProgressMonitorDialog.run(ProgressMonitorDialog.java:469)
-	at com.st.stm32cube.common.mx.editor.CubeMxEditor.update(CubeMxEditor.java:2044)
-	at com.st.stm32cube.common.mx.editor.CubeMxEditor._doSave(CubeMxEditor.java:436)
-	at com.st.stm32cube.common.mx.editor.CubeMxEditor.doSave(CubeMxEditor.java:413)
-	at org.eclipse.ui.internal.DefaultSaveable.doSave(DefaultSaveable.java:53)
-	at org.eclipse.ui.Saveable.doSave(Saveable.java:213)
-	at org.eclipse.ui.internal.SaveableHelper.doSaveModel(SaveableHelper.java:333)
-	at org.eclipse.ui.internal.SaveablesList.lambda$2(SaveablesList.java:850)
-	at org.eclipse.ui.internal.SaveablesList$$Lambda$702/2065512965.run(Unknown Source)
-	at org.eclipse.ui.internal.SaveableHelper.lambda$3(SaveableHelper.java:271)
-	at org.eclipse.ui.internal.SaveableHelper$$Lambda$703/1347211074.run(Unknown Source)
-	at org.eclipse.jface.operation.ModalContext.runInCurrentThread(ModalContext.java:436)
-	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:352)
-	at org.eclipse.ui.internal.WorkbenchWindow.lambda$5(WorkbenchWindow.java:2368)
-	at org.eclipse.ui.internal.WorkbenchWindow$$Lambda$704/1867830167.run(Unknown Source)
-	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:72)
-	at org.eclipse.ui.internal.WorkbenchWindow.run(WorkbenchWindow.java:2366)
-	at org.eclipse.ui.internal.SaveableHelper.runProgressMonitorOperation(SaveableHelper.java:278)
-	at org.eclipse.ui.internal.SaveablesList.saveModels(SaveablesList.java:858)
-	at org.eclipse.ui.internal.SaveablesList.saveModels(SaveablesList.java:822)
-	at org.eclipse.ui.internal.Workbench.saveAll(Workbench.java:3451)
-	at org.eclipse.ui.ide.IDE$1.run(IDE.java:1495)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
-	at org.eclipse.ui.ide.IDE.saveAllEditors(IDE.java:1483)
-	at org.eclipse.debug.internal.ui.launchConfigurations.SaveScopeResourcesHandler.doSave(SaveScopeResourcesHandler.java:228)
-	at org.eclipse.debug.internal.ui.launchConfigurations.SaveScopeResourcesHandler.handleStatus(SaveScopeResourcesHandler.java:182)
-	at org.eclipse.debug.internal.ui.sourcelookup.Prompter.lambda$0(Prompter.java:73)
-	at org.eclipse.debug.internal.ui.sourcelookup.Prompter$$Lambda$697/420445051.run(Unknown Source)
-	at org.eclipse.ui.internal.PendingSyncExec.run(PendingSyncExec.java:68)
-	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:171)
-	at org.eclipse.ui.internal.UISynchronizer.lambda$0(UISynchronizer.java:152)
-	at org.eclipse.ui.internal.UISynchronizer$$Lambda$551/566864136.run(Unknown Source)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3961)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3588)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:633)
-	at org.eclipse.ui.internal.Workbench$$Lambda$26/1518752790.run(Unknown Source)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:557)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:660)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2019-12-03 20:55:16.091
+!MESSAGE Started RMI Server, listening on port 41337
 
-!ENTRY org.eclipse.jface 2 0 2019-11-26 14:55:24.356
+!ENTRY org.eclipse.jface 2 0 2019-12-03 20:58:21.209
 !MESSAGE Ignored reentrant call while viewer is busy. This is only logged once per viewer instance, but similar calls will still be ignored.
 !STACK 0
 java.lang.RuntimeException
@@ -1543,168 +176,411 @@ java.lang.RuntimeException
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
 
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-11-26 15:00:08.223
-!MESSAGE Error while determining symbol addresses
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 21:36:47.693
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 21:36:47.698
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 21:36:47.703
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 21:36:47.708
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 21:36:47.712
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 21:36:47.717
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 21:36:47.722
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 21:36:47.727
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 21:36:47.732
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 21:36:47.737
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 21:36:47.770
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 21:36:47.774
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 21:36:47.779
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 21:36:47.783
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 21:36:47.788
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 21:36:47.793
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 21:36:47.798
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 21:36:47.804
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 21:36:47.810
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 21:36:47.815
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 21:36:47.822
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 21:36:47.827
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 21:36:47.832
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 21:36:47.837
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 21:36:47.842
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 21:36:47.847
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 21:36:47.852
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 21:36:47.857
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 21:36:47.861
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 21:36:47.866
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 21:36:47.873
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 21:36:47.878
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 21:36:47.882
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 21:36:47.886
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 21:36:47.891
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 21:36:47.895
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 21:36:47.899
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 21:36:47.903
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 21:36:47.907
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 21:36:47.911
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 21:36:47.918
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 21:36:47.923
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 21:36:47.927
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 21:36:47.931
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 21:36:47.935
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 21:36:47.939
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 21:36:47.943
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 21:36:47.948
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 21:36:47.952
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 21:36:47.957
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 21:36:47.969
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 21:36:47.973
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 21:36:47.978
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 21:36:47.982
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 21:36:47.986
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 21:36:47.990
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 21:36:47.994
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 21:36:47.998
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 21:36:48.002
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 21:36:48.006
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 21:36:48.049
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 21:36:48.055
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 21:36:48.059
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 21:36:48.062
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 21:36:48.066
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 21:36:48.071
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 21:36:48.075
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 21:36:48.079
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 21:36:48.083
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 21:36:48.087
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 21:36:48.112
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 21:36:48.117
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 21:36:48.122
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 21:36:48.125
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 21:36:48.129
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 21:36:48.133
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 21:36:48.138
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 21:36:48.142
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 21:36:48.146
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 21:36:48.150
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 21:36:48.166
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 21:36:48.171
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 21:36:48.175
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 21:36:48.179
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 21:36:48.183
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 21:36:48.188
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 21:36:48.192
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 21:36:48.196
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-03 21:36:48.199
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-03 21:36:48.204
+!MESSAGE Falling back to default toolchain
+
+!ENTRY org.eclipse.ui 4 0 2019-12-04 01:54:36.286
+!MESSAGE Unhandled event loop exception
 !STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$15(StackAnalyzerView.java:1223)
-	at java.lang.Thread.run(Thread.java:748)
+java.lang.NullPointerException
+	at com.st.stm32cube.ide.mcu.debug.launch.oss.ui.MCUStartupTab.initializeFrom(MCUStartupTab.java:437)
+	at org.eclipse.debug.ui.AbstractLaunchConfigurationTab.activated(AbstractLaunchConfigurationTab.java:453)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationTabGroupViewer.handleTabSelected(LaunchConfigurationTabGroupViewer.java:1468)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationTabGroupViewer.handleTabChange(LaunchConfigurationTabGroupViewer.java:446)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationTabGroupViewer.access$5(LaunchConfigurationTabGroupViewer.java:435)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationTabGroupViewer$6.widgetSelected(LaunchConfigurationTabGroupViewer.java:412)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:252)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4173)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1057)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1081)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:780)
+	at org.eclipse.swt.custom.CTabFolder.setSelection(CTabFolder.java:3193)
+	at org.eclipse.swt.custom.CTabFolder.onMouse(CTabFolder.java:1876)
+	at org.eclipse.swt.custom.CTabFolder.lambda$0(CTabFolder.java:330)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4173)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1057)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3986)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3585)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+	at org.eclipse.jface.window.Window.open(Window.java:799)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationsDialog.open(LaunchConfigurationsDialog.java:1241)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationPropertiesDialog.open(LaunchConfigurationPropertiesDialog.java:186)
+	at com.st.stm32cube.ide.mcu.debug.launch.ui.MCUDebugLaunchShortcut.createConfiguration(MCUDebugLaunchShortcut.java:74)
+	at com.st.stm32cube.ide.mcu.debug.launch.oss.ui.DebugLaunchShortcut.launch(DebugLaunchShortcut.java:63)
+	at com.st.stm32cube.ide.mcu.debug.launch.oss.ui.DebugLaunchShortcut.searchAndLaunch(DebugLaunchShortcut.java:173)
+	at com.st.stm32cube.ide.mcu.debug.launch.ui.MCUDebugLaunchShortcut.launch(MCUDebugLaunchShortcut.java:108)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.launch(LaunchShortcutExtension.java:420)
+	at org.eclipse.debug.internal.ui.contextlaunching.ContextRunner.launchShortcut(ContextRunner.java:263)
+	at org.eclipse.debug.internal.ui.contextlaunching.ContextRunner.showShortcutSelectionDialog(ContextRunner.java:374)
+	at org.eclipse.debug.internal.ui.contextlaunching.ContextRunner.selectAndLaunch(ContextRunner.java:192)
+	at org.eclipse.debug.internal.ui.contextlaunching.ContextRunner.launch(ContextRunner.java:101)
+	at org.eclipse.debug.ui.actions.AbstractLaunchToolbarAction.runInternal(AbstractLaunchToolbarAction.java:90)
+	at org.eclipse.debug.ui.actions.AbstractLaunchHistoryAction.runWithEvent(AbstractLaunchHistoryAction.java:420)
+	at org.eclipse.ui.internal.PluginAction.runWithEvent(PluginAction.java:222)
+	at org.eclipse.ui.internal.WWinPluginAction.runWithEvent(WWinPluginAction.java:218)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:580)
+	at org.eclipse.jface.action.ActionContributionItem.lambda$5(ActionContributionItem.java:451)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4173)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1057)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3986)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3585)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:633)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:557)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:660)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-11-26 15:08:39.067
-!MESSAGE Error while determining symbol addresses
-!STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$15(StackAnalyzerView.java:1223)
-	at java.lang.Thread.run(Thread.java:748)
-!SESSION 2019-12-01 16:56:58.814 -----------------------------------------------
+!ENTRY org.eclipse.cdt.ui 4 0 2019-12-04 01:56:50.410
+!MESSAGE Error in CDT UI during reconcile
+!STACK 1
+C Model Exception: C Model Status [Element sensors.c does not exist.]
+	at org.eclipse.cdt.internal.core.model.CElement.newNotPresentException(CElement.java:486)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.makeConsistent(TranslationUnit.java:583)
+	at org.eclipse.cdt.internal.core.model.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:65)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.execute(CModelOperation.java:346)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.run(CModelOperation.java:613)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.runOperation(CModelOperation.java:641)
+	at org.eclipse.cdt.internal.core.model.WorkingCopy.reconcile(WorkingCopy.java:365)
+	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.reconcile(CReconcilingStrategy.java:79)
+	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.reconcile(CReconcilingStrategy.java:64)
+	at org.eclipse.cdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:89)
+	at org.eclipse.cdt.internal.ui.text.CCompositeReconcilingStrategy.reconcile(CCompositeReconcilingStrategy.java:90)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.cdt.internal.ui.text.CReconciler.process(CReconciler.java:346)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+!SUBENTRY 1 org.eclipse.cdt.core 4 969 2019-12-04 01:56:50.410
+!MESSAGE Element sensors.c does not exist.
+
+!ENTRY org.eclipse.core.jobs 2 2 2019-12-04 02:58:04.965
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.cdt.dsf.gdb.internal.ui.console.GdbBasicCliConsole$InputReadJob
+!SESSION 2019-12-04 03:07:46.087 -----------------------------------------------
 eclipse.buildId=Version 1.1.0
 java.version=1.8.0_202
 java.vendor=AdoptOpenJdk
 BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
-Command-line arguments:  -os win32 -ws win32 -arch x86_64
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\Users\Assyria\Documents\PLANT
 
-!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2019-12-01 16:57:08.144
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2019-12-04 03:07:50.624
 !MESSAGE Log4j initialized with config file C:\Users\Assyria\Documents\PLANT\.metadata\.log4j.xml
 
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-01 16:57:10.002
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-04 03:07:51.719
 !MESSAGE Type or version is empty: ; 
 
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-01 16:57:10.009
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-04 03:07:51.719
 !MESSAGE Falling back to default toolchain
 
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-01 16:57:10.130
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-04 03:07:51.734
 !MESSAGE Type or version is empty: ; 
 
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-01 16:57:10.135
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-04 03:07:51.750
 !MESSAGE Falling back to default toolchain
 
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-01 16:57:10.140
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-04 03:07:51.750
 !MESSAGE Type or version is empty: ; 
 
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-01 16:57:10.146
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-04 03:07:51.765
 !MESSAGE Falling back to default toolchain
 
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-01 16:57:10.150
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-04 03:07:51.765
 !MESSAGE Type or version is empty: ; 
 
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-01 16:57:10.156
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-04 03:07:51.765
 !MESSAGE Falling back to default toolchain
 
-!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2019-12-01 16:57:14.292
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2019-12-04 03:07:54.195
 !MESSAGE Started RMI Server, listening on port 41337
 
-!ENTRY com.st.stm32cube.ide.mcu.ide 4 4 2019-12-01 16:57:14.727
-!MESSAGE com.st.stm32cube.ide.mcu.ide/META-INF/version/build_ref file not found, build reference will not be reported into properties
-!SESSION 2019-12-01 17:30:12.069 -----------------------------------------------
-eclipse.buildId=Version 1.1.0
-java.version=1.8.0_202
-java.vendor=AdoptOpenJdk
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
-Command-line arguments:  -os win32 -ws win32 -arch x86_64
-
-!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2019-12-01 17:30:16.843
-!MESSAGE Log4j initialized with config file C:\Users\Assyria\Documents\PLANT\.metadata\.log4j.xml
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-01 17:30:18.052
-!MESSAGE Type or version is empty: ; 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-01 17:30:18.062
-!MESSAGE Falling back to default toolchain
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-01 17:30:18.085
-!MESSAGE Type or version is empty: ; 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-01 17:30:18.094
-!MESSAGE Falling back to default toolchain
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-01 17:30:18.101
-!MESSAGE Type or version is empty: ; 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-01 17:30:18.107
-!MESSAGE Falling back to default toolchain
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-01 17:30:18.113
-!MESSAGE Type or version is empty: ; 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-01 17:30:18.119
-!MESSAGE Falling back to default toolchain
-
-!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2019-12-01 17:30:21.167
-!MESSAGE Started RMI Server, listening on port 41337
-
-!ENTRY com.st.stm32cube.ide.mcu.ide 4 4 2019-12-01 17:30:21.277
-!MESSAGE com.st.stm32cube.ide.mcu.ide/META-INF/version/build_ref file not found, build reference will not be reported into properties
-!SESSION 2019-12-02 10:08:27.761 -----------------------------------------------
-eclipse.buildId=Version 1.1.0
-java.version=1.8.0_202
-java.vendor=AdoptOpenJdk
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
-Command-line arguments:  -os win32 -ws win32 -arch x86_64
-
-!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2019-12-02 10:08:36.878
-!MESSAGE Log4j initialized with config file C:\Users\Assyria\Documents\PLANT\.metadata\.log4j.xml
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-02 10:08:38.692
-!MESSAGE Type or version is empty: ; 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-02 10:08:38.692
-!MESSAGE Falling back to default toolchain
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-02 10:08:38.832
-!MESSAGE Type or version is empty: ; 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-02 10:08:38.832
-!MESSAGE Falling back to default toolchain
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-02 10:08:38.848
-!MESSAGE Type or version is empty: ; 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-02 10:08:38.848
-!MESSAGE Falling back to default toolchain
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-02 10:08:38.848
-!MESSAGE Type or version is empty: ; 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-02 10:08:38.863
-!MESSAGE Falling back to default toolchain
-
-!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2019-12-02 10:08:42.970
-!MESSAGE Started RMI Server, listening on port 41337
-
-!ENTRY com.st.stm32cube.ide.mcu.ide 4 4 2019-12-02 10:08:43.594
+!ENTRY com.st.stm32cube.ide.mcu.ide 4 4 2019-12-04 03:07:54.518
 !MESSAGE com.st.stm32cube.ide.mcu.ide/META-INF/version/build_ref file not found, build reference will not be reported into properties
 
-!ENTRY org.eclipse.jface 2 0 2019-12-02 10:21:35.339
+!ENTRY org.eclipse.jface 2 0 2019-12-04 03:10:52.847
 !MESSAGE Ignored reentrant call while viewer is busy. This is only logged once per viewer instance, but similar calls will still be ignored.
 !STACK 0
 java.lang.RuntimeException
@@ -1723,653 +599,79 @@ java.lang.RuntimeException
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
 
-!ENTRY org.eclipse.cdt.dsf 4 10005 2019-12-02 11:15:44.814
-!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.service.GDBRunControl_7_0_NS$12@3de6927a): Status ERROR: org.eclipse.cdt.dsf code=10004  null children=[Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Failed to execute MI command:
--exec-interrupt
-Error message from debugger back end:
-Remote communication error.  Target disconnected.: Success. java.lang.Exception: Remote communication error.  Target disconnected.: Success.]' resulted in an error.
-!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-12-02 11:15:44.814
-!MESSAGE Failed to execute MI command:
--exec-interrupt
-Error message from debugger back end:
-Remote communication error.  Target disconnected.: Success.
+!ENTRY com.st.stm32cube.ide.mcu.debug.stlink 4 4 2019-12-04 03:21:24.722
+!MESSAGE ST-LINK GDB server failed to start (exit code = 4)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2019-12-04 03:21:24.756
+!MESSAGE Error in final launch sequence:
+
+Error in initializing ST-LINK device.
+Reason: (4) No device found on target.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Error in initializing ST-LINK device.
+Reason: (4) No device found on target.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:242)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:106)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:94)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:860)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:719)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1017)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1220)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 com.st.stm32cube.ide.mcu.debug.launch 4 0 2019-12-04 03:21:24.756
+!MESSAGE Error in initializing ST-LINK device.
+Reason: (4) No device found on target.
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.stlink 4 4 2019-12-04 03:21:35.135
+!MESSAGE ST-LINK GDB server failed to start (exit code = 4)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2019-12-04 03:21:35.150
+!MESSAGE Error in final launch sequence:
+
+Error in initializing ST-LINK device.
+Reason: (4) No device found on target.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Error in initializing ST-LINK device.
+Reason: (4) No device found on target.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:242)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:106)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:94)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:860)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:719)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1017)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1220)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 com.st.stm32cube.ide.mcu.debug.launch 4 0 2019-12-04 03:21:35.150
+!MESSAGE Error in initializing ST-LINK device.
+Reason: (4) No device found on target.
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2019-12-04 07:44:21.162
+!MESSAGE Program file does not exist
 !STACK 0
-java.lang.Exception: Remote communication error.  Target disconnected.: Success.
-	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
-	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
-!SESSION 2019-12-02 23:40:03.555 -----------------------------------------------
-eclipse.buildId=Version 1.1.0
-java.version=1.8.0_202
-java.vendor=AdoptOpenJdk
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
-Command-line arguments:  -os win32 -ws win32 -arch x86_64
-
-!ENTRY org.eclipse.core.resources 2 10035 2019-12-02 23:41:11.185
-!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
-
-!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2019-12-02 23:41:14.573
-!MESSAGE Log4j initialized with config file C:\Users\pspirito\Documents\Plant\PLANT\.metadata\.log4j.xml
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-02 23:41:15.605
-!MESSAGE Type or version is empty: ; 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-02 23:41:15.605
-!MESSAGE Falling back to default toolchain
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-02 23:41:15.621
-!MESSAGE Type or version is empty: ; 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-02 23:41:15.621
-!MESSAGE Falling back to default toolchain
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-02 23:41:15.621
-!MESSAGE Type or version is empty: ; 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-02 23:41:15.621
-!MESSAGE Falling back to default toolchain
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-02 23:41:15.621
-!MESSAGE Type or version is empty: ; 
-
-!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-02 23:41:15.621
-!MESSAGE Falling back to default toolchain
-
-!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2019-12-02 23:41:18.779
-!MESSAGE Started RMI Server, listening on port 41337
-
-!ENTRY com.st.stm32cube.ide.mcu.ide 4 4 2019-12-02 23:41:23.110
-!MESSAGE com.st.stm32cube.ide.mcu.ide/META-INF/version/build_ref file not found, build reference will not be reported into properties
-
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-12-02 23:41:41.391
-!MESSAGE Error while determining symbol addresses
+java.io.FileNotFoundException: C:\Users\Assyria\Documents\PLANT\Final\Debug\Final.elf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:131)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:315)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:142)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:106)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:94)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:860)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:719)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1017)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1220)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2019-12-04 07:44:21.162
+!MESSAGE C:\Users\Assyria\Documents\PLANT\Final\Debug\Final.elf not found
 !STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$15(StackAnalyzerView.java:1223)
-	at java.lang.Thread.run(Thread.java:748)
-
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-12-02 23:42:58.483
-!MESSAGE Error while determining symbol addresses
-!STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$15(StackAnalyzerView.java:1223)
-	at java.lang.Thread.run(Thread.java:748)
-
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-12-02 23:51:26.031
-!MESSAGE Error while determining symbol addresses
-!STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$15(StackAnalyzerView.java:1223)
-	at java.lang.Thread.run(Thread.java:748)
-
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-12-02 23:55:30.277
-!MESSAGE Error while determining symbol addresses
-!STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$15(StackAnalyzerView.java:1223)
-	at java.lang.Thread.run(Thread.java:748)
-
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-12-02 23:58:11.844
-!MESSAGE Error while determining symbol addresses
-!STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$14(StackAnalyzerView.java:1178)
-	at java.lang.Thread.run(Thread.java:748)
-
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-12-03 00:00:24.611
-!MESSAGE Error while determining symbol addresses
-!STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$14(StackAnalyzerView.java:1178)
-	at java.lang.Thread.run(Thread.java:748)
-
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-12-03 00:21:10.883
-!MESSAGE Error while determining symbol addresses
-!STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$14(StackAnalyzerView.java:1178)
-	at java.lang.Thread.run(Thread.java:748)
-
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-12-03 00:23:08.293
-!MESSAGE Error while determining symbol addresses
-!STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$14(StackAnalyzerView.java:1178)
-	at java.lang.Thread.run(Thread.java:748)
-
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-12-03 00:24:25.676
-!MESSAGE Error while determining symbol addresses
-!STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$15(StackAnalyzerView.java:1223)
-	at java.lang.Thread.run(Thread.java:748)
-
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-12-03 00:28:03.158
-!MESSAGE Error while determining symbol addresses
-!STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$15(StackAnalyzerView.java:1223)
-	at java.lang.Thread.run(Thread.java:748)
-
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-12-03 00:28:10.000
-!MESSAGE Error while determining symbol addresses
-!STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$14(StackAnalyzerView.java:1178)
-	at java.lang.Thread.run(Thread.java:748)
-
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-12-03 00:29:46.822
-!MESSAGE Error while determining symbol addresses
-!STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$14(StackAnalyzerView.java:1178)
-	at java.lang.Thread.run(Thread.java:748)
-
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-12-03 00:29:50.462
-!MESSAGE Error while determining symbol addresses
-!STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$14(StackAnalyzerView.java:1178)
-	at java.lang.Thread.run(Thread.java:748)
-
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-12-03 00:30:34.608
-!MESSAGE Error while determining symbol addresses
-!STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$14(StackAnalyzerView.java:1178)
-	at java.lang.Thread.run(Thread.java:748)
-
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-12-03 00:30:49.980
-!MESSAGE Error while determining symbol addresses
-!STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$14(StackAnalyzerView.java:1178)
-	at java.lang.Thread.run(Thread.java:748)
-
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-12-03 00:31:09.444
-!MESSAGE Error while determining symbol addresses
-!STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$14(StackAnalyzerView.java:1178)
-	at java.lang.Thread.run(Thread.java:748)
-
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-12-03 00:32:03.712
-!MESSAGE Error while determining symbol addresses
-!STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$14(StackAnalyzerView.java:1178)
-	at java.lang.Thread.run(Thread.java:748)
-
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-12-03 00:33:05.260
-!MESSAGE Error while determining symbol addresses
-!STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$14(StackAnalyzerView.java:1178)
-	at java.lang.Thread.run(Thread.java:748)
-
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-12-03 00:35:15.840
-!MESSAGE Error while determining symbol addresses
-!STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$14(StackAnalyzerView.java:1178)
-	at java.lang.Thread.run(Thread.java:748)
-
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-12-03 00:35:30.650
-!MESSAGE Error while determining symbol addresses
-!STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$14(StackAnalyzerView.java:1178)
-	at java.lang.Thread.run(Thread.java:748)
-
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-12-03 00:36:22.418
-!MESSAGE Error while determining symbol addresses
-!STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$14(StackAnalyzerView.java:1178)
-	at java.lang.Thread.run(Thread.java:748)
-
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-12-03 00:37:52.846
-!MESSAGE Error while determining symbol addresses
-!STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$14(StackAnalyzerView.java:1178)
-	at java.lang.Thread.run(Thread.java:748)
-
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-12-03 00:40:08.874
-!MESSAGE Error while determining symbol addresses
-!STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$14(StackAnalyzerView.java:1178)
-	at java.lang.Thread.run(Thread.java:748)
-
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-12-03 00:40:32.712
-!MESSAGE Error while determining symbol addresses
-!STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$14(StackAnalyzerView.java:1178)
-	at java.lang.Thread.run(Thread.java:748)
-
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-12-03 00:40:55.910
-!MESSAGE Error while determining symbol addresses
-!STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$14(StackAnalyzerView.java:1178)
-	at java.lang.Thread.run(Thread.java:748)
-
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-12-03 00:52:36.717
-!MESSAGE Error while determining symbol addresses
-!STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$14(StackAnalyzerView.java:1178)
-	at java.lang.Thread.run(Thread.java:748)
-
-!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 2 0 2019-12-03 01:12:58.429
-!MESSAGE Error while determining symbol addresses
-!STACK 0
-java.lang.NumberFormatException: For input string: ""
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:601)
-	at java.lang.Long.valueOf(Long.java:776)
-	at java.lang.Long.decode(Long.java:928)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:74)
-	at org.eclipse.cdt.utils.Addr32.<init>(Addr32.java:70)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$6(StackAnalyzerView.java:857)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:865)
-	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$14(StackAnalyzerView.java:1178)
-	at java.lang.Thread.run(Thread.java:748)
+java.io.FileNotFoundException: C:\Users\Assyria\Documents\PLANT\Final\Debug\Final.elf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:131)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:315)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:142)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:106)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:94)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:860)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:719)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1017)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1220)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)

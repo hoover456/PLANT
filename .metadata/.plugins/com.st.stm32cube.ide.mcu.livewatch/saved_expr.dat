@@ -1,5 +1,2 @@
-robot.x
-robot.y
-robot.left.encoder
-robot.right.encoder
-robot.theta
+ADC_Values
+buffer

@@ -1,0 +1,13 @@
+sensors.c:26:6:DMAInit	16	static
+sensors.c:68:5:check_light_variance	56	static
+sensors.c:91:5:check_light_direction	24	static
+sensors.c:114:6:TIM6_UltraSonic_Handler	8	static
+sensors.c:132:6:checkTurn	8	static
+sensors.c:144:6:checkStraight	8	static
+sensors.c:159:6:checkLeft	8	static
+sensors.c:171:6:checkRight	8	static
+sensors.c:183:6:determineDir	8	static
+sensors.c:196:6:init_Left	8	static
+sensors.c:200:6:init_Right	8	static
+sensors.c:204:6:init_Straight	8	static
+sensors.c:208:6:countUp	8	static

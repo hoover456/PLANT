@@ -5,4 +5,4 @@ stm32l0xx_it.c:111:6:PendSV_Handler	8	static
 stm32l0xx_it.c:124:6:SysTick_Handler	8	static
 stm32l0xx_it.c:145:6:EXTI0_1_IRQHandler	8	static
 stm32l0xx_it.c:163:6:EXTI4_15_IRQHandler	8	static
-stm32l0xx_it.c:188:6:TIM6_DAC_IRQHandler	8	static
+stm32l0xx_it.c:194:6:TIM6_DAC_IRQHandler	8	static

@@ -32,6 +32,14 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#define ARM_MATH_CM0PLUS
+#define ARM_MATH_CM0_FAMILY
+#define __FPU_PRESENT 1
+#include "arm_math.h"
+
+#include "movement.h"
+#include "sensors.h"
+#include "math.h"
 
 /* USER CODE END Includes */
 
@@ -47,7 +55,6 @@ extern "C" {
 
 /* Exported macro ------------------------------------------------------------*/
 /* USER CODE BEGIN EM */
-
 /* USER CODE END EM */
 
 void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
@@ -62,6 +69,14 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define Ultrasonic_B_Pin GPIO_PIN_13
 #define Ultrasonic_B_GPIO_Port GPIOC
+#define LS_FR_Pin GPIO_PIN_0
+#define LS_FR_GPIO_Port GPIOC
+#define LS_RI_Pin GPIO_PIN_1
+#define LS_RI_GPIO_Port GPIOC
+#define LS_RE_Pin GPIO_PIN_2
+#define LS_RE_GPIO_Port GPIOC
+#define LS_LE_Pin GPIO_PIN_3
+#define LS_LE_GPIO_Port GPIOC
 #define Ultrasonic_Trig_Pin GPIO_PIN_0
 #define Ultrasonic_Trig_GPIO_Port GPIOA
 #define Ultrasonic_Echo_Pin GPIO_PIN_1
@@ -77,6 +92,9 @@ void Error_Handler(void);
 #define RM_PWM_1_GPIO_Port GPIOB
 #define RM_PWM_2_Pin GPIO_PIN_1
 #define RM_PWM_2_GPIO_Port GPIOB
+#define CLIFF_Pin GPIO_PIN_9
+#define CLIFF_GPIO_Port GPIOA
+#define CLIFF_EXTI_IRQn EXTI4_15_IRQn
 #define L_MTR_ENC_Pin GPIO_PIN_11
 #define L_MTR_ENC_GPIO_Port GPIOC
 #define L_MTR_ENC_EXTI_IRQn EXTI4_15_IRQn
@@ -85,26 +103,6 @@ void Error_Handler(void);
 #define R_MTR_ENC_EXTI_IRQn EXTI4_15_IRQn
 /* USER CODE BEGIN Private defines */
 
-typedef struct{
-	signed char dir;
-	int encoder;
-	int ch1;
-	int ch2;
-}Motor;
-
-typedef struct{
-	Motor left;
-	Motor right;
-	double x;
-	double y;
-	double theta;
-}Robot;
-
-void pwm_gen(Motor* motor, int speed);
-void update_pos(Robot* robot);
-char turn(Robot* robot, float target);
-char move_x(Robot* robot, float target);
-char move_y(Robot* robot, float target);
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

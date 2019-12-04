@@ -174,7 +174,13 @@ void EXTI4_15_IRQHandler(void)
 		if(abs(robot.right.encoder) > 50) update_pos(&robot);
 	}
 
+	if(__HAL_GPIO_EXTI_GET_FLAG(CLIFF_Pin)){
+		extern Robot robot;
+		robot.cliff = !HAL_GPIO_ReadPin(CLIFF_GPIO_Port, CLIFF_Pin);
+	}
+
   /* USER CODE END EXTI4_15_IRQn 0 */
+  HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_9);
   HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_11);
   HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_12);
   /* USER CODE BEGIN EXTI4_15_IRQn 1 */
