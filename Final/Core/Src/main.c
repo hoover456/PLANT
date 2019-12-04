@@ -513,7 +513,7 @@ static void MX_TIM6_Init(void)
   htim6.Instance = TIM6;
   htim6.Init.Prescaler = 2099;
   htim6.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim6.Init.Period = 99;
+  htim6.Init.Period = 249;
   htim6.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_Base_Init(&htim6) != HAL_OK)
   {
@@ -599,26 +599,20 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOC, Ultrasonic_B_Pin|SOIL_MTR_PWR_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(Ultrasonic_B_GPIO_Port, Ultrasonic_B_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(Ultrasonic_A_GPIO_Port, Ultrasonic_A_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pins : Ultrasonic_B_Pin SOIL_MTR_PWR_Pin */
-  GPIO_InitStruct.Pin = Ultrasonic_B_Pin|SOIL_MTR_PWR_Pin;
+  /*Configure GPIO pin : Ultrasonic_B_Pin */
+  GPIO_InitStruct.Pin = Ultrasonic_B_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+  HAL_GPIO_Init(Ultrasonic_B_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : Ultrasonic_Echo_Pin L_MTR_ENC_Pin R_MTR_ENC_Pin */
-  GPIO_InitStruct.Pin = Ultrasonic_Echo_Pin|L_MTR_ENC_Pin|R_MTR_ENC_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
-
-  /*Configure GPIO pins : SOIL_LED_Pin CLIFF_Pin */
-  GPIO_InitStruct.Pin = SOIL_LED_Pin|CLIFF_Pin;
+  /*Configure GPIO pins : Ultrasonic_Echo_Pin CLIFF_Pin */
+  GPIO_InitStruct.Pin = Ultrasonic_Echo_Pin|CLIFF_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
@@ -635,6 +629,12 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : L_MTR_ENC_Pin R_MTR_ENC_Pin */
+  GPIO_InitStruct.Pin = L_MTR_ENC_Pin|R_MTR_ENC_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
   /*Configure GPIO pin : PB6 */
   GPIO_InitStruct.Pin = GPIO_PIN_6;

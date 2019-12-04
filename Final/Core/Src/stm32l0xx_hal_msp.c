@@ -105,7 +105,7 @@ void HAL_ADC_MspInit(ADC_HandleTypeDef* hadc)
     PC4     ------> ADC_IN14 
     */
     GPIO_InitStruct.Pin = LS_FR_Pin|LS_RI_Pin|LS_RE_Pin|LS_LE_Pin 
-                          |SOIL_MTR_VAL_Pin;
+                          |GPIO_PIN_4;
     GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
@@ -141,7 +141,7 @@ void HAL_ADC_MspDeInit(ADC_HandleTypeDef* hadc)
     PC4     ------> ADC_IN14 
     */
     HAL_GPIO_DeInit(GPIOC, LS_FR_Pin|LS_RI_Pin|LS_RE_Pin|LS_LE_Pin 
-                          |SOIL_MTR_VAL_Pin);
+                          |GPIO_PIN_4);
 
   /* USER CODE BEGIN ADC1_MspDeInit 1 */
 

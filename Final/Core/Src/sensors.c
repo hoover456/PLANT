@@ -127,38 +127,23 @@ int IR_dock(void){
  * 	Author: Phill Spiritoso
  */
 void TIM6_UltraSonic_Handler(void){
-	if (TrackSet == 0){
-		if (UltraTurn > 0){
-			checkTurn();
-		}
-		else if ((left == right) && (LCheck == RCheck)){
+		if (Track == 1){
+			init_Straight();
 			checkStraight();
 		}
-		else if(left > 0){
-			checkLeft();
+		if (Track == 2){
+			init_Left();
+			TrackLeft();
 		}
-		else if(right > 0){
-			checkRight();
+		if (Track == 3){
+			init_Right();
+			TrackRight();
+			Track = 0;
 		}
-		else if ((RCheck > 0) && (LCheck > 0)){
-			determineDir();
-		}
-		if (~firstloop) {
-		Track++;
-		}
+		if (~TrackSet){
+			Track++;
 	}
-		if (~firstloop) {
-			if (Track == 2){
-				init_Left();
-				TrackLeft();
-			}
-			if (Track == 3){
-				init_Right();
-				TrackRight();
-				Track = 0;
-			}
-	}
-	count = 0;
+	count = 1;
 
 }
 void checkTurn(void){
@@ -179,12 +164,10 @@ void checkTurn(void){
 void checkStraight(void){
 	if (count > 50){
 		robot.obstacle[1] = 1;
-		printf("checkDirection\r\n");
-		firstloop = 1;
-		left = 1;
-		init_Left();
+		TrackSet=1;
 	} else {
 		robot.obstacle[1] = 0;
+		TrackSet=0;
 	}
 }
 void checkLeft(void){
