@@ -146,7 +146,7 @@ void TIM6_UltraSonic_Handler(void){
 		Track++;
 		}
 	}
-		if (LCheck | ~UltraTurn) {
+		if (LCheck | ~UltraTurn | left) {
 			if (Track == 2){
 				init_Left();
 				TrackLeft();
