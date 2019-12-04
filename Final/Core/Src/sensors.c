@@ -228,3 +228,15 @@ void TIM2_conf(void){
 	RCC->APB1ENR |= RCC_APB1ENR_TIM2EN;
 	RCC->APB1ENR |= RCC_APB1ENR_TIM6EN;
 }
+
+int obstacle_right(){
+		return robot.obstacle[2];
+}
+
+int obstacle_left(){
+		return robot.obstacle[0];
+}
+
+int ret_one(){
+	return 1;
+}

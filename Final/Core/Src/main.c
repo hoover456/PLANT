@@ -169,6 +169,8 @@ int main(void)
 	arm_pid_init_f32(&robot.left.pos_pid,1);
 	arm_pid_init_f32(&robot.left.rad_pid,1);
 
+	HAL_GPIO_WritePin(SOIL_MTR_PWR_GPIO_Port, SOIL_MTR_PWR_Pin, GPIO_PIN_SET);
+
 	int sw = 0;
 //	Menu_Main();
 	while (1)
@@ -182,13 +184,38 @@ int main(void)
 		if(robot.cliff){
 			stop(&robot);
 		} else {
-			if(IR_align()){
-				if(turn_until(&robot, IR_align)){
-					move_until(&robot, IR_dock, 1);
+			if(check_light_variance()){
+				if(turn_until(&robot, check_light_direction)){
+					if(!robot.obstacle[1]){
+						if(robot.obstacle[0]){
+							if(turn_until(&robot, obstacle_left)){
+								move_until(&robot, ret_one, 1);
+								HAL_Delay(2000);
+							}
+						} else if (robot.obstacle[2]){
+							if(turn_until(&robot, obstacle_right)){
+								move_until(&robot, ret_one, 1);
+								HAL_Delay(2000);
+							}
+						} else move_until(&robot, check_light_variance, 0);
+					}
 				}
 			} else{
 				stop(&robot);
 			}
+
+		if(buffer[4] < 500){
+			HAL_GPIO_WritePin(SOIL_LED_GPIO_Port, SOIL_LED_Pin, GPIO_PIN_SET);
+		} else {
+			HAL_GPIO_WritePin(SOIL_LED_GPIO_Port, SOIL_LED_Pin, GPIO_PIN_RESET);
+		}
+//			if(IR_align()){
+//				if(turn_until(&robot, IR_align)){
+//					move_until(&robot, IR_dock, 1);
+//				}
+//			} else{
+//				stop(&robot);
+//			}
 		}
 //			if(sw == 0){
 //					if(robot.x < 12){
@@ -574,26 +601,26 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(Ultrasonic_B_GPIO_Port, Ultrasonic_B_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOC, Ultrasonic_B_Pin|SOIL_MTR_PWR_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(Ultrasonic_A_GPIO_Port, Ultrasonic_A_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pin : Ultrasonic_B_Pin */
-  GPIO_InitStruct.Pin = Ultrasonic_B_Pin;
+  /*Configure GPIO pins : Ultrasonic_B_Pin SOIL_MTR_PWR_Pin */
+  GPIO_InitStruct.Pin = Ultrasonic_B_Pin|SOIL_MTR_PWR_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(Ultrasonic_B_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : PC15 L_MTR_ENC_Pin R_MTR_ENC_Pin */
-  GPIO_InitStruct.Pin = GPIO_PIN_15|L_MTR_ENC_Pin|R_MTR_ENC_Pin;
+  /*Configure GPIO pins : Ultrasonic_Echo_Pin L_MTR_ENC_Pin R_MTR_ENC_Pin */
+  GPIO_InitStruct.Pin = Ultrasonic_Echo_Pin|L_MTR_ENC_Pin|R_MTR_ENC_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : Ultrasonic_Echo_Pin CLIFF_Pin */
-  GPIO_InitStruct.Pin = Ultrasonic_Echo_Pin|CLIFF_Pin;
+  /*Configure GPIO pins : SOIL_LED_Pin CLIFF_Pin */
+  GPIO_InitStruct.Pin = SOIL_LED_Pin|CLIFF_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);

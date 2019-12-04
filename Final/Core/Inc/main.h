@@ -69,6 +69,9 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define Ultrasonic_B_Pin GPIO_PIN_13
 #define Ultrasonic_B_GPIO_Port GPIOC
+#define Ultrasonic_Echo_Pin GPIO_PIN_15
+#define Ultrasonic_Echo_GPIO_Port GPIOC
+#define Ultrasonic_Echo_EXTI_IRQn EXTI4_15_IRQn
 #define LS_FR_Pin GPIO_PIN_0
 #define LS_FR_GPIO_Port GPIOC
 #define LS_RI_Pin GPIO_PIN_1
@@ -79,15 +82,19 @@ void Error_Handler(void);
 #define LS_LE_GPIO_Port GPIOC
 #define Ultrasonic_Trig_Pin GPIO_PIN_0
 #define Ultrasonic_Trig_GPIO_Port GPIOA
-#define Ultrasonic_Echo_Pin GPIO_PIN_1
-#define Ultrasonic_Echo_GPIO_Port GPIOA
-#define Ultrasonic_Echo_EXTI_IRQn EXTI0_1_IRQn
+#define SOIL_LED_Pin GPIO_PIN_1
+#define SOIL_LED_GPIO_Port GPIOA
+#define SOIL_LED_EXTI_IRQn EXTI0_1_IRQn
 #define Ultrasonic_A_Pin GPIO_PIN_4
 #define Ultrasonic_A_GPIO_Port GPIOA
 #define LM_PWM_1_Pin GPIO_PIN_6
 #define LM_PWM_1_GPIO_Port GPIOA
 #define LM_PWM_2_Pin GPIO_PIN_7
 #define LM_PWM_2_GPIO_Port GPIOA
+#define SOIL_MTR_VAL_Pin GPIO_PIN_4
+#define SOIL_MTR_VAL_GPIO_Port GPIOC
+#define SOIL_MTR_PWR_Pin GPIO_PIN_5
+#define SOIL_MTR_PWR_GPIO_Port GPIOC
 #define RM_PWM_1_Pin GPIO_PIN_0
 #define RM_PWM_1_GPIO_Port GPIOB
 #define RM_PWM_2_Pin GPIO_PIN_1

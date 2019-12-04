@@ -25,4 +25,7 @@ void init_Left();
 void init_Right();
 void init_Straight();
 void TIM2_conf(void);
+int obstacle_right();
+int obstacle_left();
+int ret_one();
 #endif

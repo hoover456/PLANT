@@ -13,3 +13,6 @@ sensors.c:203:6:init_Left	8	static
 sensors.c:207:6:init_Right	8	static
 sensors.c:211:6:init_Straight	8	static
 sensors.c:216:6:TIM2_conf	8	static
+sensors.c:232:5:obstacle_right	8	static
+sensors.c:236:5:obstacle_left	8	static
+sensors.c:240:5:ret_one	8	static
