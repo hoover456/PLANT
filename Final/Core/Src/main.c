@@ -19,7 +19,6 @@
 /* USER CODE END Header */
 
 /* Includes ------------------------------------------------------------------*/
-#include <menu.h>
 #include "main.h"
 
 /* Private includes ----------------------------------------------------------*/
@@ -166,27 +165,40 @@ int main(void)
 	arm_pid_init_f32(&robot.left.rad_pid,1);
 
 	int sw = 0;
-
+	Menu_Main();
 	while (1)
 	{
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-		Menu_Main();
-		if(sw == 0){
-				if(robot.x < 12){
-					move_x(&robot, 12);
-				} else {
-					sw = 1;
-				}
+		if(robot.stop){
+			stop(&robot);
 		} else {
-				if(robot.x > 0){
-					move_x(&robot, 0);
-				} else {
-						sw = 0;
+		if(robot.cliff){
+			stop(&robot);
+		} else {
+			if(IR_align()){
+				if(turn_until(&robot, IR_align)){
+					move_until(&robot, IR_dock, 1);
 				}
+			} else{
+				stop(&robot);
+			}
 		}
-
+//			if(sw == 0){
+//					if(robot.x < 12){
+//						move_x(&robot, 12);
+//					} else {
+//						sw = 1;
+//					}
+//			} else {
+//					if(robot.x > 0){
+//						move_x(&robot, 0);
+//					} else {
+//							sw = 0;
+//					}
+//			}
+		}
 //		if(robot.cliff){
 //			stop(&robot);
 //		} else {

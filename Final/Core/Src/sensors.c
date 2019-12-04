@@ -106,6 +106,55 @@ int check_light_direction(void){
 	return maxIndex == LEFT ? -1 : 1;
 }
 
+int IR_align(void){
+	int IR_Pins = ((GPIOA->IDR>>10) & 7);
+	if(IR_Pins == 1 || IR_Pins == 5) return -1;
+	if(IR_Pins == 2 || IR_Pins == 6) return 1;
+	return 0;
+}
+
+int IR_dock(void){
+	int IR_Pins = ((GPIOA->IDR>>10) & 7);
+	return IR_Pins != 0;
+}
+
+
+//void IR_LOCATE(void){
+//	int pins = ((GPIOA->IDR>>10) & 7);
+//	if(pins == 0){
+//		move_robot(0,0);
+//		printf("NO IR\r\n");
+//	}
+//	if(pins == 1){
+//		printf("Hard Left\r\n");
+//		move_robot(TURN_LEFT, 20000);
+//	}
+//	if(pins == 2){
+//		printf("Hard Right\r\n");
+//		move_robot(TURN_RIGHT, 20000);
+//	}
+//	if(pins == 3){
+//		printf("Forward\r\n");
+//		move_robot(FORWARD, 20000);
+//	}
+//	if(pins == 4){
+//		printf("Forward\r\n");
+//		move_robot(FORWARD, 20000);
+//	}
+//	if(pins == 5){
+//		printf("Soft Left\r\n");
+//		move_robot(TURN_LEFT, 10000);
+//	}
+//	if(pins == 6){
+//		printf("Soft Right\r\n");
+//		move_robot(TURN_RIGHT, 10000);
+//	}
+//	if(pins == 7){
+//		printf("Forward\r\n");
+//		move_robot(FORWARD, 20000);
+//	}
+//}
+
 
 /***
  * Ultrasonic Sensors

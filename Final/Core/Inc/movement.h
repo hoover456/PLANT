@@ -61,5 +61,7 @@ char move_y(Robot* robot, float target);
 int move_until(Robot* robot, int (*compare)(), int compare_value);
 int turn_until(Robot* robot, int (*compare)());
 void stop(Robot* robot);
+int IR_dock(void);
+int IR_align(void);
 #endif
 

@@ -1,4 +1,4 @@
-Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/menu.h ../Core/Inc/main.h \
+Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h \
  ../Core/Inc/stm32l0xx_hal_conf.h \
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc.h \
@@ -29,9 +29,7 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/menu.h ../Core/Inc/main.h \
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_tim_ex.h \
  ../Drivers/CMSIS/Include/arm_math.h \
  ../Drivers/CMSIS/Include/core_cm0plus.h ../Core/Inc/movement.h \
- ../Core/Inc/sensors.h ../Core/Inc/main.h
-
-../Core/Inc/menu.h:
+ ../Core/Inc/main.h ../Core/Inc/sensors.h
 
 ../Core/Inc/main.h:
 
@@ -97,6 +95,6 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/menu.h ../Core/Inc/main.h \
 
 ../Core/Inc/movement.h:
 
-../Core/Inc/sensors.h:
-
 ../Core/Inc/main.h:
+
+../Core/Inc/sensors.h:

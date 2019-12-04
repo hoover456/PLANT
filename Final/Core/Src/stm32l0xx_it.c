@@ -168,6 +168,7 @@ void EXTI4_15_IRQHandler(void)
 	if(__HAL_GPIO_EXTI_GET_FLAG(L_MTR_ENC_Pin)){
 		extern Robot robot;
 		robot.left.encoder+= robot.left.dir;
+		Menu_Main();
 		if(abs(robot.left.encoder) > 50) update_pos(&robot);
 	}
 	if(__HAL_GPIO_EXTI_GET_FLAG(R_MTR_ENC_Pin)){
