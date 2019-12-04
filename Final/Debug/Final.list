@@ -21,33 +21,33 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, DATA
   8 .data         0000006c  20000000  08008df0  00020000  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  9 .bss          00000350  20000070  08008e5c  00020070  2**3
+  9 .bss          00000358  20000070  08008e5c  00020070  2**3
                   ALLOC
- 10 ._user_heap_stack 00000600  200003c0  08008e5c  000203c0  2**0
+ 10 ._user_heap_stack 00000600  200003c8  08008e5c  000203c8  2**0
                   ALLOC
  11 .ARM.attributes 0000002c  00000000  00000000  0002006c  2**0
                   CONTENTS, READONLY
- 12 .debug_info   0000fda7  00000000  00000000  00020098  2**0
+ 12 .debug_info   0000fdb8  00000000  00000000  00020098  2**0
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_abbrev 00002543  00000000  00000000  0002fe3f  2**0
+ 13 .debug_abbrev 00002543  00000000  00000000  0002fe50  2**0
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_aranges 00000bc0  00000000  00000000  00032388  2**3
+ 14 .debug_aranges 00000bc0  00000000  00000000  00032398  2**3
                   CONTENTS, READONLY, DEBUGGING
- 15 .debug_ranges 00000aa8  00000000  00000000  00032f48  2**3
+ 15 .debug_ranges 00000aa8  00000000  00000000  00032f58  2**3
                   CONTENTS, READONLY, DEBUGGING
- 16 .debug_macro  000163c3  00000000  00000000  000339f0  2**0
+ 16 .debug_macro  000163c3  00000000  00000000  00033a00  2**0
                   CONTENTS, READONLY, DEBUGGING
- 17 .debug_line   0000a629  00000000  00000000  00049db3  2**0
+ 17 .debug_line   0000a62a  00000000  00000000  00049dc3  2**0
                   CONTENTS, READONLY, DEBUGGING
- 18 .debug_str    000841d8  00000000  00000000  000543dc  2**0
+ 18 .debug_str    000841e2  00000000  00000000  000543ed  2**0
                   CONTENTS, READONLY, DEBUGGING
- 19 .comment      000000b2  00000000  00000000  000d85b4  2**0
+ 19 .comment      000000b2  00000000  00000000  000d85cf  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  00003450  00000000  00000000  000d8668  2**2
+ 20 .debug_frame  00003450  00000000  00000000  000d8684  2**2
                   CONTENTS, READONLY, DEBUGGING
- 21 .debug_loc    0000003c  00000000  00000000  000dbab8  2**0
+ 21 .debug_loc    0000003c  00000000  00000000  000dbad4  2**0
                   CONTENTS, READONLY, DEBUGGING
- 22 .debug_macinfo 00000001  00000000  00000000  000dbaf4  2**0
+ 22 .debug_macinfo 00000001  00000000  00000000  000dbb10  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -6002,16 +6002,16 @@ int main(void)
  8002ee2:	f000 fecb 	bl	8003c7c <stop>
 		if(robot.stop){
  8002ee6:	e7c9      	b.n	8002e7c <main+0x1f4>
- 8002ee8:	20000114 	.word	0x20000114
+ 8002ee8:	2000011c 	.word	0x2000011c
  8002eec:	42c80000 	.word	0x42c80000
  8002ef0:	447a0000 	.word	0x447a0000
  8002ef4:	fffffe60 	.word	0xfffffe60
- 8002ef8:	20000350 	.word	0x20000350
+ 8002ef8:	20000358 	.word	0x20000358
  8002efc:	40011400 	.word	0x40011400
  8002f00:	40021000 	.word	0x40021000
  8002f04:	00007530 	.word	0x00007530
- 8002f08:	200002d8 	.word	0x200002d8
- 8002f0c:	200001e8 	.word	0x200001e8
+ 8002f08:	200002e0 	.word	0x200002e0
+ 8002f0c:	200001f0 	.word	0x200001f0
  8002f10:	08003dfd 	.word	0x08003dfd
  8002f14:	08003e3f 	.word	0x08003e3f
 
@@ -6345,7 +6345,7 @@ static void MX_ADC_Init(void)
  80030e2:	b002      	add	sp, #8
  80030e4:	bd80      	pop	{r7, pc}
  80030e6:	46c0      	nop			; (mov r8, r8)
- 80030e8:	20000350 	.word	0x20000350
+ 80030e8:	20000358 	.word	0x20000358
  80030ec:	40012400 	.word	0x40012400
  80030f0:	28000400 	.word	0x28000400
  80030f4:	2c000800 	.word	0x2c000800
@@ -6496,7 +6496,7 @@ static void MX_TIM2_Init(void)
  80031ca:	b006      	add	sp, #24
  80031cc:	bd80      	pop	{r7, pc}
  80031ce:	46c0      	nop			; (mov r8, r8)
- 80031d0:	20000314 	.word	0x20000314
+ 80031d0:	2000031c 	.word	0x2000031c
 
 080031d4 <MX_TIM3_Init>:
   * @brief TIM3 Initialization Function
@@ -6712,7 +6712,7 @@ static void MX_TIM3_Init(void)
  8003312:	b00a      	add	sp, #40	; 0x28
  8003314:	bd80      	pop	{r7, pc}
  8003316:	46c0      	nop			; (mov r8, r8)
- 8003318:	20000114 	.word	0x20000114
+ 8003318:	2000011c 	.word	0x2000011c
  800331c:	40000400 	.word	0x40000400
  8003320:	00002710 	.word	0x00002710
 
@@ -6802,7 +6802,7 @@ static void MX_TIM6_Init(void)
  800338a:	b002      	add	sp, #8
  800338c:	bd80      	pop	{r7, pc}
  800338e:	46c0      	nop			; (mov r8, r8)
- 8003390:	200002d8 	.word	0x200002d8
+ 8003390:	200002e0 	.word	0x200002e0
  8003394:	40001000 	.word	0x40001000
  8003398:	00000833 	.word	0x00000833
 
@@ -6954,7 +6954,7 @@ static void MX_TIM22_Init(void)
  8003466:	46bd      	mov	sp, r7
  8003468:	b00d      	add	sp, #52	; 0x34
  800346a:	bd90      	pop	{r4, r7, pc}
- 800346c:	200001ac 	.word	0x200001ac
+ 800346c:	200001b4 	.word	0x200001b4
  8003470:	40011400 	.word	0x40011400
  8003474:	0000fde8 	.word	0x0000fde8
 
@@ -8481,38 +8481,38 @@ void TIM6_UltraSonic_Handler(void){
  8003e64:	b580      	push	{r7, lr}
  8003e66:	af00      	add	r7, sp, #0
 	if (TrackSet == 0){
- 8003e68:	4b2e      	ldr	r3, [pc, #184]	; (8003f24 <TIM6_UltraSonic_Handler+0xc0>)
+ 8003e68:	4b2b      	ldr	r3, [pc, #172]	; (8003f18 <TIM6_UltraSonic_Handler+0xb4>)
  8003e6a:	781b      	ldrb	r3, [r3, #0]
  8003e6c:	2b00      	cmp	r3, #0
  8003e6e:	d136      	bne.n	8003ede <TIM6_UltraSonic_Handler+0x7a>
 		if (UltraTurn > 0){
- 8003e70:	4b2d      	ldr	r3, [pc, #180]	; (8003f28 <TIM6_UltraSonic_Handler+0xc4>)
+ 8003e70:	4b2a      	ldr	r3, [pc, #168]	; (8003f1c <TIM6_UltraSonic_Handler+0xb8>)
  8003e72:	681b      	ldr	r3, [r3, #0]
  8003e74:	2b00      	cmp	r3, #0
  8003e76:	dd02      	ble.n	8003e7e <TIM6_UltraSonic_Handler+0x1a>
 			checkTurn();
- 8003e78:	f000 f864 	bl	8003f44 <checkTurn>
+ 8003e78:	f000 f860 	bl	8003f3c <checkTurn>
  8003e7c:	e026      	b.n	8003ecc <TIM6_UltraSonic_Handler+0x68>
 		}
 		else if ((left == right) && (LCheck == RCheck)){
- 8003e7e:	4b2b      	ldr	r3, [pc, #172]	; (8003f2c <TIM6_UltraSonic_Handler+0xc8>)
+ 8003e7e:	4b28      	ldr	r3, [pc, #160]	; (8003f20 <TIM6_UltraSonic_Handler+0xbc>)
  8003e80:	681a      	ldr	r2, [r3, #0]
- 8003e82:	4b2b      	ldr	r3, [pc, #172]	; (8003f30 <TIM6_UltraSonic_Handler+0xcc>)
+ 8003e82:	4b28      	ldr	r3, [pc, #160]	; (8003f24 <TIM6_UltraSonic_Handler+0xc0>)
  8003e84:	681b      	ldr	r3, [r3, #0]
  8003e86:	429a      	cmp	r2, r3
  8003e88:	d108      	bne.n	8003e9c <TIM6_UltraSonic_Handler+0x38>
- 8003e8a:	4b2a      	ldr	r3, [pc, #168]	; (8003f34 <TIM6_UltraSonic_Handler+0xd0>)
+ 8003e8a:	4b27      	ldr	r3, [pc, #156]	; (8003f28 <TIM6_UltraSonic_Handler+0xc4>)
  8003e8c:	681a      	ldr	r2, [r3, #0]
- 8003e8e:	4b2a      	ldr	r3, [pc, #168]	; (8003f38 <TIM6_UltraSonic_Handler+0xd4>)
+ 8003e8e:	4b27      	ldr	r3, [pc, #156]	; (8003f2c <TIM6_UltraSonic_Handler+0xc8>)
  8003e90:	681b      	ldr	r3, [r3, #0]
  8003e92:	429a      	cmp	r2, r3
  8003e94:	d102      	bne.n	8003e9c <TIM6_UltraSonic_Handler+0x38>
 			checkStraight();
- 8003e96:	f000 f893 	bl	8003fc0 <checkStraight>
+ 8003e96:	f000 f88f 	bl	8003fb8 <checkStraight>
  8003e9a:	e017      	b.n	8003ecc <TIM6_UltraSonic_Handler+0x68>
 		}
 		else if(left > 0){
- 8003e9c:	4b23      	ldr	r3, [pc, #140]	; (8003f2c <TIM6_UltraSonic_Handler+0xc8>)
+ 8003e9c:	4b20      	ldr	r3, [pc, #128]	; (8003f20 <TIM6_UltraSonic_Handler+0xbc>)
  8003e9e:	681b      	ldr	r3, [r3, #0]
  8003ea0:	2b00      	cmp	r3, #0
  8003ea2:	dd02      	ble.n	8003eaa <TIM6_UltraSonic_Handler+0x46>
@@ -8521,7 +8521,7 @@ void TIM6_UltraSonic_Handler(void){
  8003ea8:	e010      	b.n	8003ecc <TIM6_UltraSonic_Handler+0x68>
 		}
 		else if(right > 0){
- 8003eaa:	4b21      	ldr	r3, [pc, #132]	; (8003f30 <TIM6_UltraSonic_Handler+0xcc>)
+ 8003eaa:	4b1e      	ldr	r3, [pc, #120]	; (8003f24 <TIM6_UltraSonic_Handler+0xc0>)
  8003eac:	681b      	ldr	r3, [r3, #0]
  8003eae:	2b00      	cmp	r3, #0
  8003eb0:	dd02      	ble.n	8003eb8 <TIM6_UltraSonic_Handler+0x54>
@@ -8530,198 +8530,197 @@ void TIM6_UltraSonic_Handler(void){
  8003eb6:	e009      	b.n	8003ecc <TIM6_UltraSonic_Handler+0x68>
 		}
 		else if ((RCheck > 0) && (LCheck > 0)){
- 8003eb8:	4b1f      	ldr	r3, [pc, #124]	; (8003f38 <TIM6_UltraSonic_Handler+0xd4>)
+ 8003eb8:	4b1c      	ldr	r3, [pc, #112]	; (8003f2c <TIM6_UltraSonic_Handler+0xc8>)
  8003eba:	681b      	ldr	r3, [r3, #0]
  8003ebc:	2b00      	cmp	r3, #0
  8003ebe:	dd05      	ble.n	8003ecc <TIM6_UltraSonic_Handler+0x68>
- 8003ec0:	4b1c      	ldr	r3, [pc, #112]	; (8003f34 <TIM6_UltraSonic_Handler+0xd0>)
+ 8003ec0:	4b19      	ldr	r3, [pc, #100]	; (8003f28 <TIM6_UltraSonic_Handler+0xc4>)
  8003ec2:	681b      	ldr	r3, [r3, #0]
  8003ec4:	2b00      	cmp	r3, #0
  8003ec6:	dd01      	ble.n	8003ecc <TIM6_UltraSonic_Handler+0x68>
 			determineDir();
  8003ec8:	f000 f904 	bl	80040d4 <determineDir>
 		}
-		if (UltraTurn == 0) {
- 8003ecc:	4b16      	ldr	r3, [pc, #88]	; (8003f28 <TIM6_UltraSonic_Handler+0xc4>)
+		if (~firstloop) {
+ 8003ecc:	4b18      	ldr	r3, [pc, #96]	; (8003f30 <TIM6_UltraSonic_Handler+0xcc>)
  8003ece:	681b      	ldr	r3, [r3, #0]
- 8003ed0:	2b00      	cmp	r3, #0
- 8003ed2:	d104      	bne.n	8003ede <TIM6_UltraSonic_Handler+0x7a>
+ 8003ed0:	3301      	adds	r3, #1
+ 8003ed2:	d004      	beq.n	8003ede <TIM6_UltraSonic_Handler+0x7a>
 		Track++;
- 8003ed4:	4b19      	ldr	r3, [pc, #100]	; (8003f3c <TIM6_UltraSonic_Handler+0xd8>)
+ 8003ed4:	4b17      	ldr	r3, [pc, #92]	; (8003f34 <TIM6_UltraSonic_Handler+0xd0>)
  8003ed6:	681b      	ldr	r3, [r3, #0]
  8003ed8:	1c5a      	adds	r2, r3, #1
- 8003eda:	4b18      	ldr	r3, [pc, #96]	; (8003f3c <TIM6_UltraSonic_Handler+0xd8>)
+ 8003eda:	4b16      	ldr	r3, [pc, #88]	; (8003f34 <TIM6_UltraSonic_Handler+0xd0>)
  8003edc:	601a      	str	r2, [r3, #0]
 		}
 	}
-		if (LCheck | ~UltraTurn | left) {
- 8003ede:	4b12      	ldr	r3, [pc, #72]	; (8003f28 <TIM6_UltraSonic_Handler+0xc4>)
+		if (~firstloop) {
+ 8003ede:	4b14      	ldr	r3, [pc, #80]	; (8003f30 <TIM6_UltraSonic_Handler+0xcc>)
  8003ee0:	681b      	ldr	r3, [r3, #0]
- 8003ee2:	43da      	mvns	r2, r3
- 8003ee4:	4b13      	ldr	r3, [pc, #76]	; (8003f34 <TIM6_UltraSonic_Handler+0xd0>)
- 8003ee6:	681b      	ldr	r3, [r3, #0]
- 8003ee8:	431a      	orrs	r2, r3
- 8003eea:	4b10      	ldr	r3, [pc, #64]	; (8003f2c <TIM6_UltraSonic_Handler+0xc8>)
- 8003eec:	681b      	ldr	r3, [r3, #0]
- 8003eee:	4313      	orrs	r3, r2
- 8003ef0:	d012      	beq.n	8003f18 <TIM6_UltraSonic_Handler+0xb4>
+ 8003ee2:	3301      	adds	r3, #1
+ 8003ee4:	d012      	beq.n	8003f0c <TIM6_UltraSonic_Handler+0xa8>
 			if (Track == 2){
- 8003ef2:	4b12      	ldr	r3, [pc, #72]	; (8003f3c <TIM6_UltraSonic_Handler+0xd8>)
- 8003ef4:	681b      	ldr	r3, [r3, #0]
- 8003ef6:	2b02      	cmp	r3, #2
- 8003ef8:	d103      	bne.n	8003f02 <TIM6_UltraSonic_Handler+0x9e>
+ 8003ee6:	4b13      	ldr	r3, [pc, #76]	; (8003f34 <TIM6_UltraSonic_Handler+0xd0>)
+ 8003ee8:	681b      	ldr	r3, [r3, #0]
+ 8003eea:	2b02      	cmp	r3, #2
+ 8003eec:	d103      	bne.n	8003ef6 <TIM6_UltraSonic_Handler+0x92>
 				init_Left();
- 8003efa:	f000 f917 	bl	800412c <init_Left>
+ 8003eee:	f000 f91d 	bl	800412c <init_Left>
 				TrackLeft();
- 8003efe:	f000 f95b 	bl	80041b8 <TrackLeft>
+ 8003ef2:	f000 f961 	bl	80041b8 <TrackLeft>
 			}
 			if (Track == 3){
- 8003f02:	4b0e      	ldr	r3, [pc, #56]	; (8003f3c <TIM6_UltraSonic_Handler+0xd8>)
- 8003f04:	681b      	ldr	r3, [r3, #0]
- 8003f06:	2b03      	cmp	r3, #3
- 8003f08:	d106      	bne.n	8003f18 <TIM6_UltraSonic_Handler+0xb4>
+ 8003ef6:	4b0f      	ldr	r3, [pc, #60]	; (8003f34 <TIM6_UltraSonic_Handler+0xd0>)
+ 8003ef8:	681b      	ldr	r3, [r3, #0]
+ 8003efa:	2b03      	cmp	r3, #3
+ 8003efc:	d106      	bne.n	8003f0c <TIM6_UltraSonic_Handler+0xa8>
 				init_Right();
- 8003f0a:	f000 f927 	bl	800415c <init_Right>
+ 8003efe:	f000 f92d 	bl	800415c <init_Right>
 				TrackRight();
- 8003f0e:	f000 f971 	bl	80041f4 <TrackRight>
+ 8003f02:	f000 f977 	bl	80041f4 <TrackRight>
 				Track = 0;
- 8003f12:	4b0a      	ldr	r3, [pc, #40]	; (8003f3c <TIM6_UltraSonic_Handler+0xd8>)
- 8003f14:	2200      	movs	r2, #0
- 8003f16:	601a      	str	r2, [r3, #0]
+ 8003f06:	4b0b      	ldr	r3, [pc, #44]	; (8003f34 <TIM6_UltraSonic_Handler+0xd0>)
+ 8003f08:	2200      	movs	r2, #0
+ 8003f0a:	601a      	str	r2, [r3, #0]
 			}
 	}
 	count = 0;
- 8003f18:	4b09      	ldr	r3, [pc, #36]	; (8003f40 <TIM6_UltraSonic_Handler+0xdc>)
- 8003f1a:	2200      	movs	r2, #0
- 8003f1c:	601a      	str	r2, [r3, #0]
+ 8003f0c:	4b0a      	ldr	r3, [pc, #40]	; (8003f38 <TIM6_UltraSonic_Handler+0xd4>)
+ 8003f0e:	2200      	movs	r2, #0
+ 8003f10:	601a      	str	r2, [r3, #0]
 
 }
- 8003f1e:	46c0      	nop			; (mov r8, r8)
- 8003f20:	46bd      	mov	sp, r7
- 8003f22:	bd80      	pop	{r7, pc}
- 8003f24:	200000a4 	.word	0x200000a4
- 8003f28:	2000008c 	.word	0x2000008c
- 8003f2c:	20000094 	.word	0x20000094
- 8003f30:	20000098 	.word	0x20000098
- 8003f34:	2000009c 	.word	0x2000009c
- 8003f38:	200000a0 	.word	0x200000a0
- 8003f3c:	200000a8 	.word	0x200000a8
- 8003f40:	20000090 	.word	0x20000090
+ 8003f12:	46c0      	nop			; (mov r8, r8)
+ 8003f14:	46bd      	mov	sp, r7
+ 8003f16:	bd80      	pop	{r7, pc}
+ 8003f18:	200000a4 	.word	0x200000a4
+ 8003f1c:	2000008c 	.word	0x2000008c
+ 8003f20:	20000094 	.word	0x20000094
+ 8003f24:	20000098 	.word	0x20000098
+ 8003f28:	2000009c 	.word	0x2000009c
+ 8003f2c:	200000a0 	.word	0x200000a0
+ 8003f30:	200000ac 	.word	0x200000ac
+ 8003f34:	200000a8 	.word	0x200000a8
+ 8003f38:	20000090 	.word	0x20000090
 
-08003f44 <checkTurn>:
+08003f3c <checkTurn>:
 void checkTurn(void){
- 8003f44:	b580      	push	{r7, lr}
- 8003f46:	af00      	add	r7, sp, #0
+ 8003f3c:	b580      	push	{r7, lr}
+ 8003f3e:	af00      	add	r7, sp, #0
 	if ((UltraTurn == UltraLeft) && (count > 50)){
- 8003f48:	4b17      	ldr	r3, [pc, #92]	; (8003fa8 <checkTurn+0x64>)
+ 8003f40:	4b17      	ldr	r3, [pc, #92]	; (8003fa0 <checkTurn+0x64>)
+ 8003f42:	681b      	ldr	r3, [r3, #0]
+ 8003f44:	2b01      	cmp	r3, #1
+ 8003f46:	d108      	bne.n	8003f5a <checkTurn+0x1e>
+ 8003f48:	4b16      	ldr	r3, [pc, #88]	; (8003fa4 <checkTurn+0x68>)
  8003f4a:	681b      	ldr	r3, [r3, #0]
- 8003f4c:	2b01      	cmp	r3, #1
- 8003f4e:	d108      	bne.n	8003f62 <checkTurn+0x1e>
- 8003f50:	4b16      	ldr	r3, [pc, #88]	; (8003fac <checkTurn+0x68>)
- 8003f52:	681b      	ldr	r3, [r3, #0]
- 8003f54:	2b32      	cmp	r3, #50	; 0x32
- 8003f56:	dd04      	ble.n	8003f62 <checkTurn+0x1e>
+ 8003f4c:	2b32      	cmp	r3, #50	; 0x32
+ 8003f4e:	dd04      	ble.n	8003f5a <checkTurn+0x1e>
 		printf("Keep turning left\r\n");
- 8003f58:	4b15      	ldr	r3, [pc, #84]	; (8003fb0 <checkTurn+0x6c>)
- 8003f5a:	0018      	movs	r0, r3
- 8003f5c:	f002 ff2c 	bl	8006db8 <puts>
+ 8003f50:	4b15      	ldr	r3, [pc, #84]	; (8003fa8 <checkTurn+0x6c>)
+ 8003f52:	0018      	movs	r0, r3
+ 8003f54:	f002 ff30 	bl	8006db8 <puts>
 	if ((UltraTurn == UltraLeft) && (count > 50)){
- 8003f60:	e01f      	b.n	8003fa2 <checkTurn+0x5e>
+ 8003f58:	e01f      	b.n	8003f9a <checkTurn+0x5e>
 	}
 	else if ((UltraTurn == UltraRight) && (count > 50)){
- 8003f62:	4b11      	ldr	r3, [pc, #68]	; (8003fa8 <checkTurn+0x64>)
+ 8003f5a:	4b11      	ldr	r3, [pc, #68]	; (8003fa0 <checkTurn+0x64>)
+ 8003f5c:	681b      	ldr	r3, [r3, #0]
+ 8003f5e:	2b02      	cmp	r3, #2
+ 8003f60:	d108      	bne.n	8003f74 <checkTurn+0x38>
+ 8003f62:	4b10      	ldr	r3, [pc, #64]	; (8003fa4 <checkTurn+0x68>)
  8003f64:	681b      	ldr	r3, [r3, #0]
- 8003f66:	2b02      	cmp	r3, #2
- 8003f68:	d108      	bne.n	8003f7c <checkTurn+0x38>
- 8003f6a:	4b10      	ldr	r3, [pc, #64]	; (8003fac <checkTurn+0x68>)
- 8003f6c:	681b      	ldr	r3, [r3, #0]
- 8003f6e:	2b32      	cmp	r3, #50	; 0x32
- 8003f70:	dd04      	ble.n	8003f7c <checkTurn+0x38>
+ 8003f66:	2b32      	cmp	r3, #50	; 0x32
+ 8003f68:	dd04      	ble.n	8003f74 <checkTurn+0x38>
 		printf("Keep turning right\r\n");
- 8003f72:	4b10      	ldr	r3, [pc, #64]	; (8003fb4 <checkTurn+0x70>)
- 8003f74:	0018      	movs	r0, r3
- 8003f76:	f002 ff1f 	bl	8006db8 <puts>
+ 8003f6a:	4b10      	ldr	r3, [pc, #64]	; (8003fac <checkTurn+0x70>)
+ 8003f6c:	0018      	movs	r0, r3
+ 8003f6e:	f002 ff23 	bl	8006db8 <puts>
 	else if ((UltraTurn == UltraRight) && (count > 50)){
- 8003f7a:	e012      	b.n	8003fa2 <checkTurn+0x5e>
+ 8003f72:	e012      	b.n	8003f9a <checkTurn+0x5e>
 	}
 	else {
 		printf("Good to go Forward\r\n");
- 8003f7c:	4b0e      	ldr	r3, [pc, #56]	; (8003fb8 <checkTurn+0x74>)
- 8003f7e:	0018      	movs	r0, r3
- 8003f80:	f002 ff1a 	bl	8006db8 <puts>
+ 8003f74:	4b0e      	ldr	r3, [pc, #56]	; (8003fb0 <checkTurn+0x74>)
+ 8003f76:	0018      	movs	r0, r3
+ 8003f78:	f002 ff1e 	bl	8006db8 <puts>
 		robot.obstacle[1] = 0;
- 8003f84:	4b0d      	ldr	r3, [pc, #52]	; (8003fbc <checkTurn+0x78>)
- 8003f86:	22da      	movs	r2, #218	; 0xda
+ 8003f7c:	4b0d      	ldr	r3, [pc, #52]	; (8003fb4 <checkTurn+0x78>)
+ 8003f7e:	22da      	movs	r2, #218	; 0xda
+ 8003f80:	2100      	movs	r1, #0
+ 8003f82:	5499      	strb	r1, [r3, r2]
+		robot.obstacle[2] = 0;
+ 8003f84:	4b0b      	ldr	r3, [pc, #44]	; (8003fb4 <checkTurn+0x78>)
+ 8003f86:	22db      	movs	r2, #219	; 0xdb
  8003f88:	2100      	movs	r1, #0
  8003f8a:	5499      	strb	r1, [r3, r2]
-		robot.obstacle[2] = 0;
- 8003f8c:	4b0b      	ldr	r3, [pc, #44]	; (8003fbc <checkTurn+0x78>)
- 8003f8e:	22db      	movs	r2, #219	; 0xdb
+		robot.obstacle[0] = 0;
+ 8003f8c:	4b09      	ldr	r3, [pc, #36]	; (8003fb4 <checkTurn+0x78>)
+ 8003f8e:	22d9      	movs	r2, #217	; 0xd9
  8003f90:	2100      	movs	r1, #0
  8003f92:	5499      	strb	r1, [r3, r2]
-		robot.obstacle[0] = 0;
- 8003f94:	4b09      	ldr	r3, [pc, #36]	; (8003fbc <checkTurn+0x78>)
- 8003f96:	22d9      	movs	r2, #217	; 0xd9
- 8003f98:	2100      	movs	r1, #0
- 8003f9a:	5499      	strb	r1, [r3, r2]
 		UltraTurn = 0;
- 8003f9c:	4b02      	ldr	r3, [pc, #8]	; (8003fa8 <checkTurn+0x64>)
- 8003f9e:	2200      	movs	r2, #0
- 8003fa0:	601a      	str	r2, [r3, #0]
+ 8003f94:	4b02      	ldr	r3, [pc, #8]	; (8003fa0 <checkTurn+0x64>)
+ 8003f96:	2200      	movs	r2, #0
+ 8003f98:	601a      	str	r2, [r3, #0]
 	}
 }
- 8003fa2:	46c0      	nop			; (mov r8, r8)
- 8003fa4:	46bd      	mov	sp, r7
- 8003fa6:	bd80      	pop	{r7, pc}
- 8003fa8:	2000008c 	.word	0x2000008c
- 8003fac:	20000090 	.word	0x20000090
- 8003fb0:	080089c8 	.word	0x080089c8
- 8003fb4:	080089dc 	.word	0x080089dc
- 8003fb8:	080089f0 	.word	0x080089f0
- 8003fbc:	200001f8 	.word	0x200001f8
+ 8003f9a:	46c0      	nop			; (mov r8, r8)
+ 8003f9c:	46bd      	mov	sp, r7
+ 8003f9e:	bd80      	pop	{r7, pc}
+ 8003fa0:	2000008c 	.word	0x2000008c
+ 8003fa4:	20000090 	.word	0x20000090
+ 8003fa8:	080089c8 	.word	0x080089c8
+ 8003fac:	080089dc 	.word	0x080089dc
+ 8003fb0:	080089f0 	.word	0x080089f0
+ 8003fb4:	20000200 	.word	0x20000200
 
-08003fc0 <checkStraight>:
+08003fb8 <checkStraight>:
 void checkStraight(void){
- 8003fc0:	b580      	push	{r7, lr}
- 8003fc2:	af00      	add	r7, sp, #0
+ 8003fb8:	b580      	push	{r7, lr}
+ 8003fba:	af00      	add	r7, sp, #0
 	if (count > 50){
- 8003fc4:	4b0c      	ldr	r3, [pc, #48]	; (8003ff8 <checkStraight+0x38>)
- 8003fc6:	681b      	ldr	r3, [r3, #0]
- 8003fc8:	2b32      	cmp	r3, #50	; 0x32
- 8003fca:	dd0d      	ble.n	8003fe8 <checkStraight+0x28>
+ 8003fbc:	4b0d      	ldr	r3, [pc, #52]	; (8003ff4 <checkStraight+0x3c>)
+ 8003fbe:	681b      	ldr	r3, [r3, #0]
+ 8003fc0:	2b32      	cmp	r3, #50	; 0x32
+ 8003fc2:	dd10      	ble.n	8003fe6 <checkStraight+0x2e>
 		robot.obstacle[1] = 1;
- 8003fcc:	4b0b      	ldr	r3, [pc, #44]	; (8003ffc <checkStraight+0x3c>)
- 8003fce:	22da      	movs	r2, #218	; 0xda
- 8003fd0:	2101      	movs	r1, #1
- 8003fd2:	5499      	strb	r1, [r3, r2]
+ 8003fc4:	4b0c      	ldr	r3, [pc, #48]	; (8003ff8 <checkStraight+0x40>)
+ 8003fc6:	22da      	movs	r2, #218	; 0xda
+ 8003fc8:	2101      	movs	r1, #1
+ 8003fca:	5499      	strb	r1, [r3, r2]
 		printf("checkDirection\r\n");
- 8003fd4:	4b0a      	ldr	r3, [pc, #40]	; (8004000 <checkStraight+0x40>)
- 8003fd6:	0018      	movs	r0, r3
- 8003fd8:	f002 feee 	bl	8006db8 <puts>
+ 8003fcc:	4b0b      	ldr	r3, [pc, #44]	; (8003ffc <checkStraight+0x44>)
+ 8003fce:	0018      	movs	r0, r3
+ 8003fd0:	f002 fef2 	bl	8006db8 <puts>
+		firstloop = 1;
+ 8003fd4:	4b0a      	ldr	r3, [pc, #40]	; (8004000 <checkStraight+0x48>)
+ 8003fd6:	2201      	movs	r2, #1
+ 8003fd8:	601a      	str	r2, [r3, #0]
 		left = 1;
- 8003fdc:	4b09      	ldr	r3, [pc, #36]	; (8004004 <checkStraight+0x44>)
- 8003fde:	2201      	movs	r2, #1
- 8003fe0:	601a      	str	r2, [r3, #0]
+ 8003fda:	4b0a      	ldr	r3, [pc, #40]	; (8004004 <checkStraight+0x4c>)
+ 8003fdc:	2201      	movs	r2, #1
+ 8003fde:	601a      	str	r2, [r3, #0]
 		init_Left();
- 8003fe2:	f000 f8a3 	bl	800412c <init_Left>
+ 8003fe0:	f000 f8a4 	bl	800412c <init_Left>
 	} else {
 		robot.obstacle[1] = 0;
 	}
 }
- 8003fe6:	e003      	b.n	8003ff0 <checkStraight+0x30>
+ 8003fe4:	e003      	b.n	8003fee <checkStraight+0x36>
 		robot.obstacle[1] = 0;
- 8003fe8:	4b04      	ldr	r3, [pc, #16]	; (8003ffc <checkStraight+0x3c>)
- 8003fea:	22da      	movs	r2, #218	; 0xda
- 8003fec:	2100      	movs	r1, #0
- 8003fee:	5499      	strb	r1, [r3, r2]
+ 8003fe6:	4b04      	ldr	r3, [pc, #16]	; (8003ff8 <checkStraight+0x40>)
+ 8003fe8:	22da      	movs	r2, #218	; 0xda
+ 8003fea:	2100      	movs	r1, #0
+ 8003fec:	5499      	strb	r1, [r3, r2]
 }
- 8003ff0:	46c0      	nop			; (mov r8, r8)
- 8003ff2:	46bd      	mov	sp, r7
- 8003ff4:	bd80      	pop	{r7, pc}
- 8003ff6:	46c0      	nop			; (mov r8, r8)
- 8003ff8:	20000090 	.word	0x20000090
- 8003ffc:	200001f8 	.word	0x200001f8
- 8004000:	08008a04 	.word	0x08008a04
+ 8003fee:	46c0      	nop			; (mov r8, r8)
+ 8003ff0:	46bd      	mov	sp, r7
+ 8003ff2:	bd80      	pop	{r7, pc}
+ 8003ff4:	20000090 	.word	0x20000090
+ 8003ff8:	20000200 	.word	0x20000200
+ 8003ffc:	08008a04 	.word	0x08008a04
+ 8004000:	200000ac 	.word	0x200000ac
  8004004:	20000094 	.word	0x20000094
 
 08004008 <checkLeft>:
@@ -8780,7 +8779,7 @@ void checkLeft(void){
  800405a:	bd80      	pop	{r7, pc}
  800405c:	20000094 	.word	0x20000094
  8004060:	20000090 	.word	0x20000090
- 8004064:	200001f8 	.word	0x200001f8
+ 8004064:	20000200 	.word	0x20000200
  8004068:	20000098 	.word	0x20000098
  800406c:	2000009c 	.word	0x2000009c
 
@@ -8838,7 +8837,7 @@ void checkRight(void){
  80040be:	bd80      	pop	{r7, pc}
  80040c0:	20000098 	.word	0x20000098
  80040c4:	20000090 	.word	0x20000090
- 80040c8:	200001f8 	.word	0x200001f8
+ 80040c8:	20000200 	.word	0x20000200
  80040cc:	20000094 	.word	0x20000094
  80040d0:	200000a0 	.word	0x200000a0
 
@@ -9015,7 +9014,7 @@ void TrackLeft(){
  80041e4:	46bd      	mov	sp, r7
  80041e6:	bd80      	pop	{r7, pc}
  80041e8:	20000090 	.word	0x20000090
- 80041ec:	200001f8 	.word	0x200001f8
+ 80041ec:	20000200 	.word	0x20000200
  80041f0:	200000a4 	.word	0x200000a4
 
 080041f4 <TrackRight>:
@@ -9057,7 +9056,7 @@ void TrackRight(){
  8004220:	46bd      	mov	sp, r7
  8004222:	bd80      	pop	{r7, pc}
  8004224:	20000090 	.word	0x20000090
- 8004228:	200001f8 	.word	0x200001f8
+ 8004228:	20000200 	.word	0x20000200
  800422c:	200000a4 	.word	0x200000a4
 
 08004230 <TIM2_conf>:
@@ -9950,7 +9949,7 @@ void EXTI4_15_IRQHandler(void)
  80046e0:	bd80      	pop	{r7, pc}
  80046e2:	46c0      	nop			; (mov r8, r8)
  80046e4:	40010400 	.word	0x40010400
- 80046e8:	200001f8 	.word	0x200001f8
+ 80046e8:	20000200 	.word	0x20000200
  80046ec:	20000090 	.word	0x20000090
 
 080046f0 <TIM6_DAC_IRQHandler>:
@@ -9978,7 +9977,7 @@ void TIM6_DAC_IRQHandler(void)
  8004702:	46bd      	mov	sp, r7
  8004704:	bd80      	pop	{r7, pc}
  8004706:	46c0      	nop			; (mov r8, r8)
- 8004708:	200002d8 	.word	0x200002d8
+ 8004708:	200002e0 	.word	0x200002e0
 
 0800470c <TIM22_IRQHandler>:
 
@@ -10004,7 +10003,7 @@ void TIM22_IRQHandler(void)
  800471a:	46bd      	mov	sp, r7
  800471c:	bd80      	pop	{r7, pc}
  800471e:	46c0      	nop			; (mov r8, r8)
- 8004720:	200001ac 	.word	0x200001ac
+ 8004720:	200001b4 	.word	0x200001b4
 
 08004724 <_read>:
 	_kill(status, -1);
@@ -10234,8 +10233,8 @@ caddr_t _sbrk(int incr)
  800483a:	46bd      	mov	sp, r7
  800483c:	b004      	add	sp, #16
  800483e:	bd80      	pop	{r7, pc}
- 8004840:	200000ac 	.word	0x200000ac
- 8004844:	200003c0 	.word	0x200003c0
+ 8004840:	200000b0 	.word	0x200000b0
+ 8004844:	200003c8 	.word	0x200003c8
 
 08004848 <SystemInit>:
   * @brief  Setup the microcontroller system.
@@ -10424,7 +10423,7 @@ LoopForever:
   ldr  r2, =_sbss
  800490c:	20000070 	.word	0x20000070
   ldr  r3, = _ebss
- 8004910:	200003c0 	.word	0x200003c0
+ 8004910:	200003c8 	.word	0x200003c8
 
 08004914 <ADC1_COMP_IRQHandler>:
  * @retval : None
@@ -10579,7 +10578,7 @@ __weak void HAL_IncTick(void)
  80049ba:	46c0      	nop			; (mov r8, r8)
  80049bc:	46bd      	mov	sp, r7
  80049be:	bd80      	pop	{r7, pc}
- 80049c0:	200003b8 	.word	0x200003b8
+ 80049c0:	200003c0 	.word	0x200003c0
 
 080049c4 <HAL_GetTick>:
   * @note This function is declared as __weak to be overwritten in case of other
@@ -10598,7 +10597,7 @@ __weak uint32_t HAL_GetTick(void)
  80049ce:	46bd      	mov	sp, r7
  80049d0:	bd80      	pop	{r7, pc}
  80049d2:	46c0      	nop			; (mov r8, r8)
- 80049d4:	200003b8 	.word	0x200003b8
+ 80049d4:	200003c0 	.word	0x200003c0
 
 080049d8 <HAL_ADC_Init>:
   *         function "HAL_ADCEx_EnableVREFINTTempSensor()" must be called similarilly.  
@@ -18116,7 +18115,7 @@ HAL_StatusTypeDef HAL_TIMEx_RemapConfig(TIM_HandleTypeDef *htim, uint32_t Remap)
  80073de:	605c      	str	r4, [r3, #4]
  80073e0:	e7ca      	b.n	8007378 <_free_r+0x24>
  80073e2:	46c0      	nop			; (mov r8, r8)
- 80073e4:	200000b0 	.word	0x200000b0
+ 80073e4:	200000b4 	.word	0x200000b4
 
 080073e8 <_malloc_r>:
  80073e8:	2303      	movs	r3, #3
@@ -18203,8 +18202,8 @@ HAL_StatusTypeDef HAL_TIMEx_RemapConfig(TIM_HandleTypeDef *htim, uint32_t Remap)
  8007496:	d1db      	bne.n	8007450 <_malloc_r+0x68>
  8007498:	e7c7      	b.n	800742a <_malloc_r+0x42>
  800749a:	46c0      	nop			; (mov r8, r8)
- 800749c:	200000b0 	.word	0x200000b0
- 80074a0:	200000b4 	.word	0x200000b4
+ 800749c:	200000b4 	.word	0x200000b4
+ 80074a0:	200000b8 	.word	0x200000b8
 
 080074a4 <_sbrk_r>:
  80074a4:	2300      	movs	r3, #0
@@ -18222,7 +18221,7 @@ HAL_StatusTypeDef HAL_TIMEx_RemapConfig(TIM_HandleTypeDef *htim, uint32_t Remap)
  80074be:	602b      	str	r3, [r5, #0]
  80074c0:	bd70      	pop	{r4, r5, r6, pc}
  80074c2:	46c0      	nop			; (mov r8, r8)
- 80074c4:	200003bc 	.word	0x200003bc
+ 80074c4:	200003c4 	.word	0x200003c4
 
 080074c8 <__sread>:
  80074c8:	b570      	push	{r4, r5, r6, lr}
@@ -18318,7 +18317,7 @@ HAL_StatusTypeDef HAL_TIMEx_RemapConfig(TIM_HandleTypeDef *htim, uint32_t Remap)
  800757e:	602b      	str	r3, [r5, #0]
  8007580:	bd70      	pop	{r4, r5, r6, pc}
  8007582:	46c0      	nop			; (mov r8, r8)
- 8007584:	200003bc 	.word	0x200003bc
+ 8007584:	200003c4 	.word	0x200003c4
 
 08007588 <_close_r>:
  8007588:	2300      	movs	r3, #0
@@ -18336,7 +18335,7 @@ HAL_StatusTypeDef HAL_TIMEx_RemapConfig(TIM_HandleTypeDef *htim, uint32_t Remap)
  80075a2:	602b      	str	r3, [r5, #0]
  80075a4:	bd70      	pop	{r4, r5, r6, pc}
  80075a6:	46c0      	nop			; (mov r8, r8)
- 80075a8:	200003bc 	.word	0x200003bc
+ 80075a8:	200003c4 	.word	0x200003c4
 
 080075ac <_fstat_r>:
  80075ac:	2300      	movs	r3, #0
@@ -18354,7 +18353,7 @@ HAL_StatusTypeDef HAL_TIMEx_RemapConfig(TIM_HandleTypeDef *htim, uint32_t Remap)
  80075c6:	d000      	beq.n	80075ca <_fstat_r+0x1e>
  80075c8:	602b      	str	r3, [r5, #0]
  80075ca:	bd70      	pop	{r4, r5, r6, pc}
- 80075cc:	200003bc 	.word	0x200003bc
+ 80075cc:	200003c4 	.word	0x200003c4
 
 080075d0 <_isatty_r>:
  80075d0:	2300      	movs	r3, #0
@@ -18372,7 +18371,7 @@ HAL_StatusTypeDef HAL_TIMEx_RemapConfig(TIM_HandleTypeDef *htim, uint32_t Remap)
  80075ea:	602b      	str	r3, [r5, #0]
  80075ec:	bd70      	pop	{r4, r5, r6, pc}
  80075ee:	46c0      	nop			; (mov r8, r8)
- 80075f0:	200003bc 	.word	0x200003bc
+ 80075f0:	200003c4 	.word	0x200003c4
 
 080075f4 <_lseek_r>:
  80075f4:	b570      	push	{r4, r5, r6, lr}
@@ -18392,7 +18391,7 @@ HAL_StatusTypeDef HAL_TIMEx_RemapConfig(TIM_HandleTypeDef *htim, uint32_t Remap)
  8007612:	602b      	str	r3, [r5, #0]
  8007614:	bd70      	pop	{r4, r5, r6, pc}
  8007616:	46c0      	nop			; (mov r8, r8)
- 8007618:	200003bc 	.word	0x200003bc
+ 8007618:	200003c4 	.word	0x200003c4
 
 0800761c <__malloc_lock>:
  800761c:	4770      	bx	lr
@@ -18418,7 +18417,7 @@ HAL_StatusTypeDef HAL_TIMEx_RemapConfig(TIM_HandleTypeDef *htim, uint32_t Remap)
  800763e:	602b      	str	r3, [r5, #0]
  8007640:	bd70      	pop	{r4, r5, r6, pc}
  8007642:	46c0      	nop			; (mov r8, r8)
- 8007644:	200003bc 	.word	0x200003bc
+ 8007644:	200003c4 	.word	0x200003c4
 
 08007648 <cos>:
  8007648:	b530      	push	{r4, r5, lr}
